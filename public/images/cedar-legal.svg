@@ -1,0 +1,24 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" rx="42" fill="#0F0F12"/>
+  <rect x="56" y="56" width="1488" height="888" rx="32" fill="#141419" stroke="rgba(255,255,255,0.06)"/>
+  <rect x="100" y="100" width="1400" height="48" rx="24" fill="#1A1A20"/>
+  <circle cx="130" cy="124" r="8" fill="#F87171"/>
+  <circle cx="162" cy="124" r="8" fill="#FBBF24"/>
+  <circle cx="194" cy="124" r="8" fill="#34D399"/>
+  <rect x="112" y="188" width="1274" height="286" rx="28" fill="url(#hero)"/>
+  <rect x="112" y="508" width="402" height="300" rx="24" fill="#18181B"/>
+  <rect x="538" y="508" width="402" height="300" rx="24" fill="#18181B"/>
+  <rect x="964" y="508" width="422" height="300" rx="24" fill="#18181B"/>
+  <rect x="156" y="244" width="208" height="20" rx="10" fill="#FCD34D"/>
+  <rect x="156" y="284" width="414" height="20" rx="10" fill="#FAFAFA" fill-opacity="0.92"/>
+  <rect x="156" y="322" width="374" height="18" rx="9" fill="#FAFAFA" fill-opacity="0.52"/>
+  <rect x="156" y="374" width="188" height="48" rx="24" fill="#F59E0B"/>
+  <rect x="356" y="374" width="184" height="48" rx="24" fill="#27272A"/>
+  <text x="156" y="438" fill="#FAFAFA" font-size="48" font-family="Arial, sans-serif" font-weight="700">Cedar Legal</text>
+  <defs>
+    <linearGradient id="hero" x1="112" y1="188" x2="1386" y2="474" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F59E0B" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#1F2937" stop-opacity="0.86"/>
+    </linearGradient>
+  </defs>
+</svg>
