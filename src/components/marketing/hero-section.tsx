@@ -24,8 +24,8 @@ export function HeroSection() {
     <section className="relative isolate overflow-hidden px-4 pt-4 pb-0 sm:px-6 sm:pt-6 sm:pb-0 lg:px-10 lg:pt-8 lg:pb-0">
       <div className="pointer-events-none absolute bottom-0 left-1/2 -z-10 h-[35rem] w-[min(100vw,70rem)] -translate-x-1/2 bg-[radial-gradient(ellipse_at_bottom,_rgba(245,158,11,1)_0%,_rgba(245,158,11,0.6)_30%,_rgba(245,158,11,0.25)_50%,_transparent_70%)] blur-[130px] sm:h-[40rem] sm:w-[min(100vw,80rem)]" />
 
-      <div className="mx-auto flex min-h-[calc(100svh-96px)] w-full max-w-[1200px] flex-col items-center justify-start pt-4 gap-4 text-center sm:pt-[clamp(3rem,8vh,6rem)] sm:gap-5 lg:gap-6">
-        <span className="eyebrow border-white/10 bg-white/5 text-foreground text-[10px] px-3 py-1.5 sm:text-xs">
+      <div className="mx-auto flex min-h-0 w-full max-w-[1200px] flex-col items-center justify-start pt-4 gap-4 text-center sm:min-h-[calc(100svh-96px)] sm:pt-[clamp(3rem,8vh,6rem)] sm:gap-5 lg:gap-6">
+        <span className="eyebrow border-white/10 bg-white/5 text-foreground text-[9px] px-2.5 py-1 sm:text-xs sm:px-4 sm:py-1.5">
           <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 text-accent" />
           Modern Websites for Growing Businesses
         </span>
@@ -43,10 +43,10 @@ export function HeroSection() {
         </div>
 
         <div className="flex flex-row items-center justify-center gap-2 sm:gap-3">
-          <TrackedLink href="/work" eventName="click_hero_portfolio" className="button-primary w-auto min-h-[44px] px-4 text-[11px] sm:min-h-[52px] sm:px-7 sm:text-sm">
+          <TrackedLink href="/work" eventName="click_hero_portfolio" className="button-primary w-auto min-h-[44px] px-3.5 text-xs sm:min-h-[52px] sm:px-7 sm:text-sm">
             View Portfolio
           </TrackedLink>
-          <TrackedLink href="/contact" eventName="click_hero_contact" className="button-secondary w-auto min-h-[44px] px-4 text-[11px] sm:min-h-[52px] sm:px-7 sm:text-sm">
+          <TrackedLink href="/contact" eventName="click_hero_contact" className="button-secondary w-auto min-h-[44px] px-3.5 text-xs sm:min-h-[52px] sm:px-7 sm:text-sm">
             Free Consultation
           </TrackedLink>
         </div>
@@ -67,7 +67,7 @@ export function HeroSection() {
           })}
         </div>
 
-        <div className="relative mt-auto w-full max-w-[1100px] pt-2 sm:pt-8 lg:pt-12">
+        <div className="relative mt-4 w-full max-w-[1100px] sm:mt-auto sm:pt-8 lg:pt-12">
           <Image
             src={deviceShowcase}
             alt="Device showcase featuring MhStudio website mockups on laptop, tablet, and phone."

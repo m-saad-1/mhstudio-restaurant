@@ -53,7 +53,7 @@ export function Reveal({
           }
         });
       },
-      { threshold: 0.05, rootMargin: "50px" },
+      { threshold: 0.01, rootMargin: "200px" },
     );
 
     if (ref.current) {
@@ -68,8 +68,8 @@ export function Reveal({
   }, []);
 
   const classes = [
-    "transition duration-[600ms] ease-out will-change-[transform,opacity,filter] motion-reduce:transition-none",
-    isVisible || reduceMotion ? "translate-y-0 opacity-100 blur-0" : "translate-y-[30px] opacity-0 blur-[2px]",
+    "transition-all duration-[400ms] ease-out will-change-[transform,opacity] motion-reduce:transition-none",
+    isVisible || reduceMotion ? "translate-y-0 opacity-100" : "translate-y-[15px] opacity-0",
     className,
   ].join(" ");
 
@@ -78,7 +78,6 @@ export function Reveal({
       <section
         id={id}
         ref={setRef}
-        style={reduceMotion ? undefined : { transitionDelay: `${delayMs}ms` }}
         className={classes}
       >
         {children}
@@ -90,7 +89,6 @@ export function Reveal({
     <div
       id={id}
       ref={setRef}
-      style={reduceMotion ? undefined : { transitionDelay: `${delayMs}ms` }}
       className={classes}
     >
       {children}
