@@ -34,6 +34,11 @@ export const metadata: Metadata = {
       "High-performance applications, custom AI integrations, and scalable software systems engineered for modern business growth.",
     type: "website",
   },
+  icons: {
+    icon: "/mh_logo.png",
+    shortcut: "/mh_logo.png",
+    apple: "/mh_logo.png",
+  },
 };
 
 export default function RootLayout({
