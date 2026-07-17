@@ -14,8 +14,8 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About MhStudio"
-        title="Built to help businesses grow through beautiful, high-performing websites."
-        description="MhStudio was created to help businesses establish a strong online presence through modern websites that build trust, support growth, and convert visitors into customers."
+        title="High-performance websites built for modern restaurants."
+        description="We build fast, responsive digital experiences that highlight your culinary concept, streamline reservations, and turn visitors into guests."
         primaryCta={{ label: "View Portfolio", href: "/work" }}
         secondaryCta={{ label: "Contact MhStudio", href: "/contact" }}
       />
@@ -23,27 +23,24 @@ export default function AboutPage() {
         <div className="content-shell grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <Reveal className="surface-card p-8 sm:p-10">
             <span className="eyebrow">Story</span>
-            <h2 className="mt-5 text-[2rem] font-semibold leading-[1.1] text-foreground sm:text-[2.8rem]">
-              Every business deserves a website that feels as strong as the business behind it.
+            <h2 className="mt-5 text-[2rem] font-semibold leading-[1.15] text-foreground sm:text-[2.8rem]">
+              Your website should match the quality of your dining room.
             </h2>
             <p className="mt-5 text-base leading-[1.7] text-foreground-body sm:text-lg">
-              MhStudio exists to bridge the gap between visual quality and business performance. The goal is not simply to ship pages, but to give local businesses a digital presence that feels premium, credible, and ready to convert.
-            </p>
-            <p className="mt-4 text-base leading-[1.7] text-foreground-body sm:text-lg">
-              The work blends strategy, strong content structure, and fast frontend execution so owners can present their services with clarity and confidence.
+              MhStudio blends culinary strategy, visual design, and fast frontend engineering. We give restaurants a premium digital presence that is easy to navigate, fast to load, and built to convert hungry visitors.
             </p>
           </Reveal>
           <Reveal delayMs={100} className="grid gap-6">
             <div className="surface-card p-6">
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-200">Mission</p>
-              <p className="mt-4 text-sm leading-[1.7] text-foreground-body sm:text-base">
-                Build websites that drive growth, build trust, and turn local-business attention into action.
+              <p className="mt-3 text-sm leading-[1.7] text-foreground-body sm:text-base">
+                Build high-performance websites that increase reservations and elevate your restaurant's brand.
               </p>
             </div>
             <div className="surface-card p-6">
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-200">Vision</p>
-              <p className="mt-4 text-sm leading-[1.7] text-foreground-body sm:text-base">
-                Become the premium digital partner local businesses think of when they need modern websites that actually support results.
+              <p className="mt-3 text-sm leading-[1.7] text-foreground-body sm:text-base">
+                Empower restaurants with digital tools that fill tables, showcase menus, and simplify operations.
               </p>
             </div>
             <div className="surface-card p-6">
@@ -63,9 +60,9 @@ export default function AboutPage() {
         <div className="content-shell grid gap-6 lg:grid-cols-2">
           <Reveal className="surface-card p-6 sm:p-8">
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-200">Your Journey</p>
-            <h2 className="mt-4 text-2xl font-semibold text-foreground">From business goals to launch-ready confidence.</h2>
+            <h2 className="mt-4 text-2xl font-semibold text-foreground">From concept to launch-ready confidence.</h2>
             <p className="mt-4 text-sm leading-[1.7] text-foreground-body sm:text-base">
-              MhStudio works through discovery, planning, design, development, testing, and launch so the website reflects the business clearly and performs well across devices.
+              We guide you through strategy, layout design, and fast coding to launch a website that performs perfectly across all devices.
             </p>
             <div className="mt-6 grid gap-3">
               {processSteps.slice(0, 6).map((step) => (

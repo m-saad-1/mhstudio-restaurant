@@ -22,7 +22,7 @@ export function PageHero({
         <div className="relative flex max-w-[700px] flex-col gap-6">
           <span className="eyebrow w-fit">{eyebrow}</span>
           <div className="space-y-4">
-            <h1 className="text-[2.2rem] font-semibold leading-[1.1] text-foreground sm:text-[3.2rem] lg:text-[4.2rem]">
+            <h1 className="text-[1.8rem] font-semibold leading-[1.15] text-foreground sm:text-[2.6rem] lg:text-[3.4rem]">
               {title}
             </h1>
             <p className="text-base leading-[1.7] text-foreground-body sm:text-lg">

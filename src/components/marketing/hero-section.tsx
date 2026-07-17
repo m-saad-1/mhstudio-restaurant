@@ -12,11 +12,11 @@ import {
 import { siteConfig } from "@/data/site-content";
 
 const trustItems = [
-  { label: "Fast Delivery", icon: Zap },
-  { label: "AI Integration", icon: Bot },
-  { label: "SEO Ready", icon: SearchCheck },
-  { label: "Modern Design", icon: Sparkles },
-  { label: "Secure Hosting", icon: ShieldCheck },
+  { label: "95+ Page Speed", icon: Zap },
+  { label: "AI Receptionist", icon: Bot },
+  { label: "Local SEO & Maps", icon: SearchCheck },
+  { label: "Mobile-First Menus", icon: Sparkles },
+  { label: "Secure SSL Hosting", icon: ShieldCheck },
 ];
 
 export function HeroSection() {
@@ -27,17 +27,17 @@ export function HeroSection() {
       <div className="mx-auto flex min-h-0 w-full max-w-[1200px] flex-col items-center justify-start pt-4 gap-4 text-center sm:min-h-[calc(100svh-96px)] sm:pt-[clamp(3rem,8vh,6rem)] sm:gap-5 lg:gap-6">
         <span className="eyebrow border-white/10 bg-white/5 text-foreground !text-[10px] !px-3 !py-1 sm:!text-xs sm:!px-4 sm:!py-1.5">
           <Sparkles className="h-3.5 w-3.5 text-accent sm:h-4 sm:w-4" />
-          AI Solutions • Web Applications • SaaS Products
+          Premium Websites • Online Menus • Restaurant AI
         </span>
 
         <div className="space-y-3 sm:space-y-4">
-          <h1 className="mx-auto text-[clamp(1.8rem,6vw,3.2rem)] font-semibold leading-[1.12] tracking-[-0.04em] text-foreground sm:text-[clamp(2.4rem,4.5vw,4rem)]">
-            <span className="block">Building Software That Doesn&apos;t Just Work</span>
-            <span className="block">— It Helps Your Business Grow.</span>
+          <h1 className="mx-auto text-[clamp(1.6rem,5vw,2.8rem)] font-semibold leading-[1.12] tracking-[-0.04em] text-foreground sm:text-[clamp(2.2rem,4vw,3.5rem)]">
+            <span className="block">Premium Websites for Restaurants</span>
+            <span className="block">— Built to Fill Your Tables.</span>
           </h1>
 
-          <p className="mx-auto max-w-[700px] text-pretty text-sm leading-[1.65] text-foreground-body sm:text-[clamp(1rem,2vw,1.125rem)]">
-            MHStudio develops high-performance applications, AI systems, and scalable SaaS products engineered for modern businesses.
+          <p className="mx-auto max-w-[840px] text-pretty text-sm leading-[1.65] text-foreground-body sm:text-[clamp(1.05rem,1.8vw,1.125rem)]">
+            MHStudio designs and builds high-performance restaurant websites with interactive menus, online reservation integrations, and 24/7 AI-powered booking assistants.
           </p>
         </div>
 

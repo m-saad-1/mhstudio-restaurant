@@ -13,7 +13,7 @@ export type Metric = {
 export type PortfolioItem = {
   slug: string;
   title: string;
-  category: "Restaurant" | "Hotels" | "Bar" | "AI & Automation";
+  category: "Restaurant" | "Hotels" | "Bar";
   clientType: string;
   shortDescription: string;
   overview: string;
@@ -33,12 +33,12 @@ export type PortfolioItem = {
 
 export const siteConfig = {
   name: "MhStudio",
-  tagline: "Premium software, custom AI systems, and automated workflows.",
+  tagline: "Premium websites and AI features for modern restaurants.",
   description:
-    "MhStudio develops high-performance applications, custom AI integrations, and scalable software systems engineered for modern business growth.",
+    "MhStudio designs and develops high-performance, conversion-focused websites for modern restaurants, featuring online menus, digital reservations, and custom restaurant AI assistants.",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "saad@mhstudios.online",
   whatsappHref: process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "https://wa.me/+923429842565",
-  calendarHref: process.env.NEXT_PUBLIC_CALENDAR_URL ?? "https://calendly.com/muhammadsaad23305/30min",
+  calendarHref: process.env.NEXT_PUBLIC_CALENDAR_URL ?? "https://calendly.com/mhstudio/30min",
   phoneLabel: "WhatsApp consultation",
 };
 
@@ -58,28 +58,28 @@ export const socialLinks = [
 ];
 
 export const trustedIndustries = [
-  "Restaurants",
-  "Salons",
-  "Gyms",
-  "Dental Clinics",
-  "Barbers",
-  "Coffee Shops",
-  "Small Businesses",
+  "Fine Dining",
+  "Casual Dining",
+  "Cafes & Bistros",
+  "Bars & Pubs",
+  "Pizzerias",
+  "Steakhouses",
+  "Sushi Bars",
 ];
 
 export const industries = [
-  "Restaurant",
-  "Gym",
-  "Dental",
-  "Salon",
-  "Barber",
-  "Law Firm",
-  "Consultant",
-  "Real Estate",
-  "Medical",
-  "Construction",
-  "Education",
-  "Small Business",
+  "Fine Dining",
+  "Casual Dining",
+  "Cafe",
+  "Bar & Grill",
+  "Pizzeria",
+  "Steakhouse",
+  "Sushi Bar",
+  "Fast Casual",
+  "Bakery",
+  "Bistro",
+  "Food Truck",
+  "Catering",
 ];
 
 export type IndustryShowcaseItem = {
@@ -91,75 +91,39 @@ export type IndustryShowcaseItem = {
 
 export const industryShowcaseItems: IndustryShowcaseItem[] = [
   {
-    label: "Restaurant",
+    label: "Restaurants & Bistros",
     image: "/images/restaurant.avif",
+    alt: "Cozy bistro dining space and plated culinary dishes.",
+    objectPosition: "center center",
+  },
+  {
+    label: "Fine Dining",
+    image: "/images/fine_dining.png",
     alt: "Elegant restaurant table with plated dishes and warm ambient lighting.",
     objectPosition: "center center",
   },
   {
-    label: "Salon",
-    image: "/images/salon.avif",
-    alt: "Stylist preparing a haircut in a premium salon setting.",
+    label: "Casual Dining",
+    image: "/images/casual_dining.png",
+    alt: "Expansive casual dining restaurant seating and food display.",
     objectPosition: "center center",
   },
   {
-    label: "Gym",
-    image: "/images/gym.avif",
-    alt: "Modern gym interior with strength training equipment and dramatic lighting.",
-    objectPosition: "center center",
-  },
-  {
-    label: "Dental Clinic",
-    image: "/images/dental_clinic.avif",
-    alt: "Dental professional workspace with clean clinical equipment.",
-    objectPosition: "center center",
-  },
-  {
-    label: "Barbershop",
-    image: "/images/barbershop.avif",
-    alt: "Barbershop scene with a clean haircut in progress and premium grooming details.",
-    objectPosition: "center center",
-  },
-  {
-    label: "Coffee Shop",
+    label: "Cafes & Coffee Shops",
     image: "/images/coffee_shop.avif",
-    alt: "Coffee shop barista with espresso equipment and moody lighting.",
+    alt: "Coffee shop barista preparing specialty drinks.",
     objectPosition: "center center",
   },
   {
-    label: "Small Business",
-    image: "/images/small_business.avif",
-    alt: "Small business team collaborating in a modern workspace.",
+    label: "Bars & Nightlife",
+    image: "/images/bar_nightlife.png",
+    alt: "Vibrant bar scene with cocktails and warm lighting.",
     objectPosition: "center center",
   },
   {
-    label: "Consultant",
-    image: "/images/consultant.avif",
-    alt: "Consulting team reviewing ideas around a conference table.",
-    objectPosition: "center center",
-  },
-  {
-    label: "Real Estate",
-    image: "/images/real_estate.avif",
-    alt: "Modern home exterior with clean architectural lines.",
-    objectPosition: "center center",
-  },
-  {
-    label: "Medical",
-    image: "/images/medical.avif",
-    alt: "Medical professional in a calm clinical environment.",
-    objectPosition: "center center",
-  },
-  {
-    label: "Construction",
-    image: "/images/construction.avif",
-    alt: "Construction worker on site with an active build in the background.",
-    objectPosition: "center center",
-  },
-  {
-    label: "Education",
-    image: "/images/education.avif",
-    alt: "Classroom environment with students collaborating around a table.",
+    label: "Restaurant Groups",
+    image: "/images/restaurant_group.png",
+    alt: "Premium multi-location restaurant brand presentation.",
     objectPosition: "center center",
   },
 ];
@@ -169,397 +133,303 @@ export const stats: Metric[] = [
     label: "Projects Completed",
     value: 6,
     suffix: "+",
-    description: "Launch-ready concept builds tailored to local service businesses.",
+    description: "Premium websites designed and launched for restaurants and food brands.",
   },
   {
     label: "Years Experience",
     value: 4,
     suffix: "+",
-    description: "Hands-on website design and development experience across modern stacks.",
+    description: "Creating high-performance digital dining experiences.",
   },
   {
-    label: "Satisfied Clients",
+    label: "Satisfied Owners",
     value: 6,
     suffix: "+",
-    description: "A focused portfolio built around clarity, speed, and business conversion.",
+    description: "Restaurant owners enjoying seamless reservations and increased orders.",
   },
   {
-    label: "Industries Served",
-    value: 12,
+    label: "Establishment Types",
+    value: 8,
     suffix: "+",
-    description: "From restaurants and salons to clinics, consultants, and local brands.",
+    description: "From fine dining and casual eateries to bars, cafes, and bakeries.",
   },
   {
     label: "Technologies Used",
-    value: 14,
+    value: 12,
     suffix: "+",
-    description: "A modern toolkit selected for speed, maintainability, and growth.",
+    description: "Modern tools chosen for speed, online menus, and booking integrations.",
   },
 ];
 
 export const whyChooseItems = [
   {
-    title: "Business-First Thinking",
-    problem: "Technology is only the tool.",
-    solution: "We start by understanding your business goals and growth strategy before writing code.",
+    title: "Speed & Performance",
+    problem: "Guests won't wait for a slow menu to load.",
+    solution: "MhStudio builds ultra-fast, lightweight pages so customers can view your menu and book tables instantly, even on poor mobile connections.",
   },
   {
-    title: "Built for Scale",
-    problem: "Designed to grow with you.",
-    solution: "Solutions are architected with future growth and long-term scalability in mind.",
+    title: "Mobile-First Menus",
+    problem: "Most guests search for your restaurant on their phone.",
+    solution: "Our digital menus and reservation flows are designed specifically for fingers on screens, ensuring a seamless booking experience on the go.",
   },
   {
-    title: "Transparent Process",
-    problem: "No surprises along the way.",
-    solution: "Clear communication and defined milestones keep every project predictable.",
+    title: "Local SEO & Maps",
+    problem: "A beautiful site is useless if hungry customers can't find you.",
+    solution: "We implement advanced local schema markup and Google Maps integrations to ensure you rank high when people search for food near them.",
   },
   {
-    title: "Modern Engineering",
-    problem: "Built using best practices.",
-    solution: "Clean architecture and production-ready standards ensure long-term reliability.",
+    title: "Self-Managed Menus",
+    problem: "You shouldn't need a developer to change a price or add a special.",
+    solution: "We design simple, intuitive admin panels allowing you to update dishes, prices, and announcements in real-time with zero technical skills.",
   },
   {
-    title: "Quality Without Compromise",
-    problem: "Every detail matters.",
-    solution: "Quality is built into every stage, from user experience to performance.",
+    title: "AI-Powered Assistants",
+    problem: "Missing reservation inquiries during busy hours costs revenue.",
+    solution: "We integrate smart AI receptionists that handle booking assistance, answer FAQ questions about dietary options, and log inquiries 24/7.",
   },
   {
-    title: "Long-Term Partnership",
-    problem: "Beyond project delivery.",
-    solution: "We continue supporting and scaling your product as your business evolves.",
-  },
-  {
-    title: "Tailored Solutions",
-    problem: "No templates. No shortcuts.",
-    solution: "Every solution is designed around your specific business needs.",
-  },
-  {
-    title: "Results That Matter",
-    problem: "Focused on business impact.",
-    solution: "Success is measured by better user experiences and measurable business growth.",
+    title: "Stunning Food Showcases",
+    problem: "Low-quality or poorly displayed photos make your food look unappetizing.",
+    solution: "We build premium visual galleries and showcases that highlight your culinary artistry, interior ambiance, and brand story.",
   },
 ];
 
 export const serviceCards = [
   {
-    title: "Web Development",
-    description: "Mobile-optimized frontend development that feels smooth, fast, and polished on every screen.",
-    features: ["Performance-first build", "Responsive breakpoints", "Accessible interaction patterns"],
+    title: "Modern Restaurant Websites",
+    description: "Custom, responsive website builds that showcase your brand, dining experience, and locations.",
+    features: ["Brand story layout", "Multi-location ready", "Fluid responsive design"],
     icon: "monitor-smartphone",
   },
   {
-    title: "Custom AI Solutions",
-    description: "Tailored machine learning models and intelligent tools designed for your specific business needs.",
-    features: ["Data Processing", "Computer Vision", "Predictive Modeling"],
-    icon: "brain",
+    title: "Interactive Online Menus",
+    description: "Fast, mobile-optimized digital menus that make browsing dishes and pricing effortless for guests.",
+    features: ["Category navigation", "Dietary filters (e.g., Vegan, GF)", "Dynamic price updates"],
+    icon: "utensils-crossed",
   },
   {
-    title: "E-commerce Development",
-    description: "High-performance online stores optimized for fast checkouts and high conversion rates.",
-    features: ["Custom Storefronts", "Secure Checkouts", "Inventory Management"],
-    icon: "shopping-cart",
+    title: "Online Reservation Systems",
+    description: "Easy connection to OpenTable, Resy, or custom reservation flows to keep tables booked.",
+    features: ["Direct platform widgets", "Custom booking inquiry forms", "Reservation FAQs"],
+    icon: "calendar",
   },
   {
-    title: "Workflow Automation",
-    description: "Custom AI assistants built to handle customer support, lead generation, and inquiries 24/7.",
-    features: ["Natural Language", "Contextual Memory", "CRM Integration"],
+    title: "AI Restaurant Assistants",
+    description: "Intelligent chat and WhatsApp AI assistants to answer ingredient FAQs, automate customer replies, and assist with bookings 24/7.",
+    features: ["WhatsApp AI integration", "Automated booking support", "Menu FAQ responses"],
     icon: "bot",
   },
   {
-    title: "AI-Powered Web Applications",
-    description: "Next-generation web apps with built-in artificial intelligence for dynamic, personalized user experiences.",
-    features: ["Dynamic Generation", "Personalized UI", "Intelligent Workflows"],
-    icon: "sparkles",
+    title: "Gallery & Food Showcases",
+    description: "Stunning food photography and interior gallery layouts designed to captivate guests.",
+    features: ["High-speed image loading", "Lightbox gallery overlays", "Ambiance highlight reels"],
+    icon: "images",
   },
   {
-    title: "Business Websites",
-    description: "Multi-page websites for local brands that need trust, clarity, and a stronger digital presence.",
-    features: ["Page architecture", "Service storytelling", "Location-ready sections"],
-    icon: "briefcase-business",
+    title: "Events & Announcements",
+    description: "Promote holiday menus, wine tastings, private dining options, and local events.",
+    features: ["Announcement banners", "Special menu builders", "Private event booking flows"],
+    icon: "megaphone",
   },
   {
-    title: "AI Integration",
-    description: "Seamlessly embed AI capabilities into your existing systems to enhance decision making.",
-    features: ["OpenAI & LLMs", "Predictive Analytics", "Smart Search"],
-    icon: "cpu",
-  },
-  {
-    title: "Business Process Automation",
-    description: "Reduce manual work by automating repetitive tasks, connecting apps, and streamlining operations.",
-    features: ["Zapier & Make", "Custom Webhooks", "Data Syncing"],
-    icon: "workflow",
-  },
-  {
-    title: "Workflow Automation",
-    description: "Connect disparate systems and automate complex multi-step workflows to save time and reduce errors.",
-    features: ["System Integrations", "Error Reduction", "Time Savings"],
-    icon: "git-merge",
-  },
-  {
-    title: "Desktop Application",
-    description: "Cross-platform desktop applications built with web technologies for Windows, macOS, and Linux.",
-    features: ["Electron & Tauri", "Offline Support", "Native Features"],
-    icon: "monitor",
-  },
-  {
-    title: "API Integration",
-    description: "Connect third-party services and payment gateways to expand your platform's capabilities.",
-    features: ["RESTful APIs", "Payment Gateways", "Third-party Services"],
-    icon: "plug",
-  },
-  {
-    title: "Landing Pages",
-    description: "Focused campaign pages designed to turn traffic into calls, bookings, and qualified leads.",
-    features: ["Single-goal structure", "Lead capture forms", "High-intent CTAs"],
-    icon: "goal",
-  },
-  {
-    title: "Website Design",
-    description: "Custom interface design built to position your business as credible, modern, and easy to trust.",
-    features: ["Custom UI direction", "Premium page layouts", "Conversion-first content flow"],
-    icon: "palette",
-  },
-  {
-    title: "SEO Optimization",
-    description: "Technical SEO foundations that help local businesses show up clearly and rank more confidently.",
-    features: ["Metadata setup", "Semantic structure", "Performance support"],
-    icon: "search",
+    title: "Local SEO & Map Rankings",
+    description: "Technical search optimization so your restaurant shows up first when customers search nearby.",
+    features: ["Google Business optimization", "Schema markup for menus/hours", "Local keyword targeting"],
+    icon: "map-pinned",
   },
   {
     title: "Performance Optimization",
-    description: "Speed-focused improvements that keep the experience smooth and Core Web Vitals-aware.",
-    features: ["Core Web Vitals", "Image handling", "Interaction polish"],
-    icon: "gauge",
+    description: "Speed-focused improvements ensuring your pages load instantly even on cellular data.",
+    features: ["95+ Core Web Vitals score", "Advanced image compression", "Instant page transitions"],
+    icon: "zap",
   },
   {
-    title: "Website Maintenance",
-    description: "Ongoing support to keep your website secure, current, and aligned with your business updates.",
-    features: ["Content updates", "Backup guidance", "Health checks"],
-    icon: "shield-check",
-  },
-  {
-    title: "Hosting & Deployment",
-    description: "Deployment guidance and launch readiness for reliable modern hosting environments.",
-    features: ["Vercel", "Netlify", "Cloudflare"],
-    icon: "cloud",
-  },
-  {
-    title: "Technical Consulting",
-    description: "Strategic technical guidance to help you choose the right stack and architecture for your goals.",
-    features: ["Architecture Design", "Stack Selection", "Code Reviews"],
-    icon: "lightbulb",
+    title: "Website Maintenance & Support",
+    description: "Ongoing support to update your menus, pricing, hours, and announcements without delay.",
+    features: ["Same-day content updates", "Regular backups & health checks", "Security monitoring"],
+    icon: "wrench",
   },
 ];
 
 export const serviceSections = [
   {
-    title: "Web Development",
-    description: "Modern frontend development that turns approved designs into responsive, production-ready pages.",
-    points: ["Modern stack", "Responsive implementation", "Accessible markup"],
-    icon: "code-xml",
+    title: "Modern Restaurant Websites",
+    description: "Custom, responsive website builds that showcase your brand, dining experience, and locations.",
+    points: ["Brand story layout", "Multi-location ready", "Fluid responsive design"],
+    icon: "monitor-smartphone",
   },
   {
-    title: "Custom AI Solutions",
-    description: "Tailored machine learning models and intelligent tools designed for your specific business needs.",
-    points: ["Data Processing", "Computer Vision", "Predictive Modeling"],
-    icon: "brain",
+    title: "Interactive Online Menus",
+    description: "Fast, mobile-optimized digital menus that make browsing dishes and pricing effortless for guests.",
+    points: ["Category navigation", "Dietary filters (e.g., Vegan, GF)", "Dynamic price updates"],
+    icon: "utensils-crossed",
   },
   {
-    title: "E-commerce Development",
-    description: "High-performance online stores optimized for fast checkouts and high conversion rates.",
-    points: ["Custom Storefronts", "Secure Checkouts", "Inventory Management"],
-    icon: "shopping-cart",
+    title: "Online Reservation Systems",
+    description: "Easy connection to OpenTable, Resy, or custom reservation flows to keep tables booked.",
+    points: ["Direct platform widgets", "Custom booking inquiry forms", "Reservation FAQs"],
+    icon: "calendar",
   },
   {
-    title: "Workflow Automation",
-    description: "Custom AI assistants built to handle customer support, lead generation, and inquiries 24/7.",
-    points: ["Natural Language", "Contextual Memory", "CRM Integration"],
+    title: "AI Restaurant Assistants",
+    description: "Intelligent chat and WhatsApp AI assistants to answer ingredient FAQs, automate customer replies, and assist with bookings 24/7.",
+    points: ["WhatsApp AI integration", "Automated booking support", "Menu FAQ responses"],
     icon: "bot",
   },
   {
-    title: "AI-Powered Web Applications",
-    description: "Next-generation web apps with built-in artificial intelligence for dynamic, personalized user experiences.",
-    points: ["Dynamic Generation", "Personalized UI", "Intelligent Workflows"],
-    icon: "sparkles",
+    title: "WhatsApp AI Assistant",
+    description: "Connect a custom AI assistant directly to your WhatsApp to handle reservation assistance, menu lookups, and customer queries.",
+    points: ["WhatsApp API integration", "Automated customer replies", "Menu & ingredient support"],
+    icon: "message-circle-more",
   },
   {
-    title: "Business Websites",
-    description: "Complete websites that give service businesses a strong digital home with a clear conversion path.",
-    points: ["Complete websites", "Trust-building sections", "Service clarity"],
-    icon: "briefcase-business",
+    title: "Gallery & Food Showcases",
+    description: "Stunning food photography and interior gallery layouts designed to captivate guests.",
+    points: ["High-speed image loading", "Lightbox gallery overlays", "Ambiance highlight reels"],
+    icon: "images",
   },
   {
-    title: "AI Integration",
-    description: "Seamlessly embed AI capabilities into your existing systems to enhance decision making.",
-    points: ["OpenAI & LLMs", "Predictive Analytics", "Smart Search"],
-    icon: "cpu",
+    title: "Events & Announcements",
+    description: "Promote holiday menus, wine tastings, private dining options, and local events.",
+    points: ["Announcement banners", "Special menu builders", "Private event booking flows"],
+    icon: "megaphone",
   },
   {
-    title: "Business Process Automation",
-    description: "Reduce manual work by automating repetitive tasks, connecting apps, and streamlining operations.",
-    points: ["Zapier & Make", "Custom Webhooks", "Data Syncing"],
-    icon: "workflow",
-  },
-  {
-    title: "Workflow Automation",
-    description: "Connect disparate systems and automate complex multi-step workflows to save time and reduce errors.",
-    points: ["System Integrations", "Error Reduction", "Time Savings"],
-    icon: "git-merge",
-  },
-  {
-    title: "Desktop Application",
-    description: "Cross-platform desktop applications built with web technologies for Windows, macOS, and Linux.",
-    points: ["Electron & Tauri", "Offline Support", "Native Features"],
-    icon: "monitor",
-  },
-  {
-    title: "API Integration",
-    description: "Connect third-party services and payment gateways to expand your platform's capabilities.",
-    points: ["RESTful APIs", "Payment Gateways", "Third-party Services"],
-    icon: "plug",
-  },
-  {
-    title: "Landing Pages",
-    description: "High-intent page structures built for promotions, launches, consultations, and lead generation.",
-    points: ["Lead generation", "Offer positioning", "Single-page funnels"],
-    icon: "goal",
-  },
-  {
-    title: "Website Design",
-    description: "Design systems, page layouts, and visual direction that make a local business feel premium and trustworthy.",
-    points: ["Custom UI", "Conversion copy structure", "Visual hierarchy"],
-    icon: "palette",
-  },
-  {
-    title: "SEO Optimization",
-    description: "Practical technical SEO foundations to help businesses perform better in local discovery and search.",
-    points: ["Technical SEO", "Metadata", "Semantic structure"],
-    icon: "search",
+    title: "Local SEO & Map Rankings",
+    description: "Technical search optimization so your restaurant shows up first when customers search nearby.",
+    points: ["Google Business optimization", "Schema markup for menus/hours", "Local keyword targeting"],
+    icon: "map-pinned",
   },
   {
     title: "Performance Optimization",
-    description: "Speed-focused improvements that keep the experience smooth and Core Web Vitals-aware.",
-    points: ["Core Web Vitals", "Image handling", "Interaction polish"],
-    icon: "gauge",
+    description: "Speed-focused improvements ensuring your pages load instantly even on cellular data.",
+    points: ["95+ Core Web Vitals score", "Advanced image compression", "Instant page transitions"],
+    icon: "zap",
   },
   {
-    title: "Website Maintenance",
-    description: "Ongoing support for updates, backups, and content confidence after launch.",
-    points: ["Updates", "Backups", "Security"],
-    icon: "shield-check",
-  },
-  {
-    title: "Hosting & Deployment",
-    description: "Deployment guidance and launch readiness for reliable modern hosting environments.",
-    points: ["Vercel", "Netlify", "Cloudflare"],
-    icon: "cloud",
-  },
-  {
-    title: "Technical Consulting",
-    description: "Strategic technical guidance to help you choose the right stack and architecture for your goals.",
-    points: ["Architecture Design", "Stack Selection", "Code Reviews"],
-    icon: "lightbulb",
+    title: "Website Maintenance & Support",
+    description: "Ongoing support to update your menus, pricing, hours, and announcements without delay.",
+    points: ["Same-day content updates", "Regular backups & health checks", "Security monitoring"],
+    icon: "wrench",
   },
 ];
 
 export const websiteFeatures = [
-  { title: "High Performance", description: "Fast experiences create better first impressions. Optimized code and efficient asset delivery ensure your application loads quickly.", icon: "zap" },
-  { title: "AI Integration", description: "Bring intelligence into your business. Integrate AI chatbots, assistants, and LLM-powered workflows directly into your application.", icon: "bot" },
-  { title: "Workflow Automation", description: "Reduce repetitive work. Automate business processes, notifications, and scheduling to improve efficiency.", icon: "workflow" },
-  { title: "Secure Authentication", description: "Protect users and business data. Implement secure authentication with role-based access control and enterprise security practices.", icon: "shield-check" },
-  { title: "Admin Dashboards", description: "Manage everything from one place. Custom dashboards for managing users, content, orders, and business operations.", icon: "layout-dashboard" },
-  { title: "API & Third-Party Integrations", description: "Connect the tools your business already uses. Integrate payment gateways, CRMs, and external platforms.", icon: "plug" },
-  { title: "SEO & Discoverability", description: "Make it easy for customers to find you. Technical SEO and search engine best practices are built into every project.", icon: "search-check" },
-  { title: "Scalable Architecture", description: "Ready to grow with your business. Applications are built with clean architecture that supports future features and increasing traffic.", icon: "layers" },
-  { title: "Cloud Deployment", description: "Reliable deployment from day one. Deployment to modern cloud platforms with CI/CD pipelines and secure hosting configurations.", icon: "cloud" },
-  { title: "SaaS Development", description: "Launch products with confidence. Build scalable SaaS platforms with subscriptions, multi-tenant architecture, and billing.", icon: "box" },
-  { title: "MVP Development", description: "Validate ideas faster. Rapidly build production-ready MVPs to help startups launch and collect feedback.", icon: "rocket" },
-  { title: "E-Commerce Solutions", description: "Sell products online. Develop secure stores with product management, payments, and order tracking.", icon: "shopping-cart" },
-  { title: "Ongoing Support & Maintenance", description: "Your product doesn't stop after launch. Continuous maintenance, security updates, and technical support ensure your application stays reliable.", icon: "wrench" },
+  { title: "Interactive Menu Builder", description: "Easily structured content sections for food, drinks, and daily specials.", icon: "utensils-crossed" },
+  { title: "Online Reservations", description: "Seamless integration with OpenTable, Resy, or custom calendar systems.", icon: "calendar" },
+  { title: "AI Restaurant Assistant", description: "Smart chat receptionists to answer ingredients questions and assist with bookings 24/7.", icon: "bot" },
+  { title: "Mobile-First Experience", description: "Perfect readability and navigation on smartphones, where 80%+ of guests find you.", icon: "smartphone" },
+  { title: "Local SEO Schema", description: "Pre-configured Schema.json markup for menu items, opening hours, and location.", icon: "search-check" },
+  { title: "Google Maps Integration", description: "Embedded, responsive maps to guide guests straight to your front door.", icon: "map-pinned" },
+  { title: "Social Proof & Reviews", description: "Displays for Google Reviews, Yelp stars, and diner testimonials.", icon: "star" },
+  { title: "Fast Performance", description: "Blazing-fast load times ensuring guests don't abandon your site before seeing the menu.", icon: "zap" },
+  { title: "Food & Ambiance Gallery", description: "Beautiful lightbox grids to showcase your plating, interior design, and staff.", icon: "images" },
+  { title: "Events & Announcements", description: "Banners and cards for wine nights, brunch specials, and holiday hours.", icon: "megaphone" },
+  { title: "Secure Hosting & SSL", description: "Robust deployment on modern cloud networks keeping your site safe and online.", icon: "server-cog" },
+  { title: "Self-Managed CMS", description: "Simple dashboard to change pricing, hours, or dishes in under two minutes.", icon: "layout-dashboard" },
+  { title: "Newsletter Signups", description: "Integrated forms to grow your email list for marketing and announcements.", icon: "mail" },
 ];
 
 export const processSteps = [
   {
     step: "01",
     title: "Discovery",
-    description: "We learn your business goals, audience, offer, and what success should look like online.",
-    bullets: ["Business goals", "Audience review", "Offer clarity"],
+    description: "We learn about your brand, menu specialties, location, and guest booking goals.",
+    bullets: ["Restaurant goals", "Guest profile", "Brand identity"],
   },
   {
     step: "02",
     title: "Planning",
-    description: "We map the information architecture, wireframes, content direction, and CTA flow.",
-    bullets: ["Wireframes", "Content planning", "Conversion strategy"],
+    description: "We structure the online menu, reservation paths, and map out location pages.",
+    bullets: ["Menu architecture", "Booking flows", "CTA placements"],
   },
   {
     step: "03",
     title: "Design",
-    description: "We create a modern UI system that feels premium, fast, and aligned with your brand.",
-    bullets: ["Design system", "Page composition", "Mobile-first review"],
+    description: "We create a premium visual system that highlights your dishes and captures your dining room ambiance.",
+    bullets: ["Visual branding", "Food photography prep", "Mobile menu layout"],
   },
   {
     step: "04",
     title: "Development",
-    description: "The approved design is built into responsive, production-ready pages with clean structure.",
-    bullets: ["Responsive frontend", "Performance focus", "SEO-ready structure"],
+    description: "We build your custom responsive pages, optimize images, and integrate booking systems.",
+    bullets: ["Fast-loading menus", "Third-party bookings", "Local SEO structure"],
   },
   {
     step: "05",
     title: "Testing",
-    description: "We review responsiveness, accessibility, polish, and consistency before launch.",
-    bullets: ["Performance review", "Accessibility checks", "Cross-device QA"],
+    description: "We test menu interactions, booking flows, page performance, and mobile layout.",
+    bullets: ["Menu usability test", "Booking checks", "Performance optimization"],
   },
   {
     step: "06",
     title: "Launch",
-    description: "Your site goes live with support for analytics, handoff, and next-step improvements.",
-    bullets: ["Deployment", "Analytics readiness", "Post-launch support"],
+    description: "Your site goes live with Google Maps sync, analytics, and self-managed menu support.",
+    bullets: ["Domain connection", "Analytics setup", "Dashboard handover"],
   },
 ];
 
 export const technologyGroups = [
   { title: "Frontend", items: ["React.js", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap"] },
-  { title: "Backend", items: ["Node.js", "Express.js", "PHP", "Laravel", "REST APIs", "JWT Authentication", "Google OAuth"] },
-  { title: "Databases", items: ["MongoDB", "PostgreSQL", "MySQL", "Supabase", "Firebase", "Prisma ORM"] },
-  { title: "AI & Automation", items: ["Python", "AI Integration", "AI Chatbots", "Automation", "AI-Powered", "Machine Learning", "Data Processing"] },
-  { title: "Tools & DevOps", items: ["Git", "GitHub", "AWS", "CI/CD Pipeline", "Cloudflare", "Vercel", "Netlify", "Cloudinary", "Postman", "Electron", "Tauri"] },
+  { title: "Backend & CMS", items: ["Node.js", "Express.js", "REST APIs", "Sanity CMS", "Payload CMS", "Strapi", "WordPress API"] },
+  { title: "Databases & Storage", items: ["MongoDB", "PostgreSQL", "Supabase", "Prisma ORM", "Redis"] },
+  { title: "AI & Automation", items: ["Gemini AI", "OpenAI API", "AI Chat Assistants", "Automated Booking", "Dietary Analysis", "Customer Reply Bots"] },
+  { title: "Tools & Integrations", items: ["Git", "GitHub", "Vercel", "Cloudflare", "Cloudinary", "OpenTable API", "Resy API", "Google Business Profile"] },
 ];
 
 export const faqs = [
   {
-    question: "How long does a project typically take?",
+    question: "How long does a restaurant website take?",
     answer:
-      "Timelines vary by scope. A modern marketing website usually takes 2-6 weeks, while MVPs, SaaS platforms, and complex AI integrations can take 4-12 weeks.",
+      "A standard restaurant website takes 2-4 weeks, while larger groups requiring multi-location support or advanced AI reservation features take 4-6 weeks.",
   },
   {
-    question: "Can you modernize an existing product or application?",
+    question: "Can you redesign our existing restaurant website?",
     answer:
-      "Yes. We can refactor legacy codebases, improve UI/UX, integrate new AI features, and optimize performance for existing digital products.",
+      "Yes. We can update outdated designs, optimize your menu for mobile viewing, and migrate you to a faster, modern stack to improve reservation conversion rates.",
   },
   {
     question: "Do you offer post-launch support and maintenance?",
     answer:
-      "Absolutely. We provide ongoing support, security updates, and performance monitoring to ensure your application remains reliable as your business scales.",
+      "Absolutely. We offer ongoing maintenance packages to handle regular menu changes, holiday hours, price updates, and technical performance checks.",
   },
   {
     question: "Will I be able to manage the platform after launch?",
     answer:
-      "Yes. We build with maintainability in mind. We provide custom admin dashboards and scalable architectures so your team can manage content and data effortlessly.",
+      "Yes. We provide a simple, intuitive custom dashboard so you or your staff can update menu items, prices, photos, and announce special events in minutes.",
   },
   {
     question: "Do you handle hosting and cloud deployment?",
     answer:
-      "Yes. We set up production-ready environments using modern cloud infrastructure like Vercel, AWS, or Cloudflare, complete with CI/CD pipelines.",
+      "Yes. We set up fast, secure, and production-ready hosting environments on modern networks like Vercel and Cloudflare, complete with SSL certificates.",
   },
   {
     question: "How do you ensure the product performs well?",
     answer:
-      "Performance and SEO are built into our foundation. We use optimized code, modern rendering techniques, semantic architecture, and strict quality assurance.",
+      "Performance is critical for mobile visitors. We optimize every image of your dishes, write lean code, and ensure near-perfect page speeds so customers stay engaged.",
   },
   {
-    question: "Can you integrate third-party APIs and tools?",
+    question: "Can you integrate our existing reservation and booking systems?",
     answer:
-      "Yes. We integrate CRMs, payment gateways, booking systems, LLMs (like OpenAI), and any other third-party services your business relies on.",
+      "Yes. We can seamlessly embed widgets or connect APIs for OpenTable, Resy, SevenRooms, or standard calendar booking tools directly into your layout.",
+  },
+];
+
+export const leftFaqs = [
+  {
+    question: "Can you design a website that handles multiple locations?",
+    answer:
+      "Yes. We build centralized systems that showcase all of your restaurant locations, featuring location-specific menus, localized reservation links, and Google Map details for each branch.",
+  },
+  {
+    question: "How does the AI Reservation Assistant work?",
+    answer:
+      "Our AI assistants can be integrated into your website or WhatsApp. They answer customer queries about hours, parking, or menu ingredients and help them secure table bookings instantly.",
+  },
+  {
+    question: "Will our online menu load fast on slow cellular networks?",
+    answer:
+      "Yes. We use aggressive image optimization and modern static generation techniques, meaning your digital menus load in milliseconds, even on slow mobile connections.",
   },
 ];
 
@@ -567,63 +437,50 @@ export const pricingPackages = [
   {
     name: "Launch",
     price: "From $499",
-    summary: "Perfect for startups, local businesses, restaurants, salons, gyms, clinics, barbershops, and professionals who need a modern online presence.",
+    summary: "Perfect for single-location restaurants, cafes, bistros, or food trucks that need a modern, high-performance web presence with a digital menu.",
     includes: [
-      "Up to 6 Pages",
-      "Fully Responsive Design",
-      "Contact Forms",
-      "WhatsApp Integration",
+      "Up to 5 Pages",
+      "Interactive Digital Menu",
+      "Mobile-First Responsive Layout",
+      "Google Maps & Location Page",
+      "Reservation Link Integration",
       "Basic SEO Setup",
-      "Google Maps Integration",
-      "Social Media Integration",
-      "Hosting & Deployment Support",
+      "Contact & Inquiry Forms",
       "30 Days Support"
     ],
     ctaText: "View Details",
     timeline: "1-2 weeks",
     modalDetails: [
       {
-        category: "Website Design",
-        features: ["Custom modern UI", "Premium responsive layout", "Mobile-first design", "Professional typography", "Smooth animations"]
-      },
-      {
-        category: "Pages",
-        features: ["Home", "About", "Services", "Portfolio/Gallery", "Contact", "Custom Page"]
+        category: "Design & Pages",
+        features: ["Custom modern UI", "Mobile-first digital menu", "Home, Menu, About, Gallery, Contact pages"]
       },
       {
         category: "Integrations",
-        features: ["Contact Form", "WhatsApp Chat", "Google Maps", "Social Media Links", "Click-to-Call", "Click-to-Email"]
+        features: ["OpenTable/Resy Link", "Google Maps", "Contact Form", "Click-to-Call / Click-to-Email"]
       },
       {
-        category: "Performance",
-        features: ["Fast Loading", "Responsive on all devices", "Image Optimization", "Basic Performance Optimization"]
-      },
-      {
-        category: "SEO",
-        features: ["Technical SEO", "Meta Tags", "Open Graph", "Sitemap", "Robots.txt", "Google Index Ready"]
-      },
-      {
-        category: "Deployment",
-        features: ["Domain Connection", "SSL Configuration", "Hosting Assistance"]
+        category: "SEO & Speed",
+        features: ["Local SEO keywords", "Restaurant schema markup", "Image compression for fast loading"]
       },
       {
         category: "Support",
-        features: ["30 Days Free Support", "Minor Content Updates", "Bug Fixes"]
+        features: ["30 Days Free Support", "Minor menu/pricing updates"]
       }
     ]
   },
   {
     name: "Growth",
     price: "From $1,199",
-    summary: "Ideal for businesses that want more than a website—designed to generate leads, automate communication, and improve customer engagement.",
+    summary: "Ideal for growing restaurants and bistros that want to automate reservations, capture reviews, and integrate basic AI customer service.",
     includes: [
       "Everything in Launch",
-      "AI Chatbot",
-      "CRM Integrations",
-      "Analytics Dashboard",
-      "Booking System",
-      "Advanced SEO",
-      "API Integrations",
+      "Interactive Booking System",
+      "AI Menu & FAQ Assistant",
+      "Google Reviews Display",
+      "Private Events Page",
+      "Newsletter & Email Signup",
+      "Advanced Local SEO",
       "45 Days Support"
     ],
     featured: true,
@@ -631,119 +488,96 @@ export const pricingPackages = [
     timeline: "2-5 weeks",
     modalDetails: [
       {
-        category: "Advanced Website",
-        features: ["Up to 12 Pages", "Advanced UI/UX", "Custom Animations", "Premium Sections", "Interactive Components"]
+        category: "Enhanced Website",
+        features: ["Up to 10 Pages", "Advanced UI/UX with smooth scroll", "Private events inquiry system", "Chef's specials highlight"]
       },
       {
         category: "AI Features",
-        features: ["AI Chatbot", "FAQ Assistant", "Smart Contact Assistant", "AI Lead Qualification", "AI Content Assistance"]
+        features: ["AI Chatbot for booking guidance", "Menu ingredient & allergy FAQ assistant", "Automated guest reply system"]
       },
       {
         category: "Integrations",
-        features: ["CRM Integration", "Calendar Booking", "Email Marketing Integration", "Newsletter Setup", "Third-party API Integration", "Payment Gateway (if required)"]
+        features: ["Embedded booking widgets", "Google Reviews live sync", "Mailchimp / email marketing tools"]
       },
       {
-        category: "Marketing",
-        features: ["Google Analytics", "Google Search Console", "Conversion Tracking", "Event Tracking", "Enhanced SEO"]
-      },
-      {
-        category: "Automation",
-        features: ["Automated Contact Responses", "Lead Notifications", "Email Routing", "Form Automation", "Workflow Triggers"]
-      },
-      {
-        category: "Performance",
-        features: ["Advanced Optimization", "Core Web Vitals Optimization", "Lazy Loading", "CDN Configuration"]
+        category: "SEO & Performance",
+        features: ["Advanced local SEO optimization", "Core Web Vitals compliance", "CDN media hosting"]
       },
       {
         category: "Support",
-        features: ["45 Days Premium Support", "Priority Bug Fixes", "Website Health Check"]
+        features: ["45 Days Premium Support", "Priority menu and pricing updates"]
       }
     ]
   },
   {
     name: "Scale AI",
     price: "From $2,499",
-    summary: "Built for businesses that want AI-driven automation, intelligent workflows, and scalable digital solutions.",
+    summary: "Designed for premium dining spots and food brands seeking fully custom AI receptionists, automated booking workflows, and advanced marketing integrations.",
     includes: [
       "Everything in Growth",
-      "AI Automation",
-      "Custom AI Solutions",
-      "Workflow Automation",
-      "AI Agents",
-      "Machine Learning Integration",
+      "Custom AI Receptionist Bot",
+      "Automated Reservation Verification",
+      "Interactive Food Showcase Reels",
+      "Multi-Language Menu Support",
+      "CRM & POS Integrations",
+      "Admin Analytics Dashboard",
       "60 Days Support"
     ],
     ctaText: "View Details",
     timeline: "4-8 weeks",
     modalDetails: [
       {
-        category: "Premium Website",
-        features: ["Unlimited Pages", "Fully Custom UI/UX", "Advanced Animations", "Custom Dashboards", "Premium Design System"]
+        category: "Premium Features",
+        features: ["Unlimited Pages", "Custom motion transitions", "Interactive culinary showcases", "Multi-language menus"]
       },
       {
-        category: "Advanced AI",
-        features: ["AI Agents", "Multi-step AI Workflows", "Custom AI Assistants", "AI Content Generation", "AI Customer Support", "AI Knowledge Base", "AI Search"]
+        category: "Advanced Restaurant AI",
+        features: ["Custom AI Receptionist (highly trained on your brand)", "Reservation booking assistant", "SMS reservation alerts"]
       },
       {
-        category: "Automation",
-        features: ["Business Workflow Automation", "Email Automation", "CRM Automation", "Appointment Automation", "Lead Management Automation", "Internal Process Automation"]
+        category: "Integrations",
+        features: ["POS System Integration (e.g. Toast, Square)", "Customer CRM setup", "SMS reservation alerts"]
       },
       {
-        category: "AI Integrations",
-        features: ["OpenAI Integration", "Claude Integration", "Gemini Integration (if required)", "Custom AI APIs"]
-      },
-      {
-        category: "Machine Learning",
-        features: ["Machine Learning Model Integration", "Intelligent Recommendations", "Data Analysis Features", "Prediction Systems (where applicable)"]
-      },
-      {
-        category: "Business Intelligence",
-        features: ["Admin Dashboard", "Analytics Dashboard", "Reporting System", "User Management"]
-      },
-      {
-        category: "Infrastructure",
-        features: ["Advanced Security", "Cloud Storage Integration", "Backup Strategy", "Performance Monitoring"]
+        category: "Analytics",
+        features: ["Admin dashboard", "Menu view tracking", "Reservation conversions analytics"]
       },
       {
         category: "Support",
-        features: ["60 Days Premium Support", "Priority Assistance", "Performance Reviews", "Optimization Recommendations"]
+        features: ["60 Days Priority Support", "Same-day menu edits"]
       }
     ]
   },
   {
     name: "Enterprise",
     price: "Custom Quote",
-    summary: "Tailored solutions for organizations, multi-location businesses, SaaS platforms, startups, and companies with complex operational requirements.",
+    summary: "Tailored digital solutions for multi-location restaurant groups, franchise networks, upscale hotel dining, and complex catering brands.",
     includes: [
-      "Custom Scope",
-      "Dedicated Consultation",
-      "Enterprise Architecture",
-      "Advanced AI Systems",
-      "Team Collaboration",
-      "Ongoing Partnership"
+      "Custom Multi-Location Scope",
+      "Corporate Platform Design",
+      "POS-Connected Online Ordering",
+      "Centralized Franchise Admin",
+      "Dedicated Account Manager",
+      "Ongoing Partnership & SLA"
     ],
     ctaText: "Contact Us",
     timeline: "Custom timeline",
     modalDetails: [
       {
-        category: "Enterprise Development",
-        features: ["Large-scale Websites", "Web Applications", "SaaS Platforms", "Client Portals", "Admin Systems", "Multi-location Websites", "Enterprise Dashboards"]
+        category: "Group Platform",
+        features: ["Multi-location routing", "Franchise microsites", "Centralized menu content manager", "Upscale hotel dining sections"]
       },
       {
-        category: "AI & Automation",
-        features: ["Custom AI Solutions", "Enterprise AI Assistants", "AI Agents", "Business Automation", "Internal AI Tools", "Knowledge Management Systems", "Document Intelligence", "AI Workflow Orchestration"]
+        category: "POS & Ordering",
+        features: ["Full POS-connected ordering flow", "Delivery platform integrations", "Catering ordering system"]
       },
       {
-        category: "Integrations",
-        features: ["ERP Integration", "CRM Integration", "Payment Systems", "Third-party APIs", "Cloud Services", "Authentication Systems", "Internal Software Integration"]
+        category: "AI & Custom Workflows",
+        features: ["Multi-location AI dispatch system", "Voice AI booking agent support", "Custom enterprise analytics"]
       },
       {
-        category: "Infrastructure",
-        features: ["Scalable Architecture", "Cloud Deployment", "CI/CD Pipelines", "Monitoring", "Security Hardening", "Backup & Disaster Recovery"]
-      },
-      {
-        category: "Collaboration",
-        features: ["Discovery Workshops", "Project Planning", "Dedicated Project Management", "Team Training", "Long-term Maintenance", "SLA-based Support"]
+        category: "Support",
+        features: ["Dedicated Project Manager", "24/7 Priority SLA support", "Monthly performance reviews"]
       }
     ]
   }
@@ -753,24 +587,24 @@ export const contactFaqs = [
   {
     question: "What should I prepare before booking a consultation?",
     answer:
-      "Bring your business goals, details about any existing software or website, examples of products you like, and a rough idea of your timeline or budget.",
+      "Bring your restaurant's story, menu concept, food photography if available, links to websites you admire, and your target opening or launch timeline.",
   },
   {
-    question: "Do you take on smaller projects like single landing pages or minor AI integrations?",
+    question: "Do you build websites for single-location restaurants or food trucks?",
     answer:
-      "Yes. Whether you need a focused landing page, a specific API integration, or a fully custom SaaS product, we can scale our services to fit your requirements.",
+      "Yes. We design and build sites of all sizes—whether you're a single neighborhood bistro, a local food truck, or an expansive multi-location hospitality group.",
   },
   {
     question: "What happens after I send the contact form?",
     answer:
-      "We will schedule a brief discovery call to understand your operational challenges, align on scope and timeline, and determine the best architectural approach for your business.",
+      "We will schedule a quick discovery call to discuss your menu style, reservation requirements, design preferences, and set a clear timeline for your launch.",
   },
 ];
 
 export const aboutValues = [
-  "Outcome-focused work over decoration for decoration's sake.",
-  "Clear, confident communication that respects business owners' time.",
-  "Fast, modern execution with attention to trust, usability, and performance.",
+  "Culinary storytelling that translates your physical atmosphere to the screen.",
+  "Mobile performance that ensures guests can view your menu instantly anywhere.",
+  "Seamless automated systems that keep your tables filled without distracting your team.",
 ];
 
 export const portfolioItems: PortfolioItem[] = [
@@ -885,26 +719,26 @@ export const portfolioItems: PortfolioItem[] = [
       "Built a flexible content management architecture allowing the client to easily update daily sports events and rotating food vendors.",
   },
   {
-    slug: "multi-vertical-ai-receptionist-chatbot",
-    title: "AI Receptionist Chatbot",
-    category: "AI & Automation",
-    clientType: "Internal Demo / SaaS Concept",
-    shortDescription: "A multi-vertical AI receptionist chatbot demo designed for dental clinics, gyms, salons, and restaurants.",
+    slug: "restaurant-ai-receptionist-chatbot",
+    title: "Restaurant AI Assistant",
+    category: "Restaurant",
+    clientType: "Restaurant AI Integration",
+    shortDescription: "An intelligent AI receptionist chatbot designed to automate restaurant reservations, menu inquiries, and guest support.",
     overview:
-      "An intelligent AI receptionist mockup showcasing tailored response personas and appointment-booking workflows for dental clinics, gyms, salons, and restaurants.",
-    industry: "AI & Automation",
+      "An interactive restaurant assistant demonstration showcasing how custom LLM integrations can answer guest inquiries about ingredients, dietary constraints, parking, and reservation availability 24/7.",
+    industry: "Restaurant",
     technologies: ["React.js", "Node.js", "Express", "MongoDB", "Gemini AI", "Tailwind CSS"],
-    features: ["Custom business personas", "Lead capture forms", "Automated email notifications", "Interactive preview"],
+    features: ["Custom reservation flow", "Allergen & menu FAQ search", "SMS/Email notifications", "Interactive chat sandbox"],
     image: "/images/Multi-vertical-Ai-receptionist-chatbot.avif",
-    imageAlt: "Multi-Vertical AI Receptionist Chatbot website preview showing chat pane and live lead dashboard.",
+    imageAlt: "Restaurant AI Assistant preview showing active chat window answering menu questions.",
     liveHref: "https://multireceptionai.vercel.app/",
     performance: "100/100 Core Web Vitals score",
-    results: ["Increased demo bookings", "Automated lead collection", "Flawless API performance"],
-    challenge: "Designing a clean, single-page interface hosting four distinct AI personalities.",
-    goals: ["Qualify leads automatically", "Deliver instant chatbot responses", "Provide a premium multi-vertical experience"],
-    design: "High contrast dark mode, dashboard views, and responsive messaging bubbles.",
+    results: ["Zero missed reservation inquiries", "Instant responses to guest questions", "Reduced host phone time"],
+    challenge: "Providing precise details on menu ingredients and seating availability without human intervention during busy kitchen hours.",
+    goals: ["Provide instant guest support", "Qualify reservation inquiries", "Increase table booking efficiency"],
+    design: "Clean, dark-mode messaging interface with easy quick-reply buttons for reservations, hours, and menu.",
     development:
-      "Developed with a responsive React frontend, Express/Node backend, and direct integration with Gemini AI API for prompt-driven responses.",
+      "Developed with a responsive React frontend, Express/Node backend, and direct integration with Gemini AI API for structured menu and booking responses.",
   },
 ];
 
@@ -913,5 +747,4 @@ export const portfolioFilters = [
   "Restaurant",
   "Hotels",
   "Bar",
-  "AI & Automation",
 ] as const;

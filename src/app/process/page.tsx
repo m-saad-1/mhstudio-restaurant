@@ -19,7 +19,7 @@ const FaqAccordion = dynamic(() => import("@/components/ui/faq-accordion").then(
 
 export const metadata: Metadata = {
   title: "Process | How We Work",
-  description: "Whether you’re building a business website, AI-powered app, or full-scale product, our process ensures quality, transparency, and predictable timelines.",
+  description: "Whether you’re launching a single restaurant website, a digital menu, or custom booking systems, our process ensures quality, transparency, and predictable timelines.",
 };
 
 export default function ProcessPage() {
@@ -27,8 +27,8 @@ export default function ProcessPage() {
     <>
       <PageHero
         eyebrow="Workflow & Methodology"
-        title="A clear workflow keeps premium work moving without confusion."
-        description="Whether you’re building a business website, AI-powered app, or full-scale product, our process ensures quality, transparency, and predictable timelines."
+        title="A structured workflow built for clarity."
+        description="From digital menus to custom reservation platforms, our process guarantees clear steps, fixed timelines, and high-performance launches."
         primaryCta={{ label: "Start Your Project", href: "/contact" }}
         secondaryCta={{ label: "View Our Work", href: "/work" }}
       />
@@ -38,8 +38,8 @@ export default function ProcessPage() {
         <div className="content-shell space-y-10">
           <SectionHeading
             eyebrow="The Core Process"
-            title="Six steps to production readiness."
-            description="Our foundational framework for building reliable and scalable digital products."
+            title="Six steps to launch."
+            description="Our step-by-step roadmap for building high-speed restaurant platforms."
           />
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {corePhases.map((phase, index) => {
@@ -80,8 +80,8 @@ export default function ProcessPage() {
         <div className="content-shell space-y-10">
           <SectionHeading
             eyebrow="Development Paths"
-            title="Every business has unique requirements."
-            description="Not every project follows the exact same path. We tailor the workflow to your specific product type and goals."
+            title="Tailored development paths."
+            description="We customize our workflow to match your exact goals and business size."
           />
           <div className="grid gap-6">
             {developmentPaths.map((path, index) => (
@@ -120,8 +120,8 @@ export default function ProcessPage() {
         <div className="content-shell space-y-10">
           <SectionHeading
             eyebrow="Client Involvement"
-            title="What happens during the project?"
-            description="We keep you involved and informed without overwhelming your schedule."
+            title="How we stay aligned."
+            description="We communicate clearly at every step without taking up your valuable time."
           />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {clientInvolvement.map((item, index) => {
@@ -147,8 +147,8 @@ export default function ProcessPage() {
           <div className="space-y-8">
             <div>
               <span className="eyebrow">Engineering Standards</span>
-              <h2 className="mt-2 text-3xl font-semibold text-foreground">Quality Assurance</h2>
-              <p className="mt-3 text-foreground-body">Quality is built into every stage, not just bolted on at the end.</p>
+              <h2 className="mt-2 text-3xl font-semibold text-foreground">High Standards</h2>
+              <p className="mt-3 text-foreground-body">Every detail is thoroughly tested prior to launch.</p>
             </div>
             <div className="grid grid-cols-2 gap-4">
               {qualityAssurance.map((qa, i) => {
@@ -166,8 +166,8 @@ export default function ProcessPage() {
           <div className="space-y-8">
             <div>
               <span className="eyebrow">The Stack</span>
-              <h2 className="mt-2 text-3xl font-semibold text-foreground">Technologies Used</h2>
-              <p className="mt-3 text-foreground-body">Modern, scalable, and production-ready technologies power our workflow.</p>
+              <h2 className="mt-2 text-3xl font-semibold text-foreground">Tech Stack</h2>
+              <p className="mt-3 text-foreground-body">Fast, reliable, and secure tools powering your site.</p>
             </div>
             <div className="relative border-l border-white/10 pl-6 space-y-6">
               {techTimeline.map((item, i) => {
@@ -195,8 +195,8 @@ export default function ProcessPage() {
         <div className="content-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <SectionHeading
             eyebrow="FAQ"
-            title="Questions about our process."
-            description="Clear answers about how we manage timelines, feedback, and post-launch support."
+            title="Process FAQs"
+            description="Brief answers on scheduling, menu updates, and launch timelines."
           />
           <FaqAccordion items={processFaqs} />
         </div>
@@ -208,12 +208,12 @@ export default function ProcessPage() {
           <div className="surface-card relative overflow-hidden px-8 py-12 sm:px-10 sm:py-14 lg:px-14 text-center flex flex-col items-center">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(245,158,11,0.15)_0%,_transparent_70%)] blur-[100px]" />
             <div className="relative space-y-5 max-w-3xl">
-              <span className="eyebrow mx-auto">Ready to Build Something Great?</span>
+              <span className="eyebrow mx-auto">Ready to grow?</span>
               <h2 className="text-[2rem] font-semibold leading-[1.1] text-foreground sm:text-[2.8rem]">
-                Start Your Project
+                Let's Build It
               </h2>
               <p className="text-base leading-[1.7] text-foreground-body sm:text-lg">
-                Whether you're launching your first website, validating an MVP, building a SaaS platform, or integrating AI into your business, MHStudio follows a structured process that keeps projects transparent, scalable, and focused on results.
+                Whether launching your first site, updating a digital menu, or integrating WhatsApp AI assistants, our structured process ensures a fast, transparent path to filling tables.
               </p>
               <div className="pt-4">
                 <Link href="/contact" className="button-primary px-8 text-sm sm:w-auto">

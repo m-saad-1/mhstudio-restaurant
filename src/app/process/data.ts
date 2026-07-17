@@ -4,152 +4,150 @@ export const corePhases = [
   {
     step: "01",
     title: "Discovery & Strategy",
-    tagline: "Understand before building.",
-    description: "We begin by learning about your business, users, challenges, and goals. This stage ensures every technical decision aligns with your objectives.",
-    activities: ["Business consultation", "Requirement gathering", "Competitor research", "Technical feasibility", "Project roadmap", "Timeline estimation"],
+    tagline: "Understand your brand.",
+    description: "We begin by learning about your restaurant's brand, culinary concept, location, and guest booking goals. This stage ensures every technical decision aligns with your business objectives.",
+    activities: ["Concept consultation", "Guest profile mapping", "Competitor menu research", "Third-party platform check", "Project roadmap", "Launch estimation"],
     icon: "search"
   },
   {
     step: "02",
     title: "Planning & Architecture",
-    tagline: "Building the blueprint.",
-    description: "Before writing code, we define the system architecture, user flows, database design, API structure, and project milestones.",
-    activities: ["User flows", "Wireframes", "Technical architecture", "Database schema", "Feature roadmap", "Project planning"],
+    tagline: "Structure the guest path.",
+    description: "Before writing code, we structure your digital menu, define the reservation path, and map out location pages to optimize user conversion.",
+    activities: ["Menu architecture", "Reservation user flows", "Location page layouts", "SEO keyword strategy", "Feature prioritization", "Content gathering"],
     icon: "layers"
   },
   {
     step: "03",
     title: "Design",
-    tagline: "Design with purpose.",
-    description: "We create intuitive interfaces focused on usability, accessibility, and conversion while ensuring consistency across every screen.",
-    activities: ["UI/UX Design", "Responsive layouts", "Design system", "Prototypes", "Client feedback"],
+    tagline: "Capture the atmosphere.",
+    description: "We create a premium visual system that highlights your culinary artistry, showcases your dining room space, and makes booking intuitive.",
+    activities: ["Visual identity design", "Mobile menu prototypes", "Food gallery styling", "Typography selection", "Client review & feedback"],
     icon: "palette"
   },
   {
     step: "04",
     title: "Development",
-    tagline: "Where ideas become products.",
-    description: "Using modern technologies, we develop scalable, maintainable applications with clean architecture and production-ready standards.",
-    activities: ["Frontend development", "Backend APIs", "Database integration", "Authentication", "AI integration", "Third-party APIs"],
+    tagline: "Build with speed.",
+    description: "We translate the designs into responsive, fast-loading pages and integrate reservation widgets, digital menus, and custom restaurant AI tools.",
+    activities: ["Fast-loading frontend", "Digital menu coding", "Booking system integration", "Restaurant AI setup", "Analytics configuration"],
     icon: "code-xml"
   },
   {
     step: "05",
     title: "Testing & Optimization",
-    tagline: "Quality comes first.",
-    description: "Every project is thoroughly tested across devices and browsers to ensure reliability, performance, and security before launch.",
-    activities: ["Functional testing", "Performance optimization", "Bug fixing", "Accessibility review", "Security checks"],
+    tagline: "Flawless checkouts.",
+    description: "We thoroughly test menu navigation, booking forms, page performance, and mobile layout before going live.",
+    activities: ["Menu usability testing", "Reservation flow validation", "Mobile responsiveness check", "Image loading optimization", "Local SEO health check"],
     icon: "shield-check"
   },
   {
     step: "06",
     title: "Launch & Growth",
-    tagline: "Launch is only the beginning.",
-    description: "After deployment, we continue monitoring, improving, and supporting your product as your business evolves.",
-    activities: ["Deployment", "Domain configuration", "Analytics", "Monitoring", "Training", "Ongoing support"],
+    tagline: "Welcome guests online.",
+    description: "Your site goes live with Google Maps sync, and we hand over simple tools so you can update your menu, prices, and announcements in real-time.",
+    activities: ["Vercel deployment", "Domain & SSL config", "Google Maps sync", "Dashboard walkthrough", "Ongoing menu support"],
     icon: "rocket"
   }
 ];
 
 export const developmentPaths = [
   {
-    title: "Web Development",
-    description: "Ideal for Local businesses, Restaurants, Clinics, Salons, Agencies, and Professional services.",
-    timeline: "2–6 weeks",
-    steps: ["Discovery", "Design", "Development", "Testing", "Launch"],
+    title: "Single-Location Restaurant",
+    description: "Ideal for independent bistros, neighborhood eateries, cafes, and food trucks looking for a premium online home.",
+    timeline: "2–3 weeks",
+    steps: ["Discovery", "Menu Design", "Development", "Booking Integration", "Launch"],
   },
   {
-    title: "MVP Development",
-    description: "Perfect for startups validating an idea. We focus on launching quickly, gathering feedback, and improving based on real users.",
-    steps: ["Idea Validation", "Feature Prioritization", "Rapid MVP Design", "Development", "User Testing", "Iteration", "Production Scaling"],
+    title: "Multi-Location & Group Site",
+    description: "Tailored for restaurant groups, franchises, and hospitality brands managing multiple locations and menus.",
+    timeline: "4–6 weeks",
+    steps: ["Discovery", "Group Strategy", "Location Routing", "Shared Assets System", "Centralized CMS", "Launch"],
   },
   {
-    title: "SaaS Development",
-    description: "A more structured process focusing on scalability, security, and maintainability for software products.",
-    steps: ["Discovery", "Architecture", "Authentication", "Core Features", "Billing", "Admin Dashboard", "Testing", "Production Deployment", "Continuous Improvements"],
+    title: "AI-Enhanced Digital Experience",
+    description: "For forward-thinking restaurants looking to integrate AI receptionists, SMS booking alerts, and interactive menus.",
+    timeline: "3–5 weeks",
+    steps: ["Brand Strategy", "AI Personality Training", "Interactive Menu Setup", "Booking Automation", "Integration", "Launch"],
   },
   {
-    title: "AI Solutions & Automation",
-    description: "Custom workflows for AI Chatbots, Assistants, Agents, and Business Automation.",
-    steps: ["Business Analysis", "Workflow Discovery", "AI Strategy", "Prompt Engineering", "LLM Integration", "Automation Design", "Testing", "Deployment", "Optimization"],
-  },
-  {
-    title: "Custom Software Development",
-    description: "Every business has unique requirements. We build bespoke solutions tailored to your operational needs.",
-    steps: ["Requirements", "Architecture", "Design", "Development", "Integration", "Testing", "Deployment", "Long-Term Support"],
+    title: "Catering & Events Platform",
+    description: "Built for venues, upscale caterers, and private dining rooms needing custom inquiry and proposal management.",
+    timeline: "3–4 weeks",
+    steps: ["Inquiry Mapping", "Package Showcase Design", "Booking Pipeline Setup", "Client Dashboard", "Testing", "Launch"],
   }
 ];
 
 export const clientInvolvement = [
   {
-    title: "Weekly Progress Updates",
-    description: "Regular updates keep you informed throughout development.",
+    title: "Regular Menu & Layout Updates",
+    description: "We share staging links so you can watch your menus and layouts come together.",
     icon: "calendar",
   },
   {
-    title: "Client Feedback",
-    description: "Key milestones are reviewed together before moving forward.",
+    title: "Tasting & Review Milestones",
+    description: "Review key design drafts and menu organization before we begin coding.",
     icon: "message-square-quote",
   },
   {
-    title: "Transparent Communication",
-    description: "No hidden progress or unexpected surprises.",
+    title: "Clear Project Deliverables",
+    description: "No hidden development or unexpected reservation setup surprises.",
     icon: "refresh-cw",
   },
   {
-    title: "Flexible Iteration",
-    description: "Small adjustments are welcomed during development.",
+    title: "Menu & Detail Tweaks",
+    description: "We accommodate minor pricing or ingredient updates throughout the process.",
     icon: "git-merge",
   }
 ];
 
 export const qualityAssurance = [
-  { title: "Performance Optimization", icon: "zap" },
+  { title: "Menu Usability", icon: "utensils-crossed" },
   { title: "Responsive Testing", icon: "monitor-smartphone" },
-  { title: "Security Review", icon: "shield-check" },
-  { title: "Accessibility", icon: "search-check" },
-  { title: "SEO Validation", icon: "search" },
-  { title: "Cross-Browser Testing", icon: "app-window" },
-  { title: "Code Quality", icon: "code-xml" },
-  { title: "Production Readiness", icon: "server-cog" }
+  { title: "Image Loading Speed", icon: "zap" },
+  { title: "Local SEO Validation", icon: "search" },
+  { title: "Cross-Device Checks", icon: "smartphone" },
+  { title: "SSL & Security", icon: "shield-check" },
+  { title: "Schema Markup", icon: "search-check" },
+  { title: "Booking Verification", icon: "calendar" }
 ];
 
 export const processFaqs = [
   {
-    question: "How long does a project usually take?",
-    answer: "Timelines vary depending on scope. Marketing websites typically take 2-6 weeks, while MVPs and SaaS platforms can take 4-12 weeks."
+    question: "How long does a restaurant project take?",
+    answer: "A single-location site typically takes 2-4 weeks, while larger groups with multi-location routing or advanced AI reservation features take 4-6 weeks."
   },
   {
-    question: "Can requirements change during development?",
-    answer: "Yes, we use an agile approach. While major architecture changes might affect timeline and budget, we welcome small adjustments and flexible iterations."
+    question: "Can you work with our existing reservation platform?",
+    answer: "Yes. We seamlessly integrate with all major booking platforms including OpenTable, Resy, SevenRooms, Tock, and standard contact forms."
   },
   {
-    question: "Will I receive progress updates?",
-    answer: "Absolutely. We provide weekly progress updates and review key milestones with you to ensure alignment throughout the project."
+    question: "Will we be able to update menu prices and items ourselves?",
+    answer: "Absolutely. We build your site with a custom, user-friendly CMS so your staff can update dishes, edit prices, and post holiday hours in real-time."
   },
   {
-    question: "Who owns the source code?",
-    answer: "Upon full payment, you own 100% of the source code and intellectual property for your custom project."
+    question: "Do you help with food photography and image optimization?",
+    answer: "While we don't shoot the photos directly, we guide you on what assets are needed and perform advanced compression to ensure your high-res food shots load instantly on mobile."
   },
   {
-    question: "Do you provide post-launch support?",
-    answer: "Yes, we offer ongoing maintenance, monitoring, and support to keep your product secure and scalable after launch."
+    question: "What is restaurant schema markup and do we need it?",
+    answer: "Yes, it is structured code that helps search engines understand your menu items, opening hours, and location. We include it in every build so you rank higher in local search results."
   },
   {
-    question: "Can you improve an existing product instead of rebuilding it?",
-    answer: "Yes, we often help clients modernize legacy applications, improve performance, or integrate new AI features into existing codebases."
+    question: "How do AI receptionist features benefit our restaurant?",
+    answer: "They handle repetitive guest inquiries about dietary restrictions, reservation slots, or parking locations 24/7, reducing phone traffic for your busy front-of-house staff."
   },
   {
-    question: "How do AI projects differ from traditional web development?",
-    answer: "AI projects involve heavy discovery around data, workflows, and prompt engineering before development, often requiring more iterative testing to ensure the AI responds accurately."
+    question: "Do you provide training on how to use the dashboard?",
+    answer: "Yes, we provide a video walkthrough and guide showing you exactly how to update menus, manage booking links, and post announcements."
   }
 ];
 
 export const techTimeline = [
-  { stage: "Planning", tech: "Figma, Notion", icon: "palette" },
-  { stage: "Frontend", tech: "React, Next.js, Tailwind", icon: "monitor" },
-  { stage: "Backend", tech: "Node.js, Supabase", icon: "server-cog" },
-  { stage: "Database", tech: "PostgreSQL, MongoDB", icon: "database" },
-  { stage: "AI", tech: "OpenAI, Claude, Python", icon: "brain" },
-  { stage: "Deployment", tech: "Vercel, Cloudflare, AWS", icon: "cloud" }
+  { stage: "Planning", tech: "Figma, Notion, Brand Assets", icon: "palette" },
+  { stage: "Frontend", tech: "React, Next.js, Tailwind CSS", icon: "monitor" },
+  { stage: "Integration", tech: "OpenTable, Resy, Toast APIs", icon: "plug" },
+  { stage: "Database & CMS", tech: "Supabase, Sanity CMS, Payload", icon: "database" },
+  { stage: "AI Features", tech: "Gemini AI, OpenAI API, Chatbots", icon: "bot" },
+  { stage: "Deployment", tech: "Vercel, Cloudflare, SSL", icon: "cloud" }
 ];

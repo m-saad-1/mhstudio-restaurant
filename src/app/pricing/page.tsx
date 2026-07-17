@@ -13,8 +13,8 @@ export default function PricingPage() {
     <>
       <PageHero
         eyebrow="Pricing"
-        title="Package-based pricing keeps the offer clear while leaving room for the right scope."
-        description="Instead of random fixed pricing, the structure uses clear tiers so local businesses can understand what level of website support fits their goals."
+        title="Clear, flat-rate pricing built for restaurant growth."
+        description="Choose a plan that fits your business—from simple launch sites to advanced custom online menus and WhatsApp AI assistants."
         primaryCta={{ label: "Book Free Consultation", href: "/contact" }}
         secondaryCta={{ label: "View Services", href: "/services" }}
       />

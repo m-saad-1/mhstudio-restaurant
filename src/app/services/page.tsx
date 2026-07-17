@@ -16,8 +16,8 @@ export default function ServicesPage() {
     <>
       <PageHero
         eyebrow="Services"
-        title="Services designed to help local businesses look stronger and convert faster."
-        description="Every service section is structured around outcomes, deliverables, and the premium experience needed to make the website feel trustworthy from the first screen."
+        title="Services built to fill your tables and elevate your brand."
+        description="From modern digital menus and booking systems to automated WhatsApp AI assistants, we build tools that drive local diners to your doors."
         primaryCta={{ label: "Start a Project", href: "/contact" }}
         secondaryCta={{ label: "How We Work", href: "/process" }}
       />

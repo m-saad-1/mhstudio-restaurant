@@ -35,7 +35,7 @@ export function DemoForm() {
       <div className="mb-6 space-y-3">
         <h2 className="text-2xl font-semibold text-foreground">Request a Free Demo</h2>
         <p className="text-sm leading-[1.7] text-foreground-body sm:text-base">
-          Fill out the details below, and we will build a custom interactive preview tailored to your business needs.
+          Fill out the details below, and we will build a custom interactive preview tailored to your restaurant.
         </p>
       </div>
 
@@ -62,22 +62,22 @@ export function DemoForm() {
           onSubmit={async (event) => {
             event.preventDefault();
             setIsSubmitting(true);
-
+ 
             try {
               const finalSolution = formState.solution === "Other" 
                 ? `Other: ${formState.otherSolution}` 
                 : formState.solution;
-
+ 
               // Combine additional information into the message to ensure EmailJS template delivers it
               const combinedMessage = `
 Requested Solution: ${finalSolution}
 Website: ${formState.website || "Not provided"}
 Company: ${formState.business}
-
+ 
 Use Case Details:
 ${formState.message}
               `.trim();
-
+ 
               await emailjs.send(
                 "service_tnqdrdd", // Service ID
                 "template_teb23hr", // Template ID
@@ -92,7 +92,7 @@ ${formState.message}
                 },
                 "C9krtPTiFCls0Vayb" // Public Key
               );
-
+ 
               setSubmitted(true);
               setFormState(initialState);
               sendGAEvent({ event: "submit_demo", form_name: "demo_form" });
@@ -131,7 +131,7 @@ ${formState.message}
                   setFormState((current) => ({ ...current, email: event.target.value }))
                 }
                 className="min-h-11 rounded-[16px] border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground placeholder:text-foreground-muted"
-                placeholder="you@business.com"
+                placeholder="you@restaurant.com"
                 disabled={isSubmitting}
               />
             </label>
@@ -139,7 +139,7 @@ ${formState.message}
 
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="grid gap-2 text-sm font-medium text-foreground">
-              Company Name
+              Restaurant / Brand Name
               <input
                 required
                 minLength={2}
@@ -149,7 +149,7 @@ ${formState.message}
                   setFormState((current) => ({ ...current, business: event.target.value }))
                 }
                 className="min-h-11 rounded-[16px] border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground placeholder:text-foreground-muted"
-                placeholder="Business or brand name"
+                placeholder="Restaurant or brand name"
                 disabled={isSubmitting}
               />
             </label>
@@ -170,7 +170,7 @@ ${formState.message}
           </div>
 
           <label className="grid gap-2 text-sm font-medium text-foreground">
-            Solution of Interest
+            Service of Interest
             <select
               required
               name="solution"
@@ -181,22 +181,21 @@ ${formState.message}
               className="min-h-11 rounded-[16px] border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground"
               disabled={isSubmitting}
             >
-              <option value="">Select a solution</option>
-              <option value="AI-Powered Web Applications">AI-Powered Web Applications</option>
-              <option value="Custom AI Solutions">Custom AI Solutions</option>
-              <option value="Workflow Automation">Workflow Automation</option>
-              <option value="Business Process Automation">Business Process Automation</option>
-              <option value="Desktop Application">Desktop Application</option>
-              <option value="Web Development">Web Development</option>
-              <option value="Landing Pages">Landing Pages</option>
-              <option value="Hosting & Deployment">Hosting & Deployment</option>
+              <option value="">Select a service</option>
+              <option value="Modern Restaurant Website">Modern Restaurant Website</option>
+              <option value="Interactive Online Menu">Interactive Online Menu</option>
+              <option value="Online Reservation Integration">Online Reservation Integration</option>
+              <option value="AI Restaurant Assistant">AI Restaurant Assistant</option>
+              <option value="Gallery & Food Showcase">Gallery & Food Showcase</option>
+              <option value="Local SEO & Map Rankings">Local SEO & Map Rankings</option>
+              <option value="Website Maintenance & Support">Website Maintenance & Support</option>
               <option value="Other">Other (Please specify)</option>
             </select>
           </label>
 
           {formState.solution === "Other" && (
             <label className="grid gap-2 text-sm font-medium text-foreground animate-in fade-in slide-in-from-top-1 duration-200">
-              Please specify the solution
+              Please specify the service
               <input
                 required
                 minLength={2}
@@ -206,14 +205,14 @@ ${formState.message}
                   setFormState((current) => ({ ...current, otherSolution: event.target.value }))
                 }
                 className="min-h-11 rounded-[16px] border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground placeholder:text-foreground-muted"
-                placeholder="What solution do you need?"
+                placeholder="What service do you need?"
                 disabled={isSubmitting}
               />
             </label>
           )}
 
           <label className="grid gap-2 text-sm font-medium text-foreground">
-            Use Case / Requirements
+            Requirements / Focus
             <textarea
               required
               minLength={15}
@@ -224,7 +223,7 @@ ${formState.message}
               }
               rows={5}
               className="rounded-[16px] border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 py-3 text-foreground placeholder:text-foreground-muted"
-              placeholder="Tell us what you would like the demo to showcase (e.g., custom AI agent, automated pipeline, business landing page)."
+              placeholder="Tell us what you would like the demo to showcase (e.g., modern layout, digital menu, custom reservation widget, AI assistant)."
               disabled={isSubmitting}
             />
           </label>

@@ -17,7 +17,7 @@ export function SiteFooter() {
               {siteConfig.name}
             </Link>
             <p className="max-w-sm text-sm leading-[1.7] text-foreground-body sm:text-base">
-              High-performance software development delivering custom AI solutions, automated workflows, and scalable web applications.
+              High-performance websites and AI features for modern restaurants, fine dining, bars, and bistros.
             </p>
             {/* Social links hidden for now
             <div className="flex flex-wrap gap-3">
@@ -82,7 +82,7 @@ export function SiteFooter() {
 
         <div className="mt-12 flex flex-col gap-3 border-t border-white/6 pt-6 text-sm text-foreground-muted sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
-          <p>Developing premium software, custom AI systems, and automated workflows.</p>
+          <p>Designing premium websites and AI features for modern restaurants.</p>
         </div>
       </div>
     </footer>

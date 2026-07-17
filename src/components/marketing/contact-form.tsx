@@ -111,7 +111,7 @@ export function ContactForm() {
               value={formState.email}
               onChange={(event) => setFormState((current) => ({ ...current, email: event.target.value }))}
               className="min-h-11 rounded-[16px] border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground placeholder:text-foreground-muted"
-              placeholder="you@business.com"
+              placeholder="you@restaurant.com"
               disabled={isSubmitting}
             />
           </label>
@@ -119,7 +119,7 @@ export function ContactForm() {
 
         <div className="grid gap-4 sm:grid-cols-2">
           <label className="grid gap-2 text-sm font-medium text-foreground">
-            Business
+            Restaurant / Brand Name
             <input
               required
               minLength={2}
@@ -127,12 +127,12 @@ export function ContactForm() {
               value={formState.business}
               onChange={(event) => setFormState((current) => ({ ...current, business: event.target.value }))}
               className="min-h-11 rounded-[16px] border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground placeholder:text-foreground-muted"
-              placeholder="Business or brand name"
+              placeholder="Restaurant or brand name"
               disabled={isSubmitting}
             />
           </label>
           <label className="grid gap-2 text-sm font-medium text-foreground">
-            Budget
+            Package of Interest
             <select
               required
               name="budget"
@@ -141,11 +141,11 @@ export function ContactForm() {
               className="min-h-11 rounded-[16px] border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground"
               disabled={isSubmitting}
             >
-              <option value="">Select budget range</option>
-              <option value="starter">Starter</option>
-              <option value="business">Business</option>
-              <option value="premium">Premium</option>
-              <option value="enterprise">Enterprise</option>
+              <option value="">Select package range</option>
+              <option value="Launch ($499+)">Launch ($499+)</option>
+              <option value="Growth ($1,199+)">Growth ($1,199+)</option>
+              <option value="Scale AI ($2,499+)">Scale AI ($2,499+)</option>
+              <option value="Enterprise (Custom Quote)">Enterprise (Custom Quote)</option>
             </select>
           </label>
         </div>
@@ -178,7 +178,7 @@ export function ContactForm() {
             onChange={(event) => setFormState((current) => ({ ...current, message: event.target.value }))}
             rows={6}
             className="rounded-[16px] border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 py-3 text-foreground placeholder:text-foreground-muted"
-            placeholder="Tell us about the goals, pages, features, or industry context."
+            placeholder="Tell us about your restaurant's concept, menu size, reservation platform, and any desired AI features."
             disabled={isSubmitting}
           />
         </label>

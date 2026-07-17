@@ -10,23 +10,23 @@ import { contactFaqs, siteConfig } from "@/data/site-content";
 
 export const metadata: Metadata = {
   title: "Get Free Demo",
-  description: "Request a custom interactive demo of our web apps, AI integrations, or workflow automations for your business.",
+  description: "Request a custom interactive demo of our restaurant websites, online menus, or AI-powered reservation assistants for your restaurant.",
 };
 
 const demoSteps = [
   {
-    title: "1. Share Your Needs",
-    description: "Submit the demo request form with your business details, target solution, and what you would like to automate or build.",
+    title: "1. Share Concept",
+    description: "Fill out the request form with your restaurant's branding, style, and reservation goals.",
     icon: Laptop,
   },
   {
-    title: "2. Custom Development",
-    description: "We review your business and design a customized, interactive mock preview or proof-of-concept tailored to your operational needs.",
+    title: "2. Custom Mockup",
+    description: "We build a custom homepage and digital menu layout matching your restaurant's aesthetics.",
     icon: Cpu,
   },
   {
-    title: "3. Interactive Walkthrough",
-    description: "We host a live call or send you a direct link to explore the prototype yourself, completely free of charge and with no obligations.",
+    title: "3. Test Live",
+    description: "Test the high-speed mobile menu and booking system yourself, completely free.",
     icon: CalendarRange,
   },
 ];
@@ -51,8 +51,8 @@ export default function DemoPage() {
     <>
       <PageHero
         eyebrow="Free Demo"
-        title="Experience how our software transforms your business."
-        description="We build custom proof-of-concepts and interactive previews so you can test features, explore integrations, and see the exact value before committing."
+        title="Preview your new digital dining experience."
+        description="We design custom interactive menus and homepage mockups so you can test page speed, mobile UX, and layout design before any commitment."
       />
       <section className="section-space">
         <div className="content-shell grid gap-6 xl:grid-cols-[1.05fr_0.95fr]">
@@ -61,7 +61,7 @@ export default function DemoPage() {
           </Reveal>
           <div className="grid gap-6">
             <Reveal delayMs={80} className="surface-card p-6 sm:p-8">
-              <h2 className="text-2xl font-semibold text-foreground">How the demo process works</h2>
+              <h2 className="text-2xl font-semibold text-foreground">Demo Process</h2>
               <div className="mt-6 grid gap-6">
                 {demoSteps.map((step) => {
                   const Icon = step.icon;

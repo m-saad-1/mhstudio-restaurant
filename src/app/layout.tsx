@@ -14,24 +14,23 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "MhStudio | Premium Software, AI Solutions & Automation",
+    default: "MhStudio | Premium Restaurant Websites & AI Solutions",
     template: "%s | MhStudio",
   },
   description:
-    "MhStudio develops high-performance applications, custom AI integrations, and scalable software systems engineered for modern business growth.",
+    "MhStudio designs and develops high-performance, conversion-focused websites for modern restaurants, featuring online menus, digital reservations, and custom restaurant AI assistants.",
   keywords: [
     "MhStudio",
-    "software development agency",
-    "AI solutions",
-    "workflow automation",
-    "web application development",
-    "desktop applications",
-    "SaaS development",
+    "restaurant web development",
+    "online menu design",
+    "restaurant reservation system",
+    "restaurant AI receptionist",
+    "restaurant web design",
   ],
   openGraph: {
-    title: "MhStudio | Premium Software, AI Solutions & Automation",
+    title: "MhStudio | Premium Restaurant Websites & AI Solutions",
     description:
-      "High-performance applications, custom AI integrations, and scalable software systems engineered for modern business growth.",
+      "High-performance, conversion-focused websites for modern restaurants, featuring online menus, digital reservations, and custom restaurant AI assistants.",
     type: "website",
   },
   icons: {
@@ -58,7 +57,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "MhStudio",
-              description: "Premium software, custom AI systems, and automated workflows.",
+              description: "Premium websites, online menus, and AI-powered booking systems for modern restaurants.",
               url: "https://mhstudio.com",
             }),
           }}

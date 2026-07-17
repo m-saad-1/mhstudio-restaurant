@@ -12,6 +12,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { getIcon } from "@/components/ui/icon-map";
 import {
   faqs,
+  leftFaqs,
   industryShowcaseItems,
   portfolioItems,
   processSteps,
@@ -28,15 +29,12 @@ export default function Home() {
   const featuredProjects = portfolioItems.slice(0, 6);
 
   const homeServiceTitles = [
-    "AI-Powered Web Applications",
-    "Custom AI Solutions",
-    "Desktop Application",
-    "Hosting & Deployment",
-    "E-commerce Development",
-    "Workflow Automation",
-    "Web Development",
-    "Landing Pages",
-    "Business Process Automation"
+    "Modern Restaurant Websites",
+    "Interactive Online Menus",
+    "Online Reservation Systems",
+    "AI Restaurant Assistants",
+    "Gallery & Food Showcases",
+    "Local SEO & Map Rankings"
   ];
 
   const homeServiceCards = homeServiceTitles
@@ -51,8 +49,8 @@ export default function Home() {
         <div className="content-shell space-y-10">
           <SectionHeading
             eyebrow="Services Snapshot"
-            title="Everything a local business needs to launch with confidence."
-            description="Each service is framed around business outcomes, not just deliverables, so the value stays clear for owners and decision-makers."
+            title="High-Performance Digital Menu & Site Solutions"
+            description="High-performance digital solutions tailored to elevate your dining brand."
           />
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {homeServiceCards.map((service, index) => {
@@ -90,8 +88,8 @@ export default function Home() {
         <div className="content-shell space-y-10">
           <SectionHeading
             eyebrow="Featured Portfolio"
-            title="Real website concepts built for real businesses."
-            description="The portfolio is the primary proof layer, so every project is treated like a launch story with device previews, feature highlights, and a dedicated case study."
+            title="Featured Restaurant Concepts & Live Previews"
+            description="Explore our interactive restaurant websites and digital concepts."
             action={
               <Link href="/work" className="button-secondary px-6 text-sm">
                 See All Projects
@@ -112,22 +110,29 @@ export default function Home() {
         <div className="content-shell space-y-10">
           <SectionHeading
             eyebrow="Why Choose MhStudio"
-            title="A premium site is not just visual. It solves the real business friction."
-            description="Instead of generic claims, each proof point pairs a business problem with the decision or capability that addresses it."
+            title="Why Premium Design Matters for Reservations"
+            description="How we solve real-world restaurant challenges."
           />
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {whyChooseItems.map((item, index) => (
               <Reveal
                 key={item.title}
                 delayMs={index * 70}
-                className="surface-card relative overflow-hidden p-6"
+                className="surface-card relative overflow-hidden p-6 sm:p-8 border border-white/8 hover:border-amber-500/30 transition-all duration-500 group hover:shadow-[0_10px_35px_-10px_rgba(245,158,11,0.25)] !rounded-[24px]"
               >
-                <div className="pointer-events-none absolute right-[-3rem] top-[-3rem] h-[13rem] w-[13rem] rounded-full bg-[radial-gradient(circle,_rgba(245,158,11,0.18)_0%,_rgba(245,158,11,0.08)_26%,_transparent_72%)] blur-[90px]" />
-                <div className="pointer-events-none absolute bottom-[-3rem] left-[-3rem] h-[12rem] w-[12rem] rounded-full bg-[radial-gradient(circle,_rgba(245,158,11,0.12)_0%,_rgba(245,158,11,0.05)_28%,_transparent_72%)] blur-[90px]" />
-                <div className="relative">
-                  <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-200">{item.title}</p>
-                  <p className="mt-4 text-lg font-semibold text-foreground">{item.problem}</p>
-                  <p className="mt-3 text-sm leading-[1.7] text-foreground-body sm:text-base">{item.solution}</p>
+                {/* Ambient neon glow arriving from the bottom right */}
+                <div className="pointer-events-none absolute bottom-0 right-0 h-32 w-32 rounded-full bg-[radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.12)_0%,rgba(245,158,11,0.02)_60%,transparent_100%)] blur-[20px] transition-all duration-500 group-hover:h-40 group-hover:w-40 group-hover:bg-[radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.25)_0%,rgba(245,158,11,0.05)_65%,transparent_100%)]" />
+                
+                <div className="relative space-y-4">
+                  {/* Card Title */}
+                  <h3 className="text-xl sm:text-2xl font-semibold text-foreground tracking-tight group-hover:text-amber-400 transition-colors duration-300">
+                    {item.title}
+                  </h3>
+                  
+                  {/* Solution description only (no middle/problem line) */}
+                  <p className="text-sm sm:text-base leading-[1.7] text-foreground-body">
+                    {item.solution}
+                  </p>
                 </div>
               </Reveal>
             ))}
@@ -139,8 +144,8 @@ export default function Home() {
         <div className="content-shell space-y-10">
           <SectionHeading
             eyebrow="Industries We Serve"
-            title="Flexible enough for many local-business models, focused enough to stay sharp."
-            description="The experience is designed around the needs of service businesses that depend on trust, clarity, and fast mobile conversion."
+            title="Web Experiences Tailored for Fine Dining & Cafes"
+            description="Custom web design for restaurants, bistros, cafes, and hospitality groups."
             align="center"
           />
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
@@ -176,9 +181,9 @@ export default function Home() {
       <Reveal as="section" className="section-space section-divider">
         <div className="content-shell space-y-10">
           <SectionHeading
-            eyebrow="Website & Software Capabilities"
-            title="Modern digital products built for performance, scalability, and business growth."
-            description="Every project is engineered with production-ready architecture, modern technologies, and features that help businesses launch faster, automate workflows, and scale confidently."
+            eyebrow="Restaurant Website Capabilities"
+            title="Next-Gen Integrations Built to Fill Tables"
+            description="High-performance features engineered to increase guest reservations."
           />
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {websiteFeatures.map((feature, index) => {
@@ -206,8 +211,8 @@ export default function Home() {
         <div className="content-shell space-y-10">
           <SectionHeading
             eyebrow="Our Process"
-            title="A six-step workflow that keeps strategy, design, and launch aligned."
-            description="The process is built to reduce confusion, clarify deliverables, and keep the site moving toward launch without losing quality."
+            title="Our Structured Process from Concept to Launch"
+            description="A structured workflow built for clarity and speed."
           />
           <div className="grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
             {processSteps.map((step, index) => (
@@ -236,6 +241,7 @@ export default function Home() {
         </div>
       </Reveal>
 
+      {/* 
       <Reveal as="section" className="section-space section-divider">
         <div className="content-shell">
           <div className="surface-card flex flex-col items-center justify-center gap-4 px-8 py-14 text-center">
@@ -249,29 +255,34 @@ export default function Home() {
           </div>
         </div>
       </Reveal>
+      */}
 
       <Reveal as="section" className="section-space section-divider">
         <div className="content-shell space-y-10">
           <SectionHeading
             eyebrow="Stats"
-            title="Measured signals that support the credibility story."
-            description="Animated counters bring energy to the section while staying restrained and purposeful."
+            title="Key Performance Metrics That Drive Bookings"
+            description="Key performance metrics of our builds."
             align="center"
           />
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-5">
             {stats.map((stat, index) => (
-              <Reveal key={stat.label} delayMs={index * 50} className="surface-card p-6">
-                <div className="text-[2.3rem] font-semibold leading-none text-foreground">
+              <Reveal
+                key={stat.label}
+                delayMs={index * 50}
+                className="surface-card p-6 flex flex-col items-center justify-center text-center border border-white/8 hover:border-amber-500/25 transition-all duration-300 hover:shadow-[0_5px_20px_-5px_rgba(245,158,11,0.1)] !rounded-[20px]"
+              >
+                <div className="text-[2.6rem] font-semibold leading-none text-amber-400">
                   <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                 </div>
-                <p className="mt-3 text-base font-semibold text-foreground">{stat.label}</p>
-                <p className="mt-2 text-sm leading-[1.7] text-foreground-body">{stat.description}</p>
+                <p className="mt-3 text-sm font-semibold uppercase tracking-wider text-foreground-muted">{stat.label}</p>
               </Reveal>
             ))}
           </div>
         </div>
       </Reveal>
 
+      {/* 
       <Reveal as="section" className="section-space section-divider">
         <div className="content-shell space-y-10">
           <SectionHeading
@@ -298,14 +309,20 @@ export default function Home() {
           </div>
         </div>
       </Reveal>
+      */}
 
       <Reveal as="section" className="section-space section-divider">
         <div className="content-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-          <SectionHeading
-            eyebrow="FAQ"
-            title="Questions a business owner is likely to ask before reaching out."
-            description="The answers stay short, confident, and practical so the section supports trust rather than creating more friction."
-          />
+          <div className="space-y-6">
+            <SectionHeading
+              eyebrow="FAQ"
+              title="Answers to Common Pre-Launch Questions"
+              description="Answers to common pre-launch questions."
+            />
+            <div className="pt-4">
+              <FaqAccordion items={leftFaqs} />
+            </div>
+          </div>
           <FaqAccordion items={faqs} />
         </div>
       </Reveal>
