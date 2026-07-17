@@ -98,13 +98,13 @@ export const industryShowcaseItems: IndustryShowcaseItem[] = [
   },
   {
     label: "Fine Dining",
-    image: "/images/fine_dining.png",
+    image: "/images/fine_dining.avif",
     alt: "Elegant restaurant table with plated dishes and warm ambient lighting.",
     objectPosition: "center center",
   },
   {
     label: "Casual Dining",
-    image: "/images/casual_dining.png",
+    image: "/images/casual_dining.avif",
     alt: "Expansive casual dining restaurant seating and food display.",
     objectPosition: "center center",
   },
@@ -116,13 +116,13 @@ export const industryShowcaseItems: IndustryShowcaseItem[] = [
   },
   {
     label: "Bars & Nightlife",
-    image: "/images/bar_nightlife.png",
+    image: "/images/bar_nightlife.avif",
     alt: "Vibrant bar scene with cocktails and warm lighting.",
     objectPosition: "center center",
   },
   {
     label: "Restaurant Groups",
-    image: "/images/restaurant_group.png",
+    image: "/images/restaurant_group.avif",
     alt: "Premium multi-location restaurant brand presentation.",
     objectPosition: "center center",
   },
