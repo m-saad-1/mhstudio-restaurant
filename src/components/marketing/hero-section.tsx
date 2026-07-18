@@ -25,19 +25,25 @@ export function HeroSection() {
       <div className="pointer-events-none absolute bottom-0 left-1/2 -z-10 h-[35rem] w-[min(100vw,70rem)] -translate-x-1/2 bg-[radial-gradient(ellipse_at_bottom,_rgba(245,158,11,1)_0%,_rgba(245,158,11,0.6)_30%,_rgba(245,158,11,0.25)_50%,_transparent_70%)] blur-[130px] sm:h-[40rem] sm:w-[min(100vw,80rem)]" />
 
       <div className="mx-auto flex min-h-0 w-full max-w-[1200px] flex-col items-center justify-start pt-4 gap-4 text-center sm:min-h-[calc(100svh-96px)] sm:pt-[clamp(3rem,8vh,6rem)] sm:gap-5 lg:gap-6">
-        <span className="eyebrow border-white/10 bg-white/5 text-foreground !text-[10px] !px-3 !py-1 sm:!text-xs sm:!px-4 sm:!py-1.5">
-          <Sparkles className="h-3.5 w-3.5 text-accent sm:h-4 sm:w-4" />
-          Premium Websites • Online Menus • Restaurant AI
+        <span className="eyebrow border-white/10 bg-white/5 text-foreground !text-[9px] !px-2.5 !py-0.5 tracking-tight sm:!text-xs sm:!px-4 sm:!py-1.5 sm:tracking-normal">
+          <Sparkles className="h-3 w-3 text-accent sm:h-4 sm:w-4" />
+          Attract more customers through modern Websites
         </span>
 
         <div className="space-y-3 sm:space-y-4">
-          <h1 className="mx-auto text-[clamp(1.6rem,5vw,2.8rem)] font-semibold leading-[1.12] tracking-[-0.04em] text-foreground sm:text-[clamp(2.2rem,4vw,3.5rem)]">
-            <span className="block">Premium Websites for Restaurants</span>
-            <span className="block">— Built to Fill Your Tables.</span>
+          <h1 className="mx-auto text-foreground">
+            <span className="block sm:hidden text-[2.15rem] leading-[1.1] font-bold tracking-[-0.04em]">
+              <span className="block">Websites For Restaurants</span>
+              <span className="block text-accent mt-0.5">- That Fill Tables.</span>
+            </span>
+            <span className="hidden sm:block text-[clamp(2.2rem,4vw,3.5rem)] font-semibold leading-[1.12] tracking-[-0.04em]">
+              <span className="block">Premium Websites for Restaurants</span>
+              <span className="block">— Built to Fill Your Tables.</span>
+            </span>
           </h1>
 
           <p className="mx-auto max-w-[840px] text-pretty text-sm leading-[1.65] text-foreground-body sm:text-[clamp(1.05rem,1.8vw,1.125rem)]">
-            MHStudio designs and builds high-performance restaurant websites with interactive menus, online reservation integrations, and 24/7 AI-powered booking assistants.
+            High-performance restaurant websites with interactive menus, online reservation integrations, and 24/7 AI-powered booking assistants.
           </p>
         </div>
 

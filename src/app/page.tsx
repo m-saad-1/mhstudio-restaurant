@@ -118,10 +118,11 @@ export default function Home() {
               <Reveal
                 key={item.title}
                 delayMs={index * 70}
-                className="surface-card relative overflow-hidden p-6 sm:p-8 border border-white/8 hover:border-amber-500/30 transition-all duration-500 group hover:shadow-[0_10px_35px_-10px_rgba(245,158,11,0.25)] !rounded-[24px]"
+                className="surface-card relative overflow-hidden p-6 sm:p-8 border border-amber-500/35 hover:border-amber-400/80 bg-[linear-gradient(135deg,rgba(245,158,11,0.06)_0%,rgba(18,18,22,0.95)_40%,rgba(9,9,11,0.98)_100%)] transition-all duration-500 group shadow-[0_0_20px_rgba(245,158,11,0.12)] hover:shadow-[0_0_35px_rgba(245,158,11,0.3)] !rounded-[24px]"
               >
-                {/* Ambient neon glow arriving from the bottom right */}
-                <div className="pointer-events-none absolute bottom-0 right-0 h-32 w-32 rounded-full bg-[radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.12)_0%,rgba(245,158,11,0.02)_60%,transparent_100%)] blur-[20px] transition-all duration-500 group-hover:h-40 group-hover:w-40 group-hover:bg-[radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.25)_0%,rgba(245,158,11,0.05)_65%,transparent_100%)]" />
+                {/* Amplified internal neon glow */}
+                <div className="pointer-events-none absolute -bottom-6 -right-6 h-44 w-44 rounded-full bg-[radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.32)_0%,rgba(245,158,11,0.12)_45%,transparent_75%)] blur-[25px] transition-all duration-500 group-hover:h-52 group-hover:w-52 group-hover:bg-[radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.52)_0%,rgba(245,158,11,0.2)_50%,transparent_80%)]" />
+                <div className="pointer-events-none absolute -top-8 -left-8 h-32 w-32 rounded-full bg-[radial-gradient(circle_at_top_left,rgba(251,191,36,0.18)_0%,transparent_70%)] blur-[20px]" />
                 
                 <div className="relative space-y-4">
                   {/* Card Title */}

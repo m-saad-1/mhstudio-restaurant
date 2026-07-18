@@ -141,7 +141,7 @@ export function SiteHeader() {
               onClick={() => setMenuOpen(false)}
               className="button-secondary w-full px-6 text-base"
             >
-              Contact
+              Book Free Consultation
             </Link>
           </div>
         </div>
