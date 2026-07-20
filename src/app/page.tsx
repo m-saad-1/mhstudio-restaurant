@@ -49,8 +49,8 @@ export default function Home() {
         <div className="content-shell space-y-10">
           <SectionHeading
             eyebrow="Services Snapshot"
-            title="High-Performance Digital Menu & Site Solutions"
-            description="High-performance digital solutions tailored to elevate your dining brand."
+            title="High-Performance Digital & Web Solutions"
+            description="High-performance digital solutions tailored to elevate your brand."
           />
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {homeServiceCards.map((service, index) => {
@@ -88,8 +88,8 @@ export default function Home() {
         <div className="content-shell space-y-10">
           <SectionHeading
             eyebrow="Featured Portfolio"
-            title="Featured Restaurant Concepts & Live Previews"
-            description="Explore our interactive restaurant websites and digital concepts."
+            title="Featured Web Concepts & Live Projects"
+            description="Explore our interactive custom websites and digital projects."
             action={
               <Link href="/work" className="button-secondary px-6 text-sm">
                 See All Projects
@@ -110,8 +110,8 @@ export default function Home() {
         <div className="content-shell space-y-10">
           <SectionHeading
             eyebrow="Why Choose MhStudio"
-            title="Why Premium Design Matters for Reservations"
-            description="How we solve real-world restaurant challenges."
+            title="Why Premium Design Matters for Business"
+            description="How we solve real-world digital & growth challenges."
           />
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {whyChooseItems.map((item, index) => (
@@ -145,8 +145,8 @@ export default function Home() {
         <div className="content-shell space-y-10">
           <SectionHeading
             eyebrow="Industries We Serve"
-            title="Web Experiences Tailored for Fine Dining & Cafes"
-            description="Custom web design for restaurants, bistros, cafes, and hospitality groups."
+            title="Web Experiences Tailored for Growing Brands"
+            description="Custom web design tailored for modern businesses across diverse industries."
             align="center"
           />
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
@@ -182,9 +182,9 @@ export default function Home() {
       <Reveal as="section" className="section-space section-divider">
         <div className="content-shell space-y-10">
           <SectionHeading
-            eyebrow="Restaurant Website Capabilities"
-            title="Next-Gen Integrations Built to Fill Tables"
-            description="High-performance features engineered to increase guest reservations."
+            eyebrow="Digital Capabilities"
+            title="Next-Gen Integrations Built to Drive Conversions"
+            description="High-performance features engineered to increase user engagement and growth."
           />
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {websiteFeatures.map((feature, index) => {
@@ -262,8 +262,8 @@ export default function Home() {
         <div className="content-shell space-y-10">
           <SectionHeading
             eyebrow="Stats"
-            title="Key Performance Metrics That Drive Bookings"
-            description="Key performance metrics of our builds."
+            title="Key Performance Metrics That Drive Results"
+            description="Key performance metrics of our high-speed digital builds."
             align="center"
           />
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-5">

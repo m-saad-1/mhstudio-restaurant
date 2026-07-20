@@ -13,8 +13,8 @@ export default function PricingPage() {
     <>
       <PageHero
         eyebrow="Pricing"
-        title="Clear, flat-rate pricing built for restaurant growth."
-        description="Choose a plan that fits your business—from simple launch sites to advanced custom online menus and WhatsApp AI assistants."
+        title="Clear, flat-rate pricing built for business growth."
+        description="Choose a plan that fits your business—from simple launch sites to advanced custom digital platforms and AI assistants."
         primaryCta={{ label: "Book Free Consultation", href: "/contact" }}
         secondaryCta={{ label: "View Services", href: "/services" }}
       />

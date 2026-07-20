@@ -14,8 +14,8 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About MhStudio"
-        title="High-performance websites built for modern restaurants."
-        description="We build fast, responsive digital experiences that highlight your culinary concept, streamline reservations, and turn visitors into guests."
+        title="High-performance websites built for modern businesses."
+        description="We build fast, responsive digital experiences that highlight your brand, streamline customer flows, and turn visitors into loyal clients."
         primaryCta={{ label: "View Portfolio", href: "/work" }}
         secondaryCta={{ label: "Contact MhStudio", href: "/contact" }}
       />
@@ -24,23 +24,23 @@ export default function AboutPage() {
           <Reveal className="surface-card p-8 sm:p-10">
             <span className="eyebrow">Story</span>
             <h2 className="mt-5 text-[2rem] font-semibold leading-[1.15] text-foreground sm:text-[2.8rem]">
-              Your website should match the quality of your dining room.
+              Your website should match the quality of your business.
             </h2>
             <p className="mt-5 text-base leading-[1.7] text-foreground-body sm:text-lg">
-              MhStudio blends culinary strategy, visual design, and fast frontend engineering. We give restaurants a premium digital presence that is easy to navigate, fast to load, and built to convert hungry visitors.
+              MhStudio blends digital strategy, visual design, and fast frontend engineering. We give businesses a premium digital presence that is easy to navigate, fast to load, and built to convert.
             </p>
           </Reveal>
           <Reveal delayMs={100} className="grid gap-6">
             <div className="surface-card p-6">
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-200">Mission</p>
               <p className="mt-3 text-sm leading-[1.7] text-foreground-body sm:text-base">
-                Build high-performance websites that increase reservations and elevate your restaurant's brand.
+                Build high-performance websites that increase conversions and elevate your brand.
               </p>
             </div>
             <div className="surface-card p-6">
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-200">Vision</p>
               <p className="mt-3 text-sm leading-[1.7] text-foreground-body sm:text-base">
-                Empower restaurants with digital tools that fill tables, showcase menus, and simplify operations.
+                Empower businesses with digital tools that drive growth, showcase services, and simplify operations.
               </p>
             </div>
             <div className="surface-card p-6">

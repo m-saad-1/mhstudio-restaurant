@@ -53,7 +53,8 @@ export function Reveal({
           }
         });
       },
-      { threshold: 0.01, rootMargin: "200px" },
+      // Trigger just before entering the viewport so user can see it animate
+      { threshold: 0.01, rootMargin: "50px" },
     );
 
     if (ref.current) {
@@ -68,10 +69,13 @@ export function Reveal({
   }, []);
 
   const classes = [
-    "transition-all duration-[400ms] ease-out will-change-[transform,opacity] motion-reduce:transition-none",
-    isVisible || reduceMotion ? "translate-y-0 opacity-100" : "translate-y-[15px] opacity-0",
+    "transition-all duration-500 ease-out w-full will-change-[transform,opacity] motion-reduce:transition-none",
+    isVisible || reduceMotion ? "translate-y-0 opacity-100" : "translate-y-[24px] opacity-0",
     className,
   ].join(" ");
+
+  // Re-enable delay but cap it so it doesn't get stuck if user scrolls fast
+  const inlineStyle = delayMs > 0 ? { transitionDelay: `${Math.min(delayMs, 150)}ms` } : undefined;
 
   if (as === "section") {
     return (
@@ -79,6 +83,7 @@ export function Reveal({
         id={id}
         ref={setRef}
         className={classes}
+        style={inlineStyle}
       >
         {children}
       </section>
@@ -90,6 +95,7 @@ export function Reveal({
       id={id}
       ref={setRef}
       className={classes}
+      style={inlineStyle}
     >
       {children}
     </div>

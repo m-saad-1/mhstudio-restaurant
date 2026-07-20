@@ -22,12 +22,19 @@ export function PricingGrid() {
               <div className="flex items-center justify-between gap-3">
                 <h2 className="text-2xl font-semibold text-foreground">{pkg.name}</h2>
                 {pkg.featured && (
-                  <span className="rounded-full bg-amber-400 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-zinc-950">
-                    Popular
+                  <span className="rounded-full bg-amber-400 px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-zinc-950 shadow-[0_4px_14px_rgba(245,158,11,0.3)]">
+                    Recommended
                   </span>
                 )}
               </div>
-              <p className="text-3xl font-semibold text-foreground">{pkg.price}</p>
+              <div className="flex items-baseline gap-2.5">
+                <p className="text-3xl font-bold text-foreground">{pkg.price}</p>
+                {pkg.originalPrice && (
+                  <span className="text-lg font-medium text-foreground-muted line-through opacity-60">
+                    {pkg.originalPrice}
+                  </span>
+                )}
+              </div>
               <p className="text-sm leading-[1.7] text-foreground-body sm:text-base">{pkg.summary}</p>
             </div>
             <div className="mt-6 grid gap-3 flex-1">

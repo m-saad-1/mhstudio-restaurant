@@ -39,7 +39,7 @@ export default function ProcessPage() {
           <SectionHeading
             eyebrow="The Core Process"
             title="Six steps to launch."
-            description="Our step-by-step roadmap for building high-speed restaurant platforms."
+            description="Our step-by-step roadmap for building high-speed digital platforms."
           />
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {corePhases.map((phase, index) => {
@@ -213,7 +213,7 @@ export default function ProcessPage() {
                 Let's Build It
               </h2>
               <p className="text-base leading-[1.7] text-foreground-body sm:text-lg">
-                Whether launching your first site, updating a digital menu, or integrating WhatsApp AI assistants, our structured process ensures a fast, transparent path to filling tables.
+                Whether launching your first site, building a custom web application, or integrating AI assistants, our structured process ensures a fast, transparent path to growth.
               </p>
               <div className="pt-4">
                 <Link href="/contact" className="button-primary px-8 text-sm sm:w-auto">

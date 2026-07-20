@@ -33,9 +33,9 @@ export type PortfolioItem = {
 
 export const siteConfig = {
   name: "MhStudio",
-  tagline: "Premium websites and AI features for modern restaurants.",
+  tagline: "Premium custom websites and AI solutions for modern businesses.",
   description:
-    "MhStudio designs and develops high-performance, conversion-focused websites for modern restaurants, featuring online menus, digital reservations, and custom restaurant AI assistants.",
+    "MhStudio designs and develops high-performance, conversion-focused websites featuring digital showcases, smart integrations, and custom AI assistants.",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "saad@mhstudios.online",
   whatsappHref: process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "https://wa.me/+923429842565",
   calendarHref: process.env.NEXT_PUBLIC_CALENDAR_URL ?? "https://calendly.com/mhstudio/30min",
@@ -244,6 +244,12 @@ export const serviceCards = [
     icon: "zap",
   },
   {
+    title: "Hosting & Deployment",
+    description: "End-to-end cloud hosting setup, custom domain connection, SSL security configuration, and smooth production launch.",
+    features: ["Hosting setup & domain connection", "Deployment & SSL configuration", "Production launch & post-support"],
+    icon: "server-cog",
+  },
+  {
     title: "Website Maintenance & Support",
     description: "Ongoing support to update your menus, pricing, hours, and announcements without delay.",
     features: ["Same-day content updates", "Regular backups & health checks", "Security monitoring"],
@@ -305,6 +311,12 @@ export const serviceSections = [
     description: "Speed-focused improvements ensuring your pages load instantly even on cellular data.",
     points: ["95+ Core Web Vitals score", "Advanced image compression", "Instant page transitions"],
     icon: "zap",
+  },
+  {
+    title: "Hosting & Deployment",
+    description: "Complete hosting setup, custom domain routing, SSL certificate configuration, production launch, and dedicated post-launch support.",
+    points: ["Hosting setup", "Domain connection", "Deployment", "SSL configuration", "Production launch", "Post-launch support"],
+    icon: "server-cog",
   },
   {
     title: "Website Maintenance & Support",
@@ -436,16 +448,19 @@ export const leftFaqs = [
 export const pricingPackages = [
   {
     name: "Launch",
-    price: "From $499",
-    summary: "Perfect for single-location restaurants, cafes, bistros, or food trucks that need a modern, high-performance web presence with a digital menu.",
+    price: "$199",
+    originalPrice: "$299",
+    summary: "Perfect for small businesses, cafes, bistros, or startups that need a modern, high-performance web presence with a digital menu.",
     includes: [
       "Up to 5 Pages",
-      "Interactive Digital Menu",
+      "Interactive Digital Menu / Showcase",
       "Mobile-First Responsive Layout",
-      "Google Maps & Location Page",
-      "Reservation Link Integration",
-      "Basic SEO Setup",
       "Contact & Inquiry Forms",
+      "Domain & Hosting Guidance",
+      "Deployment & SSL Configuration",
+      "Basic Technical SEO & Schema",
+      "Google Maps Integration",
+      "Performance Optimization",
       "30 Days Support"
     ],
     ctaText: "View Details",
@@ -453,55 +468,53 @@ export const pricingPackages = [
     modalDetails: [
       {
         category: "Design & Pages",
-        features: ["Custom modern UI", "Mobile-first digital menu", "Home, Menu, About, Gallery, Contact pages"]
+        features: ["Custom modern UI", "Mobile-first digital menu", "Home, Menu/Services, About, Gallery, Contact pages"]
       },
       {
-        category: "Integrations",
-        features: ["OpenTable/Resy Link", "Google Maps", "Contact Form", "Click-to-Call / Click-to-Email"]
+        category: "Deployment & Setup",
+        features: ["Domain connection & hosting guidance", "SSL security setup & deployment", "Google Maps & contact forms", "Click-to-Call / Click-to-Email"]
       },
       {
         category: "SEO & Speed",
-        features: ["Local SEO keywords", "Restaurant schema markup", "Image compression for fast loading"]
+        features: ["Basic technical SEO setup", "Local schema markup", "Image compression for fast loading"]
       },
       {
         category: "Support",
-        features: ["30 Days Free Support", "Minor menu/pricing updates"]
+        features: ["30 Days Free Support", "Minor content & pricing updates"]
       }
     ]
   },
   {
     name: "Growth",
-    price: "From $1,199",
-    summary: "Ideal for growing restaurants and bistros that want to automate reservations, capture reviews, and integrate basic AI customer service.",
+    price: "$399",
+    originalPrice: "$499",
+    summary: "Ideal for growing restaurants and modern brands looking to automate reservations, capture reviews, and integrate AI customer support.",
     includes: [
       "Everything in Launch",
-      "Interactive Booking System",
+      "Interactive Reservation System",
       "AI Menu & FAQ Assistant",
+      "WhatsApp Integration",
+      "Analytics Setup & Tracking",
       "Google Reviews Display",
-      "Private Events Page",
-      "Newsletter & Email Signup",
+      "Security Best Practices Setup",
       "Advanced Local SEO",
       "45 Days Support"
     ],
     featured: true,
     ctaText: "View Details",
-    timeline: "2-5 weeks",
+    timeline: "2-4 weeks",
     modalDetails: [
       {
-        category: "Enhanced Website",
-        features: ["Up to 10 Pages", "Advanced UI/UX with smooth scroll", "Private events inquiry system", "Chef's specials highlight"]
+        category: "Enhanced Platform",
+        features: ["Up to 10 Pages", "Advanced UI/UX with smooth animations", "Private events & inquiry system", "Featured specials highlight"]
       },
       {
-        category: "AI Features",
-        features: ["AI Chatbot for booking guidance", "Menu ingredient & allergy FAQ assistant", "Automated guest reply system"]
+        category: "AI & Integrations",
+        features: ["AI Chat Assistant for booking & FAQ support", "WhatsApp integration for instant guest communication", "Embedded booking widgets", "Google Reviews live sync", "Analytics setup & conversion tracking"]
       },
       {
-        category: "Integrations",
-        features: ["Embedded booking widgets", "Google Reviews live sync", "Mailchimp / email marketing tools"]
-      },
-      {
-        category: "SEO & Performance",
-        features: ["Advanced local SEO optimization", "Core Web Vitals compliance", "CDN media hosting"]
+        category: "SEO, Security & Performance",
+        features: ["Advanced local SEO optimization", "Security best practices setup", "Core Web Vitals compliance", "CDN media hosting"]
       },
       {
         category: "Support",
@@ -511,73 +524,71 @@ export const pricingPackages = [
   },
   {
     name: "Scale AI",
-    price: "From $2,499",
-    summary: "Designed for premium dining spots and food brands seeking fully custom AI receptionists, automated booking workflows, and advanced marketing integrations.",
+    price: "$999",
+    originalPrice: "$1999",
+    summary: "Designed for premium businesses and brands seeking fully custom AI receptionists, automated booking workflows, and advanced ordering integrations.",
     includes: [
       "Everything in Growth",
-      "Custom AI Receptionist Bot",
-      "Automated Reservation Verification",
-      "Interactive Food Showcase Reels",
-      "Multi-Language Menu Support",
-      "CRM & POS Integrations",
+      "Custom AI Receptionist Assistant",
+      "Automated Reservation Workflows",
+      "Online Ordering / POS Integration",
+      "Multi-Language Support",
+      "High-Speed Performance Optimization (98+ Vitals)",
       "Admin Analytics Dashboard",
+      "Website Maintenance Package",
       "60 Days Support"
     ],
     ctaText: "View Details",
-    timeline: "4-8 weeks",
+    timeline: "4-6 weeks",
     modalDetails: [
       {
         category: "Premium Features",
-        features: ["Unlimited Pages", "Custom motion transitions", "Interactive culinary showcases", "Multi-language menus"]
+        features: ["Unlimited Pages", "Custom motion transitions", "Interactive showcases", "Multi-language menu support"]
       },
       {
-        category: "Advanced Restaurant AI",
-        features: ["Custom AI Receptionist (highly trained on your brand)", "Reservation booking assistant", "SMS reservation alerts"]
+        category: "Advanced Custom AI",
+        features: ["Custom AI Receptionist (trained on your brand & data)", "Automated booking & lead verification", "SMS & email alerts"]
       },
       {
-        category: "Integrations",
-        features: ["POS System Integration (e.g. Toast, Square)", "Customer CRM setup", "SMS reservation alerts"]
+        category: "Integrations & Ordering",
+        features: ["Online Ordering & POS Integration (Toast, Square, etc.)", "Customer CRM setup", "Admin Analytics Dashboard"]
       },
       {
-        category: "Analytics",
-        features: ["Admin dashboard", "Menu view tracking", "Reservation conversions analytics"]
-      },
-      {
-        category: "Support",
-        features: ["60 Days Priority Support", "Same-day menu edits"]
+        category: "Performance & Support",
+        features: ["Dedicated performance tuning (98+ Core Web Vitals)", "Website Maintenance & Support", "60 Days Priority Support", "Same-day menu edits"]
       }
     ]
   },
   {
     name: "Enterprise",
     price: "Custom Quote",
-    summary: "Tailored digital solutions for multi-location restaurant groups, franchise networks, upscale hotel dining, and complex catering brands.",
+    summary: "Tailored digital solutions for multi-location groups, franchise networks, upscale hotel dining, and complex enterprise platforms.",
     includes: [
       "Custom Multi-Location Scope",
       "Corporate Platform Design",
       "POS-Connected Online Ordering",
       "Centralized Franchise Admin",
       "Dedicated Account Manager",
-      "Ongoing Partnership & SLA"
+      "24/7 Priority SLA & Partnership"
     ],
     ctaText: "Contact Us",
     timeline: "Custom timeline",
     modalDetails: [
       {
         category: "Group Platform",
-        features: ["Multi-location routing", "Franchise microsites", "Centralized menu content manager", "Upscale hotel dining sections"]
+        features: ["Multi-location routing", "Franchise microsites", "Centralized content manager", "Upscale enterprise sections"]
       },
       {
         category: "POS & Ordering",
-        features: ["Full POS-connected ordering flow", "Delivery platform integrations", "Catering ordering system"]
+        features: ["Full POS-connected ordering flow", "Delivery platform integrations", "Catering & events pipeline"]
       },
       {
         category: "AI & Custom Workflows",
-        features: ["Multi-location AI dispatch system", "Voice AI booking agent support", "Custom enterprise analytics"]
+        features: ["Multi-location AI dispatch system", "Voice AI booking support", "Custom enterprise analytics"]
       },
       {
         category: "Support",
-        features: ["Dedicated Project Manager", "24/7 Priority SLA support", "Monthly performance reviews"]
+        features: ["Dedicated Account Manager", "24/7 Priority SLA support", "Monthly performance & security reviews"]
       }
     ]
   }
@@ -726,7 +737,7 @@ export const portfolioItems: PortfolioItem[] = [
     shortDescription: "An intelligent AI receptionist chatbot designed to automate restaurant reservations, menu inquiries, and guest support.",
     overview:
       "An interactive restaurant assistant demonstration showcasing how custom LLM integrations can answer guest inquiries about ingredients, dietary constraints, parking, and reservation availability 24/7.",
-    industry: "Restaurant",
+    industry: "AI Receptionist",
     technologies: ["React.js", "Node.js", "Express", "MongoDB", "Gemini AI", "Tailwind CSS"],
     features: ["Custom reservation flow", "Allergen & menu FAQ search", "SMS/Email notifications", "Interactive chat sandbox"],
     image: "/images/Multi-vertical-Ai-receptionist-chatbot.avif",
