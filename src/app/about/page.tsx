@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/reveal";
 import { PageHero } from "@/components/marketing/page-hero";
-import { aboutValues, processSteps, technologyGroups } from "@/data/site-content";
+import { aboutValues, processSteps, technologyGroups, whyChooseItems } from "@/data/site-content";
+import { SectionHeading } from "@/components/ui/section-heading";
 
 export const metadata: Metadata = {
   title: "About MhStudio",
@@ -56,6 +57,42 @@ export default function AboutPage() {
           </Reveal>
         </div>
       </section>
+
+      <Reveal as="section" className="section-space section-divider">
+        <div className="content-shell space-y-10">
+          <SectionHeading
+            eyebrow="Why Choose MhStudio"
+            title="Why Premium Design Matters for Business"
+            description="How we solve real-world digital & growth challenges."
+          />
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {whyChooseItems.map((item, index) => (
+              <Reveal
+                key={item.title}
+                delayMs={index * 70}
+                className="surface-card relative overflow-hidden p-6 sm:p-8 border border-amber-500/35 hover:border-amber-400/80 bg-[linear-gradient(135deg,rgba(245,158,11,0.06)_0%,rgba(18,18,22,0.95)_40%,rgba(9,9,11,0.98)_100%)] transition-all duration-500 group shadow-[0_0_20px_rgba(245,158,11,0.12)] hover:shadow-[0_0_35px_rgba(245,158,11,0.3)] !rounded-[24px]"
+              >
+                {/* Amplified internal neon glow */}
+                <div className="pointer-events-none absolute -bottom-6 -right-6 h-44 w-44 rounded-full bg-[radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.32)_0%,rgba(245,158,11,0.12)_45%,transparent_75%)] blur-[25px] transition-all duration-500 group-hover:h-52 group-hover:w-52 group-hover:bg-[radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.52)_0%,rgba(245,158,11,0.2)_50%,transparent_80%)]" />
+                <div className="pointer-events-none absolute -top-8 -left-8 h-32 w-32 rounded-full bg-[radial-gradient(circle_at_top_left,rgba(251,191,36,0.18)_0%,transparent_70%)] blur-[20px]" />
+                
+                <div className="relative space-y-4">
+                  {/* Card Title */}
+                  <h3 className="text-xl sm:text-2xl font-semibold text-foreground tracking-tight group-hover:text-amber-400 transition-colors duration-300">
+                    {item.title}
+                  </h3>
+                  
+                  {/* Solution description only (no middle/problem line) */}
+                  <p className="text-sm sm:text-base leading-[1.7] text-foreground-body">
+                    {item.solution}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </Reveal>
+
       <section className="section-space section-divider">
         <div className="content-shell grid gap-6 lg:grid-cols-2">
           <Reveal className="surface-card p-6 sm:p-8">

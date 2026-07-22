@@ -20,7 +20,6 @@ import {
   stats,
   technologyGroups,
   websiteFeatures,
-  whyChooseItems,
 } from "@/data/site-content";
 
 const blurData = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTYnIGhlaWdodD0nMTAnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHJlY3Qgd2lkdGg9JzE2JyBoZWlnaHQ9JzEwJyBmaWxsPScjMTExMTEzJy8+PHJlY3QgY29yPScyJyB4PScxJyB5PScxJyB3aWR0aD0nMTQnIGhlaWdodD0nOCcgZmlsbD0nI0Y1OUUwQicgb3BhY2l0eT0nMC4xNScvPjwvc3ZnPg==";
@@ -85,6 +84,71 @@ export default function Home() {
       </Reveal>
 
       <Reveal as="section" className="section-space section-divider">
+        <div className="content-shell grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:items-stretch">
+          {/* Left Side: Image */}
+          <Reveal delayMs={0} className="relative mx-auto w-full max-w-md lg:mx-0 lg:max-w-none flex justify-center lg:h-full">
+            {/* Decorative Glow */}
+            <div className="pointer-events-none absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.22)_0%,transparent_70%)] blur-[50px]" />
+            <div className="relative w-full aspect-[4/5] lg:aspect-auto lg:h-full z-10 perspective-1000">
+              <Image
+                src="/images/chatbot.avif"
+                alt="AI Receptionist Interface"
+                fill
+                className="object-contain object-center drop-shadow-[0_20px_40px_rgba(245,158,11,0.18)] hover:-translate-y-2 transition-transform duration-500 ease-out"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+            </div>
+          </Reveal>
+
+          {/* Right Side: Content */}
+          <Reveal delayMs={100} className="space-y-8">
+            <div className="space-y-5">
+              <span className="inline-flex items-center gap-2 rounded-[12px] border border-amber-400/20 bg-amber-400/10 px-4 py-1.5 text-sm font-semibold text-amber-400 backdrop-blur-md shadow-[0_0_15px_rgba(245,158,11,0.15)]">
+                <span className="text-base">🤖</span> AI-Powered Customer Experience
+              </span>
+              <h2 className="text-[2rem] font-semibold leading-[1.15] text-foreground sm:text-[2.8rem] tracking-tight">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200 drop-shadow-sm">24/7 AI Receptionist</span>
+              </h2>
+              <p className="text-base leading-[1.8] text-foreground-body sm:text-lg">
+                Deliver instant responses and simplify customer interactions around the clock. Help guests book tables, take orders, and answer questions while reducing your team's workload.
+              </p>
+            </div>
+
+            <div className="grid gap-3 sm:grid-cols-2">
+              {[
+                { title: "Instant Customer Replies", desc: "Answers in seconds." },
+                { title: "Online Ordering", desc: "Guided order flow." },
+                { title: "Table Reservations", desc: "Automated booking." },
+                { title: "Events & Catering", desc: "Manage large inquiries." },
+                { title: "Business Information", desc: "Hours & location." },
+                { title: "Smart Menu", desc: "Dish recommendations." },
+              ].map((feature) => (
+                <div key={feature.title} className="surface-card flex items-start gap-4 p-4 !rounded-[16px] border border-white/5 hover:border-amber-500/30 transition-all duration-300 hover:shadow-[0_4px_20px_rgba(245,158,11,0.08)] bg-white/[0.01] hover:bg-white/[0.03]">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-amber-400/10 text-amber-400 shadow-[inset_0_0_10px_rgba(245,158,11,0.1)]">
+                    <Check className="h-4 w-4" strokeWidth={3} />
+                  </span>
+                  <div>
+                    <span className="block text-sm font-semibold text-foreground">{feature.title}</span>
+                    <span className="block text-xs text-foreground-muted mt-1">{feature.desc}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+
+
+            <div className="pt-2">
+              <Link href="/services" className="button-primary px-8 py-3.5 text-sm w-full sm:w-auto inline-flex items-center justify-center group shadow-[0_0_20px_rgba(245,158,11,0.25)] hover:shadow-[0_0_30px_rgba(245,158,11,0.4)]">
+                Explore AI Features
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            </div>
+          </Reveal>
+        </div>
+      </Reveal>
+
+      <Reveal as="section" className="section-space section-divider">
         <div className="content-shell space-y-10">
           <SectionHeading
             eyebrow="Featured Portfolio"
@@ -106,40 +170,7 @@ export default function Home() {
         </div>
       </Reveal>
 
-      <Reveal as="section" className="section-space section-divider">
-        <div className="content-shell space-y-10">
-          <SectionHeading
-            eyebrow="Why Choose MhStudio"
-            title="Why Premium Design Matters for Business"
-            description="How we solve real-world digital & growth challenges."
-          />
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {whyChooseItems.map((item, index) => (
-              <Reveal
-                key={item.title}
-                delayMs={index * 70}
-                className="surface-card relative overflow-hidden p-6 sm:p-8 border border-amber-500/35 hover:border-amber-400/80 bg-[linear-gradient(135deg,rgba(245,158,11,0.06)_0%,rgba(18,18,22,0.95)_40%,rgba(9,9,11,0.98)_100%)] transition-all duration-500 group shadow-[0_0_20px_rgba(245,158,11,0.12)] hover:shadow-[0_0_35px_rgba(245,158,11,0.3)] !rounded-[24px]"
-              >
-                {/* Amplified internal neon glow */}
-                <div className="pointer-events-none absolute -bottom-6 -right-6 h-44 w-44 rounded-full bg-[radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.32)_0%,rgba(245,158,11,0.12)_45%,transparent_75%)] blur-[25px] transition-all duration-500 group-hover:h-52 group-hover:w-52 group-hover:bg-[radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.52)_0%,rgba(245,158,11,0.2)_50%,transparent_80%)]" />
-                <div className="pointer-events-none absolute -top-8 -left-8 h-32 w-32 rounded-full bg-[radial-gradient(circle_at_top_left,rgba(251,191,36,0.18)_0%,transparent_70%)] blur-[20px]" />
-                
-                <div className="relative space-y-4">
-                  {/* Card Title */}
-                  <h3 className="text-xl sm:text-2xl font-semibold text-foreground tracking-tight group-hover:text-amber-400 transition-colors duration-300">
-                    {item.title}
-                  </h3>
-                  
-                  {/* Solution description only (no middle/problem line) */}
-                  <p className="text-sm sm:text-base leading-[1.7] text-foreground-body">
-                    {item.solution}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </Reveal>
+
 
       <Reveal as="section" className="section-space section-divider">
         <div className="content-shell space-y-10">

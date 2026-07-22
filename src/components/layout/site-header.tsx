@@ -84,42 +84,56 @@ export function SiteHeader() {
         </div>
       </header>
 
+      {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-[60] transition-opacity duration-300 lg:hidden ${menuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
+        className={`fixed inset-0 z-[100] lg:hidden ${menuOpen ? "pointer-events-auto" : "pointer-events-none"}`}
         aria-hidden={!menuOpen}
       >
-        <div className="absolute inset-0 bg-[rgba(9,9,11,0.92)] backdrop-blur-md" />
-        <div className="content-shell relative flex h-[100dvh] flex-col overflow-y-auto py-6 pb-12">
+        {/* Backdrop */}
+        <div 
+          className={`absolute inset-0 bg-[rgba(9,9,11,0.95)] backdrop-blur-xl transition-opacity duration-500 ease-in-out ${menuOpen ? "opacity-100" : "opacity-0"}`} 
+          onClick={() => setMenuOpen(false)}
+          aria-hidden="true"
+        />
+        
+        {/* Menu Content */}
+        <div 
+          className={`content-shell relative flex h-[100dvh] flex-col overflow-y-auto py-6 pb-12 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${menuOpen ? "translate-y-0 opacity-100" : "-translate-y-8 opacity-0"}`}
+        >
           <div className="flex items-center justify-between">
             <Link
               href="/"
               onClick={() => setMenuOpen(false)}
-              className="flex items-center"
+              className="flex items-center transition-transform active:scale-95"
             >
-              <Image src="/mh_logo.png" alt="MhStudio Logo" width={48} height={48} className="h-10 w-auto sm:h-12" />
+              <Image src="/mh_logo.png" alt="MhStudio Logo" width={48} height={48} className="h-10 w-auto sm:h-12 drop-shadow-lg" />
             </Link>
             <button
               type="button"
               onClick={() => setMenuOpen(false)}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-foreground"
+              className="group flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-foreground transition-all duration-300 hover:bg-white/10 hover:scale-105 active:scale-95"
               aria-label="Close menu"
             >
-              <X className="h-5 w-5" />
+              <X className="h-5 w-5 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:rotate-90" />
             </button>
           </div>
 
-          <nav className="mt-16 flex flex-1 flex-col justify-center gap-6" aria-label="Mobile">
-            {navigationItems.map((item) => {
+          <nav className="mt-12 flex flex-1 flex-col justify-center gap-6 sm:gap-8" aria-label="Mobile">
+            {navigationItems.map((item, index) => {
               const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
               return (
-                <div key={item.href} className="relative w-fit">
+                <div 
+                  key={item.href} 
+                  className={`relative w-fit transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${menuOpen ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"}`}
+                  style={{ transitionDelay: `${menuOpen ? index * 100 + 100 : 0}ms` }}
+                >
                   {isActive && (
-                    <span className="absolute -left-6 top-1/2 -translate-y-1/2 h-2.5 w-2.5 rounded-full bg-accent" />
+                    <span className="absolute -left-6 top-1/2 -translate-y-1/2 h-2 w-2 rounded-full bg-accent shadow-[0_0_12px_rgba(245,158,11,0.8)]" />
                   )}
                   <Link
                     href={item.href}
                     onClick={() => setMenuOpen(false)}
-                    className={`block text-3xl font-semibold leading-none transition-colors duration-300 ${isActive ? "text-accent" : "text-foreground hover:text-accent"}`}
+                    className={`block text-4xl sm:text-5xl font-bold tracking-tight leading-none transition-colors duration-300 ${isActive ? "text-accent" : "text-foreground hover:text-white/70"}`}
                   >
                     {item.label}
                   </Link>
@@ -128,18 +142,21 @@ export function SiteHeader() {
             })}
           </nav>
 
-          <div className="mt-8 flex flex-col gap-3 pb-8">
+          <div 
+            className={`mt-8 flex flex-col gap-3 pb-8 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${menuOpen ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}
+            style={{ transitionDelay: `${menuOpen ? navigationItems.length * 100 + 150 : 0}ms` }}
+          >
             <Link
               href="/demo"
               onClick={() => setMenuOpen(false)}
-              className="button-primary w-full px-6 text-base"
+              className="button-primary w-full px-6 text-base shadow-[0_0_20px_rgba(245,158,11,0.15)] transition-all hover:shadow-[0_0_30px_rgba(245,158,11,0.25)] hover:-translate-y-0.5 active:translate-y-0"
             >
               Get Free Demo
             </Link>
             <Link
               href="/contact"
               onClick={() => setMenuOpen(false)}
-              className="button-secondary w-full px-6 text-base"
+              className="button-secondary w-full px-6 text-base transition-all hover:-translate-y-0.5 active:translate-y-0"
             >
               Book Free Consultation
             </Link>
