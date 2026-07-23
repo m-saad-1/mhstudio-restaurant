@@ -620,6 +620,28 @@ export const aboutValues = [
 
 export const portfolioItems: PortfolioItem[] = [
   {
+    slug: "savor-fine-dining",
+    title: "Savor Fine Dining",
+    category: "Restaurant",
+    clientType: "Fine Dining",
+    shortDescription: "An exquisite fine dining website designed to showcase a premium culinary experience, reservations, and elegant ambiance.",
+    overview:
+      "Savor Fine Dining required a highly sophisticated online presence that reflects the artistry of their dishes and simplifies the booking process for their exclusive clientele.",
+    industry: "Restaurant",
+    technologies: ["Next.js", "Tailwind CSS", "Animations", "Reservation API"],
+    features: ["Immersive visual galleries", "Streamlined reservation flow", "Seasonal menu showcases", "Mobile-optimized experience"],
+    image: "/images/Savorfinedining.avif",
+    imageAlt: "Savor Fine Dining website preview showing elegant culinary presentations and reservation features.",
+    liveHref: "https://savordining.vercel.app",
+    performance: "100/100 Core Web Vitals score",
+    results: ["Increased exclusive table bookings", "Enhanced digital brand elegance", "Frictionless mobile reservations"],
+    challenge: "Translating a high-end physical dining experience into a fast, visually stunning digital platform.",
+    goals: ["Showcase culinary artistry", "Streamline VIP reservations", "Elevate digital brand perception"],
+    design: "Elegant, minimalist layout with high-resolution imagery and sophisticated typography to reflect a premium atmosphere.",
+    development:
+      "Built with a focus on performance and smooth transitions, integrating a seamless booking API while maintaining flawless Core Web Vitals.",
+  },
+  {
     slug: "momofuku",
     title: "Momofuku",
     category: "Restaurant",
