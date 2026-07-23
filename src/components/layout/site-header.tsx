@@ -38,7 +38,7 @@ export function SiteHeader() {
         <div className="content-shell relative py-4">
           <div
             className={[
-              "grid h-[72px] grid-cols-[1fr_auto] items-center rounded-full border transition-colors duration-300 lg:grid-cols-[1fr_auto_1fr]",
+              "grid h-[72px] grid-cols-[1fr_auto] items-center border transition-colors duration-300 lg:grid-cols-[1fr_auto_1fr]",
               scrolled
                 ? "border-white/10 bg-navigation-background shadow-[0_20px_70px_rgba(0,0,0,0.28)] backdrop-blur-md"
                 : "border-white/0 bg-transparent backdrop-blur-md",
@@ -58,7 +58,7 @@ export function SiteHeader() {
                     className={`relative text-sm font-medium transition-colors duration-300 ${isActive ? "text-foreground" : "text-foreground-body hover:text-foreground"}`}
                   >
                     {isActive && (
-                      <span className="absolute -left-3 top-1/2 -translate-y-1/2 h-1.5 w-1.5 rounded-full bg-accent" />
+                      <span className="absolute -left-3 top-1/2 -translate-y-1/2 h-1.5 w-1.5 rounded-none bg-accent" />
                     )}
                     {item.label}
                   </Link>
@@ -75,7 +75,7 @@ export function SiteHeader() {
             <button
               type="button"
               onClick={() => setMenuOpen(true)}
-              className="mr-3 flex h-11 w-11 items-center justify-center rounded-full border border-white/8 bg-card-background text-foreground lg:hidden"
+              className="mr-3 flex h-11 w-11 items-center justify-center rounded-none border border-white/8 bg-card-background text-foreground lg:hidden"
               aria-label="Open menu"
             >
               <Menu className="h-5 w-5" />
@@ -111,7 +111,7 @@ export function SiteHeader() {
             <button
               type="button"
               onClick={() => setMenuOpen(false)}
-              className="group flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-foreground transition-all duration-300 hover:bg-white/10 hover:scale-105 active:scale-95"
+              className="group flex h-11 w-11 items-center justify-center rounded-none border border-white/10 bg-white/5 text-foreground transition-all duration-300 hover:bg-white/10 hover:scale-105 active:scale-95"
               aria-label="Close menu"
             >
               <X className="h-5 w-5 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:rotate-90" />
@@ -128,7 +128,7 @@ export function SiteHeader() {
                   style={{ transitionDelay: `${menuOpen ? index * 100 + 100 : 0}ms` }}
                 >
                   {isActive && (
-                    <span className="absolute -left-6 top-1/2 -translate-y-1/2 h-2 w-2 rounded-full bg-accent shadow-[0_0_12px_rgba(245,158,11,0.8)]" />
+                    <span className="absolute -left-6 top-1/2 -translate-y-1/2 h-2 w-2 rounded-none bg-accent shadow-[0_0_12px_rgba(245,158,11,0.8)]" />
                   )}
                   <Link
                     href={item.href}

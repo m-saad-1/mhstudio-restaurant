@@ -38,8 +38,8 @@ export function ContactForm() {
       </div>
 
       {submitted ? (
-        <div className="flex flex-col items-center justify-center rounded-[24px] border border-emerald-500/20 bg-emerald-500/10 p-10 text-center animate-in fade-in zoom-in duration-500">
-          <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400">
+        <div className="flex flex-col items-center justify-center rounded-none border border-emerald-500/20 bg-emerald-500/10 p-10 text-center animate-in fade-in zoom-in duration-500">
+          <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-none bg-emerald-500/20 text-emerald-400">
             <CheckCircle2 className="h-8 w-8" />
           </div>
           <h3 className="mb-3 text-2xl font-semibold text-emerald-400">Message Sent Successfully!</h3>
@@ -97,7 +97,7 @@ export function ContactForm() {
               name="name"
               value={formState.name}
               onChange={(event) => setFormState((current) => ({ ...current, name: event.target.value }))}
-              className="min-h-11 rounded-[16px] border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground placeholder:text-foreground-muted"
+              className="min-h-11 rounded-none border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground placeholder:text-foreground-muted"
               placeholder="Your full name"
               disabled={isSubmitting}
             />
@@ -110,7 +110,7 @@ export function ContactForm() {
               name="email"
               value={formState.email}
               onChange={(event) => setFormState((current) => ({ ...current, email: event.target.value }))}
-              className="min-h-11 rounded-[16px] border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground placeholder:text-foreground-muted"
+              className="min-h-11 rounded-none border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground placeholder:text-foreground-muted"
               placeholder="you@restaurant.com"
               disabled={isSubmitting}
             />
@@ -126,7 +126,7 @@ export function ContactForm() {
               name="business"
               value={formState.business}
               onChange={(event) => setFormState((current) => ({ ...current, business: event.target.value }))}
-              className="min-h-11 rounded-[16px] border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground placeholder:text-foreground-muted"
+              className="min-h-11 rounded-none border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground placeholder:text-foreground-muted"
               placeholder="Restaurant or brand name"
               disabled={isSubmitting}
             />
@@ -138,7 +138,7 @@ export function ContactForm() {
               name="budget"
               value={formState.budget}
               onChange={(event) => setFormState((current) => ({ ...current, budget: event.target.value }))}
-              className="min-h-11 rounded-[16px] border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground"
+              className="min-h-11 rounded-none border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground"
               disabled={isSubmitting}
             >
               <option value="">Select package range</option>
@@ -157,7 +157,7 @@ export function ContactForm() {
             name="timeline"
             value={formState.timeline}
             onChange={(event) => setFormState((current) => ({ ...current, timeline: event.target.value }))}
-            className="min-h-11 rounded-[16px] border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground"
+            className="min-h-11 rounded-none border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground"
             disabled={isSubmitting}
           >
             <option value="">Choose a timeline</option>
@@ -177,7 +177,7 @@ export function ContactForm() {
             value={formState.message}
             onChange={(event) => setFormState((current) => ({ ...current, message: event.target.value }))}
             rows={6}
-            className="rounded-[16px] border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 py-3 text-foreground placeholder:text-foreground-muted"
+            className="rounded-none border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 py-3 text-foreground placeholder:text-foreground-muted"
             placeholder="Tell us about your restaurant's concept, menu size, reservation platform, and any desired AI features."
             disabled={isSubmitting}
           />

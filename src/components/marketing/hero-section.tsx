@@ -44,9 +44,9 @@ export function HeroSection() {
           isReady ? "opacity-0 pointer-events-none" : "opacity-100"
         }`}
       >
-        <div className="relative h-[2px] w-48 overflow-hidden rounded-full bg-white/10">
+        <div className="relative h-[2px] w-48 overflow-hidden rounded-none bg-white/10">
           <div 
-            className="absolute inset-y-0 w-1/2 rounded-full bg-amber-500" 
+            className="absolute inset-y-0 w-1/2 rounded-none bg-amber-500" 
             style={{ animation: "progress-indeterminate 1.5s infinite ease-in-out" }}
           />
         </div>
@@ -102,7 +102,7 @@ export function HeroSection() {
             return (
               <div
                 key={item.label}
-                className="inline-flex items-center gap-1.5 rounded-full border border-white/8 bg-white/[0.03] px-2.5 py-1 text-[10px] text-foreground-body sm:px-4 sm:py-1.5 sm:text-sm"
+                className="inline-flex items-center gap-1.5 rounded-none border border-white/8 bg-white/[0.03] px-2.5 py-1 text-[10px] text-foreground-body sm:px-4 sm:py-1.5 sm:text-sm"
               >
                 <Icon className="h-3 w-3 shrink-0 text-accent sm:h-4 sm:w-4" strokeWidth={2} />
                 <span className="whitespace-nowrap">{item.label}</span>

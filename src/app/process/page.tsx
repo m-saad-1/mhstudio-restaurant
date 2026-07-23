@@ -47,7 +47,7 @@ export default function ProcessPage() {
               return (
                 <Reveal key={phase.step} delayMs={index * 60} className="surface-card flex flex-col p-6">
                   <div className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-400 text-sm font-bold text-zinc-950">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-none bg-amber-400 text-sm font-bold text-zinc-950">
                       {phase.step}
                     </div>
                     <div>
@@ -91,7 +91,7 @@ export default function ProcessPage() {
                     <h3 className="text-2xl font-semibold text-foreground">{path.title}</h3>
                     <p className="text-sm leading-[1.7] text-foreground-body">{path.description}</p>
                     {path.timeline && (
-                      <p className="inline-flex items-center rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-foreground-muted">
+                      <p className="inline-flex items-center rounded-none bg-white/5 px-3 py-1 text-xs font-medium text-foreground-muted">
                         Typical Timeline: {path.timeline}
                       </p>
                     )}
@@ -99,7 +99,7 @@ export default function ProcessPage() {
                   <div className="flex flex-wrap items-center gap-2">
                     {path.steps.map((step, stepIdx) => (
                       <div key={step} className="flex items-center gap-2">
-                        <span className="rounded-md border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-foreground-body">
+                        <span className="rounded-none border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-foreground-body">
                           {step}
                         </span>
                         {stepIdx < path.steps.length - 1 && (
@@ -128,7 +128,7 @@ export default function ProcessPage() {
               const Icon = getIcon(item.icon);
               return (
                 <Reveal key={item.title} delayMs={index * 50} className="surface-card p-6">
-                  <span className="mb-4 inline-flex rounded-full bg-white/5 p-3 text-accent">
+                  <span className="mb-4 inline-flex rounded-none bg-white/5 p-3 text-accent">
                     <Icon className="h-6 w-6" />
                   </span>
                   <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
@@ -154,7 +154,7 @@ export default function ProcessPage() {
               {qualityAssurance.map((qa, i) => {
                 const Icon = getIcon(qa.icon);
                 return (
-                  <Reveal key={qa.title} delayMs={i * 30} className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-4">
+                  <Reveal key={qa.title} delayMs={i * 30} className="flex items-center gap-3 rounded-none border border-white/10 bg-white/5 p-4">
                     <Icon className="h-5 w-5 text-accent shrink-0" />
                     <span className="text-sm font-medium text-foreground">{qa.title}</span>
                   </Reveal>
@@ -174,7 +174,7 @@ export default function ProcessPage() {
                 const Icon = getIcon(item.icon);
                 return (
                   <Reveal key={item.stage} delayMs={i * 40} className="relative">
-                    <div className="absolute -left-[41px] top-1 flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-zinc-950 text-accent">
+                    <div className="absolute -left-[41px] top-1 flex h-8 w-8 items-center justify-center rounded-none border border-white/10 bg-zinc-950 text-accent">
                       <Icon className="h-4 w-4" />
                     </div>
                     <div>

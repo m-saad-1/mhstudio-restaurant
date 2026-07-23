@@ -44,7 +44,7 @@ export default function Home() {
     <>
       <HeroSection />
 
-      <Reveal as="section" className="section-space section-divider">
+      <Reveal as="section" className="section-space !pt-4 sm:!pt-[90px] lg:!pt-[120px] section-divider">
         <div className="content-shell space-y-10">
           <SectionHeading
             eyebrow="Services Snapshot"
@@ -64,7 +64,7 @@ export default function Home() {
                   className={`surface-card group flex h-full flex-col justify-between p-6 transition-transform duration-300 hover:-translate-y-1.5 ${columnSpan}`}
                 >
                   <div className="space-y-5">
-                    <span className="inline-flex rounded-[18px] border border-amber-400/15 bg-amber-400/10 p-3 text-accent transition-transform duration-300 group-hover:rotate-6">
+                    <span className="inline-flex rounded-none border border-amber-400/15 bg-amber-400/10 p-3 text-accent transition-transform duration-300 group-hover:rotate-6">
                       <Icon className="h-6 w-6" strokeWidth={2} />
                     </span>
                     <div className="space-y-3">
@@ -104,7 +104,7 @@ export default function Home() {
           {/* Right Side: Content */}
           <Reveal delayMs={100} className="space-y-8">
             <div className="space-y-5">
-              <span className="inline-flex items-center gap-2 rounded-[12px] border border-amber-400/20 bg-amber-400/10 px-4 py-1.5 text-sm font-semibold text-amber-400 backdrop-blur-md shadow-[0_0_15px_rgba(245,158,11,0.15)]">
+              <span className="inline-flex items-center gap-2 rounded-none border border-amber-400/20 bg-amber-400/10 px-4 py-1.5 text-sm font-semibold text-amber-400 backdrop-blur-md shadow-[0_0_15px_rgba(245,158,11,0.15)]">
                 <span className="text-base">🤖</span> AI-Powered Customer Experience
               </span>
               <h2 className="text-[2rem] font-semibold leading-[1.15] text-foreground sm:text-[2.8rem] tracking-tight">
@@ -124,8 +124,8 @@ export default function Home() {
                 { title: "Business Information", desc: "Hours & location." },
                 { title: "Smart Menu", desc: "Dish recommendations." },
               ].map((feature) => (
-                <div key={feature.title} className="surface-card flex items-start gap-4 p-4 !rounded-[16px] border border-white/5 hover:border-amber-500/30 transition-all duration-300 hover:shadow-[0_4px_20px_rgba(245,158,11,0.08)] bg-white/[0.01] hover:bg-white/[0.03]">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-amber-400/10 text-amber-400 shadow-[inset_0_0_10px_rgba(245,158,11,0.1)]">
+                <div key={feature.title} className="surface-card flex items-start gap-4 p-4 !rounded-none border border-white/5 hover:border-amber-500/30 transition-all duration-300 hover:shadow-[0_4px_20px_rgba(245,158,11,0.08)] bg-white/[0.01] hover:bg-white/[0.03]">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-none bg-amber-400/10 text-amber-400 shadow-[inset_0_0_10px_rgba(245,158,11,0.1)]">
                     <Check className="h-4 w-4" strokeWidth={3} />
                   </span>
                   <div>
@@ -185,7 +185,7 @@ export default function Home() {
               <Reveal
                 key={industry.label}
                 delayMs={index * 50}
-                className="surface-card group relative min-h-[220px] overflow-hidden !rounded-[24px] border border-white/8"
+                className="surface-card group relative min-h-[220px] overflow-hidden !rounded-none border border-white/8"
               >
                 <Image
                   src={industry.image}
@@ -250,7 +250,7 @@ export default function Home() {
             {processSteps.map((step, index) => (
               <Reveal key={step.step} delayMs={index * 70} className="surface-card p-6">
                 <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-400 text-sm font-bold text-zinc-950">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-none bg-amber-400 text-sm font-bold text-zinc-950">
                     {step.step}
                   </div>
                   <div>
@@ -297,17 +297,17 @@ export default function Home() {
             description="Key performance metrics of our high-speed digital builds."
             align="center"
           />
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-5">
+          <div className="grid gap-3 sm:gap-5 grid-cols-2 xl:grid-cols-5">
             {stats.map((stat, index) => (
               <Reveal
                 key={stat.label}
                 delayMs={index * 50}
-                className="surface-card p-6 flex flex-col items-center justify-center text-center border border-white/8 hover:border-amber-500/25 transition-all duration-300 hover:shadow-[0_5px_20px_-5px_rgba(245,158,11,0.1)] !rounded-[20px]"
+                className={`surface-card p-4 sm:p-6 flex flex-col items-center justify-center text-center border border-white/8 hover:border-amber-500/25 transition-all duration-300 hover:shadow-[0_5px_20px_-5px_rgba(245,158,11,0.1)] !rounded-none ${index === stats.length - 1 ? 'col-span-2 xl:col-span-1' : ''}`}
               >
                 <div className="text-[2.6rem] font-semibold leading-none text-amber-400">
                   <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                 </div>
-                <p className="mt-3 text-sm font-semibold uppercase tracking-wider text-foreground-muted">{stat.label}</p>
+                <p className="mt-2 sm:mt-3 text-[10px] sm:text-sm font-semibold uppercase tracking-wider text-foreground-muted">{stat.label}</p>
               </Reveal>
             ))}
           </div>

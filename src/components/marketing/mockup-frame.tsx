@@ -14,7 +14,7 @@ type MockupFrameProps = {
 
 export function MockupFrame({ item, compact = false }: MockupFrameProps) {
   return (
-    <div className="group relative flex flex-col overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 transition duration-300 hover:-translate-y-1 hover:border-zinc-700 hover:shadow-2xl hover:shadow-amber-500/10">
+    <div className="group relative flex flex-col overflow-hidden rounded-none border border-zinc-800 bg-zinc-900 transition duration-300 hover:-translate-y-1 hover:border-zinc-700 hover:shadow-2xl hover:shadow-amber-500/10">
       {/* Visual Asset (The Hook - Interactive Clickable Image) */}
       <TrackedLink
         href={item.liveHref}

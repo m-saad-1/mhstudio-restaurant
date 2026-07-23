@@ -66,7 +66,7 @@ export function ImageLightboxModal({
       />
 
       {/* Modal Container */}
-      <div className="relative z-10 flex max-h-[92vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl border border-white/10 bg-zinc-950 shadow-2xl transition-all duration-300 scale-100">
+      <div className="relative z-10 flex max-h-[92vh] w-full max-w-5xl flex-col overflow-hidden rounded-none border border-white/10 bg-zinc-950 shadow-2xl transition-all duration-300 scale-100">
         {/* Header Bar */}
         <div className="flex items-center justify-between border-b border-white/10 bg-zinc-900/90 px-5 py-3.5 backdrop-blur">
           <div className="flex flex-col sm:flex-row sm:items-center sm:gap-3">
@@ -86,7 +86,7 @@ export function ImageLightboxModal({
                 eventName="click_lightbox_live"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-400 transition hover:bg-amber-500/20 sm:inline-flex"
+                className="hidden items-center gap-1.5 rounded-none border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-400 transition hover:bg-amber-500/20 sm:inline-flex"
               >
                 <span>Live Project</span>
                 <ExternalLink className="h-3.5 w-3.5" />
@@ -95,7 +95,7 @@ export function ImageLightboxModal({
             <button
               onClick={onClose}
               aria-label="Close image preview"
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-zinc-400 transition hover:bg-white/15 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-none border border-white/10 bg-white/5 text-zinc-400 transition hover:bg-white/15 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
             >
               <X className="h-5 w-5" />
             </button>
@@ -104,7 +104,7 @@ export function ImageLightboxModal({
 
         {/* Scrollable / Full Image View */}
         <div className="relative flex max-h-[calc(92vh-60px)] w-full items-center justify-center overflow-auto p-2 sm:p-4 bg-zinc-950/80">
-          <div className="relative w-full max-w-full overflow-hidden rounded-lg">
+          <div className="relative w-full max-w-full overflow-hidden rounded-none">
             <Image
               src={imageSrc}
               alt={imageAlt}

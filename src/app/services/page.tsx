@@ -28,7 +28,7 @@ export default function ServicesPage() {
 
             return (
               <Reveal key={`${service.title}-${index}`} delayMs={index * 60} className="surface-card flex h-full flex-col p-6">
-                <span className="inline-flex w-fit rounded-[18px] border border-amber-400/15 bg-amber-400/10 p-3 text-accent">
+                <span className="inline-flex w-fit rounded-none border border-amber-400/15 bg-amber-400/10 p-3 text-accent">
                   <Icon className="h-6 w-6" strokeWidth={2} />
                 </span>
                 <h2 className="mt-6 text-2xl font-semibold text-foreground">{service.title}</h2>

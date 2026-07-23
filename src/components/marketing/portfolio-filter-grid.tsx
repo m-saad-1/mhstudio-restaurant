@@ -31,7 +31,7 @@ export function PortfolioFilterGrid({ items }: PortfolioFilterGridProps) {
               type="button"
               onClick={() => setActiveFilter(filter)}
               className={[
-                "min-h-11 rounded-full px-4 text-sm font-semibold transition-colors duration-300",
+                "min-h-11 rounded-none px-4 text-sm font-semibold transition-colors duration-300",
                 isActive
                   ? "bg-amber-400 text-zinc-950 shadow-[0_10px_28px_rgba(245,158,11,0.28)]"
                   : "border border-white/8 bg-white/[0.03] text-foreground-body hover:border-white/12 hover:text-foreground",

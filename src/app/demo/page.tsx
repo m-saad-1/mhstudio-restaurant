@@ -67,7 +67,7 @@ export default function DemoPage() {
                   const Icon = step.icon;
                   return (
                     <div key={step.title} className="flex gap-4">
-                      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[16px] border border-amber-400/15 bg-amber-400/10 text-accent">
+                      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-none border border-amber-400/15 bg-amber-400/10 text-accent">
                         <Icon className="h-5 w-5" />
                       </span>
                       <div className="space-y-1">

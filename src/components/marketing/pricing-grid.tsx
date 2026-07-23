@@ -22,7 +22,7 @@ export function PricingGrid() {
               <div className="flex items-center justify-between gap-3">
                 <h2 className="text-2xl font-semibold text-foreground">{pkg.name}</h2>
                 {pkg.featured && (
-                  <span className="rounded-full bg-amber-400 px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-zinc-950 shadow-[0_4px_14px_rgba(245,158,11,0.3)]">
+                  <span className="rounded-none bg-amber-400 px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-zinc-950 shadow-[0_4px_14px_rgba(245,158,11,0.3)]">
                     Recommended
                   </span>
                 )}
@@ -45,7 +45,7 @@ export function PricingGrid() {
                 </div>
               ))}
             </div>
-            <div className="mt-6 rounded-[16px] border border-white/8 bg-white/[0.03] p-4">
+            <div className="mt-6 rounded-none border border-white/8 bg-white/[0.03] p-4">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-amber-200">Timeline</p>
               <p className="mt-2 text-sm text-foreground-body">{pkg.timeline}</p>
             </div>
@@ -65,7 +65,7 @@ export function PricingGrid() {
             className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" 
             onClick={() => setSelectedPkg(null)}
           />
-          <div className="surface-card relative flex max-h-[90vh] w-full max-w-4xl flex-col overflow-hidden rounded-[24px] shadow-2xl animate-in fade-in zoom-in-95 duration-200">
+          <div className="surface-card relative flex max-h-[90vh] w-full max-w-4xl flex-col overflow-hidden rounded-none shadow-2xl animate-in fade-in zoom-in-95 duration-200">
             {/* Header */}
             <div className="flex items-center justify-between border-b border-white/10 bg-white/[0.02] px-6 py-4 sm:px-8">
               <div>
@@ -74,7 +74,7 @@ export function PricingGrid() {
               </div>
               <button 
                 onClick={() => setSelectedPkg(null)}
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-foreground-muted transition-colors hover:bg-white/10 hover:text-foreground"
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-none border border-white/10 bg-white/5 text-foreground-muted transition-colors hover:bg-white/10 hover:text-foreground"
               >
                 <X className="h-5 w-5" />
               </button>

@@ -16,9 +16,9 @@
   --accent-hover: #fbbf24;
   --accent-dark: #d97706;
   --accent-glow: rgba(245, 158, 11, 0.18);
-  --radius-card: 18px;
-  --radius-field: 16px;
-  --radius-pill: 999px;
+  --radius-card: 0px;
+  --radius-field: 0px;
+  --radius-pill: 0px;
   --shadow-soft: 0 20px 80px rgba(0, 0, 0, 0.24);
   --shadow-card: 0 18px 60px rgba(0, 0, 0, 0.22);
 }
@@ -71,8 +71,8 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, var(--accent), var(--accent-dark));
-  border-radius: 999px;
-  border: 2px solid rgba(9, 9, 11, 0.9);
+  border-radius: 0px;
+  border: 0px;
 }
 
 * {
@@ -244,13 +244,19 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  border-radius: 999px;
+  border-radius: 0px;
   border: 1px solid rgba(245, 158, 11, 0.18);
   background: rgba(245, 158, 11, 0.08);
   padding: 0.45rem 0.9rem;
   color: #fcd34d;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+}
+
+@media (min-width: 640px) {
+  .eyebrow {
+    font-size: 0.75rem;
+  }
 }
