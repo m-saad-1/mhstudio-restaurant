@@ -23,7 +23,7 @@ export function PricingGrid() {
                 <h2 className="text-2xl font-semibold text-foreground">{pkg.name}</h2>
                 {pkg.featured && (
                   <span className="rounded-none bg-amber-400 px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-zinc-950 shadow-[0_4px_14px_rgba(245,158,11,0.3)]">
-                    Recommended
+                    Recomendado
                   </span>
                 )}
               </div>
@@ -46,7 +46,7 @@ export function PricingGrid() {
               ))}
             </div>
             <div className="mt-6 rounded-none border border-white/8 bg-white/[0.03] p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-amber-200">Timeline</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-amber-200">Cronograma</p>
               <p className="mt-2 text-sm text-foreground-body">{pkg.timeline}</p>
             </div>
             <button
@@ -69,7 +69,7 @@ export function PricingGrid() {
             {/* Header */}
             <div className="flex items-center justify-between border-b border-white/10 bg-white/[0.02] px-6 py-4 sm:px-8">
               <div>
-                <h3 className="text-2xl font-semibold text-foreground">{selectedPkg.name} Package</h3>
+                <h3 className="text-2xl font-semibold text-foreground">Pacote {selectedPkg.name}</h3>
                 <p className="mt-1 text-sm text-foreground-body">{selectedPkg.price}</p>
               </div>
               <button 
@@ -103,21 +103,21 @@ export function PricingGrid() {
             <div className="border-t border-white/10 bg-white/[0.02] px-6 py-4 sm:px-8 sm:py-6">
               <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
                 <div>
-                  <p className="text-sm font-medium text-foreground">Ready to get started?</p>
-                  <p className="text-xs text-foreground-body">Book a free consultation to discuss this package.</p>
+                  <p className="text-sm font-medium text-foreground">Pronto para começar?</p>
+                  <p className="text-xs text-foreground-body">Obtenha uma demo grátis para explorar este pacote.</p>
                 </div>
                 <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
                   <Link 
-                    href="/contact" 
+                    href="/demo" 
                     className="button-primary w-full px-8 text-sm sm:w-auto"
                   >
-                    Book Consultation
+                    Obter Demo Grátis
                   </Link>
                   <Link 
                     href="/contact#contact-methods" 
                     className="button-secondary w-full px-8 text-sm sm:w-auto"
                   >
-                    Contact
+                    Contato
                   </Link>
                 </div>
               </div>

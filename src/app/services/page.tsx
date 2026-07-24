@@ -7,19 +7,19 @@ import { getIcon } from "@/components/ui/icon-map";
 import { serviceSections } from "@/data/site-content";
 
 export const metadata: Metadata = {
-  title: "Services",
-  description: "Explore MhStudio services across website design, development, landing pages, SEO, maintenance, performance, and hosting support.",
+  title: "Serviços",
+  description: "Explore os serviços da MhStudio abrangendo design de sites, desenvolvimento, páginas de destino, SEO, manutenção, desempenho e suporte de hospedagem.",
 };
 
 export default function ServicesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Services"
-        title="Services built to drive growth and elevate your brand."
-        description="From high-performance custom websites and digital platforms to automated AI assistants, we build tools that drive real business results."
-        primaryCta={{ label: "Start a Project", href: "/contact" }}
-        secondaryCta={{ label: "How We Work", href: "/process" }}
+        eyebrow="Serviços"
+        title="Serviços criados para impulsionar o crescimento e elevar sua marca."
+        description="De sites personalizados de alto desempenho e plataformas digitais a assistentes de IA automatizados, criamos ferramentas que geram resultados reais de negócios."
+        primaryCta={{ label: "Iniciar um Projeto", href: "/contact" }}
+        secondaryCta={{ label: "Como Trabalhamos", href: "/process" }}
       />
       <section className="section-space">
         <div className="content-shell grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
@@ -42,7 +42,7 @@ export default function ServicesPage() {
                   ))}
                 </div>
                 <Link href="/contact" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-amber-500 transition-colors hover:text-amber-400">
-                  Discuss this service
+                  Discutir este serviço
                 </Link>
               </Reveal>
             );

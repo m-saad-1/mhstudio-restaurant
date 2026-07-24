@@ -17,7 +17,7 @@ export function SiteFooter() {
               {siteConfig.name}
             </Link>
             <p className="max-w-sm text-sm leading-[1.7] text-foreground-body sm:text-base">
-              High-performance websites and AI features for modern restaurants, fine dining, bars, and bistros.
+              Sites de alto desempenho e recursos de IA para restaurantes modernos, jantares finos, bares e bistrôs.
             </p>
             {/* Social links hidden for now
             <div className="flex flex-wrap gap-3">
@@ -34,7 +34,7 @@ export function SiteFooter() {
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-foreground-muted">Quick Links</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-foreground-muted">Links Rápidos</h3>
             <div className="grid gap-3">
               {navigationItems.map((item) => (
                 <Link
@@ -50,7 +50,7 @@ export function SiteFooter() {
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-foreground-muted">Services</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-foreground-muted">Serviços</h3>
             <div className="grid gap-3">
               {serviceCards.slice(0, 5).map((service) => (
                 <Link
@@ -68,21 +68,21 @@ export function SiteFooter() {
             <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-foreground-muted">Legal</h3>
             <div className="grid gap-3">
               <Link href="/privacy" className="text-sm text-foreground-body transition-colors duration-300 hover:text-foreground">
-                Privacy Policy
+                Política de Privacidade
               </Link>
               <Link href="/terms" className="text-sm text-foreground-body transition-colors duration-300 hover:text-foreground">
-                Terms
+                Termos
               </Link>
               <Link href="/contact" className="text-sm text-foreground-body transition-colors duration-300 hover:text-foreground">
-                Contact
+                Contato
               </Link>
             </div>
           </div>
         </div>
 
         <div className="mt-12 flex flex-col gap-3 border-t border-white/6 pt-6 text-sm text-foreground-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>&copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
-          <p>Designing premium websites and AI features for modern restaurants.</p>
+          <p>&copy; {new Date().getFullYear()} {siteConfig.name}. Todos os direitos reservados.</p>
+          <p>Criando sites premium e recursos de IA para restaurantes modernos.</p>
         </div>
       </div>
     </footer>

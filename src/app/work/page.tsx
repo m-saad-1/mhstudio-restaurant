@@ -6,19 +6,19 @@ import { Reveal } from "@/components/ui/reveal";
 import { portfolioItems } from "@/data/site-content";
 
 export const metadata: Metadata = {
-  title: "Our Work",
-  description: "Explore MhStudio portfolio work for restaurants, salons, gyms, dental clinics, barbers, and local business brands.",
+  title: "Nosso Trabalho",
+  description: "Explore o portfólio da MhStudio de trabalhos para restaurantes, salões, academias, clínicas odontológicas, barbearias e marcas de negócios locais.",
 };
 
 export default function WorkPage() {
   return (
     <>
       <PageHero
-        eyebrow="Our Work"
-        title="Real websites built for real businesses."
-        description="Each portfolio item is structured as a launch story, with a clear industry angle, feature set, technology stack, and a dedicated case-study path."
-        primaryCta={{ label: "Book Consultation", href: "/contact" }}
-        secondaryCta={{ label: "See Pricing", href: "/pricing" }}
+        eyebrow="Nosso Trabalho"
+        title="Sites reais construídos para negócios reais."
+        description="Cada item do portfólio é estruturado como uma história de lançamento, com um ângulo claro da indústria, conjunto de recursos, pilha de tecnologia e um caminho dedicado ao estudo de caso."
+        primaryCta={{ label: "Obter Demo Grátis", href: "/demo" }}
+        secondaryCta={{ label: "Ver Preços", href: "/pricing" }}
       />
       <Reveal as="section" className="section-space">
         <div className="content-shell">

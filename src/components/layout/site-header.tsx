@@ -68,7 +68,7 @@ export function SiteHeader() {
 
             <div className="hidden justify-self-end pr-3 lg:block">
               <Link href="/demo" className="button-primary px-6 text-sm">
-                Get Free Demo
+                Obter Demo Grátis
               </Link>
             </div>
 
@@ -151,14 +151,14 @@ export function SiteHeader() {
               onClick={() => setMenuOpen(false)}
               className="button-primary w-full px-6 text-base shadow-[0_0_20px_rgba(245,158,11,0.15)] transition-all hover:shadow-[0_0_30px_rgba(245,158,11,0.25)] hover:-translate-y-0.5 active:translate-y-0"
             >
-              Get Free Demo
+              Obter Demo Grátis
             </Link>
             <Link
               href="/contact"
               onClick={() => setMenuOpen(false)}
               className="button-secondary w-full px-6 text-base transition-all hover:-translate-y-0.5 active:translate-y-0"
             >
-              Book Free Consultation
+              Obter Demo Grátis
             </Link>
           </div>
         </div>

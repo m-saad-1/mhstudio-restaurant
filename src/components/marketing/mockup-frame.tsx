@@ -66,7 +66,7 @@ export function MockupFrame({ item, compact = false }: MockupFrameProps) {
                 rel="noopener noreferrer"
                 className="text-sm font-medium text-amber-500 transition-colors hover:text-amber-400 hover:underline"
               >
-                Visit Website
+                Visitar Site
               </TrackedLink>
             </div>
           </div>

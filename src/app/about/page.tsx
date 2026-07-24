@@ -6,46 +6,46 @@ import { aboutValues, processSteps, technologyGroups, whyChooseItems } from "@/d
 import { SectionHeading } from "@/components/ui/section-heading";
 
 export const metadata: Metadata = {
-  title: "About MhStudio",
-  description: "Learn about MhStudio, the mission, values, tools, and approach behind premium websites for local businesses.",
+  title: "Sobre a MhStudio",
+  description: "Saiba mais sobre a MhStudio, a missão, valores, ferramentas e abordagem por trás de sites premium para negócios locais.",
 };
 
 export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About MhStudio"
-        title="High-performance websites built for modern businesses."
-        description="We build fast, responsive digital experiences that highlight your brand, streamline customer flows, and turn visitors into loyal clients."
-        primaryCta={{ label: "View Portfolio", href: "/work" }}
-        secondaryCta={{ label: "Contact MhStudio", href: "/contact" }}
+        eyebrow="Sobre a MhStudio"
+        title="Sites de alto desempenho criados para empresas modernas."
+        description="Construímos experiências digitais rápidas e responsivas que destacam a sua marca, simplificam os fluxos de clientes e transformam visitantes em clientes fiéis."
+        primaryCta={{ label: "Ver Portfólio", href: "/work" }}
+        secondaryCta={{ label: "Contate a MhStudio", href: "/contact" }}
       />
       <section className="section-space">
         <div className="content-shell grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <Reveal className="surface-card p-8 sm:p-10">
-            <span className="eyebrow">Story</span>
+            <span className="eyebrow">História</span>
             <h2 className="mt-5 text-[2rem] font-semibold leading-[1.15] text-foreground sm:text-[2.8rem]">
-              Your website should match the quality of your business.
+              Seu site deve corresponder à qualidade do seu negócio.
             </h2>
             <p className="mt-5 text-base leading-[1.7] text-foreground-body sm:text-lg">
-              MhStudio blends digital strategy, visual design, and fast frontend engineering. We give businesses a premium digital presence that is easy to navigate, fast to load, and built to convert.
+              A MhStudio mistura estratégia digital, design visual e engenharia frontend rápida. Damos às empresas uma presença digital premium, fácil de navegar, rápida para carregar e feita para converter.
             </p>
           </Reveal>
           <Reveal delayMs={100} className="grid gap-6">
             <div className="surface-card p-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-200">Mission</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-200">Missão</p>
               <p className="mt-3 text-sm leading-[1.7] text-foreground-body sm:text-base">
-                Build high-performance websites that increase conversions and elevate your brand.
+                Construir sites de alto desempenho que aumentem as conversões e elevem sua marca.
               </p>
             </div>
             <div className="surface-card p-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-200">Vision</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-200">Visão</p>
               <p className="mt-3 text-sm leading-[1.7] text-foreground-body sm:text-base">
-                Empower businesses with digital tools that drive growth, showcase services, and simplify operations.
+                Capacitar as empresas com ferramentas digitais que impulsionam o crescimento, exibem serviços e simplificam as operações.
               </p>
             </div>
             <div className="surface-card p-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-200">Values</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-200">Valores</p>
               <div className="mt-4 grid gap-3">
                 {aboutValues.map((value) => (
                   <p key={value} className="text-sm leading-[1.7] text-foreground-body sm:text-base">
@@ -61,9 +61,9 @@ export default function AboutPage() {
       <Reveal as="section" className="section-space section-divider">
         <div className="content-shell space-y-10">
           <SectionHeading
-            eyebrow="Why Choose MhStudio"
-            title="Why Premium Design Matters for Business"
-            description="How we solve real-world digital & growth challenges."
+            eyebrow="Por que Escolher a MhStudio"
+            title="Por que o Design Premium Importa para os Negócios"
+            description="Como resolvemos desafios reais de crescimento e digitais."
           />
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {whyChooseItems.map((item, index) => (
@@ -96,10 +96,10 @@ export default function AboutPage() {
       <section className="section-space section-divider">
         <div className="content-shell grid gap-6 lg:grid-cols-2">
           <Reveal className="surface-card p-6 sm:p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-200">Your Journey</p>
-            <h2 className="mt-4 text-2xl font-semibold text-foreground">From concept to launch-ready confidence.</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-200">Sua Jornada</p>
+            <h2 className="mt-4 text-2xl font-semibold text-foreground">Do conceito à confiança do lançamento.</h2>
             <p className="mt-4 text-sm leading-[1.7] text-foreground-body sm:text-base">
-              We guide you through strategy, layout design, and fast coding to launch a website that performs perfectly across all devices.
+              Nós te guiamos através de estratégia, design de layout e código rápido para lançar um site que performa perfeitamente em todos os dispositivos.
             </p>
             <div className="mt-6 grid gap-3">
               {processSteps.slice(0, 6).map((step) => (
@@ -111,7 +111,7 @@ export default function AboutPage() {
             </div>
           </Reveal>
           <Reveal delayMs={120} className="surface-card p-6 sm:p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-200">Technologies & Tools</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-200">Tecnologias e Ferramentas</p>
             <div className="mt-6 grid gap-4">
               {technologyGroups.map((group) => (
                 <div key={group.title}>
@@ -130,7 +130,7 @@ export default function AboutPage() {
               ))}
             </div>
             <Link href="/contact" className="button-primary mt-8 px-6 text-sm">
-              Start Your Project
+              Inicie seu Projeto
             </Link>
           </Reveal>
         </div>

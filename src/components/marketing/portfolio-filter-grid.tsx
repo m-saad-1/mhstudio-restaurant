@@ -9,10 +9,10 @@ type PortfolioFilterGridProps = {
 };
 
 export function PortfolioFilterGrid({ items }: PortfolioFilterGridProps) {
-  const [activeFilter, setActiveFilter] = useState<(typeof portfolioFilters)[number]>("All");
+  const [activeFilter, setActiveFilter] = useState<(typeof portfolioFilters)[number]>("Todos");
 
   const filteredItems = useMemo(() => {
-    if (activeFilter === "All") {
+    if (activeFilter === "Todos") {
       return items;
     }
 
