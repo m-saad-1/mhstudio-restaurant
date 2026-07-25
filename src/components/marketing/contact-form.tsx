@@ -31,9 +31,9 @@ export function ContactForm() {
   return (
     <div className="surface-card p-6 sm:p-8">
       <div className="mb-6 space-y-3">
-        <h2 className="text-2xl font-semibold text-foreground">Conte-nos sobre o seu projeto</h2>
+        <h2 className="text-2xl font-semibold text-foreground">Tell us about your project</h2>
         <p className="text-sm leading-[1.7] text-foreground-body sm:text-base">
-          Preencha o formulário abaixo para compartilhar os detalhes e as metas do seu projeto diretamente com a nossa equipe.
+          Fill out the form below to share your project details and goals directly with our team.
         </p>
       </div>
 
@@ -42,16 +42,16 @@ export function ContactForm() {
           <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-none bg-emerald-500/20 text-emerald-400">
             <CheckCircle2 className="h-8 w-8" />
           </div>
-          <h3 className="mb-3 text-2xl font-semibold text-emerald-400">Mensagem Enviada com Sucesso!</h3>
+          <h3 className="mb-3 text-2xl font-semibold text-emerald-400">Message Sent Successfully!</h3>
           <p className="text-base leading-relaxed text-emerald-200/80">
-            Obrigado por entrar em contato. Recebemos os detalhes do seu projeto e entraremos em contato em breve.
+            Thank you for reaching out. We have received your project details and will get back to you shortly.
           </p>
           <button
             type="button"
             onClick={() => setSubmitted(false)}
             className="button-primary mt-8 border border-emerald-500/30 bg-emerald-500/20 px-6 py-2.5 text-sm text-emerald-400 hover:bg-emerald-500/30 hover:text-emerald-300"
           >
-            Enviar Outra Mensagem
+            Send Another Message
           </button>
         </div>
       ) : (
@@ -90,7 +90,7 @@ export function ContactForm() {
       >
         <div className="grid gap-4 sm:grid-cols-2">
           <label className="grid gap-2 text-sm font-medium text-foreground">
-            Nome
+            Name
             <input
               required
               minLength={2}
@@ -98,7 +98,7 @@ export function ContactForm() {
               value={formState.name}
               onChange={(event) => setFormState((current) => ({ ...current, name: event.target.value }))}
               className="min-h-11 rounded-none border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground placeholder:text-foreground-muted"
-              placeholder="Seu nome completo"
+              placeholder="Your full name"
               disabled={isSubmitting}
             />
           </label>
@@ -111,7 +111,7 @@ export function ContactForm() {
               value={formState.email}
               onChange={(event) => setFormState((current) => ({ ...current, email: event.target.value }))}
               className="min-h-11 rounded-none border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground placeholder:text-foreground-muted"
-              placeholder="voce@restaurante.com"
+              placeholder="you@restaurant.com"
               disabled={isSubmitting}
             />
           </label>
@@ -119,7 +119,7 @@ export function ContactForm() {
 
         <div className="grid gap-4 sm:grid-cols-2">
           <label className="grid gap-2 text-sm font-medium text-foreground">
-            Nome do Restaurante / Marca
+            Restaurant / Brand Name
             <input
               required
               minLength={2}
@@ -127,12 +127,12 @@ export function ContactForm() {
               value={formState.business}
               onChange={(event) => setFormState((current) => ({ ...current, business: event.target.value }))}
               className="min-h-11 rounded-none border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground placeholder:text-foreground-muted"
-              placeholder="Nome do restaurante ou marca"
+              placeholder="Restaurant or brand name"
               disabled={isSubmitting}
             />
           </label>
           <label className="grid gap-2 text-sm font-medium text-foreground">
-            Pacote de Interesse
+            Package of Interest
             <select
               required
               name="budget"
@@ -141,17 +141,17 @@ export function ContactForm() {
               className="min-h-11 rounded-none border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground"
               disabled={isSubmitting}
             >
-              <option value="">Selecione o pacote</option>
-              <option value="Launch ($499+)">Lançamento ($499+)</option>
-              <option value="Growth ($1,199+)">Crescimento ($1,199+)</option>
-              <option value="Scale AI ($2,499+)">Escala com IA ($2,499+)</option>
-              <option value="Enterprise (Custom Quote)">Corporativo (Orçamento Personalizado)</option>
+              <option value="">Select package range</option>
+              <option value="Launch ($499+)">Launch ($499+)</option>
+              <option value="Growth ($1,199+)">Growth ($1,199+)</option>
+              <option value="Scale AI ($2,499+)">Scale AI ($2,499+)</option>
+              <option value="Enterprise (Custom Quote)">Enterprise (Custom Quote)</option>
             </select>
           </label>
         </div>
 
         <label className="grid gap-2 text-sm font-medium text-foreground">
-          Cronograma
+          Timeline
           <select
             required
             name="timeline"
@@ -160,16 +160,16 @@ export function ContactForm() {
             className="min-h-11 rounded-none border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground"
             disabled={isSubmitting}
           >
-            <option value="">Escolha um cronograma</option>
-            <option value="asap">O mais rápido possível</option>
-            <option value="month">Dentro de 1 mês</option>
-            <option value="quarter">Dentro de 1 trimestre</option>
-            <option value="planning">Ainda planejando</option>
+            <option value="">Choose a timeline</option>
+            <option value="asap">As soon as possible</option>
+            <option value="month">Within 1 month</option>
+            <option value="quarter">Within 1 quarter</option>
+            <option value="planning">Still planning</option>
           </select>
         </label>
 
         <label className="grid gap-2 text-sm font-medium text-foreground">
-          Mensagem
+          Message
           <textarea
             required
             minLength={20}
@@ -178,13 +178,13 @@ export function ContactForm() {
             onChange={(event) => setFormState((current) => ({ ...current, message: event.target.value }))}
             rows={6}
             className="rounded-none border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 py-3 text-foreground placeholder:text-foreground-muted"
-            placeholder="Conte-nos sobre o conceito do seu restaurante, tamanho do cardápio, plataforma de reservas e quaisquer recursos de IA desejados."
+            placeholder="Tell us about your restaurant's concept, menu size, reservation platform, and any desired AI features."
             disabled={isSubmitting}
           />
         </label>
 
         <button type="submit" disabled={isSubmitting} className="button-primary mt-2 w-full px-6 text-sm sm:w-auto disabled:opacity-70 disabled:cursor-not-allowed">
-          {isSubmitting ? "Enviando..." : "Enviar Detalhes do Projeto"}
+          {isSubmitting ? "Sending..." : "Send Project Brief"}
         </button>
 
       </form>

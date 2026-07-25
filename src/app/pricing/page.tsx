@@ -4,19 +4,19 @@ import { PageHero } from "@/components/marketing/page-hero";
 const PricingGrid = dynamic(() => import("@/components/marketing/pricing-grid").then((mod) => mod.PricingGrid));
 
 export const metadata: Metadata = {
-  title: "Preços",
-  description: "Explore os pacotes de sites MhStudio Lançamento, Crescimento, Escala com IA e Corporativo para empresas locais.",
+  title: "Pricing",
+  description: "Explore MhStudio Launch, Growth, Scale AI, and Enterprise website packages for local businesses.",
 };
 
 export default function PricingPage() {
   return (
     <>
       <PageHero
-        eyebrow="Preços"
-        title="Preços claros e de taxa fixa construídos para o crescimento dos negócios."
-        description="Escolha um plano que atenda à sua empresa — desde sites simples de lançamento até plataformas digitais avançadas e assistentes de IA."
-        primaryCta={{ label: "Obter Demo Grátis", href: "/demo" }}
-        secondaryCta={{ label: "Ver Serviços", href: "/services" }}
+        eyebrow="Pricing"
+        title="Clear, flat-rate pricing built for business growth."
+        description="Choose a plan that fits your business—from simple launch sites to advanced custom digital platforms and AI assistants."
+        primaryCta={{ label: "Book Free Consultation", href: "/contact" }}
+        secondaryCta={{ label: "View Services", href: "/services" }}
       />
       <section className="section-space">
         <PricingGrid />

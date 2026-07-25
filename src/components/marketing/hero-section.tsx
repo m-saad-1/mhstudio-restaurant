@@ -16,11 +16,11 @@ import {
 import { siteConfig } from "@/data/site-content";
 
 const trustItems = [
-  { label: "Velocidade de Página 95+", icon: Zap },
-  { label: "Recepcionista IA", icon: Bot },
-  { label: "SEO Local e Mapas", icon: SearchCheck },
-  { label: "Menus Mobile-First", icon: Sparkles },
-  { label: "Hospedagem SSL Segura", icon: ShieldCheck },
+  { label: "95+ Page Speed", icon: Zap },
+  { label: "AI Receptionist", icon: Bot },
+  { label: "Local SEO & Maps", icon: SearchCheck },
+  { label: "Mobile-First Menus", icon: Sparkles },
+  { label: "Secure SSL Hosting", icon: ShieldCheck },
 ];
 
 export function HeroSection() {
@@ -66,32 +66,32 @@ export function HeroSection() {
       <div className="mx-auto flex min-h-0 w-full max-w-[1200px] flex-col items-center justify-start pt-4 gap-4 text-center sm:min-h-[calc(100svh-96px)] sm:pt-[clamp(3rem,8vh,6rem)] sm:gap-5 lg:gap-6">
         <span className="eyebrow border-white/10 bg-white/5 text-foreground !text-[9px] !px-2.5 !py-0.5 tracking-tight sm:!text-xs sm:!px-4 sm:!py-1.5 sm:tracking-normal">
           <Sparkles className="h-3 w-3 text-accent sm:h-4 sm:w-4" />
-          Atraia mais clientes através de sites modernos
+          Attract more customers through modern Websites
         </span>
 
         <div className="space-y-3 sm:space-y-4">
           <h1 className="mx-auto text-foreground">
             <span className="block sm:hidden text-[2.15rem] leading-[1.1] font-bold tracking-[-0.04em]">
-              <span className="block">Sites Para Restaurantes</span>
-              <span className="block text-accent mt-0.5">- Que Enchem Mesas.</span>
+              <span className="block">Websites For Restaurants</span>
+              <span className="block text-accent mt-0.5">- That Fill Tables.</span>
             </span>
             <span className="hidden sm:block text-[clamp(2.2rem,4vw,3.5rem)] font-semibold leading-[1.12] tracking-[-0.04em]">
-              <span className="block">Sites Premium para Restaurantes</span>
-              <span className="block">— Feitos para Encher Suas Mesas.</span>
+              <span className="block">Premium Websites for Restaurants</span>
+              <span className="block">— Built to Fill Your Tables.</span>
             </span>
           </h1>
 
           <p className="mx-auto max-w-[840px] text-pretty text-sm leading-[1.65] text-foreground-body sm:text-[clamp(1.05rem,1.8vw,1.125rem)]">
-            Sites de restaurantes de alto desempenho com menus interativos, integrações de reservas online e assistentes de reserva com IA 24/7.
+            High-performance restaurant websites with interactive menus, online reservation integrations, and 24/7 AI-powered booking assistants.
           </p>
         </div>
 
         <div className="flex w-full max-w-[340px] flex-row items-center justify-center gap-2 sm:w-auto sm:max-w-none sm:gap-3">
           <TrackedLink href="/demo" eventName="click_hero_demo" className="button-primary flex-1 sm:flex-none sm:w-auto min-h-[44px] px-2 text-xs sm:min-h-[52px] sm:px-7 sm:text-sm">
-            Obter Demo Grátis
+            Get Free Demo
           </TrackedLink>
           <TrackedLink href="/contact" eventName="click_hero_contact" className="button-secondary flex-1 sm:flex-none sm:w-auto min-h-[44px] px-2 text-xs sm:min-h-[52px] sm:px-7 sm:text-sm">
-            Obter Demo Grátis
+            Book Free Consultation
           </TrackedLink>
         </div>
 
@@ -114,7 +114,7 @@ export function HeroSection() {
         <div className="relative mt-4 w-full max-w-[1100px] sm:mt-auto sm:pt-8 lg:pt-12">
           <Image
             src={deviceShowcase}
-            alt="Showcase de dispositivos apresentando maquetes de sites da MhStudio em laptop, tablet e telefone."
+            alt="Device showcase featuring MhStudio website mockups on laptop, tablet, and phone."
             priority
             placeholder="blur"
             sizes="(max-width: 640px) 96vw, (max-width: 1024px) 92vw, 1100px"

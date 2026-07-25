@@ -33,9 +33,9 @@ export function DemoForm() {
   return (
     <div className="surface-card p-6 sm:p-8">
       <div className="mb-6 space-y-3">
-        <h2 className="text-2xl font-semibold text-foreground">Solicitar uma Demo Grátis</h2>
+        <h2 className="text-2xl font-semibold text-foreground">Request a Free Demo</h2>
         <p className="text-sm leading-[1.7] text-foreground-body sm:text-base">
-          Preencha os detalhes abaixo e nós criaremos uma pré-visualização interativa personalizada adaptada ao seu restaurante.
+          Fill out the details below, and we will build a custom interactive preview tailored to your restaurant.
         </p>
       </div>
 
@@ -44,16 +44,16 @@ export function DemoForm() {
           <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-none bg-emerald-500/20 text-emerald-400">
             <CheckCircle2 className="h-8 w-8" />
           </div>
-          <h3 className="mb-3 text-2xl font-semibold text-emerald-400">Solicitação de Demo Enviada!</h3>
+          <h3 className="mb-3 text-2xl font-semibold text-emerald-400">Demo Request Sent!</h3>
           <p className="text-base leading-relaxed text-emerald-200/80">
-            Recebemos o seu pedido. A nossa equipe analisará o seu negócio e preparará uma demonstração personalizada gratuita para você em breve.
+            We have received your request. Our team will review your business and prepare a free custom demo for you shortly.
           </p>
           <button
             type="button"
             onClick={() => setSubmitted(false)}
             className="button-primary mt-8 border border-emerald-500/30 bg-emerald-500/20 px-6 py-2.5 text-sm text-emerald-400 hover:bg-emerald-500/30 hover:text-emerald-300"
           >
-            Solicitar Outra Demo
+            Request Another Demo
           </button>
         </div>
       ) : (
@@ -106,7 +106,7 @@ ${formState.message}
         >
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="grid gap-2 text-sm font-medium text-foreground">
-              Nome
+              Name
               <input
                 required
                 minLength={2}
@@ -116,12 +116,12 @@ ${formState.message}
                   setFormState((current) => ({ ...current, name: event.target.value }))
                 }
                 className="min-h-11 rounded-none border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground placeholder:text-foreground-muted"
-                placeholder="Seu nome completo"
+                placeholder="Your full name"
                 disabled={isSubmitting}
               />
             </label>
             <label className="grid gap-2 text-sm font-medium text-foreground">
-              Email Comercial
+              Business Email
               <input
                 required
                 type="email"
@@ -131,7 +131,7 @@ ${formState.message}
                   setFormState((current) => ({ ...current, email: event.target.value }))
                 }
                 className="min-h-11 rounded-none border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground placeholder:text-foreground-muted"
-                placeholder="voce@restaurante.com"
+                placeholder="you@restaurant.com"
                 disabled={isSubmitting}
               />
             </label>
@@ -139,7 +139,7 @@ ${formState.message}
 
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="grid gap-2 text-sm font-medium text-foreground">
-              Nome do Restaurante / Marca
+              Restaurant / Brand Name
               <input
                 required
                 minLength={2}
@@ -149,12 +149,12 @@ ${formState.message}
                   setFormState((current) => ({ ...current, business: event.target.value }))
                 }
                 className="min-h-11 rounded-none border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground placeholder:text-foreground-muted"
-                placeholder="Nome do restaurante ou marca"
+                placeholder="Restaurant or brand name"
                 disabled={isSubmitting}
               />
             </label>
             <label className="grid gap-2 text-sm font-medium text-foreground">
-              URL do Site (Opcional)
+              Website URL (Optional)
               <input
                 type="url"
                 name="website"
@@ -163,14 +163,14 @@ ${formState.message}
                   setFormState((current) => ({ ...current, website: event.target.value }))
                 }
                 className="min-h-11 rounded-none border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground placeholder:text-foreground-muted"
-                placeholder="https://exemplo.com"
+                placeholder="https://example.com"
                 disabled={isSubmitting}
               />
             </label>
           </div>
 
           <label className="grid gap-2 text-sm font-medium text-foreground">
-            Serviço de Interesse
+            Service of Interest
             <select
               required
               name="solution"
@@ -181,21 +181,21 @@ ${formState.message}
               className="min-h-11 rounded-none border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground"
               disabled={isSubmitting}
             >
-              <option value="">Selecione um serviço</option>
-              <option value="Modern Restaurant Website">Site Moderno de Restaurante</option>
-              <option value="Interactive Online Menu">Menu Online Interativo</option>
-              <option value="Online Reservation Integration">Integração de Reserva Online</option>
-              <option value="AI Restaurant Assistant">Assistente de IA para Restaurante</option>
-              <option value="Gallery & Food Showcase">Galeria e Vitrine de Alimentos</option>
-              <option value="Local SEO & Map Rankings">SEO Local e Classificação no Mapa</option>
-              <option value="Website Maintenance & Support">Manutenção e Suporte de Sites</option>
-              <option value="Other">Outro (Por favor, especifique)</option>
+              <option value="">Select a service</option>
+              <option value="Modern Restaurant Website">Modern Restaurant Website</option>
+              <option value="Interactive Online Menu">Interactive Online Menu</option>
+              <option value="Online Reservation Integration">Online Reservation Integration</option>
+              <option value="AI Restaurant Assistant">AI Restaurant Assistant</option>
+              <option value="Gallery & Food Showcase">Gallery & Food Showcase</option>
+              <option value="Local SEO & Map Rankings">Local SEO & Map Rankings</option>
+              <option value="Website Maintenance & Support">Website Maintenance & Support</option>
+              <option value="Other">Other (Please specify)</option>
             </select>
           </label>
 
           {formState.solution === "Other" && (
             <label className="grid gap-2 text-sm font-medium text-foreground animate-in fade-in slide-in-from-top-1 duration-200">
-              Por favor, especifique o serviço
+              Please specify the service
               <input
                 required
                 minLength={2}
@@ -205,14 +205,14 @@ ${formState.message}
                   setFormState((current) => ({ ...current, otherSolution: event.target.value }))
                 }
                 className="min-h-11 rounded-none border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 text-foreground placeholder:text-foreground-muted"
-                placeholder="Qual serviço você precisa?"
+                placeholder="What service do you need?"
                 disabled={isSubmitting}
               />
             </label>
           )}
 
           <label className="grid gap-2 text-sm font-medium text-foreground">
-            Requisitos / Foco
+            Requirements / Focus
             <textarea
               required
               minLength={15}
@@ -223,7 +223,7 @@ ${formState.message}
               }
               rows={5}
               className="rounded-none border border-white/8 bg-[rgba(17,17,19,0.88)] px-4 py-3 text-foreground placeholder:text-foreground-muted"
-              placeholder="Diga-nos o que você gostaria que a demo mostrasse (por exemplo, layout moderno, menu digital, widget de reserva personalizado, assistente de IA)."
+              placeholder="Tell us what you would like the demo to showcase (e.g., modern layout, digital menu, custom reservation widget, AI assistant)."
               disabled={isSubmitting}
             />
           </label>
@@ -233,7 +233,7 @@ ${formState.message}
             disabled={isSubmitting}
             className="button-primary mt-2 w-full px-6 text-sm sm:w-auto disabled:opacity-70 disabled:cursor-not-allowed"
           >
-            {isSubmitting ? "Enviando Solicitação..." : "Solicitar Demo Grátis"}
+            {isSubmitting ? "Submitting Request..." : "Request Free Demo"}
           </button>
         </form>
       )}

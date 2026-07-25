@@ -13,7 +13,7 @@ export type Metric = {
 export type PortfolioItem = {
   slug: string;
   title: string;
-  category: "Restaurante" | "Hotéis" | "Bar" | "Restaurant" | "Hotels"; // Keeping english types for safety if used elsewhere, but changing visual labels if needed. Wait, in types it's better to keep original english literals to not break code unless we also update it. Let's keep original literals: "Restaurant" | "Hotels" | "Bar".
+  category: "Restaurant" | "Hotels" | "Bar";
   clientType: string;
   shortDescription: string;
   overview: string;
@@ -33,22 +33,22 @@ export type PortfolioItem = {
 
 export const siteConfig = {
   name: "MhStudio",
-  tagline: "Sites personalizados premium e soluções de IA para empresas modernas.",
+  tagline: "Premium custom websites and AI solutions for modern businesses.",
   description:
-    "A MhStudio projeta e desenvolve sites de alto desempenho focados em conversão, com vitrines digitais, integrações inteligentes e assistentes de IA personalizados.",
+    "MhStudio designs and develops high-performance, conversion-focused websites featuring digital showcases, smart integrations, and custom AI assistants.",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "saad@mhstudios.online",
   whatsappHref: process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "https://wa.me/+923429842565",
   calendarHref: process.env.NEXT_PUBLIC_CALENDAR_URL ?? "https://calendly.com/mhstudio/30min",
-  phoneLabel: "Consulta via WhatsApp",
+  phoneLabel: "WhatsApp consultation",
 };
 
 export const navigationItems: NavItem[] = [
-  { label: "Trabalhos", href: "/work" },
-  { label: "Serviços", href: "/services" },
-  { label: "Processo", href: "/process" },
-  { label: "Sobre", href: "/about" },
-  { label: "Preços", href: "/pricing" },
-  { label: "Contato", href: "/contact" },
+  { label: "Work", href: "/work" },
+  { label: "Services", href: "/services" },
+  { label: "Process", href: "/process" },
+  { label: "About", href: "/about" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const socialLinks = [
@@ -58,26 +58,26 @@ export const socialLinks = [
 ];
 
 export const trustedIndustries = [
-  "Alta Gastronomia",
-  "Restaurantes Casuais",
-  "Cafés e Bistrôs",
-  "Bares e Pubs",
-  "Pizzarias",
-  "Churrascarias",
-  "Sushibares",
+  "Fine Dining",
+  "Casual Dining",
+  "Cafes & Bistros",
+  "Bars & Pubs",
+  "Pizzerias",
+  "Steakhouses",
+  "Sushi Bars",
 ];
 
 export const industries = [
-  "Alta Gastronomia",
-  "Restaurantes Casuais",
-  "Café",
+  "Fine Dining",
+  "Casual Dining",
+  "Cafe",
   "Bar & Grill",
-  "Pizzaria",
-  "Churrascaria",
-  "Sushibar",
+  "Pizzeria",
+  "Steakhouse",
+  "Sushi Bar",
   "Fast Casual",
-  "Padaria",
-  "Bistrô",
+  "Bakery",
+  "Bistro",
   "Food Truck",
   "Catering",
 ];
@@ -91,504 +91,504 @@ export type IndustryShowcaseItem = {
 
 export const industryShowcaseItems: IndustryShowcaseItem[] = [
   {
-    label: "Restaurantes e Bistrôs",
+    label: "Restaurants & Bistros",
     image: "/images/restaurant.avif",
-    alt: "Ambiente acolhedor de bistrô e pratos de culinária empratados.",
+    alt: "Cozy bistro dining space and plated culinary dishes.",
     objectPosition: "center center",
   },
   {
-    label: "Alta Gastronomia",
+    label: "Fine Dining",
     image: "/images/fine_dining.avif",
-    alt: "Mesa de restaurante elegante com pratos empratados e iluminação ambiente acolhedora.",
+    alt: "Elegant restaurant table with plated dishes and warm ambient lighting.",
     objectPosition: "center center",
   },
   {
-    label: "Restaurantes Casuais",
+    label: "Casual Dining",
     image: "/images/casual_dining.avif",
-    alt: "Espaçosa área de mesas de restaurante casual e exibição de alimentos.",
+    alt: "Expansive casual dining restaurant seating and food display.",
     objectPosition: "center center",
   },
   {
-    label: "Cafés e Cafeterias",
+    label: "Cafes & Coffee Shops",
     image: "/images/coffee_shop.avif",
-    alt: "Barista de cafeteria preparando bebidas especiais.",
+    alt: "Coffee shop barista preparing specialty drinks.",
     objectPosition: "center center",
   },
   {
-    label: "Bares e Vida Noturna",
+    label: "Bars & Nightlife",
     image: "/images/bar_nightlife.avif",
-    alt: "Cena vibrante de bar com coquetéis e iluminação acolhedora.",
+    alt: "Vibrant bar scene with cocktails and warm lighting.",
     objectPosition: "center center",
   },
   {
-    label: "Grupos de Restaurantes",
+    label: "Restaurant Groups",
     image: "/images/restaurant_group.avif",
-    alt: "Apresentação premium de marca de restaurante com várias localizações.",
+    alt: "Premium multi-location restaurant brand presentation.",
     objectPosition: "center center",
   },
 ];
 
 export const stats: Metric[] = [
   {
-    label: "Projetos Concluídos",
+    label: "Projects Completed",
     value: 6,
     suffix: "+",
-    description: "Sites premium projetados e lançados para restaurantes e marcas de alimentos.",
+    description: "Premium websites designed and launched for restaurants and food brands.",
   },
   {
-    label: "Anos de Experiência",
+    label: "Years Experience",
     value: 4,
     suffix: "+",
-    description: "Criando experiências digitais de refeições de alto desempenho.",
+    description: "Creating high-performance digital dining experiences.",
   },
   {
-    label: "Proprietários Satisfeitos",
+    label: "Satisfied Owners",
     value: 6,
     suffix: "+",
-    description: "Donos de restaurantes desfrutando de reservas perfeitas e aumento de pedidos.",
+    description: "Restaurant owners enjoying seamless reservations and increased orders.",
   },
   {
-    label: "Tipos de Estabelecimento",
+    label: "Establishment Types",
     value: 8,
     suffix: "+",
-    description: "Desde alta gastronomia e restaurantes casuais até bares, cafés e padarias.",
+    description: "From fine dining and casual eateries to bars, cafes, and bakeries.",
   },
   {
-    label: "Tecnologias Utilizadas",
+    label: "Technologies Used",
     value: 12,
     suffix: "+",
-    description: "Ferramentas modernas escolhidas por velocidade, menus online e integrações de reserva.",
+    description: "Modern tools chosen for speed, online menus, and booking integrations.",
   },
 ];
 
 export const whyChooseItems = [
   {
-    title: "Velocidade e Desempenho",
-    problem: "Os clientes não vão esperar um menu lento carregar.",
-    solution: "A MhStudio constrói páginas ultrarrápidas e leves para que os clientes possam visualizar seu menu e reservar mesas instantaneamente, mesmo em conexões móveis ruins.",
+    title: "Speed & Performance",
+    problem: "Guests won't wait for a slow menu to load.",
+    solution: "MhStudio builds ultra-fast, lightweight pages so customers can view your menu and book tables instantly, even on poor mobile connections.",
   },
   {
-    title: "Menus Focados em Dispositivos Móveis",
-    problem: "A maioria dos clientes procura o seu restaurante pelo celular.",
-    solution: "Nossos menus digitais e fluxos de reserva são projetados especificamente para telas sensíveis ao toque, garantindo uma experiência de reserva perfeita em qualquer lugar.",
+    title: "Mobile-First Menus",
+    problem: "Most guests search for your restaurant on their phone.",
+    solution: "Our digital menus and reservation flows are designed specifically for fingers on screens, ensuring a seamless booking experience on the go.",
   },
   {
-    title: "SEO Local e Mapas",
-    problem: "Um site bonito é inútil se clientes famintos não conseguem encontrá-lo.",
-    solution: "Implementamos marcação de esquema local avançada e integrações do Google Maps para garantir que você tenha uma classificação alta quando as pessoas pesquisarem comida perto delas.",
+    title: "Local SEO & Maps",
+    problem: "A beautiful site is useless if hungry customers can't find you.",
+    solution: "We implement advanced local schema markup and Google Maps integrations to ensure you rank high when people search for food near them.",
   },
   {
-    title: "Menus Autogerenciados",
-    problem: "Você não deveria precisar de um desenvolvedor para alterar um preço ou adicionar um especial.",
-    solution: "Projetamos painéis de administração simples e intuitivos que permitem atualizar pratos, preços e anúncios em tempo real, sem a necessidade de habilidades técnicas.",
+    title: "Self-Managed Menus",
+    problem: "You shouldn't need a developer to change a price or add a special.",
+    solution: "We design simple, intuitive admin panels allowing you to update dishes, prices, and announcements in real-time with zero technical skills.",
   },
   {
-    title: "Assistentes Movidos a IA",
-    problem: "Perder consultas de reserva durante horários de pico custa receita.",
-    solution: "Integramos recepcionistas inteligentes de IA que lidam com assistência a reservas, respondem perguntas frequentes sobre opções dietéticas e registram consultas 24/7.",
+    title: "AI-Powered Assistants",
+    problem: "Missing reservation inquiries during busy hours costs revenue.",
+    solution: "We integrate smart AI receptionists that handle booking assistance, answer FAQ questions about dietary options, and log inquiries 24/7.",
   },
   {
-    title: "Vitrines de Alimentos Deslumbrantes",
-    problem: "Fotos de baixa qualidade ou mal exibidas tornam sua comida pouco apetitosa.",
-    solution: "Construímos galerias visuais premium e vitrines que destacam sua arte culinária, ambiente interno e a história da sua marca.",
+    title: "Stunning Food Showcases",
+    problem: "Low-quality or poorly displayed photos make your food look unappetizing.",
+    solution: "We build premium visual galleries and showcases that highlight your culinary artistry, interior ambiance, and brand story.",
   },
 ];
 
 export const serviceCards = [
   {
-    title: "Sites Modernos para Restaurantes",
-    description: "Construções de sites personalizados e responsivos que mostram sua marca, experiência gastronômica e localizações.",
-    features: ["Layout da história da marca", "Pronto para várias localizações", "Design responsivo fluido"],
+    title: "Modern Restaurant Websites",
+    description: "Custom, responsive website builds that showcase your brand, dining experience, and locations.",
+    features: ["Brand story layout", "Multi-location ready", "Fluid responsive design"],
     icon: "monitor-smartphone",
   },
   {
-    title: "Menus Online Interativos",
-    description: "Menus digitais rápidos e otimizados para dispositivos móveis que facilitam a navegação por pratos e preços para os clientes.",
-    features: ["Navegação por categorias", "Filtros dietéticos (ex.: Vegano, Sem Glúten)", "Atualizações dinâmicas de preços"],
+    title: "Interactive Online Menus",
+    description: "Fast, mobile-optimized digital menus that make browsing dishes and pricing effortless for guests.",
+    features: ["Category navigation", "Dietary filters (e.g., Vegan, GF)", "Dynamic price updates"],
     icon: "utensils-crossed",
   },
   {
-    title: "Sistemas de Reserva Online",
-    description: "Conexão fácil ao OpenTable, Resy ou fluxos de reserva personalizados para manter as mesas reservadas.",
-    features: ["Widgets diretos da plataforma", "Formulários de consulta de reserva personalizados", "Perguntas frequentes sobre reservas"],
+    title: "Online Reservation Systems",
+    description: "Easy connection to OpenTable, Resy, or custom reservation flows to keep tables booked.",
+    features: ["Direct platform widgets", "Custom booking inquiry forms", "Reservation FAQs"],
     icon: "calendar",
   },
   {
-    title: "Assistentes de IA para Restaurantes",
-    description: "Assistentes inteligentes de IA por chat e WhatsApp para responder FAQs sobre ingredientes, automatizar respostas e ajudar com reservas 24/7.",
-    features: ["Integração de IA do WhatsApp", "Suporte automatizado a reservas", "Respostas para FAQs do menu"],
+    title: "AI Restaurant Assistants",
+    description: "Intelligent chat and WhatsApp AI assistants to answer ingredient FAQs, automate customer replies, and assist with bookings 24/7.",
+    features: ["WhatsApp AI integration", "Automated booking support", "Menu FAQ responses"],
     icon: "bot",
   },
   {
-    title: "Galeria e Vitrines de Alimentos",
-    description: "Fotografia de alimentos deslumbrante e layouts de galeria interna projetados para cativar os hóspedes.",
-    features: ["Carregamento rápido de imagens", "Sobreposições de galeria Lightbox", "Destaques do ambiente"],
+    title: "Gallery & Food Showcases",
+    description: "Stunning food photography and interior gallery layouts designed to captivate guests.",
+    features: ["High-speed image loading", "Lightbox gallery overlays", "Ambiance highlight reels"],
     icon: "images",
   },
   {
-    title: "Eventos e Anúncios",
-    description: "Promova menus de fim de ano, degustações de vinho, opções de refeições privadas e eventos locais.",
-    features: ["Banners de anúncios", "Construtores de menus especiais", "Fluxos de reserva de eventos privados"],
+    title: "Events & Announcements",
+    description: "Promote holiday menus, wine tastings, private dining options, and local events.",
+    features: ["Announcement banners", "Special menu builders", "Private event booking flows"],
     icon: "megaphone",
   },
   {
-    title: "SEO Local e Classificações no Mapa",
-    description: "Otimização técnica de pesquisa para que seu restaurante apareça em primeiro lugar quando os clientes pesquisarem nas proximidades.",
-    features: ["Otimização do Google Business", "Marcação de esquema para menus/horários", "Segmentação de palavras-chave locais"],
+    title: "Local SEO & Map Rankings",
+    description: "Technical search optimization so your restaurant shows up first when customers search nearby.",
+    features: ["Google Business optimization", "Schema markup for menus/hours", "Local keyword targeting"],
     icon: "map-pinned",
   },
   {
-    title: "Otimização de Desempenho",
-    description: "Melhorias focadas em velocidade garantindo que suas páginas carreguem instantaneamente, mesmo em dados de celular.",
-    features: ["Pontuação de Core Web Vitals de 95+", "Compressão avançada de imagens", "Transições de página instantâneas"],
+    title: "Performance Optimization",
+    description: "Speed-focused improvements ensuring your pages load instantly even on cellular data.",
+    features: ["95+ Core Web Vitals score", "Advanced image compression", "Instant page transitions"],
     icon: "zap",
   },
   {
-    title: "Hospedagem e Implantação",
-    description: "Configuração completa de hospedagem em nuvem, conexão de domínio personalizado, configuração de segurança SSL e lançamento em produção perfeito.",
-    features: ["Configuração de hospedagem e domínio", "Implantação e configuração SSL", "Lançamento em produção e suporte"],
+    title: "Hosting & Deployment",
+    description: "End-to-end cloud hosting setup, custom domain connection, SSL security configuration, and smooth production launch.",
+    features: ["Hosting setup & domain connection", "Deployment & SSL configuration", "Production launch & post-support"],
     icon: "server-cog",
   },
   {
-    title: "Manutenção e Suporte do Site",
-    description: "Suporte contínuo para atualizar seus menus, preços, horários e anúncios sem demora.",
-    features: ["Atualizações de conteúdo no mesmo dia", "Backups regulares e verificações de integridade", "Monitoramento de segurança"],
+    title: "Website Maintenance & Support",
+    description: "Ongoing support to update your menus, pricing, hours, and announcements without delay.",
+    features: ["Same-day content updates", "Regular backups & health checks", "Security monitoring"],
     icon: "wrench",
   },
 ];
 
 export const serviceSections = [
   {
-    title: "Sites Modernos para Restaurantes",
-    description: "Construções de sites personalizados e responsivos que mostram sua marca, experiência gastronômica e localizações.",
-    points: ["Layout da história da marca", "Pronto para várias localizações", "Design responsivo fluido"],
+    title: "Modern Restaurant Websites",
+    description: "Custom, responsive website builds that showcase your brand, dining experience, and locations.",
+    points: ["Brand story layout", "Multi-location ready", "Fluid responsive design"],
     icon: "monitor-smartphone",
   },
   {
-    title: "Menus Online Interativos",
-    description: "Menus digitais rápidos e otimizados para dispositivos móveis que facilitam a navegação por pratos e preços para os clientes.",
-    points: ["Navegação por categorias", "Filtros dietéticos (ex.: Vegano, Sem Glúten)", "Atualizações dinâmicas de preços"],
+    title: "Interactive Online Menus",
+    description: "Fast, mobile-optimized digital menus that make browsing dishes and pricing effortless for guests.",
+    points: ["Category navigation", "Dietary filters (e.g., Vegan, GF)", "Dynamic price updates"],
     icon: "utensils-crossed",
   },
   {
-    title: "Sistemas de Reserva Online",
-    description: "Conexão fácil ao OpenTable, Resy ou fluxos de reserva personalizados para manter as mesas reservadas.",
-    points: ["Widgets diretos da plataforma", "Formulários de consulta de reserva personalizados", "Perguntas frequentes sobre reservas"],
+    title: "Online Reservation Systems",
+    description: "Easy connection to OpenTable, Resy, or custom reservation flows to keep tables booked.",
+    points: ["Direct platform widgets", "Custom booking inquiry forms", "Reservation FAQs"],
     icon: "calendar",
   },
   {
-    title: "Assistentes de IA para Restaurantes",
-    description: "Assistentes inteligentes de IA por chat e WhatsApp para responder FAQs sobre ingredientes, automatizar respostas e ajudar com reservas 24/7.",
-    points: ["Integração de IA do WhatsApp", "Suporte automatizado a reservas", "Respostas para FAQs do menu"],
+    title: "AI Restaurant Assistants",
+    description: "Intelligent chat and WhatsApp AI assistants to answer ingredient FAQs, automate customer replies, and assist with bookings 24/7.",
+    points: ["WhatsApp AI integration", "Automated booking support", "Menu FAQ responses"],
     icon: "bot",
   },
   {
-    title: "Assistente de IA do WhatsApp",
-    description: "Conecte um assistente de IA personalizado diretamente ao seu WhatsApp para lidar com assistência a reservas, consultas de menu e perguntas de clientes.",
-    points: ["Integração com API do WhatsApp", "Respostas automatizadas a clientes", "Suporte para menu e ingredientes"],
+    title: "WhatsApp AI Assistant",
+    description: "Connect a custom AI assistant directly to your WhatsApp to handle reservation assistance, menu lookups, and customer queries.",
+    points: ["WhatsApp API integration", "Automated customer replies", "Menu & ingredient support"],
     icon: "message-circle-more",
   },
   {
-    title: "Galeria e Vitrines de Alimentos",
-    description: "Fotografia de alimentos deslumbrante e layouts de galeria interna projetados para cativar os hóspedes.",
-    points: ["Carregamento rápido de imagens", "Sobreposições de galeria Lightbox", "Destaques do ambiente"],
+    title: "Gallery & Food Showcases",
+    description: "Stunning food photography and interior gallery layouts designed to captivate guests.",
+    points: ["High-speed image loading", "Lightbox gallery overlays", "Ambiance highlight reels"],
     icon: "images",
   },
   {
-    title: "Eventos e Anúncios",
-    description: "Promova menus de fim de ano, degustações de vinho, opções de refeições privadas e eventos locais.",
-    points: ["Banners de anúncios", "Construtores de menus especiais", "Fluxos de reserva de eventos privados"],
+    title: "Events & Announcements",
+    description: "Promote holiday menus, wine tastings, private dining options, and local events.",
+    points: ["Announcement banners", "Special menu builders", "Private event booking flows"],
     icon: "megaphone",
   },
   {
-    title: "SEO Local e Classificações no Mapa",
-    description: "Otimização técnica de pesquisa para que seu restaurante apareça em primeiro lugar quando os clientes pesquisarem nas proximidades.",
-    points: ["Otimização do Google Business", "Marcação de esquema para menus/horários", "Segmentação de palavras-chave locais"],
+    title: "Local SEO & Map Rankings",
+    description: "Technical search optimization so your restaurant shows up first when customers search nearby.",
+    points: ["Google Business optimization", "Schema markup for menus/hours", "Local keyword targeting"],
     icon: "map-pinned",
   },
   {
-    title: "Otimização de Desempenho",
-    description: "Melhorias focadas em velocidade garantindo que suas páginas carreguem instantaneamente, mesmo em dados de celular.",
-    points: ["Pontuação de Core Web Vitals de 95+", "Compressão avançada de imagens", "Transições de página instantâneas"],
+    title: "Performance Optimization",
+    description: "Speed-focused improvements ensuring your pages load instantly even on cellular data.",
+    points: ["95+ Core Web Vitals score", "Advanced image compression", "Instant page transitions"],
     icon: "zap",
   },
   {
-    title: "Hospedagem e Implantação",
-    description: "Configuração completa de hospedagem, roteamento de domínio personalizado, configuração de certificado SSL, lançamento em produção e suporte dedicado pós-lançamento.",
-    points: ["Configuração de hospedagem", "Conexão de domínio", "Implantação", "Configuração SSL", "Lançamento em produção", "Suporte pós-lançamento"],
+    title: "Hosting & Deployment",
+    description: "Complete hosting setup, custom domain routing, SSL certificate configuration, production launch, and dedicated post-launch support.",
+    points: ["Hosting setup", "Domain connection", "Deployment", "SSL configuration", "Production launch", "Post-launch support"],
     icon: "server-cog",
   },
   {
-    title: "Manutenção e Suporte do Site",
-    description: "Suporte contínuo para atualizar seus menus, preços, horários e anúncios sem demora.",
-    points: ["Atualizações de conteúdo no mesmo dia", "Backups regulares e verificações de integridade", "Monitoramento de segurança"],
+    title: "Website Maintenance & Support",
+    description: "Ongoing support to update your menus, pricing, hours, and announcements without delay.",
+    points: ["Same-day content updates", "Regular backups & health checks", "Security monitoring"],
     icon: "wrench",
   },
 ];
 
 export const websiteFeatures = [
-  { title: "Construtor de Menus Interativos", description: "Seções de conteúdo facilmente estruturadas para comida, bebidas e especiais do dia.", icon: "utensils-crossed" },
-  { title: "Reservas Online", description: "Integração perfeita com OpenTable, Resy ou sistemas de calendário personalizados.", icon: "calendar" },
-  { title: "Assistente de Restaurante IA", description: "Recepcionistas inteligentes por chat para responder a perguntas sobre ingredientes e auxiliar nas reservas 24 horas por dia.", icon: "bot" },
-  { title: "Experiência Focada em Dispositivos Móveis", description: "Legibilidade e navegação perfeitas em smartphones, onde mais de 80% dos clientes te encontram.", icon: "smartphone" },
-  { title: "Esquema de SEO Local", description: "Marcação Schema.json pré-configurada para itens de menu, horários de funcionamento e localização.", icon: "search-check" },
-  { title: "Integração do Google Maps", description: "Mapas integrados e responsivos para guiar os clientes direto à sua porta.", icon: "map-pinned" },
-  { title: "Prova Social e Avaliações", description: "Exibição para avaliações do Google, estrelas do Yelp e depoimentos de clientes.", icon: "star" },
-  { title: "Desempenho Rápido", description: "Tempos de carregamento ultrarrápidos garantindo que os clientes não abandonem seu site antes de ver o menu.", icon: "zap" },
-  { title: "Galeria de Alimentos e Ambiente", description: "Belas grades de lightbox para mostrar o empratamento, o design de interiores e a equipe.", icon: "images" },
-  { title: "Eventos e Anúncios", description: "Banners e cartões para noites de vinho, especiais de brunch e horários de feriados.", icon: "megaphone" },
-  { title: "Hospedagem Segura e SSL", description: "Implantação robusta em redes de nuvem modernas, mantendo seu site seguro e online.", icon: "server-cog" },
-  { title: "CMS Autogerenciado", description: "Painel simples para alterar preços, horários ou pratos em menos de dois minutos.", icon: "layout-dashboard" },
-  { title: "Inscrições em Newsletters", description: "Formulários integrados para aumentar sua lista de e-mails para marketing e anúncios.", icon: "mail" },
+  { title: "Interactive Menu Builder", description: "Easily structured content sections for food, drinks, and daily specials.", icon: "utensils-crossed" },
+  { title: "Online Reservations", description: "Seamless integration with OpenTable, Resy, or custom calendar systems.", icon: "calendar" },
+  { title: "AI Restaurant Assistant", description: "Smart chat receptionists to answer ingredients questions and assist with bookings 24/7.", icon: "bot" },
+  { title: "Mobile-First Experience", description: "Perfect readability and navigation on smartphones, where 80%+ of guests find you.", icon: "smartphone" },
+  { title: "Local SEO Schema", description: "Pre-configured Schema.json markup for menu items, opening hours, and location.", icon: "search-check" },
+  { title: "Google Maps Integration", description: "Embedded, responsive maps to guide guests straight to your front door.", icon: "map-pinned" },
+  { title: "Social Proof & Reviews", description: "Displays for Google Reviews, Yelp stars, and diner testimonials.", icon: "star" },
+  { title: "Fast Performance", description: "Blazing-fast load times ensuring guests don't abandon your site before seeing the menu.", icon: "zap" },
+  { title: "Food & Ambiance Gallery", description: "Beautiful lightbox grids to showcase your plating, interior design, and staff.", icon: "images" },
+  { title: "Events & Announcements", description: "Banners and cards for wine nights, brunch specials, and holiday hours.", icon: "megaphone" },
+  { title: "Secure Hosting & SSL", description: "Robust deployment on modern cloud networks keeping your site safe and online.", icon: "server-cog" },
+  { title: "Self-Managed CMS", description: "Simple dashboard to change pricing, hours, or dishes in under two minutes.", icon: "layout-dashboard" },
+  { title: "Newsletter Signups", description: "Integrated forms to grow your email list for marketing and announcements.", icon: "mail" },
 ];
 
 export const processSteps = [
   {
     step: "01",
-    title: "Descoberta",
-    description: "Aprendemos sobre sua marca, especialidades de menu, localização e metas de reserva dos clientes.",
-    bullets: ["Metas do restaurante", "Perfil do cliente", "Identidade da marca"],
+    title: "Discovery",
+    description: "We learn about your brand, menu specialties, location, and guest booking goals.",
+    bullets: ["Restaurant goals", "Guest profile", "Brand identity"],
   },
   {
     step: "02",
-    title: "Planejamento",
-    description: "Estruturamos o menu online, os caminhos de reserva e mapeamos as páginas de localização.",
-    bullets: ["Arquitetura de menu", "Fluxos de reserva", "Posicionamento de CTAs"],
+    title: "Planning",
+    description: "We structure the online menu, reservation paths, and map out location pages.",
+    bullets: ["Menu architecture", "Booking flows", "CTA placements"],
   },
   {
     step: "03",
     title: "Design",
-    description: "Criamos um sistema visual premium que destaca seus pratos e captura o ambiente do salão de refeições.",
-    bullets: ["Branding visual", "Preparação para fotografia", "Layout de menu móvel"],
+    description: "We create a premium visual system that highlights your dishes and captures your dining room ambiance.",
+    bullets: ["Visual branding", "Food photography prep", "Mobile menu layout"],
   },
   {
     step: "04",
-    title: "Desenvolvimento",
-    description: "Construímos suas páginas responsivas personalizadas, otimizamos imagens e integramos sistemas de reserva.",
-    bullets: ["Menus de carregamento rápido", "Reservas de terceiros", "Estrutura de SEO local"],
+    title: "Development",
+    description: "We build your custom responsive pages, optimize images, and integrate booking systems.",
+    bullets: ["Fast-loading menus", "Third-party bookings", "Local SEO structure"],
   },
   {
     step: "05",
-    title: "Testes",
-    description: "Testamos interações do menu, fluxos de reserva, desempenho da página e layout em dispositivos móveis.",
-    bullets: ["Teste de usabilidade do menu", "Verificações de reserva", "Otimização de desempenho"],
+    title: "Testing",
+    description: "We test menu interactions, booking flows, page performance, and mobile layout.",
+    bullets: ["Menu usability test", "Booking checks", "Performance optimization"],
   },
   {
     step: "06",
-    title: "Lançamento",
-    description: "Seu site entra no ar com sincronização do Google Maps, análises e suporte de menu autogerenciado.",
-    bullets: ["Conexão de domínio", "Configuração de análises", "Entrega do painel"],
+    title: "Launch",
+    description: "Your site goes live with Google Maps sync, analytics, and self-managed menu support.",
+    bullets: ["Domain connection", "Analytics setup", "Dashboard handover"],
   },
 ];
 
 export const technologyGroups = [
   { title: "Frontend", items: ["React.js", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap"] },
-  { title: "Backend e CMS", items: ["Node.js", "Express.js", "APIs REST", "Sanity CMS", "Payload CMS", "Strapi", "API WordPress"] },
-  { title: "Bancos de Dados e Armazenamento", items: ["MongoDB", "PostgreSQL", "Supabase", "Prisma ORM", "Redis"] },
-  { title: "IA e Automação", items: ["IA Gemini", "API OpenAI", "Assistentes por Chat de IA", "Reservas Automatizadas", "Análise Dietética", "Bots de Resposta ao Cliente"] },
-  { title: "Ferramentas e Integrações", items: ["Git", "GitHub", "Vercel", "Cloudflare", "Cloudinary", "API OpenTable", "API Resy", "Perfil de Empresa do Google"] },
+  { title: "Backend & CMS", items: ["Node.js", "Express.js", "REST APIs", "Sanity CMS", "Payload CMS", "Strapi", "WordPress API"] },
+  { title: "Databases & Storage", items: ["MongoDB", "PostgreSQL", "Supabase", "Prisma ORM", "Redis"] },
+  { title: "AI & Automation", items: ["Gemini AI", "OpenAI API", "AI Chat Assistants", "Automated Booking", "Dietary Analysis", "Customer Reply Bots"] },
+  { title: "Tools & Integrations", items: ["Git", "GitHub", "Vercel", "Cloudflare", "Cloudinary", "OpenTable API", "Resy API", "Google Business Profile"] },
 ];
 
 export const faqs = [
   {
-    question: "Quanto tempo leva para criar um site para restaurante?",
+    question: "How long does a restaurant website take?",
     answer:
-      "Um site padrão de restaurante leva de 2 a 4 semanas, enquanto grupos maiores que exigem suporte para várias localizações ou recursos avançados de reserva com IA levam de 4 a 6 semanas.",
+      "A standard restaurant website takes 2-4 weeks, while larger groups requiring multi-location support or advanced AI reservation features take 4-6 weeks.",
   },
   {
-    question: "Vocês podem redesenhar o site atual do nosso restaurante?",
+    question: "Can you redesign our existing restaurant website?",
     answer:
-      "Sim. Podemos atualizar designs desatualizados, otimizar seu menu para visualização móvel e migrar para uma plataforma moderna e mais rápida para melhorar as taxas de conversão de reservas.",
+      "Yes. We can update outdated designs, optimize your menu for mobile viewing, and migrate you to a faster, modern stack to improve reservation conversion rates.",
   },
   {
-    question: "Vocês oferecem suporte e manutenção pós-lançamento?",
+    question: "Do you offer post-launch support and maintenance?",
     answer:
-      "Absolutamente. Oferecemos pacotes de manutenção contínua para lidar com alterações regulares de cardápio, horários de feriados, atualizações de preços e verificações técnicas de desempenho.",
+      "Absolutely. We offer ongoing maintenance packages to handle regular menu changes, holiday hours, price updates, and technical performance checks.",
   },
   {
-    question: "Poderei gerenciar a plataforma após o lançamento?",
+    question: "Will I be able to manage the platform after launch?",
     answer:
-      "Sim. Fornecemos um painel de controle simples e intuitivo para que você ou sua equipe possam atualizar itens do menu, preços, fotos e anunciar eventos especiais em minutos.",
+      "Yes. We provide a simple, intuitive custom dashboard so you or your staff can update menu items, prices, photos, and announce special events in minutes.",
   },
   {
-    question: "Vocês lidam com hospedagem e implantação na nuvem?",
+    question: "Do you handle hosting and cloud deployment?",
     answer:
-      "Sim. Configuramos ambientes de hospedagem rápidos, seguros e prontos para produção em redes modernas como Vercel e Cloudflare, com certificados SSL.",
+      "Yes. We set up fast, secure, and production-ready hosting environments on modern networks like Vercel and Cloudflare, complete with SSL certificates.",
   },
   {
-    question: "Como vocês garantem que o produto tenha um bom desempenho?",
+    question: "How do you ensure the product performs well?",
     answer:
-      "O desempenho é fundamental para visitantes móveis. Otimizamos todas as imagens de seus pratos, escrevemos um código enxuto e garantimos velocidades de página quase perfeitas para que os clientes continuem engajados.",
+      "Performance is critical for mobile visitors. We optimize every image of your dishes, write lean code, and ensure near-perfect page speeds so customers stay engaged.",
   },
   {
-    question: "Vocês podem integrar nossos sistemas de reserva e agendamento existentes?",
+    question: "Can you integrate our existing reservation and booking systems?",
     answer:
-      "Sim. Podemos integrar perfeitamente widgets ou conectar APIs do OpenTable, Resy, SevenRooms ou ferramentas padrão de reserva de calendário diretamente ao seu layout.",
+      "Yes. We can seamlessly embed widgets or connect APIs for OpenTable, Resy, SevenRooms, or standard calendar booking tools directly into your layout.",
   },
 ];
 
 export const leftFaqs = [
   {
-    question: "Você pode criar um site que atenda a várias localizações?",
+    question: "Can you design a website that handles multiple locations?",
     answer:
-      "Sim. Construímos sistemas centralizados que apresentam todas as localizações do seu restaurante, incluindo menus específicos, links de reserva localizados e detalhes do Google Maps para cada filial.",
+      "Yes. We build centralized systems that showcase all of your restaurant locations, featuring location-specific menus, localized reservation links, and Google Map details for each branch.",
   },
   {
-    question: "Como funciona o Assistente de Reserva com IA?",
+    question: "How does the AI Reservation Assistant work?",
     answer:
-      "Nossos assistentes de IA podem ser integrados ao seu site ou WhatsApp. Eles respondem a perguntas dos clientes sobre horários, estacionamento ou ingredientes do menu e os ajudam a reservar mesas instantaneamente.",
+      "Our AI assistants can be integrated into your website or WhatsApp. They answer customer queries about hours, parking, or menu ingredients and help them secure table bookings instantly.",
   },
   {
-    question: "Nosso menu online carregará rápido em redes móveis lentas?",
+    question: "Will our online menu load fast on slow cellular networks?",
     answer:
-      "Sim. Usamos otimização agressiva de imagens e técnicas modernas de geração estática, o que significa que seus menus digitais carregam em milissegundos, mesmo em conexões móveis lentas.",
+      "Yes. We use aggressive image optimization and modern static generation techniques, meaning your digital menus load in milliseconds, even on slow mobile connections.",
   },
 ];
 
 export const pricingPackages = [
   {
-    name: "Lançamento",
+    name: "Launch",
     price: "$199",
     originalPrice: "$299",
-    summary: "Perfeito para pequenas empresas, cafés, bistrôs ou startups que precisam de uma presença digital moderna e de alto desempenho com um menu digital.",
+    summary: "Perfect for small businesses, cafes, bistros, or startups that need a modern, high-performance web presence with a digital menu.",
     includes: [
-      "Até 5 Páginas",
-      "Menu Digital Interativo / Vitrine",
-      "Layout Responsivo com Foco Móvel",
-      "Formulários de Contato e Consultas",
-      "Orientação para Domínio e Hospedagem",
-      "Implantação e Configuração de SSL",
-      "SEO Técnico Básico e Esquema",
-      "Integração com Google Maps",
-      "Otimização de Desempenho",
-      "Suporte por 30 Dias"
+      "Up to 5 Pages",
+      "Interactive Digital Menu / Showcase",
+      "Mobile-First Responsive Layout",
+      "Contact & Inquiry Forms",
+      "Domain & Hosting Guidance",
+      "Deployment & SSL Configuration",
+      "Basic Technical SEO & Schema",
+      "Google Maps Integration",
+      "Performance Optimization",
+      "30 Days Support"
     ],
-    ctaText: "Ver Detalhes",
-    timeline: "1-2 semanas",
+    ctaText: "View Details",
+    timeline: "1-2 weeks",
     modalDetails: [
       {
-        category: "Design e Páginas",
-        features: ["UI moderna e personalizada", "Menu digital focado em dispositivos móveis", "Início, Menu/Serviços, Sobre, Galeria, Contato"]
+        category: "Design & Pages",
+        features: ["Custom modern UI", "Mobile-first digital menu", "Home, Menu/Services, About, Gallery, Contact pages"]
       },
       {
-        category: "Implantação e Configuração",
-        features: ["Conexão de domínio e orientação de hospedagem", "Configuração de segurança SSL e implantação", "Google Maps e formulários de contato", "Clique para Ligar / Clique para Email"]
+        category: "Deployment & Setup",
+        features: ["Domain connection & hosting guidance", "SSL security setup & deployment", "Google Maps & contact forms", "Click-to-Call / Click-to-Email"]
       },
       {
-        category: "SEO e Velocidade",
-        features: ["Configuração básica de SEO técnico", "Marcação de esquema local", "Compressão de imagens para carregamento rápido"]
+        category: "SEO & Speed",
+        features: ["Basic technical SEO setup", "Local schema markup", "Image compression for fast loading"]
       },
       {
-        category: "Suporte",
-        features: ["Suporte gratuito por 30 dias", "Pequenas atualizações de conteúdo e preços"]
+        category: "Support",
+        features: ["30 Days Free Support", "Minor content & pricing updates"]
       }
     ]
   },
   {
-    name: "Crescimento",
+    name: "Growth",
     price: "$399",
     originalPrice: "$499",
-    summary: "Ideal para restaurantes em crescimento e marcas modernas que buscam automatizar reservas, capturar avaliações e integrar suporte de IA aos clientes.",
+    summary: "Ideal for growing restaurants and modern brands looking to automate reservations, capture reviews, and integrate AI customer support.",
     includes: [
-      "Tudo no Lançamento",
-      "Sistema de Reserva Interativo",
-      "Assistente de IA para Menu e FAQ",
-      "Integração com WhatsApp",
-      "Configuração e Rastreamento de Análise",
-      "Exibição de Avaliações do Google",
-      "Configuração de Melhores Práticas de Segurança",
-      "SEO Local Avançado",
-      "Suporte por 45 Dias"
+      "Everything in Launch",
+      "Interactive Reservation System",
+      "AI Menu & FAQ Assistant",
+      "WhatsApp Integration",
+      "Analytics Setup & Tracking",
+      "Google Reviews Display",
+      "Security Best Practices Setup",
+      "Advanced Local SEO",
+      "45 Days Support"
     ],
     featured: true,
-    ctaText: "Ver Detalhes",
-    timeline: "2-4 semanas",
+    ctaText: "View Details",
+    timeline: "2-4 weeks",
     modalDetails: [
       {
-        category: "Plataforma Aprimorada",
-        features: ["Até 10 Páginas", "UI/UX avançada com animações suaves", "Eventos privados e sistema de consulta", "Destaque de especiais"]
+        category: "Enhanced Platform",
+        features: ["Up to 10 Pages", "Advanced UI/UX with smooth animations", "Private events & inquiry system", "Featured specials highlight"]
       },
       {
-        category: "IA e Integrações",
-        features: ["Assistente de Chat IA para reservas e suporte a FAQs", "Integração com WhatsApp para comunicação instantânea", "Widgets de reserva integrados", "Sincronização ao vivo de Avaliações do Google", "Configuração de análise e rastreamento de conversão"]
+        category: "AI & Integrations",
+        features: ["AI Chat Assistant for booking & FAQ support", "WhatsApp integration for instant guest communication", "Embedded booking widgets", "Google Reviews live sync", "Analytics setup & conversion tracking"]
       },
       {
-        category: "SEO, Segurança e Desempenho",
-        features: ["Otimização de SEO local avançada", "Configuração de melhores práticas de segurança", "Conformidade com os Core Web Vitals", "Hospedagem de mídia CDN"]
+        category: "SEO, Security & Performance",
+        features: ["Advanced local SEO optimization", "Security best practices setup", "Core Web Vitals compliance", "CDN media hosting"]
       },
       {
-        category: "Suporte",
-        features: ["Suporte Premium por 45 dias", "Atualizações prioritárias de menu e preços"]
+        category: "Support",
+        features: ["45 Days Premium Support", "Priority menu and pricing updates"]
       }
     ]
   },
   {
-    name: "Escala com IA",
+    name: "Scale AI",
     price: "$999",
     originalPrice: "$1999",
-    summary: "Projetado para empresas premium e marcas que buscam assistentes recepcionistas de IA totalmente personalizados, fluxos de reserva automatizados e integrações de pedidos avançadas.",
+    summary: "Designed for premium businesses and brands seeking fully custom AI receptionists, automated booking workflows, and advanced ordering integrations.",
     includes: [
-      "Tudo no Crescimento",
-      "Assistente Recepcionista de IA Personalizado",
-      "Fluxos de Reserva Automatizados",
-      "Integração com Pedidos Online / POS",
-      "Suporte a Múltiplos Idiomas",
-      "Otimização de Desempenho de Alta Velocidade (98+ Vitals)",
-      "Painel de Análise de Administração",
-      "Pacote de Manutenção de Site",
-      "Suporte por 60 Dias"
+      "Everything in Growth",
+      "Custom AI Receptionist Assistant",
+      "Automated Reservation Workflows",
+      "Online Ordering / POS Integration",
+      "Multi-Language Support",
+      "High-Speed Performance Optimization (98+ Vitals)",
+      "Admin Analytics Dashboard",
+      "Website Maintenance Package",
+      "60 Days Support"
     ],
-    ctaText: "Ver Detalhes",
-    timeline: "4-6 semanas",
+    ctaText: "View Details",
+    timeline: "4-6 weeks",
     modalDetails: [
       {
-        category: "Recursos Premium",
-        features: ["Páginas Ilimitadas", "Transições de movimento personalizadas", "Vitrines interativas", "Suporte a menu em vários idiomas"]
+        category: "Premium Features",
+        features: ["Unlimited Pages", "Custom motion transitions", "Interactive showcases", "Multi-language menu support"]
       },
       {
-        category: "IA Personalizada Avançada",
-        features: ["Recepcionista IA Personalizada (treinada em sua marca e dados)", "Reserva automatizada e verificação de leads", "Alertas SMS e e-mail"]
+        category: "Advanced Custom AI",
+        features: ["Custom AI Receptionist (trained on your brand & data)", "Automated booking & lead verification", "SMS & email alerts"]
       },
       {
-        category: "Integrações e Pedidos",
-        features: ["Integração de Pedidos Online e POS (Toast, Square, etc.)", "Configuração de CRM do cliente", "Painel de Análise de Administração"]
+        category: "Integrations & Ordering",
+        features: ["Online Ordering & POS Integration (Toast, Square, etc.)", "Customer CRM setup", "Admin Analytics Dashboard"]
       },
       {
-        category: "Desempenho e Suporte",
-        features: ["Ajuste de desempenho dedicado (98+ Core Web Vitals)", "Manutenção e Suporte do Site", "Suporte Prioritário por 60 Dias", "Edições de menu no mesmo dia"]
+        category: "Performance & Support",
+        features: ["Dedicated performance tuning (98+ Core Web Vitals)", "Website Maintenance & Support", "60 Days Priority Support", "Same-day menu edits"]
       }
     ]
   },
   {
     name: "Enterprise",
-    price: "Orçamento Personalizado",
-    summary: "Soluções digitais personalizadas para grupos de várias localizações, redes de franquias, hotéis de luxo e plataformas corporativas complexas.",
+    price: "Custom Quote",
+    summary: "Tailored digital solutions for multi-location groups, franchise networks, upscale hotel dining, and complex enterprise platforms.",
     includes: [
-      "Escopo Personalizado para Múltiplas Localizações",
-      "Design de Plataforma Corporativa",
-      "Pedidos Online Conectados ao POS",
-      "Administração de Franquia Centralizada",
-      "Gerente de Conta Dedicado",
-      "SLA de Prioridade 24/7 e Parceria"
+      "Custom Multi-Location Scope",
+      "Corporate Platform Design",
+      "POS-Connected Online Ordering",
+      "Centralized Franchise Admin",
+      "Dedicated Account Manager",
+      "24/7 Priority SLA & Partnership"
     ],
-    ctaText: "Entre em Contato",
-    timeline: "Cronograma personalizado",
+    ctaText: "Contact Us",
+    timeline: "Custom timeline",
     modalDetails: [
       {
-        category: "Plataforma do Grupo",
-        features: ["Roteamento em várias localizações", "Microsites de franquia", "Gerenciador de conteúdo centralizado", "Seções corporativas de alto padrão"]
+        category: "Group Platform",
+        features: ["Multi-location routing", "Franchise microsites", "Centralized content manager", "Upscale enterprise sections"]
       },
       {
-        category: "POS e Pedidos",
-        features: ["Fluxo de pedidos conectado ao POS", "Integrações com plataformas de entrega", "Pipeline de catering e eventos"]
+        category: "POS & Ordering",
+        features: ["Full POS-connected ordering flow", "Delivery platform integrations", "Catering & events pipeline"]
       },
       {
-        category: "IA e Fluxos de Trabalho Personalizados",
-        features: ["Sistema de despacho de IA em várias localizações", "Suporte de reserva com IA de voz", "Análises corporativas personalizadas"]
+        category: "AI & Custom Workflows",
+        features: ["Multi-location AI dispatch system", "Voice AI booking support", "Custom enterprise analytics"]
       },
       {
-        category: "Suporte",
-        features: ["Gerente de Conta Dedicado", "Suporte SLA de prioridade 24/7", "Avaliações mensais de desempenho e segurança"]
+        category: "Support",
+        features: ["Dedicated Account Manager", "24/7 Priority SLA support", "Monthly performance & security reviews"]
       }
     ]
   }
@@ -596,26 +596,26 @@ export const pricingPackages = [
 
 export const contactFaqs = [
   {
-    question: "O que devo preparar antes de agendar uma consulta?",
+    question: "What should I prepare before booking a consultation?",
     answer:
-      "Traga a história do seu restaurante, o conceito do cardápio, fotografias de alimentos se disponíveis, links para sites que você admira e sua previsão para inauguração ou lançamento.",
+      "Bring your restaurant's story, menu concept, food photography if available, links to websites you admire, and your target opening or launch timeline.",
   },
   {
-    question: "Vocês criam sites para restaurantes de localização única ou food trucks?",
+    question: "Do you build websites for single-location restaurants or food trucks?",
     answer:
-      "Sim. Desenhamos e construímos sites de todos os tamanhos—seja você um bistrô de bairro único, um food truck local ou um grupo expansivo de hospitalidade com várias localizações.",
+      "Yes. We design and build sites of all sizes—whether you're a single neighborhood bistro, a local food truck, or an expansive multi-location hospitality group.",
   },
   {
-    question: "O que acontece depois de enviar o formulário de contato?",
+    question: "What happens after I send the contact form?",
     answer:
-      "Agendaremos uma rápida chamada de descoberta para discutir o estilo do seu menu, os requisitos de reserva, as preferências de design e definir um cronograma claro para o seu lançamento.",
+      "We will schedule a quick discovery call to discuss your menu style, reservation requirements, design preferences, and set a clear timeline for your launch.",
   },
 ];
 
 export const aboutValues = [
-  "Contação de histórias gastronômica que traduz a sua atmosfera física para a tela.",
-  "Desempenho móvel que garante que os hóspedes possam ver seu menu instantaneamente em qualquer lugar.",
-  "Sistemas automatizados perfeitos que mantêm suas mesas ocupadas sem distrair sua equipe.",
+  "Culinary storytelling that translates your physical atmosphere to the screen.",
+  "Mobile performance that ensures guests can view your menu instantly anywhere.",
+  "Seamless automated systems that keep your tables filled without distracting your team.",
 ];
 
 export const portfolioItems: PortfolioItem[] = [
@@ -623,160 +623,160 @@ export const portfolioItems: PortfolioItem[] = [
     slug: "savor-fine-dining",
     title: "Savor Fine Dining",
     category: "Restaurant",
-    clientType: "Alta Gastronomia",
-    shortDescription: "Um site elegante de alta gastronomia projetado para exibir uma experiência culinária premium, reservas e um ambiente elegante.",
+    clientType: "Fine Dining",
+    shortDescription: "An exquisite fine dining website designed to showcase a premium culinary experience, reservations, and elegant ambiance.",
     overview:
-      "A Savor Fine Dining exigia uma presença online altamente sofisticada que refletisse a arte de seus pratos e simplificasse o processo de reserva para a sua clientela exclusiva.",
-    industry: "Restaurante",
-    technologies: ["Next.js", "Tailwind CSS", "Animações", "API de Reserva"],
-    features: ["Galerias visuais imersivas", "Fluxo de reserva simplificado", "Exibições de menus sazonais", "Experiência otimizada para dispositivos móveis"],
+      "Savor Fine Dining required a highly sophisticated online presence that reflects the artistry of their dishes and simplifies the booking process for their exclusive clientele.",
+    industry: "Restaurant",
+    technologies: ["Next.js", "Tailwind CSS", "Animations", "Reservation API"],
+    features: ["Immersive visual galleries", "Streamlined reservation flow", "Seasonal menu showcases", "Mobile-optimized experience"],
     image: "/images/Savorfinedining.avif",
-    imageAlt: "Pré-visualização do site do Savor Fine Dining exibindo apresentações culinárias elegantes e recursos de reserva.",
+    imageAlt: "Savor Fine Dining website preview showing elegant culinary presentations and reservation features.",
     liveHref: "https://savordining.vercel.app",
-    performance: "100/100 na Pontuação do Core Web Vitals",
-    results: ["Aumento em reservas exclusivas de mesas", "Aprimorada elegância da marca digital", "Reservas móveis sem atritos"],
-    challenge: "Traduzir uma experiência gastronômica física de alto nível em uma plataforma digital rápida e visualmente deslumbrante.",
-    goals: ["Exibir arte culinária", "Simplificar reservas VIP", "Elevar a percepção digital da marca"],
-    design: "Layout minimalista e elegante com imagens de alta resolução e tipografia sofisticada para refletir um ambiente premium.",
+    performance: "100/100 Core Web Vitals score",
+    results: ["Increased exclusive table bookings", "Enhanced digital brand elegance", "Frictionless mobile reservations"],
+    challenge: "Translating a high-end physical dining experience into a fast, visually stunning digital platform.",
+    goals: ["Showcase culinary artistry", "Streamline VIP reservations", "Elevate digital brand perception"],
+    design: "Elegant, minimalist layout with high-resolution imagery and sophisticated typography to reflect a premium atmosphere.",
     development:
-      "Construído com foco em desempenho e transições suaves, integrando uma API de reserva perfeita enquanto mantém resultados impecáveis do Core Web Vitals.",
+      "Built with a focus on performance and smooth transitions, integrating a seamless booking API while maintaining flawless Core Web Vitals.",
   },
   {
     slug: "momofuku",
     title: "Momofuku",
     category: "Restaurant",
-    clientType: "Grupo de Restaurantes",
-    shortDescription: "Um site moderno de grupo de restaurantes destacando ofertas culinárias, envios para todo o país e narrativa da marca.",
+    clientType: "Restaurant & Food Group",
+    shortDescription: "A modern restaurant group website highlighting culinary offerings, chef's counters, nationwide shipping, and brand storytelling.",
     overview:
-      "O Momofuku precisava de uma plataforma digital robusta capaz de lidar com várias localizações, integração de envio em âmbito nacional e transmitir sua identidade de marca exclusiva.",
-    industry: "Restaurante",
-    technologies: ["Next.js", "Tailwind CSS", "E-commerce", "Análise"],
-    features: ["Roteamento para várias localizações", "Integração nacional de envio", "Contação imersiva da história da marca", "Reservas focadas em dispositivos móveis"],
+      "Momofuku needed a robust digital platform that could handle multiple locations, nationwide shipping integration, and convey their distinct brand identity.",
+    industry: "Restaurant",
+    technologies: ["Next.js", "Tailwind CSS", "E-commerce", "Analytics"],
+    features: ["Multi-location routing", "Nationwide shipping integration", "Immersive brand storytelling", "Mobile-first reservations"],
     image: "/images/momofuku-new.avif",
-    imageAlt: "Pré-visualização do site do restaurante Momofuku mostrando design moderno, fotografia culinária e navegação.",
+    imageAlt: "Momofuku restaurant website preview showing modern design, culinary photography, and navigation.",
     liveHref: "https://www.momofuku.com/",
-    performance: "98/100 na Pontuação do Core Web Vitals",
-    results: ["Aumento nas vendas de envio online", "Maiores taxas de conversão de reservas", "Gerenciamento simplificado de várias localizações"],
-    challenge: "Consolidar uma complexa gama de restaurantes, produtos e histórias de marca em uma única e coesa experiência de usuário, sem sobrecarga visual.",
-    goals: ["Unificar a presença da marca", "Aumentar a receita nacional com envio", "Simplificar o processo de reservas"],
-    design: "Tipografia arrojada, imagens de alto contraste e layout editorial que reflete a autoridade culinária da marca.",
+    performance: "98/100 Core Web Vitals score",
+    results: ["Increased online shipping sales", "Higher reservation conversion rates", "Streamlined multi-location management"],
+    challenge: "Consolidating a complex array of restaurants, products, and brand stories into a single, cohesive user experience without clutter.",
+    goals: ["Unify the brand presence", "Boost nationwide shipping revenue", "Simplify the reservation process"],
+    design: "Bold typography, high-contrast imagery, and an editorial layout that reflects the brand's culinary authority.",
     development:
-      "Uma abordagem de arquitetura headless foi usada para desacoplar o front-end buscando velocidade, ao mesmo tempo em que integrava sistemas de backend complexos para reservas e e-commerce.",
+      "A headless architecture approach was used to decouple the frontend for speed while integrating complex backend systems for reservations and e-commerce.",
   },
   {
     slug: "the-cheesecake-factory",
     title: "The Cheesecake Factory",
     category: "Restaurant",
-    clientType: "Rede de Restaurantes Casuais",
-    shortDescription: "Site de restaurante enfatizando pedidos online, menus expansivos, sobremesas exclusivas e cartões de presente.",
+    clientType: "Casual Dining Chain",
+    shortDescription: "A casual dining restaurant website emphasizing online ordering, expansive food menus, signature desserts, and gift cards.",
     overview:
-      "O The Cheesecake Factory precisava de uma experiência digital ampla, mas de fácil navegação, para mostrar seu grande menu e impulsionar pedidos online.",
-    industry: "Restaurante",
-    technologies: ["Next.js", "Tailwind CSS", "Integração de API", "SEO"],
-    features: ["Menu massivo e dinâmico", "Fluxo de pedidos online", "Compra de cartão de presente", "Buscador de locais"],
+      "The Cheesecake Factory required an expansive yet easily navigable digital experience to showcase their massive menu and drive online orders.",
+    industry: "Restaurant",
+    technologies: ["Next.js", "Tailwind CSS", "API Integration", "SEO"],
+    features: ["Dynamic massive menu", "Online ordering flow", "Gift card purchasing", "Location finder"],
     image: "/images/thecheesecakefactory-new.avif",
-    imageAlt: "Site The Cheesecake Factory mostrando sobremesas, menus e pedidos.",
+    imageAlt: "The Cheesecake Factory website preview showing signature desserts, menu highlights, and online ordering prompts.",
     liveHref: "https://www.thecheesecakefactory.com/",
-    performance: "95/100 na Pontuação do Core Web Vitals",
-    results: ["Melhoria na velocidade de carregamento", "Aumento nas vendas de cartões", "Pedidos online simplificados"],
-    challenge: "Estruturar um menu enorme e diversificado em um formato rápido e legível em dispositivos móveis.",
-    goals: ["Otimizar a legibilidade", "Impulsionar vendas online", "Aprimorar SEO local"],
-    design: "Cores convidativas com navegação clara e categorizada.",
+    performance: "95/100 Core Web Vitals score",
+    results: ["Improved menu loading speed", "Increased gift card sales", "Frictionless online ordering"],
+    challenge: "Structuring an incredibly large and diverse menu in a way that remains fast and readable on mobile devices.",
+    goals: ["Optimize menu readability", "Drive online pickup orders", "Enhance local search visibility"],
+    design: "Warm, inviting colors paired with clear categorical navigation to prevent choice paralysis while browsing the extensive offerings.",
     development:
-      "Foco na otimização de imagens para centenas de itens de menu e conexão de API.",
+      "Focus placed on optimizing image delivery for hundreds of menu items and building a seamless API connection to their ordering platform.",
   },
   {
     slug: "four-seasons",
     title: "Four Seasons",
     category: "Hotels",
-    clientType: "Hospitalidade de Luxo",
-    shortDescription: "Um site de hospitalidade de luxo com foco em reservas sofisticadas, experiências de jatos particulares e vilas exclusivas.",
+    clientType: "Luxury Hospitality",
+    shortDescription: "A luxury hospitality website focusing on high-end hotel reservations, private jet experiences, and exclusive vacation rentals.",
     overview:
-      "O Four Seasons precisava de uma experiência digital incrivelmente premium.",
-    industry: "Hotéis",
-    technologies: ["Next.js", "Tailwind CSS", "API de Reservas", "Desempenho"],
-    features: ["Busca global", "Fluxo de reserva premium", "Jatos privados", "Vídeos"],
+      "Four Seasons needed an uncompromisingly premium digital experience that reflects their standard of luxury and facilitates high-value bookings.",
+    industry: "Hotels",
+    technologies: ["Next.js", "Tailwind CSS", "Booking API", "Performance"],
+    features: ["Global property search", "High-value booking flow", "Private jet inquiries", "Immersive video headers"],
     image: "/images/fourseason.avif",
-    imageAlt: "Site Four Seasons de luxo.",
+    imageAlt: "Four Seasons luxury hospitality website preview showing exclusive properties, booking interfaces, and premium visuals.",
     liveHref: "https://www.fourseasons.com/",
-    performance: "99/100 na Pontuação do Core Web Vitals",
-    results: ["Mais reservas diretas", "Alto engajamento", "Marca digital elevada"],
-    challenge: "Equilibrar alta resolução com velocidade.",
-    goals: ["Reservas VIP", "Destacar luxo", "UX móvel perfeita"],
-    design: "Elegância e minimalismo.",
+    performance: "99/100 Core Web Vitals score",
+    results: ["Increased direct bookings", "Higher engagement on premium experiences", "Elevated digital brand perception"],
+    challenge: "Balancing high-resolution, immersive visual assets with strict performance requirements for global accessibility.",
+    goals: ["Increase high-end direct bookings", "Showcase exclusive experiences", "Deliver a flawless mobile booking flow"],
+    design: "Minimalist, elegant interface that steps back to let the breathtaking property photography take center stage.",
     development:
-      "Cache de borda avançado.",
+      "Implemented advanced edge caching and image optimization to ensure lightning-fast load times regardless of the user's global location.",
   },
   {
     slug: "sparrow-italia",
     title: "Sparrow Italia",
     category: "Restaurant",
-    clientType: "Alta Gastronomia",
-    shortDescription: "Site de luxo exibindo culinária italiana, prêmios e coquetéis premium.",
+    clientType: "Fine Dining",
+    shortDescription: "An elegant fine dining website showcasing Italian-inspired cuisine, premium cocktails, press features, and an upscale dining atmosphere.",
     overview:
-      "O Sparrow Italia queria uma presença tão requintada quanto seus pratos.",
-    industry: "Restaurante",
-    technologies: ["Next.js", "Tailwind CSS", "Animações", "SEO"],
-    features: ["Animações de rolagem", "Menu elegante", "Consultas VIP", "Prêmios"],
+      "Sparrow Italia sought an online presence that mirrored their sophisticated ambiance, focusing on visual allure and seamless reservations.",
+    industry: "Restaurant",
+    technologies: ["Next.js", "Tailwind CSS", "Animations", "SEO"],
+    features: ["Immersive scroll animations", "Elegant menu presentation", "VIP booking inquiries", "Press & accolade showcase"],
     image: "/images/sparrowitlia.avif",
-    imageAlt: "Sparrow Italia",
+    imageAlt: "Sparrow Italia fine dining website preview showing elegant aesthetics, Italian cuisine, and reservation options.",
     liveHref: "https://sparrowitalia.com/",
-    performance: "96/100 na Pontuação do Core Web Vitals",
-    results: ["Mais consultas VIP", "Maior valor por mesa", "Marca forte"],
-    challenge: "Criar atmosfera digital exclusiva.",
-    goals: ["Experiência sofisticada", "Reservas premium", "Mostrar gastronomia"],
-    design: "Escuro e luxuoso.",
+    performance: "96/100 Core Web Vitals score",
+    results: ["Higher VIP booking inquiries", "Increased average table value", "Stronger brand positioning in the fine dining sector"],
+    challenge: "Creating an atmosphere of exclusivity and elegance digitally without relying on heavy, slow-loading assets.",
+    goals: ["Capture the upscale dining atmosphere", "Drive premium reservations", "Showcase culinary artistry"],
+    design: "Dark, moody aesthetics with subtle gold accents and smooth, deliberate transitions that evoke a sense of luxury.",
     development:
-      "Micro-animações CSS e carregamento sob demanda.",
+      "Leveraged CSS-driven micro-animations and lazy-loaded visual assets to maintain performance while delivering a rich experience.",
   },
   {
     slug: "big-chill-bar",
     title: "Big Chill Bar",
     category: "Bar",
-    clientType: "Vida Noturna",
-    shortDescription: "Site de bar para eventos, esportes ao vivo e reservas privadas.",
+    clientType: "Nightlife & Entertainment",
+    shortDescription: "A vibrant bar and nightlife website promoting live sports watch parties, private venue hire, food pop-ups, and special events.",
     overview:
-      "O Big Chill Bar precisava de uma plataforma de alta energia.",
+      "Big Chill Bar needed a high-energy platform to communicate their dynamic schedule of events, facilitate group bookings, and highlight pop-up kitchens.",
     industry: "Bar",
-    technologies: ["Next.js", "Tailwind CSS", "Gestão de Eventos", "Formulários"],
-    features: ["Calendário dinâmico", "Reserva de espaço", "Esportes", "Pop-ups"],
+    technologies: ["Next.js", "Tailwind CSS", "Event Management", "Forms"],
+    features: ["Dynamic event calendar", "Private hire booking flow", "Live sports schedules", "Pop-up kitchen rotation"],
     image: "/images/big_chill.avif",
-    imageAlt: "Big Chill Bar",
+    imageAlt: "Big Chill Bar website preview showing vibrant nightlife, event schedules, and venue hire information.",
     liveHref: "https://www.bigchillbar.com/",
-    performance: "97/100 na Pontuação do Core Web Vitals",
-    results: ["Mais eventos fechados", "Maior público", "Gestão fácil"],
-    challenge: "Muitos eventos que mudam rapidamente.",
-    goals: ["Aumentar reservas de espaço", "Programação clara", "Atmosfera vibrante"],
-    design: "Cores fortes e vivas.",
+    performance: "97/100 Core Web Vitals score",
+    results: ["Significant increase in private hire bookings", "Higher event attendance", "Easier management of pop-up schedules"],
+    challenge: "Organizing constantly changing event data, sports schedules, and food pop-ups into an easily digestible format.",
+    goals: ["Boost private venue hires", "Clarify the weekly event schedule", "Create a vibrant digital atmosphere"],
+    design: "Bright, energetic typography, bold color blocks, and dynamic layouts that capture the lively atmosphere of the venue.",
     development:
-      "Painel de controle para gerenciar a agenda.",
+      "Built a flexible content management architecture allowing the client to easily update daily sports events and rotating food vendors.",
   },
   {
     slug: "restaurant-ai-receptionist-chatbot",
-    title: "Assistente IA para Restaurantes",
+    title: "Restaurant AI Assistant",
     category: "Restaurant",
-    clientType: "Integração de IA",
-    shortDescription: "Um chatbot recepcionista IA que automatiza reservas e tira dúvidas.",
+    clientType: "Restaurant AI Integration",
+    shortDescription: "An intelligent AI receptionist chatbot designed to automate restaurant reservations, menu inquiries, and guest support.",
     overview:
-      "Uma demo de como a IA pode ajudar o seu negócio.",
-    industry: "IA",
-    technologies: ["React.js", "Node.js", "Express", "MongoDB", "IA Gemini", "Tailwind CSS"],
-    features: ["Reservas", "Dúvidas sobre alergias", "SMS/Email", "Chatbot online"],
+      "An interactive restaurant assistant demonstration showcasing how custom LLM integrations can answer guest inquiries about ingredients, dietary constraints, parking, and reservation availability 24/7.",
+    industry: "AI Receptionist",
+    technologies: ["React.js", "Node.js", "Express", "MongoDB", "Gemini AI", "Tailwind CSS"],
+    features: ["Custom reservation flow", "Allergen & menu FAQ search", "SMS/Email notifications", "Interactive chat sandbox"],
     image: "/images/Multi-vertical-Ai-receptionist-chatbot.avif",
-    imageAlt: "Demo do assistente IA.",
+    imageAlt: "Restaurant AI Assistant preview showing active chat window answering menu questions.",
     liveHref: "https://multireceptionai.vercel.app/",
-    performance: "100/100 na Pontuação do Core Web Vitals",
-    results: ["Zero chamadas perdidas", "Respostas na hora", "Menos telefone tocando"],
-    challenge: "Respostas precisas do menu.",
-    goals: ["Suporte imediato", "Qualificar reservas", "Eficiência"],
-    design: "Interface de mensagens escura e limpa.",
+    performance: "100/100 Core Web Vitals score",
+    results: ["Zero missed reservation inquiries", "Instant responses to guest questions", "Reduced host phone time"],
+    challenge: "Providing precise details on menu ingredients and seating availability without human intervention during busy kitchen hours.",
+    goals: ["Provide instant guest support", "Qualify reservation inquiries", "Increase table booking efficiency"],
+    design: "Clean, dark-mode messaging interface with easy quick-reply buttons for reservations, hours, and menu.",
     development:
-      "Integração rápida com a API do Gemini.",
+      "Developed with a responsive React frontend, Express/Node backend, and direct integration with Gemini AI API for structured menu and booking responses.",
   },
 ];
 
 export const portfolioFilters = [
-  "Todos",
+  "All",
   "Restaurant",
   "Hotels",
   "Bar",

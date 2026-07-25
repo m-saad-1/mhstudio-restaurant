@@ -18,27 +18,28 @@ import {
 const FaqAccordion = dynamic(() => import("@/components/ui/faq-accordion").then((mod) => mod.FaqAccordion));
 
 export const metadata: Metadata = {
-  title: "Processo | Como Trabalhamos",
-  description: "Esteja você lançando o site de um único restaurante, um menu digital ou sistemas de reserva personalizados, nosso processo garante qualidade, transparência e cronogramas previsíveis.",
+  title: "Process | How We Work",
+  description: "Whether you’re launching a single restaurant website, a digital menu, or custom booking systems, our process ensures quality, transparency, and predictable timelines.",
 };
 
 export default function ProcessPage() {
   return (
     <>
       <PageHero
-        eyebrow="Fluxo de Trabalho e Metodologia"
-        title="Um fluxo de trabalho estruturado construído para clareza."
-        description="De menus digitais a plataformas de reservas personalizadas, nosso processo garante etapas claras, cronogramas fixos e lançamentos de alto desempenho."
-        primaryCta={{ label: "Inicie seu Projeto", href: "/contact" }}
-        secondaryCta={{ label: "Ver Nosso Trabalho", href: "/work" }}
+        eyebrow="Workflow & Methodology"
+        title="A structured workflow built for clarity."
+        description="From digital menus to custom reservation platforms, our process guarantees clear steps, fixed timelines, and high-performance launches."
+        primaryCta={{ label: "Start Your Project", href: "/contact" }}
+        secondaryCta={{ label: "View Our Work", href: "/work" }}
       />
 
+      {/* 2. Core Development Process */}
       <Reveal as="section" className="section-space section-divider">
         <div className="content-shell space-y-10">
           <SectionHeading
-            eyebrow="O Processo Central"
-            title="Seis passos para o lançamento."
-            description="Nosso roteiro passo a passo para construir plataformas digitais de alta velocidade."
+            eyebrow="The Core Process"
+            title="Six steps to launch."
+            description="Our step-by-step roadmap for building high-speed digital platforms."
           />
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {corePhases.map((phase, index) => {
@@ -74,12 +75,13 @@ export default function ProcessPage() {
         </div>
       </Reveal>
 
+      {/* 3. Development Paths */}
       <Reveal as="section" className="section-space section-divider">
         <div className="content-shell space-y-10">
           <SectionHeading
-            eyebrow="Caminhos de Desenvolvimento"
-            title="Caminhos de desenvolvimento personalizados."
-            description="Personalizamos nosso fluxo de trabalho para corresponder perfeitamente aos seus objetivos e ao tamanho do negócio."
+            eyebrow="Development Paths"
+            title="Tailored development paths."
+            description="We customize our workflow to match your exact goals and business size."
           />
           <div className="grid gap-6">
             {developmentPaths.map((path, index) => (
@@ -90,7 +92,7 @@ export default function ProcessPage() {
                     <p className="text-sm leading-[1.7] text-foreground-body">{path.description}</p>
                     {path.timeline && (
                       <p className="inline-flex items-center rounded-none bg-white/5 px-3 py-1 text-xs font-medium text-foreground-muted">
-                        Cronograma Típico: {path.timeline}
+                        Typical Timeline: {path.timeline}
                       </p>
                     )}
                   </div>
@@ -113,12 +115,13 @@ export default function ProcessPage() {
         </div>
       </Reveal>
 
+      {/* 4. What Happens During the Project? */}
       <Reveal as="section" className="section-space section-divider">
         <div className="content-shell space-y-10">
           <SectionHeading
-            eyebrow="Envolvimento do Cliente"
-            title="Como nos mantemos alinhados."
-            description="Nós nos comunicamos de forma clara em cada etapa sem tomar o seu tempo valioso."
+            eyebrow="Client Involvement"
+            title="How we stay aligned."
+            description="We communicate clearly at every step without taking up your valuable time."
           />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {clientInvolvement.map((item, index) => {
@@ -137,14 +140,15 @@ export default function ProcessPage() {
         </div>
       </Reveal>
 
+      {/* 5. Quality Assurance & 6. Tech Timeline side-by-side or stacked */}
       <Reveal as="section" className="section-space section-divider">
         <div className="content-shell grid gap-10 lg:grid-cols-2">
           
           <div className="space-y-8">
             <div>
-              <span className="eyebrow">Padrões de Engenharia</span>
-              <h2 className="mt-2 text-3xl font-semibold text-foreground">Altos Padrões</h2>
-              <p className="mt-3 text-foreground-body">Cada detalhe é exaustivamente testado antes do lançamento.</p>
+              <span className="eyebrow">Engineering Standards</span>
+              <h2 className="mt-2 text-3xl font-semibold text-foreground">High Standards</h2>
+              <p className="mt-3 text-foreground-body">Every detail is thoroughly tested prior to launch.</p>
             </div>
             <div className="grid grid-cols-2 gap-4">
               {qualityAssurance.map((qa, i) => {
@@ -161,9 +165,9 @@ export default function ProcessPage() {
 
           <div className="space-y-8">
             <div>
-              <span className="eyebrow">A Stack</span>
+              <span className="eyebrow">The Stack</span>
               <h2 className="mt-2 text-3xl font-semibold text-foreground">Tech Stack</h2>
-              <p className="mt-3 text-foreground-body">Ferramentas rápidas, confiáveis e seguras impulsionando seu site.</p>
+              <p className="mt-3 text-foreground-body">Fast, reliable, and secure tools powering your site.</p>
             </div>
             <div className="relative border-l border-white/10 pl-6 space-y-6">
               {techTimeline.map((item, i) => {
@@ -186,32 +190,34 @@ export default function ProcessPage() {
         </div>
       </Reveal>
 
+      {/* 7. Frequently Asked Questions */}
       <Reveal as="section" className="section-space section-divider">
         <div className="content-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <SectionHeading
-            eyebrow="Perguntas Frequentes"
-            title="FAQs do Processo"
-            description="Breves respostas sobre agendamento, atualizações de menu e prazos de lançamento."
+            eyebrow="FAQ"
+            title="Process FAQs"
+            description="Brief answers on scheduling, menu updates, and launch timelines."
           />
           <FaqAccordion items={processFaqs} />
         </div>
       </Reveal>
 
+      {/* 8. Final CTA */}
       <Reveal as="section" className="section-space">
         <div className="content-shell">
           <div className="surface-card relative overflow-hidden px-8 py-12 sm:px-10 sm:py-14 lg:px-14 text-center flex flex-col items-center">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(245,158,11,0.15)_0%,_transparent_70%)] blur-[100px]" />
             <div className="relative space-y-5 max-w-3xl">
-              <span className="eyebrow mx-auto">Pronto para crescer?</span>
+              <span className="eyebrow mx-auto">Ready to grow?</span>
               <h2 className="text-[2rem] font-semibold leading-[1.1] text-foreground sm:text-[2.8rem]">
-                Vamos Construir
+                Let's Build It
               </h2>
               <p className="text-base leading-[1.7] text-foreground-body sm:text-lg">
-                Seja lançando seu primeiro site, construindo um aplicativo da web personalizado ou integrando assistentes de IA, nosso processo estruturado garante um caminho rápido e transparente para o crescimento.
+                Whether launching your first site, building a custom web application, or integrating AI assistants, our structured process ensures a fast, transparent path to growth.
               </p>
               <div className="pt-4">
                 <Link href="/contact" className="button-primary px-8 text-sm sm:w-auto">
-                  Entrar em Contato
+                  Get in Touch
                 </Link>
               </div>
             </div>
