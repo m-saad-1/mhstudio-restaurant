@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Check, ChevronRight } from "lucide-react";
+import Check from "lucide-react/dist/esm/icons/check";
+import ChevronRight from "lucide-react/dist/esm/icons/chevron-right";
 import { MockupFrame } from "@/components/marketing/mockup-frame";
 import { Reveal } from "@/components/ui/reveal";
 import { portfolioItems } from "@/data/site-content";

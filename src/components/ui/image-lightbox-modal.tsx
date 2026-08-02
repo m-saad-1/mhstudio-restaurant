@@ -2,7 +2,9 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { X, ZoomIn, ExternalLink } from "lucide-react";
+import X from "lucide-react/dist/esm/icons/x";
+import ZoomIn from "lucide-react/dist/esm/icons/zoom-in";
+import ExternalLink from "lucide-react/dist/esm/icons/external-link";
 import { TrackedLink } from "@/components/ui/tracked-link";
 
 type ImageLightboxModalProps = {
@@ -112,7 +114,6 @@ export function ImageLightboxModal({
               height={1000}
               sizes="(max-width: 1280px) 100vw, 1600px"
               className="h-auto max-h-[78vh] w-full object-contain mx-auto"
-              priority
             />
           </div>
         </div>

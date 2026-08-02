@@ -4,6 +4,8 @@ import withBundleAnalyzer from "@next/bundle-analyzer";
 const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
+    deviceSizes: [320, 420, 640, 768, 1024, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384, 400],
   },
   async headers() {
     return [
@@ -17,6 +19,10 @@ const nextConfig: NextConfig = {
         ],
       },
     ];
+  },
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ["lucide-react"],
   },
 };
 

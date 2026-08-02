@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CalendarRange, Mail, MessageCircleMore, Share2 } from "lucide-react";
+import CalendarRange from "lucide-react/dist/esm/icons/calendar-range";
+import Mail from "lucide-react/dist/esm/icons/mail";
+import MessageCircleMore from "lucide-react/dist/esm/icons/message-circle-more";
+import Share2 from "lucide-react/dist/esm/icons/share-2";
 import dynamic from "next/dynamic";
 const ContactForm = dynamic(() => import("@/components/marketing/contact-form").then((mod) => mod.ContactForm));
 const FaqAccordion = dynamic(() => import("@/components/ui/faq-accordion").then((mod) => mod.FaqAccordion));

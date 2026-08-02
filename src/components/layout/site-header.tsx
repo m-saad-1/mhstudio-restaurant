@@ -3,7 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import Menu from "lucide-react/dist/esm/icons/menu";
+import X from "lucide-react/dist/esm/icons/x";
 import { useEffect, useState } from "react";
 import { navigationItems } from "@/data/site-content";
 
@@ -88,6 +89,7 @@ export function SiteHeader() {
       <div
         className={`fixed inset-0 z-[100] lg:hidden ${menuOpen ? "pointer-events-auto" : "pointer-events-none"}`}
         aria-hidden={!menuOpen}
+        inert={!menuOpen ? true : undefined}
       >
         {/* Backdrop */}
         <div 

@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Check } from "lucide-react";
+import ArrowRight from "lucide-react/dist/esm/icons/arrow-right";
+import Check from "lucide-react/dist/esm/icons/check";
 import dynamic from "next/dynamic";
 
-const AnimatedCounter = dynamic(() => import("@/components/ui/animated-counter").then((mod) => mod.AnimatedCounter));
-const FaqAccordion = dynamic(() => import("@/components/ui/faq-accordion").then((mod) => mod.FaqAccordion));
-import { MockupFrame } from "@/components/marketing/mockup-frame";
+import { AnimatedCounter, FaqAccordion, MockupFrame } from "@/components/heavy-client-components";
 import { HeroSection } from "@/components/marketing/hero-section";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -74,6 +73,7 @@ export default function Home() {
                   </div>
                   <Link href="/services" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-foreground">
                     Learn More
+                    <span className="sr-only"> about {service.title}</span>
                     <ArrowRight className="h-4 w-4 text-accent transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                 </Reveal>
@@ -95,8 +95,7 @@ export default function Home() {
                 alt="AI Receptionist Interface"
                 fill
                 className="object-contain object-center drop-shadow-[0_20px_40px_rgba(245,158,11,0.18)] hover:-translate-y-2 transition-transform duration-500 ease-out"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                priority
+                sizes="(max-width: 1024px) 45vw, 400px"
               />
             </div>
           </Reveal>

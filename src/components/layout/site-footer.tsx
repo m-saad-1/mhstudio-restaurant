@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Sparkles } from "lucide-react";
+import ArrowRight from "lucide-react/dist/esm/icons/arrow-right";
+import Sparkles from "lucide-react/dist/esm/icons/sparkles";
 import { navigationItems, serviceCards, siteConfig, socialLinks } from "@/data/site-content";
 import { FooterCtaWrapper } from "@/components/layout/footer-cta-wrapper";
 import { TrackedLink } from "@/components/ui/tracked-link";

@@ -5,14 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { TrackedLink } from "@/components/ui/tracked-link";
 import deviceShowcase from "../../../public/images/device_showcase.avif";
-import {
-  SearchCheck,
-  ShieldCheck,
-  Bot,
-  Sparkles,
-  Zap,
-  Loader2,
-} from "lucide-react";
+import SearchCheck from "lucide-react/dist/esm/icons/search-check";
+import ShieldCheck from "lucide-react/dist/esm/icons/shield-check";
+import Bot from "lucide-react/dist/esm/icons/bot";
+import Sparkles from "lucide-react/dist/esm/icons/sparkles";
+import Zap from "lucide-react/dist/esm/icons/zap";
+import Loader2 from "lucide-react/dist/esm/icons/loader-2";
 import { siteConfig } from "@/data/site-content";
 
 const trustItems = [
@@ -46,14 +44,14 @@ export function HeroSection() {
       >
         <div className="relative h-[2px] w-48 overflow-hidden rounded-none bg-white/10">
           <div 
-            className="absolute inset-y-0 w-1/2 rounded-none bg-amber-500" 
+            className="absolute inset-y-0 left-0 w-1/2 rounded-none bg-amber-500" 
             style={{ animation: "progress-indeterminate 1.5s infinite ease-in-out" }}
           />
         </div>
         <style dangerouslySetInnerHTML={{__html: `
           @keyframes progress-indeterminate {
-            0% { left: -50%; }
-            100% { left: 100%; }
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(200%); }
           }
         `}} />
       </div>
@@ -116,8 +114,9 @@ export function HeroSection() {
             src={deviceShowcase}
             alt="Device showcase featuring MhStudio website mockups on laptop, tablet, and phone."
             priority
+            fetchPriority="high"
             placeholder="blur"
-            sizes="(max-width: 640px) 96vw, (max-width: 1024px) 92vw, 1100px"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 700px, 920px"
             className="relative mx-auto h-auto w-full max-h-[clamp(11rem,30vw,24rem)] object-contain drop-shadow-[0_30px_90px_rgba(0,0,0,0.72)]"
             onLoad={() => setImageLoaded(true)}
           />

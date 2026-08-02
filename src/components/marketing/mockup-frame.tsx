@@ -29,7 +29,7 @@ export function MockupFrame({ item, compact = false }: MockupFrameProps) {
           alt={item.imageAlt}
           fill
           className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-          sizes={compact ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 1024px) 100vw, 33vw"}
+          sizes={compact ? "(max-width: 768px) 100vw, 398px" : "(max-width: 1024px) 100vw, 398px"}
           placeholder="blur"
           blurDataURL={blurData}
         />

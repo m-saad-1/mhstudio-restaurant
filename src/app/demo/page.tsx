@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CalendarRange, Cpu, HelpCircle, Laptop } from "lucide-react";
+import CalendarRange from "lucide-react/dist/esm/icons/calendar-range";
+import Cpu from "lucide-react/dist/esm/icons/cpu";
+import HelpCircle from "lucide-react/dist/esm/icons/help-circle";
+import Laptop from "lucide-react/dist/esm/icons/laptop";
 import dynamic from "next/dynamic";
 const DemoForm = dynamic(() => import("@/components/marketing/demo-form").then((mod) => mod.DemoForm));
 const FaqAccordion = dynamic(() => import("@/components/ui/faq-accordion").then((mod) => mod.FaqAccordion));
