@@ -642,6 +642,28 @@ export const portfolioItems: PortfolioItem[] = [
       "Built with a focus on performance and smooth transitions, integrating a seamless booking API while maintaining flawless Core Web Vitals.",
   },
   {
+    slug: "the-loch-and-the-tyne",
+    title: "The Loch & the Tyne",
+    category: "Restaurant",
+    clientType: "Gastropub",
+    shortDescription: "A quintessentially British gastropub website showcasing seasonal menus, private events, and a refined countryside dining experience.",
+    overview:
+      "The Loch & the Tyne required a sophisticated digital presence to highlight their sustainable British cuisine, showcase their regularly changing seasonal menus, and facilitate seamless reservations for their quintessential gastropub.",
+    industry: "Restaurant",
+    technologies: ["Next.js", "Tailwind CSS", "Booking API", "Performance"],
+    features: ["Seasonal menu showcases", "Private event booking", "Online shop integration", "Mobile-optimized experience"],
+    image: "/images/the_loch_and_tyne.avif",
+    imageAlt: "The Loch & the Tyne website preview showing elegant British gastropub cuisine and dining spaces.",
+    liveHref: "https://the-loch-the-tyne.vercel.app/",
+    performance: "100/100 Core Web Vitals score",
+    results: ["Increased private dining bookings", "Streamlined reservation flow", "Elevated digital brand experience"],
+    challenge: "Translating a refined, sustainable countryside gastropub experience into a modern, fast digital platform.",
+    goals: ["Highlight sustainable British cuisine", "Streamline reservations and private events", "Enhance online shop visibility"],
+    design: "Refined, rustic elegance paired with high-quality culinary photography to reflect the gastropub's atmosphere.",
+    development:
+      "Built with a focus on seamless navigation between menus, events, and their online shop, maintaining high performance and clear typography.",
+  },
+  {
     slug: "momofuku",
     title: "Momofuku",
     category: "Restaurant",
