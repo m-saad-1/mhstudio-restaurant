@@ -15,11 +15,25 @@ export default function PricingPage() {
         eyebrow="Pricing"
         title="Clear, flat-rate pricing built for business growth."
         description="Choose a plan that fits your business—from simple launch sites to advanced custom digital platforms and AI assistants."
-        primaryCta={{ label: "Book Free Consultation", href: "/contact" }}
+        primaryCta={{ label: "Start Your Project", href: "/contact" }}
         secondaryCta={{ label: "View Services", href: "/services" }}
       />
       <section className="section-space">
         <PricingGrid />
+        
+        {/* Custom Enterprise Package Section */}
+        <div className="mt-16 content-shell text-center px-4">
+          <div className="surface-card relative isolate overflow-hidden mx-auto max-w-3xl p-8 sm:p-12 border-amber-400/20 bg-white/[0.02]">
+            <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_rgba(245,158,11,0.08)_0%,_transparent_100%)] blur-[40px]" />
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">Need a Custom Solution?</h2>
+            <p className="text-foreground-body mb-8 text-sm sm:text-base max-w-xl mx-auto">
+              If your restaurant needs a multi-location setup, franchise platform, complex POS integrations, or a tailored mobile app experience, we build custom enterprise systems perfectly matched to your operations.
+            </p>
+            <a href="/contact" className="button-primary px-8 text-sm sm:text-base shadow-[0_0_20px_rgba(245,158,11,0.15)] transition-all hover:shadow-[0_0_30px_rgba(245,158,11,0.25)] hover:-translate-y-0.5 active:translate-y-0 inline-flex">
+              Discuss Custom Enterprise Package
+            </a>
+          </div>
+        </div>
       </section>
     </>
   );

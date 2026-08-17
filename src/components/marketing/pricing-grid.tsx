@@ -12,7 +12,7 @@ export function PricingGrid() {
 
   return (
     <>
-      <div className="content-shell grid gap-6 lg:grid-cols-2 xl:grid-cols-4">
+      <div className="content-shell grid gap-6 lg:grid-cols-3">
         {pricingPackages.map((pkg, index) => (
           <Reveal
             key={pkg.name}
@@ -112,7 +112,7 @@ export function PricingGrid() {
                     href="/contact" 
                     className="button-primary w-full px-8 text-sm sm:w-auto"
                   >
-                    Book Consultation
+                    Start Your Project
                   </Link>
                   <Link 
                     href="/contact#contact-methods" 

@@ -160,7 +160,7 @@ export function SiteHeader() {
               onClick={() => setMenuOpen(false)}
               className="button-secondary w-full px-6 text-base transition-all hover:-translate-y-0.5 active:translate-y-0"
             >
-              Book Free Consultation
+              Start Your Project
             </Link>
           </div>
         </div>

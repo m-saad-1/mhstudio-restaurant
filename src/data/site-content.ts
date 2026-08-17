@@ -45,9 +45,9 @@ export const siteConfig = {
 export const navigationItems: NavItem[] = [
   { label: "Work", href: "/work" },
   { label: "Services", href: "/services" },
+  { label: "Pricing", href: "/pricing" },
   { label: "Process", href: "/process" },
   { label: "About", href: "/about" },
-  { label: "Pricing", href: "/pricing" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -448,147 +448,252 @@ export const leftFaqs = [
 export const pricingPackages = [
   {
     name: "Launch",
-    price: "$199",
-    originalPrice: "$299",
-    summary: "Perfect for small businesses, cafes, bistros, or startups that need a modern, high-performance web presence with a digital menu.",
+    price: "PKR 49,000",
+    summary: "Get your restaurant online with a professional website, digital menu and essential customer features.",
     includes: [
-      "Up to 5 Pages",
-      "Interactive Digital Menu / Showcase",
-      "Mobile-First Responsive Layout",
-      "Contact & Inquiry Forms",
-      "Domain & Hosting Guidance",
-      "Deployment & SSL Configuration",
-      "Basic Technical SEO & Schema",
+      "All Basic Pages",
+      "Digital Menu",
+      "Admin Panel",
+      "3 Branded Banner desing",
+      "3 Promotional Banne design",
+      "10 Menu Item Images desing",
+      "WhatsApp Integration",
       "Google Maps Integration",
-      "Performance Optimization",
+      "Customer Reviews Section",
+      "Mobile-First Design",
+      "90%+ Performance Target",
+      "Basic SEO",
+      "Domain & Hosting Setup",
+      "SSL & Deployment",
       "30 Days Support"
     ],
     ctaText: "View Details",
-    timeline: "1-2 weeks",
+    timeline: "7–14 Days",
     modalDetails: [
       {
-        category: "Design & Pages",
-        features: ["Custom modern UI", "Mobile-first digital menu", "Home, Menu/Services, About, Gallery, Contact pages"]
+        category: "Pages Included",
+        features: [
+          "Home — branded landing page with hero section, offers, and reviews",
+          "Menu — categorized digital menu with food images and prices",
+          "Offers — special deals, discounts and promotional items",
+          "Order & Cart — customer ordering interface and summary",
+          "Profile, About, Reservation, Contact, Gallery"
+        ]
       },
       {
-        category: "Deployment & Setup",
-        features: ["Domain connection & hosting guidance", "SSL security setup & deployment", "Google Maps & contact forms", "Click-to-Call / Click-to-Email"]
+        category: "Digital Menu",
+        features: [
+          "Categorized menu with food images",
+          "Item names, prices, and descriptions",
+          "Featured/recommended items",
+          "Mobile-friendly menu experience"
+        ]
       },
       {
-        category: "SEO & Speed",
-        features: ["Basic technical SEO setup", "Local schema markup", "Image compression for fast loading"]
+        category: "Admin Panel",
+        features: [
+          "Add/edit/delete menu items and categories",
+          "Manage prices, descriptions, and offers",
+          "Basic order and reservation viewing",
+          "Manage website content and contact information"
+        ]
       },
       {
-        category: "Support",
-        features: ["30 Days Free Support", "Minor content & pricing updates"]
+        category: "Design & Content",
+        features: [
+          "3 branded banner images",
+          "3 promotional offer graphics",
+          "10 menu item graphics"
+        ]
+      },
+      {
+        category: "Integrations",
+        features: [
+          "WhatsApp and Google Maps",
+          "Social media links and contact forms",
+          "Restaurant opening hours"
+        ]
+      },
+      {
+        category: "Performance & SEO",
+        features: [
+          "Mobile-first and image optimization (90%+ target)",
+          "Search-engine-friendly structure and Meta titles/descriptions",
+          "Basic local SEO and structured data/schema setup"
+        ]
+      },
+      {
+        category: "Deployment & Support",
+        features: [
+          "Domain connection assistance and hosting configuration",
+          "SSL and production deployment",
+          "30 days post-launch support for bug fixes"
+        ]
       }
     ]
   },
   {
     name: "Growth",
-    price: "$399",
-    originalPrice: "$499",
-    summary: "Ideal for growing restaurants and modern brands looking to automate reservations, capture reviews, and integrate AI customer support.",
+    price: "PKR 89,000",
+    summary: "Turn your website into an online ordering and customer-support channel.",
     includes: [
-      "Everything in Launch",
-      "Interactive Reservation System",
-      "AI Menu & FAQ Assistant",
-      "WhatsApp Integration",
-      "Analytics Setup & Tracking",
-      "Google Reviews Display",
-      "Security Best Practices Setup",
+      "Everything in Launch, plus:",
+      "AI Chatbot Assistant",
+      "AI Online Order Taker",
+      "Online Ordering System",
+      "Order Management",
+      "Table Reservation System",
+      "WhatsApp Order Integration",
+      "Admin Dashboard",
+      "Hero & Promotional Image Designs",
+      "Menu Item Image Designs",
+      "Customer FAQ Automation",
+      "95%+ Performance Target",
       "Advanced Local SEO",
+      "Analytics & Tracking",
+      "Google Reviews Integration",
       "45 Days Support"
     ],
     featured: true,
     ctaText: "View Details",
-    timeline: "2-4 weeks",
+    timeline: "2–3 Weeks",
     modalDetails: [
       {
-        category: "Enhanced Platform",
-        features: ["Up to 10 Pages", "Advanced UI/UX with smooth animations", "Private events & inquiry system", "Featured specials highlight"]
+        category: "AI Restaurant Assistant",
+        features: [
+          "Customized AI assistant for menu, prices, ingredients, and hours",
+          "AI Ordering Assistant to understand requests, collect customer details and info, and confirm orders",
+          "AI Reservation Assistant to collect reservation details and confirm requests"
+        ]
       },
       {
-        category: "AI & Integrations",
-        features: ["AI Chat Assistant for booking & FAQ support", "WhatsApp integration for instant guest communication", "Embedded booking widgets", "Google Reviews live sync", "Analytics setup & conversion tracking"]
+        category: "Online Ordering System",
+        features: [
+          "Menu-based ordering with cart and quantity management",
+          "Pickup/delivery selection and order confirmation",
+          "Order status tracking and WhatsApp order workflow"
+        ]
       },
       {
-        category: "SEO, Security & Performance",
-        features: ["Advanced local SEO optimization", "Security best practices setup", "Core Web Vitals compliance", "CDN media hosting"]
+        category: "Admin Dashboard",
+        features: [
+          "Menu management (categories, items, prices, availability)",
+          "Order management (view details, update status)",
+          "Reservations, offers, and basic content management"
+        ]
+      },
+      {
+        category: "Design & Creative Assets",
+        features: [
+          "5 Branded Hero/Promotional Designs",
+          "5 Offer Designs",
+          "20 Menu Item Image Designs"
+        ]
+      },
+      {
+        category: "Analytics & Reviews",
+        features: [
+          "Google Analytics and basic conversion tracking",
+          "Ordering interaction tracking",
+          "Google review display and testimonial presentation"
+        ]
+      },
+      {
+        category: "Advanced SEO & Performance",
+        features: [
+          "Advanced local SEO and restaurant-focused schema",
+          "Asset, code, and image optimization",
+          "95%+ performance target under suitable conditions"
+        ]
       },
       {
         category: "Support",
-        features: ["45 Days Premium Support", "Priority menu and pricing updates"]
+        features: [
+          "45 days post-launch support"
+        ]
       }
     ]
   },
   {
-    name: "Scale AI",
-    price: "$999",
-    originalPrice: "$1999",
-    summary: "Designed for premium businesses and brands seeking fully custom AI receptionists, automated booking workflows, and advanced ordering integrations.",
+    name: "Scale",
+    price: "PKR 159,000",
+    summary: "Automate your restaurant operations with a complete digital system featuring advanced AI workflows, custom business automation, and deep POS integrations.",
     includes: [
-      "Everything in Growth",
-      "Custom AI Receptionist Assistant",
-      "Automated Reservation Workflows",
-      "Online Ordering / POS Integration",
+      "Everything in Growth, plus:",
+      "Custom Business Automation",
+      "Automated WhatsApp Workflows",
+      "Automated Reservation Workflow",
+      "Advanced AI Restaurant Assistant",
+      "Advanced Order Management",
+      "Advanced Admin Dashboard",
+      "Payment Gateway Integration",
+      "POS/API Integration",
+      "Multi-Branch Support",
+      "Customer Management",
+      "Advanced Analytics Dashboard",
+      "Advanced Offer & Promotion Management",
       "Multi-Language Support",
-      "High-Speed Performance Optimization (98+ Vitals)",
-      "Admin Analytics Dashboard",
-      "Website Maintenance Package",
-      "60 Days Support"
+      "Priority Support",
+      "90 Days Support"
     ],
     ctaText: "View Details",
-    timeline: "4-6 weeks",
+    timeline: "4–6 Weeks",
     modalDetails: [
       {
-        category: "Premium Features",
-        features: ["Unlimited Pages", "Custom motion transitions", "Interactive showcases", "Multi-language menu support"]
+        category: "Advanced AI Assistant",
+        features: [
+          "More capable AI customized around actual operations",
+          "Handles recommendations, policies, and customer support",
+          "Advanced ordering and reservation assistance"
+        ]
       },
       {
-        category: "Advanced Custom AI",
-        features: ["Custom AI Receptionist (trained on your brand & data)", "Automated booking & lead verification", "SMS & email alerts"]
+        category: "Advanced Ordering",
+        features: [
+          "Advanced order workflows and configurable ordering rules",
+          "Order history and customer information management",
+          "Pickup, delivery, and detailed order status"
+        ]
       },
       {
-        category: "Integrations & Ordering",
-        features: ["Online Ordering & POS Integration (Toast, Square, etc.)", "Customer CRM setup", "Admin Analytics Dashboard"]
+        category: "Payment & POS Integrations",
+        features: [
+          "Payment Gateway Integration (e.g., JazzCash, Easypaisa, Cards)",
+          "POS/API Integration (subject to third-party availability)",
+          "Sync menu and order info to reduce manual entry"
+        ]
+      },
+      {
+        category: "Automation Workflows",
+        features: [
+          "Automated WhatsApp workflows for new orders and confirmations",
+          "Order → confirmation → WhatsApp notification automation",
+          "Reservation → confirmation → staff notification automation"
+        ]
+      },
+      {
+        category: "Multi-Branch & Management",
+        features: [
+          "Multi-branch support with branch-specific ordering and hours",
+          "Advanced Customer Management (profiles, history, insights)",
+          "Advanced Admin Dashboard for centralized management"
+        ]
+      },
+      {
+        category: "Advanced Analytics",
+        features: [
+          "Dashboard showing website visitors and menu views",
+          "Orders, popular products, and revenue data (where available)",
+          "Ordering, reservation, and conversion metrics"
+        ]
       },
       {
         category: "Performance & Support",
-        features: ["Dedicated performance tuning (98+ Core Web Vitals)", "Website Maintenance & Support", "60 Days Priority Support", "Same-day menu edits"]
-      }
-    ]
-  },
-  {
-    name: "Enterprise",
-    price: "Custom Quote",
-    summary: "Tailored digital solutions for multi-location groups, franchise networks, upscale hotel dining, and complex enterprise platforms.",
-    includes: [
-      "Custom Multi-Location Scope",
-      "Corporate Platform Design",
-      "POS-Connected Online Ordering",
-      "Centralized Franchise Admin",
-      "Dedicated Account Manager",
-      "24/7 Priority SLA & Partnership"
-    ],
-    ctaText: "Contact Us",
-    timeline: "Custom timeline",
-    modalDetails: [
-      {
-        category: "Group Platform",
-        features: ["Multi-location routing", "Franchise microsites", "Centralized content manager", "Upscale enterprise sections"]
-      },
-      {
-        category: "POS & Ordering",
-        features: ["Full POS-connected ordering flow", "Delivery platform integrations", "Catering & events pipeline"]
-      },
-      {
-        category: "AI & Custom Workflows",
-        features: ["Multi-location AI dispatch system", "Voice AI booking support", "Custom enterprise analytics"]
-      },
-      {
-        category: "Support",
-        features: ["Dedicated Account Manager", "24/7 Priority SLA support", "Monthly performance & security reviews"]
+        features: [
+          "High-performance optimization across frontend and APIs",
+          "Multi-Language support (e.g., English + Urdu)",
+          "Priority handling and 90 days post-launch support"
+        ]
       }
     ]
   }

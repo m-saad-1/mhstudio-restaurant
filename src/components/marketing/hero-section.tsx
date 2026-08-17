@@ -35,7 +35,7 @@ export function HeroSection() {
   const isReady = mounted && imageLoaded;
 
   return (
-    <div className="relative min-h-[calc(100svh-96px)]">
+    <div className="relative min-h-0 sm:min-h-[calc(100svh-96px)]">
       {/* Global Loader - Covers Header & Hero */}
       <div 
         className={`fixed inset-0 z-[100] flex items-center justify-center bg-background transition-opacity duration-500 ${
@@ -89,7 +89,7 @@ export function HeroSection() {
             Get Free Demo
           </TrackedLink>
           <TrackedLink href="/contact" eventName="click_hero_contact" className="button-secondary flex-1 sm:flex-none sm:w-auto min-h-[44px] px-2 text-xs sm:min-h-[52px] sm:px-7 sm:text-sm">
-            Book Free Consultation
+            Start Your Project
           </TrackedLink>
         </div>
 

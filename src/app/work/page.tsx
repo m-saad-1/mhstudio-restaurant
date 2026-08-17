@@ -17,7 +17,7 @@ export default function WorkPage() {
         eyebrow="Our Work"
         title="Real websites built for real businesses."
         description="Each portfolio item is structured as a launch story, with a clear industry angle, feature set, technology stack, and a dedicated case-study path."
-        primaryCta={{ label: "Book Consultation", href: "/contact" }}
+        primaryCta={{ label: "Start Your Project", href: "/contact" }}
         secondaryCta={{ label: "See Pricing", href: "/pricing" }}
       />
       <Reveal as="section" className="section-space">
