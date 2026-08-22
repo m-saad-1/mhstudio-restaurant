@@ -21,7 +21,11 @@ export function PricingGrid() {
           >
             <div className="space-y-4">
               <div className="flex items-center justify-between gap-3">
-                <h2 className="text-2xl font-semibold text-foreground">{pkg.name}</h2>
+                <h2 className="flex items-baseline gap-2 text-2xl font-semibold text-foreground">
+                  {pkg.name}
+                  {/* @ts-ignore */}
+                  {pkg.suffix && <span className="text-sm font-normal text-foreground-muted opacity-80">{pkg.suffix}</span>}
+                </h2>
                 {pkg.featured && (
                   <span className="rounded-none bg-amber-400 px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-zinc-950 shadow-[0_4px_14px_rgba(245,158,11,0.3)]">
                     Recommended
@@ -70,7 +74,11 @@ export function PricingGrid() {
             {/* Header */}
             <div className="flex items-center justify-between border-b border-white/10 bg-white/[0.02] px-6 py-4 sm:px-8">
               <div>
-                <h3 className="text-2xl font-semibold text-foreground">{selectedPkg.name} Package</h3>
+                <h3 className="flex items-baseline gap-2 text-2xl font-semibold text-foreground">
+                  {selectedPkg.name} Package
+                  {/* @ts-ignore */}
+                  {selectedPkg.suffix && <span className="text-sm font-normal text-foreground-muted opacity-80">{selectedPkg.suffix}</span>}
+                </h3>
                 <p className="mt-1 text-sm text-foreground-body">{selectedPkg.price}</p>
               </div>
               <button 

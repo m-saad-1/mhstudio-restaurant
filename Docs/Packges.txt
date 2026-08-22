@@ -6,20 +6,21 @@ Yes. With this structure, I would make the packages **very concrete**. The custo
 
 For Pakistan, I would price them at:
 
-**Launch — PKR 49,000**
-**Growth — PKR 89,000**
-**Scale — PKR 159,000**
+**Launch — PKR 49,000 (Discounted: PKR 29,000)**
+**Growth — PKR 89,000 (Discounted: PKR 49,000)**
+**Scale — PKR 159,000 (Discounted: PKR 119,000)**
 
 I would not go much lower because you're providing custom design, restaurant-specific pages, image design, admin functionality, deployment, optimization, and support. I also would not make Scale absurdly expensive for your current target market.
 
 ---
 
-# 1. LAUNCH — PKR 49,000
+# 1. LAUNCH — PKR 29,000 (Original: PKR 49,000)
 
 ### Main package card
 
 **LAUNCH**
-**PKR 49,000**
+**PKR 29,000 (One time)**
+*(Original: PKR 49,000)*
 
 For restaurants that need a professional website, digital menu, and a complete online presence.
 
@@ -28,12 +29,10 @@ For restaurants that need a professional website, digital menu, and a complete o
 * **All Basic Pages** `View Details`
 * **Digital Menu**
 * **Admin Panel**
-* **3 Branded Banner**
-* **3 Promotional Banner**
-* **10 Menu Item Images**
 * **WhatsApp Integration**
 * **Google Maps Integration**
-* **Customer Reviews Section**
+* **Google Reviews Integration**
+* **Table Reservation System**
 * **Mobile-First Design**
 * **90%+ Performance Target**
 * **Basic SEO**
@@ -56,8 +55,7 @@ Your restaurant website will include:
 * **Home** — branded landing page with hero section, featured items, offers, reviews and important information.
 * **Menu** — categorized digital menu with food images, names, descriptions and prices.
 * **Offers** — special deals, discounts and promotional items.
-* **Order** — customer ordering interface.
-* **Cart** — selected items, quantities and order summary.
+* **Wishlist**
 * **Profile** — customer information/profile area.
 * **About** — restaurant story, brand information and highlights.
 * **Reservation** — table reservation form.
@@ -88,15 +86,6 @@ The restaurant receives an admin area to manage website content without dependin
 * Basic order viewing
 * Basic reservation viewing
 * Contact information management
-
-### Design & Content
-
-Included creative design work:
-
-* **3 branded banner images**
-* **3 promotional offer graphics**
-* **10 menu item graphics**
-
 
 ### Integrations
 
@@ -141,7 +130,7 @@ Includes bug fixes and reasonable minor adjustments.
 
 ---
 
-# 2. GROWTH — PKR 89,000
+# 2. GROWTH — PKR 49,000 (Original: PKR 89,000)
 
 This should be your **Recommended** package.
 
@@ -155,25 +144,22 @@ The difference from Launch must be obvious:
 
 **GROWTH**
 **Recommended**
-**PKR 89,000**
+**PKR 49,000 (One time)**
+*(Original: PKR 89,000)*
 
 For restaurants that want to turn their website into an actual customer ordering and support channel.
 
 **Everything in Launch, plus:**
 
 * **AI Chatbot Assistant**
+* **AI Online Order Taker**
 * **Online Ordering System**
-* **Order Management**
-* **Table Reservation System**
 * **WhatsApp Order Integration**
-* **Admin Dashboard**
-* **Hero & Promotional Image Designs**
-* **Menu Item Image Designs**
-* **Customer FAQ Automation**
+* **POS/API Integration**
+* **Rider Tracking Application**
 * **95%+ Performance Target**
 * **Advanced Local SEO**
 * **Analytics & Tracking**
-* **Google Reviews Integration**
 * **45 Days Support**
 
 **Timeline:** 2–3 Weeks
@@ -288,28 +274,14 @@ Restaurant staff can manage:
 * Contact information
 * Opening hours
 
-### Design & Creative Assets
-
-Instead of limiting the Growth package to the same tiny design quantities, I'd include:
-
-* **5 Branded Hero/Promotional Designs**
-* **5 Offer Designs**
-* **20 Menu Item Image Designs**
-
-That creates a meaningful upgrade over Launch.
-
-### Reviews
-
-* Google review display/integration
-* Review section
-* Customer testimonial presentation
-
-### Analytics
+### Analytics & Reviews
 
 * Google Analytics setup
 * Basic conversion/event tracking
 * Ordering interaction tracking
 * Basic traffic reporting
+* Google review display/integration
+* Customer testimonial presentation
 
 ### SEO
 
@@ -337,7 +309,7 @@ Everything in Launch, plus:
 
 ---
 
-# 3. SCALE — PKR 159,000
+# 3. SCALE — PKR 119,000 (Original: PKR 159,000)
 
 This package needs to feel like a **business system**, not simply a larger website.
 
@@ -348,24 +320,26 @@ I would position it for:
 ### Main package card
 
 **SCALE**
-**PKR 159,000**
+**PKR 119,000 (One time)**
+*(Original: PKR 159,000)*
 
 For established restaurants that need advanced ordering, automation, AI, analytics and operational tools.
 
 **Everything in Growth, plus:**
 
+* **Custom Business Automation**
+* **Automated WhatsApp Workflows**
+* **Automated Reservation Workflow**
 * **Advanced AI Restaurant Assistant**
 * **Advanced Order Management**
 * **Advanced Admin Dashboard**
-* **Automated WhatsApp Workflows**
 * **Payment Gateway Integration**
-* **POS/API Integration**
+* **Supplier Management**
+* **Warehouse Inventory Management**
 * **Multi-Branch Support**
 * **Customer Management**
 * **Advanced Analytics Dashboard**
-* **Automated Reservation Workflow**
 * **Advanced Offer & Promotion Management**
-* **Custom Business Automation**
 * **Multi-Language Support**
 * **Priority Support**
 * **90 Days Support**
@@ -469,19 +443,12 @@ For restaurants with multiple locations:
 A centralized dashboard for:
 
 **Orders**
-
 **Menu**
-
 **Reservations**
-
 **Offers**
-
 **Customers**
-
 **Branches**
-
 **Website content**
-
 **Analytics**
 
 ### Customer Management
@@ -512,11 +479,8 @@ The exact revenue metrics depend on how the ordering/payment system is implement
 Custom workflows such as:
 
 **Order → confirmation → WhatsApp notification**
-
 **Reservation → confirmation → staff notification**
-
 **New customer → stored in database**
-
 **Order status → customer notification**
 
 ### Multi-Language
@@ -567,12 +531,12 @@ Your customer should understand this without opening the modal:
 | Digital Menu        | ✓       | ✓            | ✓                      |
 | Admin Panel         | ✓       | ✓            | ✓                      |
 | WhatsApp            | ✓       | ✓            | ✓                      |
-| Online Ordering     | Basic   | **Full**     | Advanced               |
-| Reservations        | ✓       | **Advanced** | Automated              |
+| Online Ordering     | —       | **Full**     | Advanced               |
+| Reservations        | ✓       | ✓            | Automated              |
 | AI Assistant        | —       | **✓**        | **Advanced ✓**         |
-| Order Management    | Basic   | ✓            | **Advanced**           |
+| Order Management    | —       | ✓            | **Advanced**           |
 | Payment Integration | —       | —            | ✓                      |
-| POS/API Integration | —       | —            | ✓                      |
+| POS/API Integration | —       | ✓            | ✓                      |
 | Multi-Branch        | —       | —            | ✓                      |
 | Customer Management | —       | Basic        | **Advanced**           |
 | Analytics           | Basic   | ✓            | **Advanced Dashboard** |
@@ -583,41 +547,7 @@ That makes the upgrade path obvious.
 
 ---
 
-# 5. One change I strongly recommend regarding your image-design limits
-
-Your original:
-
-> 3 hero images
-> 3 offer images
-> 10 menu images
-
-is reasonable for Launch.
-
-I would use:
-
-### Launch
-
-**3 Hero Designs**
-**3 Offer Designs**
-**10 Menu Item Designs**
-
-### Growth
-
-**5 Hero Designs**
-**5 Offer Designs**
-**20 Menu Item Designs**
-
-### Scale
-
-**Custom/Extended Creative Assets**
-
-That creates an actual difference between packages.
-
-Otherwise, someone can buy Launch and receive almost the same creative work as Growth.
-
----
-
-# 6. Don't say “Admin Panel” without explaining it
+# 5. Don't say “Admin Panel” without explaining it
 
 Many restaurant owners won't automatically understand what an admin panel means.
 
@@ -645,11 +575,12 @@ is much clearer than:
 
 ---
 
-# 7. I would change your package card copy to this exact hierarchy
+# 6. I would change your package card copy to this exact hierarchy
 
 ### LAUNCH
 
-**PKR 49,000**
+**PKR 29,000 (One time)**
+*(Original: PKR 49,000)*
 
 Get your restaurant online with a professional website, digital menu and essential customer features.
 
@@ -658,11 +589,9 @@ Get your restaurant online with a professional website, digital menu and essenti
 * All Basic Pages — `View Details`
 * Digital Menu
 * Admin Panel — `View Details`
-* 3 Hero Designs
-* 3 Offer Designs
-* 10 Menu Item Designs
 * WhatsApp Integration
 * Google Maps
+* Table Reservation System
 * 90%+ Performance Target
 * Basic SEO
 * 30 Days Support
@@ -673,7 +602,8 @@ Get your restaurant online with a professional website, digital menu and essenti
 
 ### GROWTH
 
-**PKR 89,000**
+**PKR 49,000 (One time)**
+*(Original: PKR 89,000)*
 
 Turn your website into an online ordering and customer-support channel.
 
@@ -682,12 +612,9 @@ Turn your website into an online ordering and customer-support channel.
 * Everything in Launch
 * AI Restaurant Assistant — `View Details`
 * Online Ordering System — `View Details`
-* Admin Dashboard
-* Table Reservations
+* POS/API Integration
+* Rider Tracking Application
 * WhatsApp Order Integration
-* 5 Hero Designs
-* 5 Offer Designs
-* 20 Menu Item Designs
 * Analytics & Tracking
 * Advanced Local SEO
 * 95%+ Performance Target
@@ -699,7 +626,8 @@ Turn your website into an online ordering and customer-support channel.
 
 ### SCALE
 
-**PKR 159,000**
+**PKR 119,000 (One time)**
+*(Original: PKR 159,000)*
 
 Build a complete digital restaurant system with AI, automation, advanced ordering and integrations.
 
@@ -708,7 +636,8 @@ Build a complete digital restaurant system with AI, automation, advanced orderin
 * Advanced Order Management
 * Automated WhatsApp Workflows
 * Payment Gateway Integration
-* POS/API Integration
+* Supplier Management
+* Warehouse Inventory Management
 * Multi-Branch Support
 * Customer Management
 * Advanced Analytics Dashboard
@@ -722,15 +651,15 @@ Build a complete digital restaurant system with AI, automation, advanced orderin
 
 ---
 
-## 8. One final pricing recommendation
+## 7. One final pricing recommendation
 
 For your current Pakistani restaurant outreach, I would **not put USD prices on the main pricing cards**.
 
 Use:
 
+**PKR 29,000**
 **PKR 49,000**
-**PKR 89,000**
-**PKR 159,000**
+**PKR 119,000**
 
 Then, if you later target restaurants outside Pakistan, show USD pricing separately.
 

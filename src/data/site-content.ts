@@ -255,6 +255,24 @@ export const serviceCards = [
     features: ["Same-day content updates", "Regular backups & health checks", "Security monitoring"],
     icon: "wrench",
   },
+  {
+    title: "Online Ordering & Delivery",
+    description: "Complete order management from checkout to customer door with POS sync.",
+    features: ["Cart & checkout flows", "POS/API Integration", "Rider tracking application"],
+    icon: "shopping-bag",
+  },
+  {
+    title: "Restaurant Management Systems",
+    description: "Advanced operational tools for established brands and multi-branch restaurants.",
+    features: ["Supplier & warehouse management", "Multi-branch support", "Centralized admin dashboard"],
+    icon: "building-2",
+  },
+  {
+    title: "Analytics & Automation",
+    description: "Data-driven insights and automated workflows to streamline operations.",
+    features: ["Advanced analytics dashboard", "Customer management profiles", "Automated WhatsApp workflows"],
+    icon: "bar-chart-3",
+  },
 ];
 
 export const serviceSections = [
@@ -324,6 +342,24 @@ export const serviceSections = [
     points: ["Same-day content updates", "Regular backups & health checks", "Security monitoring"],
     icon: "wrench",
   },
+  {
+    title: "Online Ordering & Delivery",
+    description: "End-to-end online ordering systems with cart, checkout, delivery tracking, and POS integration.",
+    points: ["Cart & checkout flows", "POS/API Integration", "Rider tracking application"],
+    icon: "shopping-bag",
+  },
+  {
+    title: "Restaurant Management Systems",
+    description: "Advanced operational tools for established brands and multi-branch restaurants, integrating supply chain and centralized management.",
+    points: ["Supplier & warehouse management", "Multi-branch support", "Centralized admin dashboard"],
+    icon: "building-2",
+  },
+  {
+    title: "Analytics & Automation",
+    description: "Data-driven insights and automated workflows to streamline operations and enhance customer engagement.",
+    points: ["Advanced analytics dashboard", "Customer management profiles", "Automated WhatsApp workflows"],
+    icon: "bar-chart-3",
+  },
 ];
 
 export const websiteFeatures = [
@@ -340,6 +376,9 @@ export const websiteFeatures = [
   { title: "Secure Hosting & SSL", description: "Robust deployment on modern cloud networks keeping your site safe and online.", icon: "server-cog" },
   { title: "Self-Managed CMS", description: "Simple dashboard to change pricing, hours, or dishes in under two minutes.", icon: "layout-dashboard" },
   { title: "Newsletter Signups", description: "Integrated forms to grow your email list for marketing and announcements.", icon: "mail" },
+  { title: "POS Integration", description: "Sync online orders and menu items directly with your supported POS system.", icon: "calculator" },
+  { title: "Delivery & Rider Tracking", description: "Manage deliveries efficiently with a dedicated application for rider tracking.", icon: "bike" },
+  { title: "Warehouse & Supply Management", description: "Keep track of inventory, suppliers, and procurement for your restaurant branches.", icon: "boxes" },
 ];
 
 export const processSteps = [
@@ -448,23 +487,21 @@ export const leftFaqs = [
 export const pricingPackages = [
   {
     name: "Launch",
-    price: "PKR 49,000",
+    price: "PKR 29,000",
+    originalPrice: "PKR 49,000",
+    suffix: "(One time)",
     summary: "Get your restaurant online with a professional website, digital menu and essential customer features.",
     includes: [
-      "All Basic Pages",
+      "All Basic Pages (View details)",
       "Digital Menu",
       "Admin Panel",
-      "3 Branded Banner desing",
-      "3 Promotional Banne design",
-      "10 Menu Item Images desing",
       "WhatsApp Integration",
       "Google Maps Integration",
-      "Customer Reviews Section",
-      "Mobile-First Design",
+      "Google Reviews Integration",
+      "Table Reservation System",
       "90%+ Performance Target",
       "Basic SEO",
       "Domain & Hosting Setup",
-      "SSL & Deployment",
       "30 Days Support"
     ],
     ctaText: "View Details",
@@ -476,7 +513,7 @@ export const pricingPackages = [
           "Home — branded landing page with hero section, offers, and reviews",
           "Menu — categorized digital menu with food images and prices",
           "Offers — special deals, discounts and promotional items",
-          "Order & Cart — customer ordering interface and summary",
+          "Wishlist",
           "Profile, About, Reservation, Contact, Gallery"
         ]
       },
@@ -496,14 +533,6 @@ export const pricingPackages = [
           "Manage prices, descriptions, and offers",
           "Basic order and reservation viewing",
           "Manage website content and contact information"
-        ]
-      },
-      {
-        category: "Design & Content",
-        features: [
-          "3 branded banner images",
-          "3 promotional offer graphics",
-          "10 menu item graphics"
         ]
       },
       {
@@ -534,24 +563,21 @@ export const pricingPackages = [
   },
   {
     name: "Growth",
-    price: "PKR 89,000",
+    price: "PKR 49,000",
+    originalPrice: "PKR 89,000",
+    suffix: "(One time)",
     summary: "Turn your website into an online ordering and customer-support channel.",
     includes: [
       "Everything in Launch, plus:",
       "AI Chatbot Assistant",
       "AI Online Order Taker",
       "Online Ordering System",
-      "Order Management",
-      "Table Reservation System",
       "WhatsApp Order Integration",
-      "Admin Dashboard",
-      "Hero & Promotional Image Designs",
-      "Menu Item Image Designs",
-      "Customer FAQ Automation",
+      "POS/API Integration",
+      "Rider Tracking Application",
       "95%+ Performance Target",
       "Advanced Local SEO",
       "Analytics & Tracking",
-      "Google Reviews Integration",
       "45 Days Support"
     ],
     featured: true,
@@ -583,14 +609,6 @@ export const pricingPackages = [
         ]
       },
       {
-        category: "Design & Creative Assets",
-        features: [
-          "5 Branded Hero/Promotional Designs",
-          "5 Offer Designs",
-          "20 Menu Item Image Designs"
-        ]
-      },
-      {
         category: "Analytics & Reviews",
         features: [
           "Google Analytics and basic conversion tracking",
@@ -616,7 +634,9 @@ export const pricingPackages = [
   },
   {
     name: "Scale",
-    price: "PKR 159,000",
+    price: "PKR 119,000",
+    originalPrice: "PKR 159,000",
+    suffix: "(One time)",
     summary: "Automate your restaurant operations with a complete digital system featuring advanced AI workflows, custom business automation, and deep POS integrations.",
     includes: [
       "Everything in Growth, plus:",
@@ -627,7 +647,8 @@ export const pricingPackages = [
       "Advanced Order Management",
       "Advanced Admin Dashboard",
       "Payment Gateway Integration",
-      "POS/API Integration",
+      "Supplier Management",
+      "Warehouse Inventory Management",
       "Multi-Branch Support",
       "Customer Management",
       "Advanced Analytics Dashboard",
