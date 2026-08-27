@@ -1,0 +1,21 @@
+
+> mhstudio@0.1.0 dev
+> next dev --webpack
+
+▲ Next.js 16.2.10 (webpack)
+- Local:         http://localhost:3000
+- Network:       http://10.29.16.61:3000
+- Environments: .env
+✓ Ready in 30.1s
+- Experiments (use with caution):
+  ✓ optimizeCss
+  · optimizePackageImports
+
+○ Compiling / ...
+ GET / 200 in 43s (next.js: 37.5s, application-code: 5.3s)
+○ Compiling /manifest.webmanifest ...
+ GET /manifest.webmanifest 200 in 4.9s (next.js: 4.8s, application-code: 103ms)
+ GET / 200 in 953ms (next.js: 219ms, application-code: 734ms)
+○ Compiling /_error ...
+Time 9.5491
+ GET / 500 in 16.7s (next.js: 8.9s, application-code: 7.8s)

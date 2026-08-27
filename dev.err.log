@@ -1,0 +1,25 @@
+[browser] Can't perform a React state update on a component that hasn't mounted yet. This indicates that you have a side-effect in your render function that asynchronously tries to update the component. Move this work to useEffect instead. 
+[browser] Image with src "/mh_logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+⨯ ./public/images/device_showcase.avif
+Error: ENOENT: no such file or directory, open 'D:\WEB_DEVELOPMENT\MhStudio - 2\public\images\device_showcase.avif'
+
+Import trace for requested module:
+./public/images/device_showcase.avif
+./src/components/marketing/hero-section.tsx
+⨯ ./public/images/device_showcase.avif
+Error: ENOENT: no such file or directory, open 'D:\WEB_DEVELOPMENT\MhStudio - 2\public\images\device_showcase.avif'
+
+Import trace for requested module:
+./public/images/device_showcase.avif
+./src/components/marketing/hero-section.tsx
+⨯ ./public/images/device_showcase.avif
+Error: ENOENT: no such file or directory, open 'D:\WEB_DEVELOPMENT\MhStudio - 2\public\images\device_showcase.avif'
+
+Import trace for requested module:
+./public/images/device_showcase.avif
+./src/components/marketing/hero-section.tsx
+[browser] ./public/images/device_showcase.avif
+Error: ENOENT: no such file or directory, open 'D:\WEB_DEVELOPMENT\MhStudio - 2\public\images\device_showcase.avif' 
+[browser] Uncaught ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-image-loader/index.js):
+Error: ENOENT: no such file or directory, open 'D:\WEB_DEVELOPMENT\MhStudio - 2\public\images\device_showcase.avif'

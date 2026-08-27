@@ -487,25 +487,31 @@ export const leftFaqs = [
 export const pricingPackages = [
   {
     name: "Launch",
-    price: "PKR 29,000",
-    originalPrice: "PKR 49,000",
-    suffix: "(One time)",
+    price: "PKR 5,000",
+    priceSuffix: "/mo",
+    pricingOptions: {
+      monthly: { price: "PKR 5,000", suffix: "/mo" },
+      yearly: { price: "PKR 54,000", suffix: "/yearly", note: "10% off (Save 6000)" },
+      onetime: { price: "PKR 120,000", suffix: "one time", smallNote: "Hosting and third party API charges will be billed separately." }
+    },
     summary: "Get your restaurant online with a professional website, digital menu and essential customer features.",
     includes: [
-      "All Basic Pages (View details)",
-      "Digital Menu",
+      "Online Ordering System",
       "Admin Panel",
       "WhatsApp Integration",
       "Google Maps Integration",
       "Google Reviews Integration",
-      "Table Reservation System",
-      "90%+ Performance Target",
-      "Basic SEO",
+      "Reservation System",
+      "AI Chatbot Assistant",
+      "POS/API Integration",
+      "Single Branch",
+      "Performance with 95% target",
+      "SEO",
       "Domain & Hosting Setup",
       "30 Days Support"
     ],
     ctaText: "View Details",
-    timeline: "7–14 Days",
+    timeline: "2–4 Days",
     modalDetails: [
       {
         category: "Pages Included",
@@ -513,42 +519,36 @@ export const pricingPackages = [
           "Home — branded landing page with hero section, offers, and reviews",
           "Menu — categorized digital menu with food images and prices",
           "Offers — special deals, discounts and promotional items",
-          "Wishlist",
-          "Profile, About, Reservation, Contact, Gallery"
+          "Cart and Order pages",
+          "About, Reservation, Contact, Gallery"
         ]
       },
       {
-        category: "Digital Menu",
+        category: "System Features",
         features: [
-          "Categorized menu with food images",
-          "Item names, prices, and descriptions",
-          "Featured/recommended items",
-          "Mobile-friendly menu experience"
+          "Categorized menu with food images, names, prices, and descriptions",
+          "Online Ordering System",
+          "Reservation System for table bookings",
+          "AI Chatbot Assistant to answer customer queries",
+          "Mobile-friendly interface and experience"
         ]
       },
       {
-        category: "Admin Panel",
+        category: "Admin Panel & Integrations",
         features: [
           "Add/edit/delete menu items and categories",
           "Manage prices, descriptions, and offers",
           "Basic order and reservation viewing",
-          "Manage website content and contact information"
-        ]
-      },
-      {
-        category: "Integrations",
-        features: [
-          "WhatsApp and Google Maps",
-          "Social media links and contact forms",
-          "Restaurant opening hours"
+          "WhatsApp and Google Maps integrations",
+          "POS/API Integration (subject to availability)"
         ]
       },
       {
         category: "Performance & SEO",
         features: [
-          "Mobile-first and image optimization (90%+ target)",
+          "Mobile-first and image optimization (Performance with 95% target)",
           "Search-engine-friendly structure and Meta titles/descriptions",
-          "Basic local SEO and structured data/schema setup"
+          "SEO and structured data/schema setup"
         ]
       },
       {
@@ -556,6 +556,7 @@ export const pricingPackages = [
         features: [
           "Domain connection assistance and hosting configuration",
           "SSL and production deployment",
+          "Single Branch configuration",
           "30 days post-launch support for bug fixes"
         ]
       }
@@ -563,49 +564,47 @@ export const pricingPackages = [
   },
   {
     name: "Growth",
-    price: "PKR 49,000",
-    originalPrice: "PKR 89,000",
-    suffix: "(One time)",
+    price: "PKR 10,000",
+    priceSuffix: "/mo",
+    pricingOptions: {
+      monthly: { price: "PKR 10,000", suffix: "/mo" },
+      yearly: { price: "PKR 108,000", suffix: "/yearly", note: "10% off (Save 12000)" },
+      onetime: { price: "PKR 240,000", suffix: "one time", smallNote: "Hosting and third party API charges will be billed separately." }
+    },
     summary: "Turn your website into an online ordering and customer-support channel.",
     includes: [
       "Everything in Launch, plus:",
-      "AI Chatbot Assistant",
-      "AI Online Order Taker",
-      "Online Ordering System",
       "WhatsApp Order Integration",
-      "POS/API Integration",
+      "AI Online Order Taker",
+      "Automation Workflows",
+      "Multi-Branch Support",
+      "Supplier Management",
+      "Multi-Language Support",
       "Rider Tracking Application",
-      "95%+ Performance Target",
       "Advanced Local SEO",
       "Analytics & Tracking",
       "45 Days Support"
     ],
     featured: true,
     ctaText: "View Details",
-    timeline: "2–3 Weeks",
+    timeline: "4–7 Days",
     modalDetails: [
       {
-        category: "AI Restaurant Assistant",
+        category: "AI & Automation",
         features: [
+          "AI Ordering Assistant to understand requests, collect details, and confirm orders",
+          "Automation Workflows for orders and notifications",
           "Customized AI assistant for menu, prices, ingredients, and hours",
-          "AI Ordering Assistant to understand requests, collect customer details and info, and confirm orders",
-          "AI Reservation Assistant to collect reservation details and confirm requests"
+          "WhatsApp Order Integration"
         ]
       },
       {
-        category: "Online Ordering System",
+        category: "Advanced Management",
         features: [
-          "Menu-based ordering with cart and quantity management",
-          "Pickup/delivery selection and order confirmation",
-          "Order status tracking and WhatsApp order workflow"
-        ]
-      },
-      {
-        category: "Admin Dashboard",
-        features: [
-          "Menu management (categories, items, prices, availability)",
-          "Order management (view details, update status)",
-          "Reservations, offers, and basic content management"
+          "Multi-Branch Support and configuration",
+          "Supplier Management capabilities",
+          "Multi-Language Support for broader audience reach",
+          "Rider Tracking Application for delivery management"
         ]
       },
       {
@@ -633,32 +632,25 @@ export const pricingPackages = [
     ]
   },
   {
-    name: "Scale",
-    price: "PKR 119,000",
-    originalPrice: "PKR 159,000",
-    suffix: "(One time)",
+    name: "Custom",
+    price: "Custom Pricing",
+    priceSuffix: "Contact us",
+    pricingOptions: null,
     summary: "Automate your restaurant operations with a complete digital system featuring advanced AI workflows, custom business automation, and deep POS integrations.",
     includes: [
       "Everything in Growth, plus:",
       "Custom Business Automation",
-      "Automated WhatsApp Workflows",
-      "Automated Reservation Workflow",
       "Advanced AI Restaurant Assistant",
       "Advanced Order Management",
       "Advanced Admin Dashboard",
       "Payment Gateway Integration",
-      "Supplier Management",
       "Warehouse Inventory Management",
-      "Multi-Branch Support",
       "Customer Management",
       "Advanced Analytics Dashboard",
-      "Advanced Offer & Promotion Management",
-      "Multi-Language Support",
-      "Priority Support",
-      "90 Days Support"
+      "Advanced Offer & Promotion Management"
     ],
     ctaText: "View Details",
-    timeline: "4–6 Weeks",
+    timeline: "1–2 Weeks",
     modalDetails: [
       {
         category: "Advanced AI Assistant",
@@ -677,26 +669,17 @@ export const pricingPackages = [
         ]
       },
       {
-        category: "Payment & POS Integrations",
+        category: "Payment Integrations",
         features: [
           "Payment Gateway Integration (e.g., JazzCash, Easypaisa, Cards)",
-          "POS/API Integration (subject to third-party availability)",
-          "Sync menu and order info to reduce manual entry"
+          "Deep POS API Integrations to reduce manual entry"
         ]
       },
       {
-        category: "Automation Workflows",
+        category: "Centralized Management",
         features: [
-          "Automated WhatsApp workflows for new orders and confirmations",
-          "Order → confirmation → WhatsApp notification automation",
-          "Reservation → confirmation → staff notification automation"
-        ]
-      },
-      {
-        category: "Multi-Branch & Management",
-        features: [
-          "Multi-branch support with branch-specific ordering and hours",
           "Advanced Customer Management (profiles, history, insights)",
+          "Warehouse Inventory Management",
           "Advanced Admin Dashboard for centralized management"
         ]
       },
@@ -712,8 +695,7 @@ export const pricingPackages = [
         category: "Performance & Support",
         features: [
           "High-performance optimization across frontend and APIs",
-          "Multi-Language support (e.g., English + Urdu)",
-          "Priority handling and 90 days post-launch support"
+          "Advanced Offer & Promotion Management"
         ]
       }
     ]

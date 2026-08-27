@@ -1,6 +1,6 @@
 # MhStudio - Restaurant Web Design & AI Solutions
 
-![MhStudio Restaurant Showcase](public/device_showcase.avif)
+![MhStudio Restaurant Showcase](public/images/device_showcase.avif)
 
 MhStudio is a premium web design and development agency specializing in high-performance, conversion-focused websites and AI integrations specifically for restaurants, dining groups, bars, and cafes. We bridge the gap between stunning visual aesthetics and real-world table bookings.
 
