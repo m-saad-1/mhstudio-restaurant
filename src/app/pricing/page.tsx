@@ -13,8 +13,8 @@ export default function PricingPage() {
     <>
       <PageHero
         eyebrow="Pricing"
-        title="Clear, flat-rate pricing built for business growth."
-        description="Choose a plan that fits your business—from simple launch sites to advanced custom digital platforms and AI assistants."
+        title="No setup or development fees."
+        description="Get your website and digital platform without a large upfront cost. Pay only a simple monthly fee based on your needs."
         primaryCta={{ label: "Start Your Project", href: "/contact" }}
         secondaryCta={{ label: "View Services", href: "/services" }}
       />
