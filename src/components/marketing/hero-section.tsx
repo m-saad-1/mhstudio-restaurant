@@ -109,15 +109,15 @@ export function HeroSection() {
           })}
         </div>
 
-        <div className="relative mt-4 w-full max-w-[1100px] sm:mt-auto sm:pt-8 lg:pt-12">
+        <div className="relative mt-4 w-full max-w-[1200px] sm:mt-auto sm:pt-8 lg:pt-12">
           <Image
             src={deviceShowcase}
             alt="Device showcase featuring MhStudio website mockups on laptop, tablet, and phone."
             priority
             fetchPriority="high"
             placeholder="blur"
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 700px, 920px"
-            className="relative mx-auto h-auto w-full max-h-[clamp(11rem,30vw,24rem)] object-contain drop-shadow-[0_30px_90px_rgba(0,0,0,0.72)]"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 900px, 1200px"
+            className="relative mx-auto h-auto w-full max-h-[clamp(15rem,50vw,40rem)] object-contain drop-shadow-[0_30px_90px_rgba(0,0,0,0.72)]"
             onLoad={() => setImageLoaded(true)}
           />
         </div>
