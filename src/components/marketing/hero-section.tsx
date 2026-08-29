@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { TrackedLink } from "@/components/ui/tracked-link";
-import deviceShowcase from "../../../public/images/device_showcase.avif";
+import deviceShowcase from "../../../public/images/Device-showcase.avif";
 import SearchCheck from "lucide-react/dist/esm/icons/search-check";
 import ShieldCheck from "lucide-react/dist/esm/icons/shield-check";
 import Bot from "lucide-react/dist/esm/icons/bot";
