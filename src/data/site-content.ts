@@ -558,10 +558,11 @@ export const leftFaqs = [
 export const pricingPackages = [
   {
     name: "Launch",
-    price: "PKR 5,000",
+    price: "PKR 3,999",
     priceSuffix: "/mo",
+    originalPrice: "PKR 5,000",
     pricingOptions: {
-      monthly: { price: "PKR 5,000", suffix: "/mo" },
+      monthly: { price: "PKR 3,999", suffix: "/mo", originalPrice: "PKR 5,000" },
       yearly: { price: "PKR 54,000", suffix: "/yearly", note: "10% off (Save 6000)" },
       onetime: { price: "PKR 120,000", suffix: "one time", smallNote: "Hosting and third party API charges will be billed separately." }
     },
@@ -635,10 +636,11 @@ export const pricingPackages = [
   },
   {
     name: "Growth",
-    price: "PKR 10,000",
+    price: "PKR 7,999",
     priceSuffix: "/mo",
+    originalPrice: "PKR 10,000",
     pricingOptions: {
-      monthly: { price: "PKR 10,000", suffix: "/mo" },
+      monthly: { price: "PKR 7,999", suffix: "/mo", originalPrice: "PKR 10,000" },
       yearly: { price: "PKR 108,000", suffix: "/yearly", note: "10% off (Save 12000)" },
       onetime: { price: "PKR 240,000", suffix: "one time", smallNote: "Hosting and third party API charges will be billed separately." }
     },

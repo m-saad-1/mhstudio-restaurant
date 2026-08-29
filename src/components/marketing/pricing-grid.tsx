@@ -13,6 +13,25 @@ export function PricingGrid() {
 
   return (
     <>
+      {/* Promotional Banner */}
+      <div className="flex justify-center mb-8">
+        <div className="flex flex-col gap-2.5 rounded-xl border border-amber-500/20 bg-amber-500/5 px-6 py-4 w-full max-w-sm relative overflow-hidden">
+          {/* Subtle background glow */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-[50px] bg-amber-500/10 blur-2xl rounded-full pointer-events-none" />
+          
+          <div className="flex items-center justify-between relative z-10">
+            <span className="text-amber-400 font-semibold text-sm">20% Off — First 20 Restaurants</span>
+            <span className="text-amber-200 text-xs font-medium bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/20">12 spots left</span>
+          </div>
+          <div className="h-2 w-full bg-black/40 rounded-full overflow-hidden relative z-10 border border-white/5 flex">
+            <div className="h-full bg-amber-500 w-2/5 rounded-full"></div>
+          </div>
+          <div className="flex justify-end relative z-10 mt-0.5">
+            <span className="text-[10px] text-foreground-muted uppercase tracking-wider font-semibold">8/20 purchased</span>
+          </div>
+        </div>
+      </div>
+
       <div className="flex justify-center mb-10">
         <div className="inline-flex rounded-full border border-white/10 bg-white/[0.02] p-1">
           <button
@@ -69,10 +88,10 @@ export function PricingGrid() {
                       </span>
                     )}
                     {/* @ts-ignore */}
-                    {pkg.originalPrice && (
+                    {(activePrice?.originalPrice || (!activePrice && pkg.originalPrice)) && (
                       <span className="text-lg font-medium text-foreground-muted line-through opacity-60">
                         {/* @ts-ignore */}
-                        {pkg.originalPrice}
+                        {activePrice?.originalPrice || pkg.originalPrice}
                       </span>
                     )}
                   </div>
