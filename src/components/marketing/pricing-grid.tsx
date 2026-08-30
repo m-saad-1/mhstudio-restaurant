@@ -10,25 +10,44 @@ import { pricingPackages } from "@/data/site-content";
 export function PricingGrid() {
   const [selectedPkg, setSelectedPkg] = useState<typeof pricingPackages[0] | null>(null);
   const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly" | "onetime">("monthly");
+  const [platform, setPlatform] = useState<"website" | "website_app">("website");
 
   return (
     <>
       {/* Promotional Banner */}
       <div className="flex justify-center mb-8">
-        <div className="flex flex-col gap-2.5 rounded-xl border border-amber-500/20 bg-amber-500/5 px-6 py-4 w-full max-w-sm relative overflow-hidden">
+        <div className="flex flex-col gap-3 rounded-xl border border-amber-500/20 bg-amber-500/5 px-6 py-5 w-full max-w-md relative overflow-hidden">
           {/* Subtle background glow */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-[50px] bg-amber-500/10 blur-2xl rounded-full pointer-events-none" />
           
-          <div className="flex items-center justify-between relative z-10">
-            <span className="text-amber-400 font-semibold text-sm">20% Off — First 20 Restaurants</span>
-            <span className="text-amber-200 text-xs font-medium bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/20">12 spots left</span>
+          <div className="flex items-center justify-between relative z-10 gap-2">
+            <span className="text-amber-400 font-semibold text-[15px] leading-tight">Founding Restaurant Pricing — First 20 Only</span>
+            <span className="text-amber-200 text-[10px] font-bold bg-amber-500/10 px-2 py-1 rounded-full border border-amber-500/20 tracking-wider uppercase whitespace-nowrap">Lifetime Price Lock</span>
           </div>
-          <div className="h-2 w-full bg-black/40 rounded-full overflow-hidden relative z-10 border border-white/5 flex">
-            <div className="h-full bg-amber-500 w-2/5 rounded-full"></div>
+          <div className="h-2 w-full bg-black/40 rounded-full overflow-hidden relative z-10 border border-white/5 flex mt-1">
+            <div className="h-full bg-amber-500 w-[60%] rounded-full shadow-[0_0_10px_rgba(245,158,11,0.5)]"></div>
           </div>
-          <div className="flex justify-end relative z-10 mt-0.5">
-            <span className="text-[10px] text-foreground-muted uppercase tracking-wider font-semibold">8/20 purchased</span>
+          <div className="flex justify-between relative z-10 mt-1 items-center">
+            <span className="text-xs text-amber-200/80 font-medium">8 spots left</span>
+            <span className="text-[10px] text-foreground-muted uppercase tracking-wider font-semibold">12/20 claimed</span>
           </div>
+        </div>
+      </div>
+
+      <div className="flex justify-center mb-6">
+        <div className="inline-flex rounded-full border border-white/10 bg-white/[0.02] p-1">
+          <button
+            onClick={() => setPlatform("website")}
+            className={`rounded-full px-6 py-2.5 text-sm font-medium transition-colors ${platform === "website" ? "bg-amber-500 text-zinc-950 shadow-[0_4px_14px_rgba(245,158,11,0.3)]" : "text-foreground-muted hover:text-foreground"}`}
+          >
+            Website
+          </button>
+          <button
+            onClick={() => setPlatform("website_app")}
+            className={`rounded-full px-6 py-2.5 text-sm font-medium transition-colors ${platform === "website_app" ? "bg-amber-500 text-zinc-950 shadow-[0_4px_14px_rgba(245,158,11,0.3)]" : "text-foreground-muted hover:text-foreground"}`}
+          >
+            Website + Mobile App
+          </button>
         </div>
       </div>
 
@@ -36,19 +55,19 @@ export function PricingGrid() {
         <div className="inline-flex rounded-full border border-white/10 bg-white/[0.02] p-1">
           <button
             onClick={() => setBillingCycle("monthly")}
-            className={`rounded-full px-5 py-2 text-sm font-medium transition-colors ${billingCycle === "monthly" ? "bg-amber-400 text-zinc-950 shadow-[0_4px_14px_rgba(245,158,11,0.3)]" : "text-foreground-muted hover:text-foreground"}`}
+            className={`rounded-full px-5 py-2 text-sm font-medium transition-colors ${billingCycle === "monthly" ? "bg-amber-500/20 text-amber-400 border border-amber-500/30 shadow-[0_0_15px_rgba(245,158,11,0.15)]" : "text-foreground-muted hover:text-foreground border border-transparent"}`}
           >
             Monthly
           </button>
           <button
             onClick={() => setBillingCycle("yearly")}
-            className={`rounded-full px-5 py-2 text-sm font-medium transition-colors ${billingCycle === "yearly" ? "bg-amber-400 text-zinc-950 shadow-[0_4px_14px_rgba(245,158,11,0.3)]" : "text-foreground-muted hover:text-foreground"}`}
+            className={`rounded-full px-5 py-2 text-sm font-medium transition-colors ${billingCycle === "yearly" ? "bg-amber-500/20 text-amber-400 border border-amber-500/30 shadow-[0_0_15px_rgba(245,158,11,0.15)]" : "text-foreground-muted hover:text-foreground border border-transparent"}`}
           >
             Yearly
           </button>
           <button
             onClick={() => setBillingCycle("onetime")}
-            className={`rounded-full px-5 py-2 text-sm font-medium transition-colors ${billingCycle === "onetime" ? "bg-amber-400 text-zinc-950 shadow-[0_4px_14px_rgba(245,158,11,0.3)]" : "text-foreground-muted hover:text-foreground"}`}
+            className={`rounded-full px-5 py-2 text-sm font-medium transition-colors ${billingCycle === "onetime" ? "bg-amber-500/20 text-amber-400 border border-amber-500/30 shadow-[0_0_15px_rgba(245,158,11,0.15)]" : "text-foreground-muted hover:text-foreground border border-transparent"}`}
           >
             One Time
           </button>
@@ -57,7 +76,8 @@ export function PricingGrid() {
 
       <div className="content-shell grid gap-6 lg:grid-cols-3">
         {pricingPackages.map((pkg, index) => {
-          const activePrice = pkg.pricingOptions ? pkg.pricingOptions[billingCycle] : null;
+          const activePlatform = pkg.platforms[platform];
+          const activePrice = activePlatform.pricingOptions ? activePlatform.pricingOptions[billingCycle] : null;
 
           return (
             <Reveal
@@ -77,30 +97,45 @@ export function PricingGrid() {
                   )}
                 </div>
                 <div className="flex flex-col gap-1 min-h-[5.5rem] justify-center">
-                  <div className="flex items-baseline gap-2.5">
-                    <p className="text-3xl font-bold text-foreground">
-                      {activePrice ? activePrice.price : pkg.price}
+                  <div className="flex items-baseline gap-1">
+                    <p className="text-2xl font-bold text-foreground">
+                      {activePrice ? activePrice.price : activePlatform.price}
                     </p>
                     {/* @ts-ignore */}
-                    {(activePrice ? activePrice.suffix : pkg.priceSuffix) && (
+                    {(activePrice ? activePrice.suffix : activePlatform.priceSuffix) && (
                       <span className="text-sm font-normal text-foreground-muted opacity-80">
-                        {activePrice ? activePrice.suffix : pkg.priceSuffix}
+                        {/* @ts-ignore */}
+                        {activePrice ? activePrice.suffix : activePlatform.priceSuffix}
                       </span>
                     )}
                     {/* @ts-ignore */}
-                    {(activePrice?.originalPrice || (!activePrice && pkg.originalPrice)) && (
-                      <span className="text-lg font-medium text-foreground-muted line-through opacity-60">
+                    {(activePrice?.originalPrice || (!activePrice && activePlatform.originalPrice)) && (
+                      <span className="text-sm font-medium text-foreground-muted line-through opacity-60 ml-1">
                         {/* @ts-ignore */}
-                        {activePrice?.originalPrice || pkg.originalPrice}
+                        {activePrice?.originalPrice || activePlatform.originalPrice}
                       </span>
                     )}
                   </div>
                   {/* @ts-ignore */}
+                  {activePrice?.monthlyEquivalent && (
+                    <p className="text-sm font-medium text-foreground-body mt-1">
+                      {/* @ts-ignore */}
+                      {activePrice.monthlyEquivalent}
+                    </p>
+                  )}
+                  {/* @ts-ignore */}
                   {activePrice?.note && (
-                    <span className="inline-block w-fit rounded-full bg-green-500/10 px-2.5 py-0.5 text-xs font-medium text-green-400 border border-green-500/20">
+                    <span className="inline-block w-fit rounded-full bg-green-500/10 px-2.5 py-0.5 text-xs font-bold text-green-400 border border-green-500/20 my-1.5">
                       {/* @ts-ignore */}
                       {activePrice.note}
                     </span>
+                  )}
+                  {/* Removed FOUNDING PRICE LOCKED FOR LIFE tag */}
+                  {/* @ts-ignore */}
+                  {activePrice?.oneTimeOwnership && (
+                    <p className="text-[11px] font-bold tracking-[0.1em] text-amber-400 uppercase mt-2">
+                      ONE-TIME OWNERSHIP
+                    </p>
                   )}
                   {/* @ts-ignore */}
                   {activePrice?.smallNote && (
@@ -110,12 +145,11 @@ export function PricingGrid() {
                     </p>
                   )}
                 </div>
-                <p className="text-sm leading-[1.7] text-foreground-body sm:text-base">{pkg.summary}</p>
               </div>
               <div className="mt-6 grid gap-3 flex-1">
-                {pkg.includes.map((item) => {
+                {activePlatform.includes.map((item) => {
                   let displayItem = item;
-                  if (item.includes("Days Support") && pkg.pricingOptions && (billingCycle === "monthly" || billingCycle === "yearly")) {
+                  if (item.includes("Days Support") && activePlatform.pricingOptions && (billingCycle === "monthly" || billingCycle === "yearly")) {
                     displayItem = "Lifetime Support";
                   }
                   return (
@@ -134,27 +168,14 @@ export function PricingGrid() {
                 onClick={() => setSelectedPkg(pkg)}
                 className="button-primary mt-6 flex w-full items-center justify-center px-6 text-sm"
               >
-                {pkg.ctaText}
+                View Details
               </button>
             </Reveal>
           );
         })}
       </div>
 
-      <Reveal delayMs={200} className="content-shell mt-8">
-        <div className="surface-card flex flex-col items-start justify-between gap-6 p-6 sm:flex-row sm:items-center lg:p-8">
-          <div>
-            <h3 className="text-xl font-semibold text-foreground">Mobile Application</h3>
-            <p className="mt-2 text-sm text-foreground-body sm:max-w-[70%]">
-              Expand your reach with a dedicated mobile application for iOS and Android. Seamlessly integrated with your restaurant's system for reservations, orders, and customer management.
-            </p>
-          </div>
-          <div className="shrink-0 sm:text-right">
-            <p className="text-2xl font-bold text-foreground">PKR 10,000</p>
-            <p className="text-sm text-foreground-muted">Additional</p>
-          </div>
-        </div>
-      </Reveal>
+      {/* Standalone Mobile App section removed */}
 
       {selectedPkg && (
         <div className="fixed inset-0 z-50 flex items-center justify-center px-4 py-6 sm:px-6">
@@ -171,7 +192,7 @@ export function PricingGrid() {
                 </h3>
                 <p className="mt-1 text-sm text-foreground-body">
                   {/* @ts-ignore */}
-                  {selectedPkg.pricingOptions ? selectedPkg.pricingOptions[billingCycle].price : selectedPkg.price}
+                  {selectedPkg.platforms[platform].pricingOptions ? selectedPkg.platforms[platform].pricingOptions[billingCycle].price : selectedPkg.platforms[platform].price}
                 </p>
               </div>
               <button 
@@ -185,13 +206,13 @@ export function PricingGrid() {
             {/* Scrollable Content */}
             <div className="flex-1 overflow-y-auto px-6 py-6 sm:px-8">
               <div className="grid gap-8 md:grid-cols-2">
-                {selectedPkg.modalDetails.map((detailSection) => (
+                {selectedPkg.platforms[platform].modalDetails.map((detailSection) => (
                   <div key={detailSection.category} className="space-y-3">
                     <h4 className="text-lg font-medium text-amber-400">{detailSection.category}</h4>
                     <ul className="grid gap-2">
                       {detailSection.features.map((feature) => {
                         let displayFeature = feature;
-                        if (feature.toLowerCase().includes("days post-launch support") && selectedPkg?.pricingOptions && (billingCycle === "monthly" || billingCycle === "yearly")) {
+                        if (feature.toLowerCase().includes("days post-launch support") && selectedPkg.platforms[platform].pricingOptions && (billingCycle === "monthly" || billingCycle === "yearly")) {
                           displayFeature = feature.replace(/\d+\s+days post-launch support/i, "Lifetime support");
                         }
                         return (

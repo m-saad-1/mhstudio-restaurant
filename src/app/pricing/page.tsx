@@ -13,8 +13,8 @@ export default function PricingPage() {
     <>
       <PageHero
         eyebrow="Pricing"
-        title="No setup or development fees."
-        description="Get your website and digital platform without a large upfront cost. Pay only a simple monthly fee based on your needs."
+        title="No upfront fees on managed plans."
+        description="Get your restaurant website and digital platform without a large upfront investment. Choose a managed monthly plan, save more with yearly billing, or own your system with a one-time implementation."
         primaryCta={{ label: "Start Your Project", href: "/contact" }}
         secondaryCta={{ label: "View Services", href: "/services" }}
       />
@@ -27,7 +27,7 @@ export default function PricingPage() {
             <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_rgba(245,158,11,0.08)_0%,_transparent_100%)] blur-[40px]" />
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">Need a Custom Solution?</h2>
             <p className="text-foreground-body mb-8 text-sm sm:text-base max-w-xl mx-auto">
-              If your restaurant needs a multi-location setup, franchise platform, complex POS integrations, or a tailored mobile app experience, we build custom enterprise systems perfectly matched to your operations.
+              For restaurants requiring advanced multi-location operations, franchise management, complex POS integrations, custom mobile applications, enterprise automation, inventory workflows, or a tailored restaurant operating system, we build around your exact requirements.
             </p>
             <a href="/contact" className="button-primary px-8 text-sm sm:text-base shadow-[0_0_20px_rgba(245,158,11,0.15)] transition-all hover:shadow-[0_0_30px_rgba(245,158,11,0.25)] hover:-translate-y-0.5 active:translate-y-0 inline-flex">
               Discuss Custom Enterprise Package

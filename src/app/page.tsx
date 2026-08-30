@@ -4,7 +4,7 @@ import ArrowRight from "lucide-react/dist/esm/icons/arrow-right";
 import Check from "lucide-react/dist/esm/icons/check";
 import dynamic from "next/dynamic";
 
-import { AnimatedCounter, FaqAccordion, MockupFrame } from "@/components/heavy-client-components";
+import { AnimatedCounter, FaqAccordion } from "@/components/heavy-client-components";
 import { HeroSection } from "@/components/marketing/hero-section";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -13,10 +13,7 @@ import {
   faqs,
   leftFaqs,
   industryShowcaseItems,
-  portfolioItems,
-  processSteps,
-  serviceCards,
-  stats,
+  serviceCards, serviceSections,
   technologyGroups,
   websiteFeatures,
 } from "@/data/site-content";
@@ -24,26 +21,24 @@ import {
 const blurData = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTYnIGhlaWdodD0nMTAnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHJlY3Qgd2lkdGg9JzE2JyBoZWlnaHQ9JzEwJyBmaWxsPScjMTExMTEzJy8+PHJlY3QgY29yPScyJyB4PScxJyB5PScxJyB3aWR0aD0nMTQnIGhlaWdodD0nOCcgZmlsbD0nI0Y1OUUwQicgb3BhY2l0eT0nMC4xNScvPjwvc3ZnPg==";
 
 export default function Home() {
-  const featuredProjects = portfolioItems.slice(0, 6);
-
   const homeServiceTitles = [
     "Modern Restaurant Websites",
-    "Interactive Online Menus",
-    "Online Reservation Systems",
-    "AI Restaurant Assistants",
-    "Gallery & Food Showcases",
-    "Local SEO & Map Rankings"
+    "Restaurant Management Systems",
+    "Point of Sale (POS) Systems",
+    "Online Ordering Systems",
+    "Kitchen Display Systems (KDS)",
+    "Dine-In & Table Management"
   ];
 
   const homeServiceCards = homeServiceTitles
-    .map(title => serviceCards.find(service => service.title === title))
+    .map(title => serviceSections.find(service => service.title === title) || serviceCards.find(service => service.title === title))
     .filter((service): service is Exclude<typeof service, undefined> => !!service);
 
   return (
     <>
       <HeroSection />
 
-      <Reveal as="section" className="section-space !pt-4 sm:!pt-[90px] lg:!pt-[120px] section-divider">
+      <Reveal as="section" className="section-space section-divider">
         <div className="content-shell space-y-10">
           <SectionHeading
             eyebrow="Services Snapshot"
@@ -104,7 +99,7 @@ export default function Home() {
           <Reveal delayMs={100} className="space-y-8">
             <div className="space-y-5">
               <span className="inline-flex items-center gap-2 rounded-none border border-amber-400/20 bg-amber-400/10 px-4 py-1.5 text-sm font-semibold text-amber-400 backdrop-blur-md shadow-[0_0_15px_rgba(245,158,11,0.15)]">
-                <span className="text-base">🤖</span> AI-Powered Customer Experience
+                AI-Powered Customer Experience
               </span>
               <h2 className="text-[2rem] font-semibold leading-[1.15] text-foreground sm:text-[2.8rem] tracking-tight">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200 drop-shadow-sm">24/7 AI Receptionist</span>
@@ -148,29 +143,102 @@ export default function Home() {
       </Reveal>
 
       <Reveal as="section" className="section-space section-divider">
+        <div className="content-shell grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+          {/* Left Side: Content */}
+          <Reveal delayMs={0} className="space-y-8">
+            <div className="space-y-5">
+              <span className="inline-flex items-center gap-2 rounded-none border border-amber-400/20 bg-amber-400/10 px-4 py-1.5 text-sm font-semibold text-amber-400 backdrop-blur-md shadow-[0_0_15px_rgba(245,158,11,0.15)]">
+                Your Restaurant, One Dashboard
+              </span>
+              <h2 className="text-[2rem] font-semibold leading-[1.15] text-foreground sm:text-[2.8rem] tracking-tight">
+                Manage your entire restaurant from <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200 drop-shadow-sm">one screen.</span>
+              </h2>
+            </div>
+
+            <div className="grid gap-3 sm:grid-cols-1">
+              {[
+                { title: "Manage your website", desc: "Update menus, content, offers, images, and restaurant information anytime." },
+                { title: "Control every order", desc: "View and manage dine-in, takeaway, and delivery orders from one place." },
+                { title: "Run your operations", desc: "Manage POS, tables, kitchen workflows, delivery, and reservations." },
+                { title: "Manage your menu & inventory", desc: "Update products, pricing, availability, ingredients, and stock." },
+                { title: "Know your customers", desc: "Track customer profiles, order history, loyalty, and repeat activity." },
+                { title: "See what matters", desc: "Monitor revenue, sales, branch performance, and AI-powered business insights." },
+              ].map((feature) => (
+                <div key={feature.title} className="surface-card flex items-start gap-4 p-4 !rounded-none border border-white/5 hover:border-amber-500/30 transition-all duration-300 hover:shadow-[0_4px_20px_rgba(245,158,11,0.08)] bg-white/[0.01] hover:bg-white/[0.03]">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-none bg-amber-400/10 text-amber-400 shadow-[inset_0_0_10px_rgba(245,158,11,0.1)]">
+                    <Check className="h-4 w-4" strokeWidth={3} />
+                  </span>
+                  <div>
+                    <span className="block text-sm font-semibold text-foreground">{feature.title}</span>
+                    <span className="block text-xs text-foreground-muted mt-1">{feature.desc}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+
+          {/* Right Side: Images */}
+          <Reveal delayMs={100} className="relative mx-auto w-full max-w-lg lg:mx-0 lg:max-w-none h-[500px] lg:h-[700px] flex items-center justify-center">
+            {/* Decorative Glow */}
+            <div className="pointer-events-none absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.15)_0%,transparent_70%)] blur-[60px]" />
+            
+            {/* Dashboard 1 - Back/Top */}
+            <div className="absolute right-0 top-[10%] w-[85%] aspect-[16/10] z-10 hover:z-30 transition-all duration-500 ease-out hover:-translate-y-4 hover:scale-105 shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 rounded-xl overflow-hidden bg-zinc-950">
+              <Image
+                src="/images/Dashboard-1.avif"
+                alt="Restaurant Management Dashboard 1"
+                fill
+                className="object-cover object-left-top"
+                sizes="(max-width: 1024px) 90vw, 50vw"
+              />
+              {/* Subtle overlay to create depth when not hovered */}
+              <div className="absolute inset-0 bg-black/20 hover:bg-transparent transition-colors duration-500" />
+            </div>
+
+            {/* Dashboard 2 - Front/Bottom */}
+            <div className="absolute left-0 bottom-[10%] w-[85%] aspect-[16/10] z-20 hover:z-30 transition-all duration-500 ease-out hover:-translate-y-4 hover:scale-105 shadow-[0_30px_60px_rgba(0,0,0,0.6)] border border-white/10 rounded-xl overflow-hidden bg-zinc-950">
+              <Image
+                src="/images/Dashboard-2.avif"
+                alt="Restaurant Management Dashboard 2"
+                fill
+                className="object-cover object-left-top"
+                sizes="(max-width: 1024px) 90vw, 50vw"
+              />
+            </div>
+          </Reveal>
+        </div>
+      </Reveal>
+
+      <Reveal as="section" className="section-space section-divider">
         <div className="content-shell space-y-10">
           <SectionHeading
-            eyebrow="Featured Portfolio"
-            title="Featured Web Concepts & Live Projects"
-            description="Explore our interactive custom websites and digital projects."
-            action={
-              <Link href="/work" className="button-secondary px-6 text-sm">
-                See All Projects
-              </Link>
-            }
+            eyebrow="Digital Capabilities"
+            title="Everything Your Restaurant Needs to Operate & Grow"
+            description="powerful capabilities designed to simplify your workflow and drive growth."
           />
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {featuredProjects.map((item, index) => (
-              <Reveal key={item.slug} delayMs={index * 70}>
-                <MockupFrame item={item} />
-              </Reveal>
-            ))}
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {websiteFeatures.map((feature, index) => {
+              const Icon = getIcon(feature.icon);
+
+              return (
+                <Reveal
+                  key={feature.title}
+                  delayMs={index * 35}
+                  className={`surface-card p-5 ${index % 5 === 0 ? "xl:col-span-2" : ""}`}
+                >
+                  <span className="inline-flex rounded-[18px] border border-amber-400/15 bg-amber-400/10 p-3 text-accent">
+                    <Icon className="h-5 w-5" strokeWidth={2} />
+                  </span>
+                  <h3 className="mt-5 text-xl font-semibold text-foreground">{feature.title}</h3>
+                  <p className="mt-3 text-sm leading-[1.7] text-foreground-body sm:text-base line-clamp-2">{feature.description}</p>
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </Reveal>
 
-
-
+      {/* 
       <Reveal as="section" className="section-space section-divider">
         <div className="content-shell space-y-10">
           <SectionHeading
@@ -209,111 +277,6 @@ export default function Home() {
         </div>
       </Reveal>
 
-      <Reveal as="section" className="section-space section-divider">
-        <div className="content-shell space-y-10">
-          <SectionHeading
-            eyebrow="Digital Capabilities"
-            title="Next-Gen Integrations Built to Drive Conversions"
-            description="High-performance features engineered to increase user engagement and growth."
-          />
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {websiteFeatures.map((feature, index) => {
-              const Icon = getIcon(feature.icon);
-
-              return (
-                <Reveal
-                  key={feature.title}
-                  delayMs={index * 35}
-                  className={`surface-card p-5 ${index % 5 === 0 ? "xl:col-span-2" : ""}`}
-                >
-                  <span className="inline-flex rounded-[18px] border border-amber-400/15 bg-amber-400/10 p-3 text-accent">
-                    <Icon className="h-5 w-5" strokeWidth={2} />
-                  </span>
-                  <h3 className="mt-5 text-xl font-semibold text-foreground">{feature.title}</h3>
-                  <p className="mt-3 text-sm leading-[1.7] text-foreground-body sm:text-base">{feature.description}</p>
-                </Reveal>
-              );
-            })}
-          </div>
-        </div>
-      </Reveal>
-
-      <Reveal as="section" className="section-space section-divider">
-        <div className="content-shell space-y-10">
-          <SectionHeading
-            eyebrow="Our Process"
-            title="Our Structured Process from Concept to Launch"
-            description="A structured workflow built for clarity and speed."
-          />
-          <div className="grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
-            {processSteps.map((step, index) => (
-              <Reveal key={step.step} delayMs={index * 70} className="surface-card p-6">
-                <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-none bg-amber-400 text-sm font-bold text-zinc-950">
-                    {step.step}
-                  </div>
-                  <div>
-                    <p className="text-xl font-semibold text-foreground">{step.title}</p>
-                    <p className="text-sm text-foreground-muted">Step-by-step project delivery</p>
-                  </div>
-                </div>
-                <p className="mt-5 text-sm leading-[1.7] text-foreground-body sm:text-base">{step.description}</p>
-                <div className="mt-5 grid gap-2">
-                  {step.bullets.map((bullet) => (
-                    <div key={bullet} className="flex items-center gap-2 text-sm text-foreground-body">
-                      <Check className="h-4 w-4 text-accent" />
-                      <span>{bullet}</span>
-                    </div>
-                  ))}
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </Reveal>
-
-      {/* 
-      <Reveal as="section" className="section-space section-divider">
-        <div className="content-shell">
-          <div className="surface-card flex flex-col items-center justify-center gap-4 px-8 py-14 text-center">
-            <span className="eyebrow">Coming Soon</span>
-            <h2 className="text-[2rem] font-semibold leading-[1.1] text-foreground sm:text-[2.6rem]">
-              Client Success Stories
-            </h2>
-            <p className="max-w-2xl text-base leading-[1.7] text-foreground-body sm:text-lg">
-              Testimonials stay hidden until verified client stories are ready to support the proof layer honestly.
-            </p>
-          </div>
-        </div>
-      </Reveal>
-      */}
-
-      <Reveal as="section" className="section-space section-divider">
-        <div className="content-shell space-y-10">
-          <SectionHeading
-            eyebrow="Stats"
-            title="Key Performance Metrics That Drive Results"
-            description="Key performance metrics of our high-speed digital builds."
-            align="center"
-          />
-          <div className="grid gap-3 sm:gap-5 grid-cols-2 xl:grid-cols-5">
-            {stats.map((stat, index) => (
-              <Reveal
-                key={stat.label}
-                delayMs={index * 50}
-                className={`surface-card p-4 sm:p-6 flex flex-col items-center justify-center text-center border border-white/8 hover:border-amber-500/25 transition-all duration-300 hover:shadow-[0_5px_20px_-5px_rgba(245,158,11,0.1)] !rounded-none ${index === stats.length - 1 ? 'col-span-2 xl:col-span-1' : ''}`}
-              >
-                <div className="text-[2.6rem] font-semibold leading-none text-amber-400">
-                  <AnimatedCounter value={stat.value} suffix={stat.suffix} />
-                </div>
-                <p className="mt-2 sm:mt-3 text-[10px] sm:text-sm font-semibold uppercase tracking-wider text-foreground-muted">{stat.label}</p>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </Reveal>
-
-      {/* 
       <Reveal as="section" className="section-space section-divider">
         <div className="content-shell space-y-10">
           <SectionHeading

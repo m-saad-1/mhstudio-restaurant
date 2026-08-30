@@ -43,9 +43,10 @@ export const siteConfig = {
 };
 
 export const navigationItems: NavItem[] = [
-  { label: "Work", href: "/work" },
   { label: "Services", href: "/services" },
   { label: "Pricing", href: "/pricing" },
+  { label: "Work", href: "/work" },
+  { label: "Process", href: "/process" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -558,223 +559,483 @@ export const leftFaqs = [
 export const pricingPackages = [
   {
     name: "Launch",
-    price: "PKR 3,999",
-    priceSuffix: "/mo",
-    originalPrice: "PKR 5,000",
-    pricingOptions: {
-      monthly: { price: "PKR 3,999", suffix: "/mo", originalPrice: "PKR 5,000" },
-      yearly: { price: "PKR 54,000", suffix: "/yearly", note: "10% off (Save 6000)" },
-      onetime: { price: "PKR 120,000", suffix: "one time", smallNote: "Hosting and third party API charges will be billed separately." }
-    },
-    summary: "Get your restaurant online with a professional website, digital menu and essential customer features.",
-    includes: [
-      "Online Ordering System",
-      "Admin Panel",
-      "WhatsApp Integration",
-      "Google Maps Integration",
-      "Google Reviews Integration",
-      "Reservation System",
-      "AI Chatbot Assistant",
-      "POS/API Integration",
-      "Single Branch",
-      "Performance with 95% target",
-      "SEO",
-      "Domain & Hosting Setup",
-      "30 Days Support"
-    ],
-    ctaText: "View Details",
     timeline: "2–4 Days",
-    modalDetails: [
-      {
-        category: "Pages Included",
-        features: [
-          "Home — branded landing page with hero section, offers, and reviews",
-          "Menu — categorized digital menu with food images and prices",
-          "Offers — special deals, discounts and promotional items",
-          "Cart and Order pages",
-          "About, Reservation, Contact, Gallery"
+    platforms: {
+      website: {
+        price: "PKR 3,999",
+        priceSuffix: "/mo",
+        originalPrice: "PKR 5,000",
+        pricingOptions: {
+          monthly: { price: "PKR 3,999", suffix: "/mo", originalPrice: "PKR 5,000", lockedForLife: true },
+          yearly: { price: "PKR 43,200", suffix: "/year", originalPrice: "PKR 60,000", monthlyEquivalent: "≈ PKR 3,600/month", note: "SAVE PKR 4,788/YEAR", lockedForLife: true },
+          onetime: { price: "PKR 120,000", suffix: "", oneTimeOwnership: true }
+        },
+        summary: "Get your restaurant online with a professional website, digital menu, direct ordering, reservations, and essential customer features.",
+        includes: [
+          "Restaurant Website",
+          "Interactive Menu",
+          "Online Ordering",
+          "Reservation System",
+          "WhatsApp Integration",
+          "Google Maps & Reviews",
+          "Basic Admin Panel",
+          "Single Branch",
+          "Local SEO Setup",
+          "Performance Optimization",
+          "Hosting & Deployment",
+          "30 Days Post-Launch Support"
+        ],
+        modalDetails: [
+          {
+            category: "Website",
+            features: ["Custom restaurant website", "Home", "Menu", "Offers", "About", "Gallery", "Reservation", "Contact", "Cart & Order pages"]
+          },
+          {
+            category: "Menu",
+            features: ["Categories", "Food images", "Prices", "Descriptions", "Basic availability"]
+          },
+          {
+            category: "Ordering",
+            features: ["Online ordering", "Cart", "Checkout", "Delivery or takeaway selection"]
+          },
+          {
+            category: "Reservations",
+            features: ["Reservation form", "Guest information", "Date & time selection"]
+          },
+          {
+            category: "Admin",
+            features: ["Menu management", "Price updates", "Offers", "Basic order viewing", "Website content updates"]
+          },
+          {
+            category: "Integrations",
+            features: ["WhatsApp", "Google Maps", "Google Reviews"]
+          },
+          {
+            category: "SEO & Performance",
+            features: ["Mobile-first design", "Image optimization", "Technical SEO setup", "Restaurant structured data", "Performance optimization"]
+          },
+          {
+            category: "Deployment",
+            features: ["Hosting setup", "SSL", "Domain connection", "Production deployment", "Single-branch configuration"]
+          },
+          {
+            category: "Support",
+            features: ["30 days post-launch support on one-time plans", "Ongoing support while subscribed on managed plans"]
+          }
         ]
       },
-      {
-        category: "System Features",
-        features: [
-          "Categorized menu with food images, names, prices, and descriptions",
-          "Online Ordering System",
-          "Reservation System for table bookings",
-          "AI Chatbot Assistant to answer customer queries",
-          "Mobile-friendly interface and experience"
-        ]
-      },
-      {
-        category: "Admin Panel & Integrations",
-        features: [
-          "Add/edit/delete menu items and categories",
-          "Manage prices, descriptions, and offers",
-          "Basic order and reservation viewing",
-          "WhatsApp and Google Maps integrations",
-          "POS/API Integration (subject to availability)"
-        ]
-      },
-      {
-        category: "Performance & SEO",
-        features: [
-          "Mobile-first and image optimization (Performance with 95% target)",
-          "Search-engine-friendly structure and Meta titles/descriptions",
-          "SEO and structured data/schema setup"
-        ]
-      },
-      {
-        category: "Deployment & Support",
-        features: [
-          "Domain connection assistance and hosting configuration",
-          "SSL and production deployment",
-          "Single Branch configuration",
-          "30 days post-launch support for bug fixes"
+      website_app: {
+        price: "PKR 7,999",
+        priceSuffix: "/mo",
+        originalPrice: "PKR 10,000",
+        pricingOptions: {
+          monthly: { price: "PKR 7,999", suffix: "/mo", originalPrice: "PKR 10,000", lockedForLife: true },
+          yearly: { price: "PKR 86,400", suffix: "/year", originalPrice: "PKR 120,000", monthlyEquivalent: "≈ PKR 7,200/month", note: "SAVE PKR 9,588/YEAR", lockedForLife: true },
+          onetime: { price: "PKR 240,000", suffix: "", oneTimeOwnership: true }
+        },
+        summary: "Get your restaurant online with a professional website, digital menu, direct ordering, reservations, and essential customer features.",
+        includes: [
+          "Restaurant Website",
+          "Interactive Menu",
+          "Online Ordering",
+          "Reservation System",
+          "WhatsApp Integration",
+          "Google Maps & Reviews",
+          "Basic Admin Panel",
+          "Single Branch",
+          "Local SEO Setup",
+          "Performance Optimization",
+          "Hosting & Deployment",
+          "Branded Customer App",
+          "Customer Account",
+          "Mobile Ordering",
+          "Order History",
+          "Order Status",
+          "Push Notifications",
+          "App Deployment Support",
+          "30 Days Post-Launch Support"
+        ],
+        modalDetails: [
+          {
+            category: "Website",
+            features: ["Custom restaurant website", "Home", "Menu", "Offers", "About", "Gallery", "Reservation", "Contact", "Cart & Order pages"]
+          },
+          {
+            category: "Menu",
+            features: ["Categories", "Food images", "Prices", "Descriptions", "Basic availability"]
+          },
+          {
+            category: "Ordering",
+            features: ["Online ordering", "Cart", "Checkout", "Delivery or takeaway selection"]
+          },
+          {
+            category: "Reservations",
+            features: ["Reservation form", "Guest information", "Date & time selection"]
+          },
+          {
+            category: "Admin",
+            features: ["Menu management", "Price updates", "Offers", "Basic order viewing", "Website content updates"]
+          },
+          {
+            category: "Integrations",
+            features: ["WhatsApp", "Google Maps", "Google Reviews"]
+          },
+          {
+            category: "Mobile App — Website + App",
+            features: ["Branded customer app", "Menu", "Online ordering", "Customer account", "Order history", "Order status", "Push notifications", "API connection to restaurant platform", "Deployment assistance"]
+          },
+          {
+            category: "SEO & Performance",
+            features: ["Mobile-first design", "Image optimization", "Technical SEO setup", "Restaurant structured data", "Performance optimization"]
+          },
+          {
+            category: "Deployment",
+            features: ["Hosting setup", "SSL", "Domain connection", "Production deployment", "Single-branch configuration"]
+          },
+          {
+            category: "Support",
+            features: ["30 days post-launch support on one-time plans", "Ongoing support while subscribed on managed plans"]
+          }
         ]
       }
-    ]
+    }
   },
   {
     name: "Growth",
-    price: "PKR 7,999",
-    priceSuffix: "/mo",
-    originalPrice: "PKR 10,000",
-    pricingOptions: {
-      monthly: { price: "PKR 7,999", suffix: "/mo", originalPrice: "PKR 10,000" },
-      yearly: { price: "PKR 108,000", suffix: "/yearly", note: "10% off (Save 12000)" },
-      onetime: { price: "PKR 240,000", suffix: "one time", smallNote: "Hosting and third party API charges will be billed separately." }
-    },
-    summary: "Turn your website into an online ordering and customer-support channel.",
-    includes: [
-      "Everything in Launch, plus:",
-      "WhatsApp Order Integration",
-      "AI Online Order Taker",
-      "Automation Workflows",
-      "Multi-Branch Support",
-      "Supplier Management",
-      "Multi-Language Support",
-      "Rider Tracking Application",
-      "Advanced Local SEO",
-      "Analytics & Tracking",
-      "45 Days Support"
-    ],
     featured: true,
-    ctaText: "View Details",
     timeline: "4–7 Days",
-    modalDetails: [
-      {
-        category: "AI & Automation",
-        features: [
-          "AI Ordering Assistant to understand requests, collect details, and confirm orders",
-          "Automation Workflows for orders and notifications",
-          "Customized AI assistant for menu, prices, ingredients, and hours",
-          "WhatsApp Order Integration"
+    platforms: {
+      website: {
+        price: "PKR 7,999",
+        priceSuffix: "/mo",
+        originalPrice: "PKR 10,000",
+        pricingOptions: {
+          monthly: { price: "PKR 7,999", suffix: "/mo", originalPrice: "PKR 10,000", lockedForLife: true },
+          yearly: { price: "PKR 86,400", suffix: "/year", originalPrice: "PKR 120,000", monthlyEquivalent: "≈ PKR 7,200/month", note: "SAVE PKR 9,588/YEAR", lockedForLife: true },
+          onetime: { price: "PKR 240,000", suffix: "", oneTimeOwnership: true }
+        },
+        summary: "Turn your digital presence into a connected restaurant platform for ordering, POS, kitchen operations, customer management, delivery, and growth.",
+        includes: [
+          "Everything in Launch, plus:",
+          "Restaurant Management Dashboard",
+          "POS",
+          "Kitchen Display System",
+          "Dine-In & Table Management",
+          "Takeaway Management",
+          "Delivery Management",
+          "QR Table Ordering",
+          "AI Restaurant Chatbot",
+          "WhatsApp Ordering",
+          "Customer CRM",
+          "Analytics & Tracking",
+          "Promotions & Offers",
+          "Up to 5 Branches",
+          "Advanced Local SEO",
+          "Hosting & Deployment",
+          "Ongoing Support on Managed Plans"
+        ],
+        modalDetails: [
+          {
+            category: "Restaurant Operations",
+            features: ["Centralized restaurant dashboard", "POS", "Dine-in orders", "Takeaway orders", "Delivery orders", "Table management", "Kitchen Display System", "Order status management"]
+          },
+          {
+            category: "Online Ordering",
+            features: ["Delivery ordering", "Takeaway ordering", "Cart & checkout", "Product modifiers", "Order tracking", "WhatsApp ordering"]
+          },
+          {
+            category: "Dine-In",
+            features: ["Table management", "Table-specific QR ordering", "Open table orders", "Guest management", "Basic bill management"]
+          },
+          {
+            category: "AI Assistant",
+            features: ["Restaurant chatbot", "Menu questions", "Ingredient questions", "Opening hours", "Location assistance", "Reservation assistance", "Basic ordering guidance"]
+          },
+          {
+            category: "Customer Management",
+            features: ["Customer profiles", "Order history", "Customer activity", "Repeat customer tracking", "Basic segmentation"]
+          },
+          {
+            category: "Analytics",
+            features: ["Revenue", "Orders", "Average order value", "Product performance", "Order sources", "Branch performance", "Customer insights"]
+          },
+          {
+            category: "Marketing",
+            features: ["Promotions", "Discount codes", "Offers", "Customer re-engagement"]
+          },
+          {
+            category: "Branches",
+            features: ["Up to 5 branches", "Branch-level menus", "Branch orders", "Branch analytics", "Branch information"]
+          },
+          {
+            category: "SEO & Performance",
+            features: ["Advanced local SEO", "Restaurant schema", "Google visibility setup", "Image/code optimization", "Performance optimization"]
+          },
+          {
+            category: "Deployment & Support",
+            features: ["Hosting", "SSL", "Deployment", "Monitoring", "Technical maintenance", "Ongoing support while subscribed"]
+          }
         ]
       },
-      {
-        category: "Advanced Management",
-        features: [
-          "Multi-Branch Support and configuration",
-          "Supplier Management capabilities",
-          "Multi-Language Support for broader audience reach",
-          "Rider Tracking Application for delivery management"
-        ]
-      },
-      {
-        category: "Analytics & Reviews",
-        features: [
-          "Google Analytics and basic conversion tracking",
-          "Ordering interaction tracking",
-          "Google review display and testimonial presentation"
-        ]
-      },
-      {
-        category: "Advanced SEO & Performance",
-        features: [
-          "Advanced local SEO and restaurant-focused schema",
-          "Asset, code, and image optimization",
-          "95%+ performance target under suitable conditions"
-        ]
-      },
-      {
-        category: "Support",
-        features: [
-          "45 days post-launch support"
+      website_app: {
+        price: "PKR 14,999",
+        priceSuffix: "/mo",
+        originalPrice: "PKR 18,000",
+        pricingOptions: {
+          monthly: { price: "PKR 14,999", suffix: "/mo", originalPrice: "PKR 18,000", lockedForLife: true },
+          yearly: { price: "PKR 161,988", suffix: "/year", originalPrice: "PKR 180,000", monthlyEquivalent: "≈ PKR 13,499/month", note: "SAVE PKR 18,000/YEAR", lockedForLife: true },
+          onetime: { price: "Starting from PKR 450,000", suffix: "", oneTimeOwnership: true }
+        },
+        summary: "Turn your digital presence into a connected restaurant platform for ordering, POS, kitchen operations, customer management, delivery, and growth.",
+        includes: [
+          "Everything in Launch, plus:",
+          "Restaurant Management Dashboard",
+          "POS",
+          "Kitchen Display System",
+          "Dine-In & Table Management",
+          "Takeaway Management",
+          "Delivery Management",
+          "QR Table Ordering",
+          "AI Restaurant Chatbot",
+          "WhatsApp Ordering",
+          "Customer CRM",
+          "Analytics & Tracking",
+          "Promotions & Offers",
+          "Up to 5 Branches",
+          "Advanced Local SEO",
+          "Hosting & Deployment",
+          "Branded Customer App",
+          "Customer Login",
+          "Online Ordering",
+          "Order History",
+          "Order Status",
+          "Push Notifications",
+          "Reservation Access",
+          "Loyalty Features where applicable",
+          "App-to-platform integration",
+          "App deployment support",
+          "Ongoing Support on Managed Plans"
+        ],
+        modalDetails: [
+          {
+            category: "Restaurant Operations",
+            features: ["Centralized restaurant dashboard", "POS", "Dine-in orders", "Takeaway orders", "Delivery orders", "Table management", "Kitchen Display System", "Order status management"]
+          },
+          {
+            category: "Online Ordering",
+            features: ["Delivery ordering", "Takeaway ordering", "Cart & checkout", "Product modifiers", "Order tracking", "WhatsApp ordering"]
+          },
+          {
+            category: "Dine-In",
+            features: ["Table management", "Table-specific QR ordering", "Open table orders", "Guest management", "Basic bill management"]
+          },
+          {
+            category: "AI Assistant",
+            features: ["Restaurant chatbot", "Menu questions", "Ingredient questions", "Opening hours", "Location assistance", "Reservation assistance", "Basic ordering guidance"]
+          },
+          {
+            category: "Customer Management",
+            features: ["Customer profiles", "Order history", "Customer activity", "Repeat customer tracking", "Basic segmentation"]
+          },
+          {
+            category: "Analytics",
+            features: ["Revenue", "Orders", "Average order value", "Product performance", "Order sources", "Branch performance", "Customer insights"]
+          },
+          {
+            category: "Marketing",
+            features: ["Promotions", "Discount codes", "Offers", "Customer re-engagement"]
+          },
+          {
+            category: "Branches",
+            features: ["Up to 5 branches", "Branch-level menus", "Branch orders", "Branch analytics", "Branch information"]
+          },
+          {
+            category: "Mobile App — Website + App",
+            features: ["Branded iOS & Android customer app", "Customer accounts", "Online ordering", "Order history", "Order status", "Push notifications", "Reservation access", "Loyalty access where applicable", "API integration", "Deployment assistance"]
+          },
+          {
+            category: "SEO & Performance",
+            features: ["Advanced local SEO", "Restaurant schema", "Google visibility setup", "Image/code optimization", "Performance optimization"]
+          },
+          {
+            category: "Deployment & Support",
+            features: ["Hosting", "SSL", "Deployment", "Monitoring", "Technical maintenance", "Ongoing support while subscribed"]
+          }
         ]
       }
-    ]
+    }
   },
   {
     name: "Custom",
-    price: "Custom Pricing",
-    priceSuffix: "Contact us",
-    pricingOptions: null,
-    summary: "Automate your restaurant operations with a complete digital system featuring advanced AI workflows, custom business automation, and deep POS integrations.",
-    includes: [
-      "Everything in Growth, plus:",
-      "Custom Business Automation",
-      "Advanced AI Restaurant Assistant",
-      "Advanced Order Management",
-      "Advanced Admin Dashboard",
-      "Payment Gateway Integration",
-      "Warehouse Inventory Management",
-      "Customer Management",
-      "Advanced Analytics Dashboard",
-      "Advanced Offer & Promotion Management"
-    ],
-    ctaText: "View Details",
-    timeline: "1–2 Weeks",
-    modalDetails: [
-      {
-        category: "Advanced AI Assistant",
-        features: [
-          "More capable AI customized around actual operations",
-          "Handles recommendations, policies, and customer support",
-          "Advanced ordering and reservation assistance"
+    timeline: "1–2+ Weeks",
+    platforms: {
+      website: {
+        price: "Custom Quote",
+        priceSuffix: "",
+        pricingOptions: null,
+        summary: "Build a complete restaurant operating platform around your exact workflows, branches, integrations, automation, and business requirements.",
+        includes: [
+          "Everything in Growth, plus:",
+          "Advanced Restaurant Management System",
+          "Multi-Branch Management",
+          "Advanced POS",
+          "Advanced KDS",
+          "Advanced Delivery Operations",
+          "Inventory & Ingredient Management",
+          "Supplier & Purchasing Management",
+          "Advanced Customer CRM",
+          "Loyalty & Rewards",
+          "Advanced Analytics",
+          "AI Business Insights",
+          "Advanced AI Restaurant Assistant",
+          "Custom Automation",
+          "Payment Gateway Integration",
+          "Deep POS Integrations",
+          "Custom API Integrations",
+          "Advanced Promotions",
+          "Custom Reports",
+          "Custom Business Workflows"
+        ],
+        modalDetails: [
+          {
+            category: "Advanced Operations",
+            features: ["Advanced POS", "Advanced order workflows", "Advanced KDS", "Advanced dine-in operations", "Advanced delivery", "Rider workflows", "Multi-location operations"]
+          },
+          {
+            category: "Multi-Branch",
+            features: ["Multiple branches", "Centralized management", "Branch controls", "Centralized menus", "Branch analytics", "Shared operational data"]
+          },
+          {
+            category: "Inventory",
+            features: ["Ingredient tracking", "Recipe management", "Stock levels", "Reorder points", "Supplier management", "Purchasing", "Wastage", "Inventory reports"]
+          },
+          {
+            category: "Customer Management",
+            features: ["Advanced customer profiles", "Order history", "Customer segmentation", "Loyalty", "Rewards", "Retention workflows", "Customer insights"]
+          },
+          {
+            category: "AI & Automation",
+            features: ["Advanced AI assistant", "AI ordering workflows", "AI business insights", "Automated customer workflows", "Custom business automation", "Custom AI logic"]
+          },
+          {
+            category: "Payments & Integrations",
+            features: ["JazzCash", "Easypaisa", "Card/payment gateways", "Supported POS integrations", "Custom APIs", "Third-party services"]
+          },
+          {
+            category: "Analytics",
+            features: ["Advanced revenue analytics", "Product performance", "Customer analytics", "Branch analytics", "Order-source analytics", "Conversion tracking", "Custom reporting"]
+          },
+          {
+            category: "Promotions",
+            features: ["Advanced offers", "Campaigns", "Coupon rules", "Branch-specific promotions", "Customer-targeted promotions"]
+          },
+          {
+            category: "Custom Development",
+            features: ["Custom workflows", "Custom dashboards", "Custom modules", "Custom integrations"]
+          },
+          {
+            category: "Performance & Deployment",
+            features: ["Advanced performance optimization", "Production infrastructure", "Hosting", "Deployment", "Monitoring", "Security configuration"]
+          },
+          {
+            category: "Support",
+            features: ["Custom support arrangement based on scope and managed plan"]
+          }
         ]
       },
-      {
-        category: "Advanced Ordering",
-        features: [
-          "Advanced order workflows and configurable ordering rules",
-          "Order history and customer information management",
-          "Pickup, delivery, and detailed order status"
-        ]
-      },
-      {
-        category: "Payment Integrations",
-        features: [
-          "Payment Gateway Integration (e.g., JazzCash, Easypaisa, Cards)",
-          "Deep POS API Integrations to reduce manual entry"
-        ]
-      },
-      {
-        category: "Centralized Management",
-        features: [
-          "Advanced Customer Management (profiles, history, insights)",
-          "Warehouse Inventory Management",
-          "Advanced Admin Dashboard for centralized management"
-        ]
-      },
-      {
-        category: "Advanced Analytics",
-        features: [
-          "Dashboard showing website visitors and menu views",
-          "Orders, popular products, and revenue data (where available)",
-          "Ordering, reservation, and conversion metrics"
-        ]
-      },
-      {
-        category: "Performance & Support",
-        features: [
-          "High-performance optimization across frontend and APIs",
-          "Advanced Offer & Promotion Management"
+      website_app: {
+        price: "Custom Quote",
+        priceSuffix: "",
+        pricingOptions: null,
+        summary: "Build a complete restaurant operating platform around your exact workflows, branches, integrations, automation, and business requirements.",
+        includes: [
+          "Everything in Growth, plus:",
+          "Advanced Restaurant Management System",
+          "Multi-Branch Management",
+          "Advanced POS",
+          "Advanced KDS",
+          "Advanced Delivery Operations",
+          "Inventory & Ingredient Management",
+          "Supplier & Purchasing Management",
+          "Advanced Customer CRM",
+          "Loyalty & Rewards",
+          "Advanced Analytics",
+          "AI Business Insights",
+          "Advanced AI Restaurant Assistant",
+          "Custom Automation",
+          "Payment Gateway Integration",
+          "Deep POS Integrations",
+          "Custom API Integrations",
+          "Advanced Promotions",
+          "Custom Reports",
+          "Custom Business Workflows",
+          "Fully branded customer app",
+          "Advanced ordering",
+          "Customer accounts",
+          "Push notifications",
+          "Loyalty",
+          "Reservations",
+          "Delivery tracking where applicable",
+          "Payment integration",
+          "Custom app workflows",
+          "Advanced API integration",
+          "App Store & Google Play deployment",
+          "App-specific analytics"
+        ],
+        modalDetails: [
+          {
+            category: "Advanced Operations",
+            features: ["Advanced POS", "Advanced order workflows", "Advanced KDS", "Advanced dine-in operations", "Advanced delivery", "Rider workflows", "Multi-location operations"]
+          },
+          {
+            category: "Multi-Branch",
+            features: ["Multiple branches", "Centralized management", "Branch controls", "Centralized menus", "Branch analytics", "Shared operational data"]
+          },
+          {
+            category: "Inventory",
+            features: ["Ingredient tracking", "Recipe management", "Stock levels", "Reorder points", "Supplier management", "Purchasing", "Wastage", "Inventory reports"]
+          },
+          {
+            category: "Customer Management",
+            features: ["Advanced customer profiles", "Order history", "Customer segmentation", "Loyalty", "Rewards", "Retention workflows", "Customer insights"]
+          },
+          {
+            category: "AI & Automation",
+            features: ["Advanced AI assistant", "AI ordering workflows", "AI business insights", "Automated customer workflows", "Custom business automation", "Custom AI logic"]
+          },
+          {
+            category: "Payments & Integrations",
+            features: ["JazzCash", "Easypaisa", "Card/payment gateways", "Supported POS integrations", "Custom APIs", "Third-party services"]
+          },
+          {
+            category: "Analytics",
+            features: ["Advanced revenue analytics", "Product performance", "Customer analytics", "Branch analytics", "Order-source analytics", "Conversion tracking", "Custom reporting"]
+          },
+          {
+            category: "Promotions",
+            features: ["Advanced offers", "Campaigns", "Coupon rules", "Branch-specific promotions", "Customer-targeted promotions"]
+          },
+          {
+            category: "Mobile App",
+            features: ["Custom iOS & Android application", "Advanced ordering", "Customer accounts", "Loyalty", "Push notifications", "Reservations", "Delivery features", "Payments", "Custom workflows", "Advanced API integration"]
+          },
+          {
+            category: "Custom Development",
+            features: ["Custom workflows", "Custom dashboards", "Custom modules", "Custom integrations", "Custom app functionality"]
+          },
+          {
+            category: "Performance & Deployment",
+            features: ["Advanced performance optimization", "Production infrastructure", "Hosting", "Deployment", "Monitoring", "Security configuration"]
+          },
+          {
+            category: "Support",
+            features: ["Custom support arrangement based on scope and managed plan"]
+          }
         ]
       }
-    ]
+    }
   }
 ];
-
 export const contactFaqs = [
   {
     question: "What should I prepare before booking a consultation?",
@@ -800,50 +1061,6 @@ export const aboutValues = [
 ];
 
 export const portfolioItems: PortfolioItem[] = [
-  {
-    slug: "savor-fine-dining",
-    title: "Savor Fine Dining",
-    category: "Restaurant",
-    clientType: "Fine Dining",
-    shortDescription: "An exquisite fine dining website designed to showcase a premium culinary experience, reservations, and elegant ambiance.",
-    overview:
-      "Savor Fine Dining required a highly sophisticated online presence that reflects the artistry of their dishes and simplifies the booking process for their exclusive clientele.",
-    industry: "Restaurant",
-    technologies: ["Next.js", "Tailwind CSS", "Animations", "Reservation API"],
-    features: ["Immersive visual galleries", "Streamlined reservation flow", "Seasonal menu showcases", "Mobile-optimized experience"],
-    image: "/images/Savorfinedining.avif",
-    imageAlt: "Savor Fine Dining website preview showing elegant culinary presentations and reservation features.",
-    liveHref: "https://savordining.vercel.app",
-    performance: "100/100 Core Web Vitals score",
-    results: ["Increased exclusive table bookings", "Enhanced digital brand elegance", "Frictionless mobile reservations"],
-    challenge: "Translating a high-end physical dining experience into a fast, visually stunning digital platform.",
-    goals: ["Showcase culinary artistry", "Streamline VIP reservations", "Elevate digital brand perception"],
-    design: "Elegant, minimalist layout with high-resolution imagery and sophisticated typography to reflect a premium atmosphere.",
-    development:
-      "Built with a focus on performance and smooth transitions, integrating a seamless booking API while maintaining flawless Core Web Vitals.",
-  },
-  {
-    slug: "the-loch-and-the-tyne",
-    title: "The Loch & the Tyne",
-    category: "Restaurant",
-    clientType: "Gastropub",
-    shortDescription: "A quintessentially British gastropub website showcasing seasonal menus, private events, and a refined countryside dining experience.",
-    overview:
-      "The Loch & the Tyne required a sophisticated digital presence to highlight their sustainable British cuisine, showcase their regularly changing seasonal menus, and facilitate seamless reservations for their quintessential gastropub.",
-    industry: "Restaurant",
-    technologies: ["Next.js", "Tailwind CSS", "Booking API", "Performance"],
-    features: ["Seasonal menu showcases", "Private event booking", "Online shop integration", "Mobile-optimized experience"],
-    image: "/images/the_loch_and_tyne.avif",
-    imageAlt: "The Loch & the Tyne website preview showing elegant British gastropub cuisine and dining spaces.",
-    liveHref: "https://the-loch-the-tyne.vercel.app/",
-    performance: "100/100 Core Web Vitals score",
-    results: ["Increased private dining bookings", "Streamlined reservation flow", "Elevated digital brand experience"],
-    challenge: "Translating a refined, sustainable countryside gastropub experience into a modern, fast digital platform.",
-    goals: ["Highlight sustainable British cuisine", "Streamline reservations and private events", "Enhance online shop visibility"],
-    design: "Refined, rustic elegance paired with high-quality culinary photography to reflect the gastropub's atmosphere.",
-    development:
-      "Built with a focus on seamless navigation between menus, events, and their online shop, maintaining high performance and clear typography.",
-  },
   {
     slug: "hambrg",
     title: "Hambrg",
@@ -903,6 +1120,50 @@ export const portfolioItems: PortfolioItem[] = [
     goals: ["Capture the cozy dining atmosphere", "Drive online orders", "Enhance local SEO"],
     design: "Warm, inviting colors paired with rustic textures and clear categorical navigation.",
     development: "Built a flexible menu architecture allowing customers to easily customize their pizzas online.",
+  },
+  {
+    slug: "savor-fine-dining",
+    title: "Savor Fine Dining",
+    category: "Restaurant",
+    clientType: "Fine Dining",
+    shortDescription: "An exquisite fine dining website designed to showcase a premium culinary experience, reservations, and elegant ambiance.",
+    overview:
+      "Savor Fine Dining required a highly sophisticated online presence that reflects the artistry of their dishes and simplifies the booking process for their exclusive clientele.",
+    industry: "Restaurant",
+    technologies: ["Next.js", "Tailwind CSS", "Animations", "Reservation API"],
+    features: ["Immersive visual galleries", "Streamlined reservation flow", "Seasonal menu showcases", "Mobile-optimized experience"],
+    image: "/images/Savorfinedining.avif",
+    imageAlt: "Savor Fine Dining website preview showing elegant culinary presentations and reservation features.",
+    liveHref: "https://savordining.vercel.app",
+    performance: "100/100 Core Web Vitals score",
+    results: ["Increased exclusive table bookings", "Enhanced digital brand elegance", "Frictionless mobile reservations"],
+    challenge: "Translating a high-end physical dining experience into a fast, visually stunning digital platform.",
+    goals: ["Showcase culinary artistry", "Streamline VIP reservations", "Elevate digital brand perception"],
+    design: "Elegant, minimalist layout with high-resolution imagery and sophisticated typography to reflect a premium atmosphere.",
+    development:
+      "Built with a focus on performance and smooth transitions, integrating a seamless booking API while maintaining flawless Core Web Vitals.",
+  },
+  {
+    slug: "the-loch-and-the-tyne",
+    title: "The Loch & the Tyne",
+    category: "Restaurant",
+    clientType: "Gastropub",
+    shortDescription: "A quintessentially British gastropub website showcasing seasonal menus, private events, and a refined countryside dining experience.",
+    overview:
+      "The Loch & the Tyne required a sophisticated digital presence to highlight their sustainable British cuisine, showcase their regularly changing seasonal menus, and facilitate seamless reservations for their quintessential gastropub.",
+    industry: "Restaurant",
+    technologies: ["Next.js", "Tailwind CSS", "Booking API", "Performance"],
+    features: ["Seasonal menu showcases", "Private event booking", "Online shop integration", "Mobile-optimized experience"],
+    image: "/images/the_loch_and_tyne.avif",
+    imageAlt: "The Loch & the Tyne website preview showing elegant British gastropub cuisine and dining spaces.",
+    liveHref: "https://the-loch-the-tyne.vercel.app/",
+    performance: "100/100 Core Web Vitals score",
+    results: ["Increased private dining bookings", "Streamlined reservation flow", "Elevated digital brand experience"],
+    challenge: "Translating a refined, sustainable countryside gastropub experience into a modern, fast digital platform.",
+    goals: ["Highlight sustainable British cuisine", "Streamline reservations and private events", "Enhance online shop visibility"],
+    design: "Refined, rustic elegance paired with high-quality culinary photography to reflect the gastropub's atmosphere.",
+    development:
+      "Built with a focus on seamless navigation between menus, events, and their online shop, maintaining high performance and clear typography.",
   },
   {
     slug: "voila-cafe",
@@ -966,7 +1227,6 @@ export const portfolioItems: PortfolioItem[] = [
     development:
       "Implemented advanced edge caching and image optimization to ensure lightning-fast load times regardless of the user's global location.",
   },
-
   {
     slug: "restaurant-ai-receptionist-chatbot",
     title: "Restaurant AI Assistant",
@@ -988,7 +1248,7 @@ export const portfolioItems: PortfolioItem[] = [
     design: "Clean, dark-mode messaging interface with easy quick-reply buttons for reservations, hours, and menu.",
     development:
       "Developed with a responsive React frontend, Express/Node backend, and direct integration with Gemini AI API for structured menu and booking responses.",
-  },
+  }
 ];
 
 export const portfolioFilters = [

@@ -11,14 +11,16 @@ import Bot from "lucide-react/dist/esm/icons/bot";
 import Sparkles from "lucide-react/dist/esm/icons/sparkles";
 import Zap from "lucide-react/dist/esm/icons/zap";
 import Loader2 from "lucide-react/dist/esm/icons/loader-2";
+import ShoppingBag from "lucide-react/dist/esm/icons/shopping-bag";
+import Calculator from "lucide-react/dist/esm/icons/calculator";
 import { siteConfig } from "@/data/site-content";
 
 const trustItems = [
-  { label: "95+ Page Speed", icon: Zap },
+  { label: "Online Ordering", icon: ShoppingBag },
+  { label: "POS & KDS", icon: Calculator },
   { label: "AI Receptionist", icon: Bot },
+  { label: "95+ Page Speed", icon: Zap },
   { label: "Local SEO & Maps", icon: SearchCheck },
-  { label: "Mobile-First Menus", icon: Sparkles },
-  { label: "Secure SSL Hosting", icon: ShieldCheck },
 ];
 
 export function HeroSection() {
@@ -74,13 +76,13 @@ export function HeroSection() {
               <span className="block text-accent mt-0.5">- That Fill Tables.</span>
             </span>
             <span className="hidden sm:block text-[clamp(2.2rem,4vw,3.5rem)] font-semibold leading-[1.12] tracking-[-0.04em]">
-              <span className="block">Premium Websites for Restaurants</span>
-              <span className="block">— Built to Fill Your Tables.</span>
+              <span className="block">Digital Solutions for Restaurants</span>
+              <span className="block">— Built to Drive Growth.</span>
             </span>
           </h1>
 
           <p className="mx-auto max-w-[840px] text-pretty text-sm leading-[1.65] text-foreground-body sm:text-[clamp(1.05rem,1.8vw,1.125rem)]">
-            High-performance restaurant websites with interactive menus, online reservation integrations, and 24/7 AI-powered booking assistants.
+            From websites and online ordering to POS, kitchen management, delivery, and AI assistants—we build connected digital systems for modern restaurants.
           </p>
         </div>
 
