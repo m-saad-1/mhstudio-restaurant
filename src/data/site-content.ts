@@ -163,34 +163,34 @@ export const stats: Metric[] = [
 
 export const whyChooseItems = [
   {
-    title: "Speed & Performance",
-    problem: "Guests won't wait for a slow menu to load.",
-    solution: "MhStudio builds ultra-fast, lightweight pages so customers can view your menu and book tables instantly, even on poor mobile connections.",
+    title: "All-in-One Dashboard",
+    problem: "Managing multiple tools for orders, menus, and website is chaotic.",
+    solution: "We unify your entire digital operation. Manage your website content, online orders, table reservations, and menus from a single, intuitive screen.",
   },
   {
-    title: "Mobile-First Menus",
-    problem: "Most guests search for your restaurant on their phone.",
-    solution: "Our digital menus and reservation flows are designed specifically for fingers on screens, ensuring a seamless booking experience on the go.",
+    title: "Zero Upfront Costs",
+    problem: "Custom restaurant technology typically requires massive investment.",
+    solution: "Our Managed Plans offer a fully customized, premium digital platform with zero setup fees, giving you enterprise-grade tech on a simple subscription.",
   },
   {
-    title: "Local SEO & Maps",
-    problem: "A beautiful site is useless if hungry customers can't find you.",
-    solution: "We implement advanced local schema markup and Google Maps integrations to ensure you rank high when people search for food near them.",
+    title: "AI-Powered Assistant",
+    problem: "Staff miss calls and messages during busy service hours.",
+    solution: "We integrate smart AI receptionists that handle booking assistance, answer menu inquiries, and log customer requests 24/7 via chat or WhatsApp.",
   },
   {
-    title: "Self-Managed Menus",
-    problem: "You shouldn't need a developer to change a price or add a special.",
-    solution: "We design simple, intuitive admin panels allowing you to update dishes, prices, and announcements in real-time with zero technical skills.",
+    title: "Built-In Ordering",
+    problem: "Third-party delivery apps eat away at your profit margins.",
+    solution: "Deploy a native ordering system for delivery and takeaway, driving direct sales straight to your dashboard without the high commission fees.",
   },
   {
-    title: "AI-Powered Assistants",
-    problem: "Missing reservation inquiries during busy hours costs revenue.",
-    solution: "We integrate smart AI receptionists that handle booking assistance, answer FAQ questions about dietary options, and log inquiries 24/7.",
+    title: "Multi-Branch Ready",
+    problem: "Scaling your brand online creates fragmented data and menus.",
+    solution: "Our platform easily scales from one to many locations, allowing you to centralize menus, track branch analytics, and maintain brand consistency.",
   },
   {
-    title: "Stunning Food Showcases",
-    problem: "Low-quality or poorly displayed photos make your food look unappetizing.",
-    solution: "We build premium visual galleries and showcases that highlight your culinary artistry, interior ambiance, and brand story.",
+    title: "Fully Managed Tech",
+    problem: "Servers crash, domains expire, and software gets outdated.",
+    solution: "We completely manage your hosting, security, and performance optimizations. You focus on the food, and we make sure your platform never goes down.",
   },
 ];
 
@@ -1034,9 +1034,9 @@ export const contactFaqs = [
 ];
 
 export const aboutValues = [
-  "Culinary storytelling that translates your physical atmosphere to the screen.",
-  "Mobile performance that ensures guests can view your menu instantly anywhere.",
-  "Seamless automated systems that keep your tables filled without distracting your team.",
+  "Unified technology that brings your entire restaurant operation into one clear dashboard.",
+  "Smart automation that handles routine guest interactions and bookings 24/7.",
+  "Transparent, manageable pricing with zero upfront costs for a premium digital platform.",
 ];
 
 export const portfolioItems: PortfolioItem[] = [
