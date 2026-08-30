@@ -27,10 +27,10 @@ export default function ProcessPage() {
   return (
     <>
       <PageHero
-        eyebrow="Workflow & Methodology"
-        title="A structured workflow built for clarity."
-        description="From digital menus to custom reservation platforms, our process guarantees clear steps, fixed timelines, and high-performance launches."
-        primaryCta={{ label: "Start Your Project", href: "/contact" }}
+        eyebrow="Onboarding & Setup"
+        title="A streamlined path to launching your platform."
+        description="From digital menus to custom AI receptionists, our setup guarantees clear steps, rapid timelines, and a high-performance system."
+        primaryCta={{ label: "View Pricing", href: "/pricing" }}
         secondaryCta={{ label: "View Our Work", href: "/work" }}
       />
 
@@ -38,9 +38,9 @@ export default function ProcessPage() {
       <Reveal as="section" className="section-space section-divider">
         <div className="content-shell space-y-10">
           <SectionHeading
-            eyebrow="The Core Process"
+            eyebrow="The Onboarding Process"
             title="Six steps to launch."
-            description="Our step-by-step roadmap for building high-speed digital platforms."
+            description="Our straightforward roadmap to deploying your unified restaurant platform."
           />
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {corePhases.map((phase, index) => {
@@ -80,9 +80,9 @@ export default function ProcessPage() {
       <Reveal as="section" className="section-space section-divider">
         <div className="content-shell space-y-10">
           <SectionHeading
-            eyebrow="Development Paths"
-            title="Tailored development paths."
-            description="We customize our workflow to match your exact goals and business size."
+            eyebrow="Deployment Paths"
+            title="Tailored deployment paths."
+            description="We customize our setup to match the exact package you choose and your business size."
           />
           <div className="grid gap-6">
             {developmentPaths.map((path, index) => (
@@ -211,10 +211,10 @@ export default function ProcessPage() {
             <div className="relative space-y-5 max-w-3xl">
               <span className="eyebrow mx-auto">Ready to grow?</span>
               <h2 className="text-[2rem] font-semibold leading-[1.1] text-foreground sm:text-[2.8rem]">
-                Let's Build It
+                Ready to Launch?
               </h2>
               <p className="text-base leading-[1.7] text-foreground-body sm:text-lg">
-                Whether launching your first site, building a custom web application, or integrating AI assistants, our structured process ensures a fast, transparent path to growth.
+                Whether deploying a basic digital menu, a native ordering system, or an advanced AI receptionist, our clear setup process guarantees a fast, transparent path to scaling your restaurant.
               </p>
               <div className="pt-4">
                 <Link href="/contact" className="button-primary px-8 text-sm sm:w-auto">

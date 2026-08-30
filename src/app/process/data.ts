@@ -3,151 +3,151 @@ import { type LucideIcon } from "lucide-react";
 export const corePhases = [
   {
     step: "01",
-    title: "Discovery & Strategy",
-    tagline: "Understand your brand.",
-    description: "We begin by learning about your restaurant's brand, culinary concept, location, and guest booking goals. This stage ensures every technical decision aligns with your business objectives.",
-    activities: ["Concept consultation", "Guest profile mapping", "Competitor menu research", "Third-party platform check", "Project roadmap", "Launch estimation"],
+    title: "Discovery & Plan Selection",
+    tagline: "Finding the right fit.",
+    description: "We review your operational needs—from online ordering to table reservations—and help you select the managed tier or custom plan that best suits your restaurant.",
+    activities: ["Workflow assessment", "Feature mapping", "Plan selection", "Timeline setting"],
     icon: "search"
   },
   {
     step: "02",
-    title: "Planning & Architecture",
-    tagline: "Structure the guest path.",
-    description: "Before writing code, we structure your digital menu, define the reservation path, and map out location pages to optimize user conversion.",
-    activities: ["Menu architecture", "Reservation user flows", "Location page layouts", "SEO keyword strategy", "Feature prioritization", "Content gathering"],
+    title: "Onboarding & Dashboard Setup",
+    tagline: "Your command center.",
+    description: "We provision your centralized dashboard, connecting your website, menus, and incoming order pipelines so everything lives in one secure place.",
+    activities: ["Account creation", "Menu data gathering", "Branch configuration", "Dashboard handover"],
     icon: "layers"
   },
   {
     step: "03",
-    title: "Design",
-    tagline: "Capture the atmosphere.",
-    description: "We create a premium visual system that highlights your culinary artistry, showcases your dining room space, and makes booking intuitive.",
-    activities: ["Visual identity design", "Mobile menu prototypes", "Food gallery styling", "Typography selection", "Client review & feedback"],
+    title: "Design & Customization",
+    tagline: "Your brand, elevated.",
+    description: "We apply a premium visual system tailored to your restaurant's brand, ensuring your digital presence perfectly matches your dining atmosphere.",
+    activities: ["Visual branding setup", "Mobile menu optimization", "Layout styling", "Content population"],
     icon: "palette"
   },
   {
     step: "04",
-    title: "Development",
-    tagline: "Build with speed.",
-    description: "We translate the designs into responsive, fast-loading pages and integrate reservation widgets, digital menus, and custom restaurant AI tools.",
-    activities: ["Fast-loading frontend", "Digital menu coding", "Booking system integration", "Restaurant AI setup", "Analytics configuration"],
-    icon: "code-xml"
+    title: "AI & System Integration",
+    tagline: "Connecting the smart tools.",
+    description: "We activate core functionalities: native online ordering, the AI Receptionist for 24/7 guest queries, and deep analytics tracking.",
+    activities: ["Ordering flow integration", "AI Assistant training", "Analytics setup", "Payment gateway linking"],
+    icon: "bot"
   },
   {
     step: "05",
-    title: "Testing & Optimization",
-    tagline: "Flawless checkouts.",
-    description: "We thoroughly test menu navigation, booking forms, page performance, and mobile layout before going live.",
-    activities: ["Menu usability testing", "Reservation flow validation", "Mobile responsiveness check", "Image loading optimization", "Local SEO health check"],
+    title: "Testing & Training",
+    tagline: "Ready for traffic.",
+    description: "We rigorously test ordering flows and provide a quick onboarding session to ensure your team is confident using the new dashboard.",
+    activities: ["End-to-end order testing", "Mobile usability checks", "Staff dashboard training", "Final client review"],
     icon: "shield-check"
   },
   {
     step: "06",
-    title: "Launch & Growth",
-    tagline: "Welcome guests online.",
-    description: "Your site goes live with Google Maps sync, and we hand over simple tools so you can update your menu, prices, and announcements in real-time.",
-    activities: ["Vercel deployment", "Domain & SSL config", "Google Maps sync", "Dashboard walkthrough", "Ongoing menu support"],
+    title: "Launch & Ongoing Support",
+    tagline: "Go live flawlessly.",
+    description: "Your platform goes live with zero upfront costs on managed plans. We continue to provide premium hosting, security, and technical support as you grow.",
+    activities: ["Domain connection", "Live deployment", "Google Maps sync", "Ongoing system updates"],
     icon: "rocket"
   }
 ];
 
 export const developmentPaths = [
   {
-    title: "Single-Location Restaurant",
-    description: "Ideal for independent bistros, neighborhood eateries, cafes, and food trucks looking for a premium online home.",
-    timeline: "2–3 weeks",
-    steps: ["Discovery", "Menu Design", "Development", "Booking Integration", "Launch"],
+    title: "Launch Plan (Fast Track)",
+    description: "Perfect for independent eateries needing a premium digital menu, fast ordering, and reservation integration immediately.",
+    timeline: "2–4 days",
+    steps: ["Selection", "Menu Setup", "Design Apply", "Launch"],
   },
   {
-    title: "Multi-Location & Group Site",
-    description: "Tailored for restaurant groups, franchises, and hospitality brands managing multiple locations and menus.",
-    timeline: "4–6 weeks",
-    steps: ["Discovery", "Group Strategy", "Location Routing", "Shared Assets System", "Centralized CMS", "Launch"],
+    title: "Growth Plan",
+    description: "Ideal for busy restaurants needing native delivery flows, basic AI queries, and customer loyalty features.",
+    timeline: "3–7 days",
+    steps: ["Selection", "Ordering Flow", "AI Setup", "Loyalty Config", "Launch"],
   },
   {
-    title: "AI-Enhanced Digital Experience",
-    description: "For forward-thinking restaurants looking to integrate AI receptionists, SMS booking alerts, and interactive menus.",
-    timeline: "3–5 weeks",
-    steps: ["Brand Strategy", "AI Personality Training", "Interactive Menu Setup", "Booking Automation", "Integration", "Launch"],
+    title: "Scale AI & Multi-Branch",
+    description: "Built for expanding operations. Centralizes menus across locations and deploys an advanced AI Receptionist for full automation.",
+    timeline: "1–2 weeks",
+    steps: ["Multi-Branch Setup", "Advanced AI Training", "Staff Training", "Launch"],
   },
   {
-    title: "Catering & Events Platform",
-    description: "Built for venues, upscale caterers, and private dining rooms needing custom inquiry and proposal management.",
-    timeline: "3–4 weeks",
-    steps: ["Inquiry Mapping", "Package Showcase Design", "Booking Pipeline Setup", "Client Dashboard", "Testing", "Launch"],
+    title: "Custom Enterprise Build",
+    description: "Tailored iOS/Android apps, custom POS integrations, and completely bespoke architectural needs for large hospitality groups.",
+    timeline: "2–4+ weeks",
+    steps: ["Deep Discovery", "Custom Development", "App Store Submission", "Rollout"],
   }
 ];
 
 export const clientInvolvement = [
   {
-    title: "Regular Menu & Layout Updates",
-    description: "We share staging links so you can watch your menus and layouts come together.",
-    icon: "calendar",
+    title: "Zero Development Hassle",
+    description: "We handle the code and infrastructure. You just provide the menu and branding.",
+    icon: "code-xml",
   },
   {
-    title: "Tasting & Review Milestones",
-    description: "Review key design drafts and menu organization before we begin coding.",
-    icon: "message-square-quote",
-  },
-  {
-    title: "Clear Project Deliverables",
-    description: "No hidden development or unexpected reservation setup surprises.",
+    title: "Clear Setup Milestones",
+    description: "No hidden fees or unexpected integration delays. Everything is clearly mapped.",
     icon: "refresh-cw",
   },
   {
-    title: "Menu & Detail Tweaks",
-    description: "We accommodate minor pricing or ingredient updates throughout the process.",
-    icon: "git-merge",
+    title: "Rapid Dashboard Access",
+    description: "Get early access to your dashboard to review orders and manage items before going live.",
+    icon: "monitor",
+  },
+  {
+    title: "Continuous Partnership",
+    description: "Our managed plans mean we are always available for technical updates and support.",
+    icon: "message-square-quote",
   }
 ];
 
 export const qualityAssurance = [
-  { title: "Menu Usability", icon: "utensils-crossed" },
-  { title: "Responsive Testing", icon: "monitor-smartphone" },
-  { title: "Image Loading Speed", icon: "zap" },
-  { title: "Local SEO Validation", icon: "search" },
-  { title: "Cross-Device Checks", icon: "smartphone" },
-  { title: "SSL & Security", icon: "shield-check" },
-  { title: "Schema Markup", icon: "search-check" },
-  { title: "Booking Verification", icon: "calendar" }
+  { title: "Native Order Flow", icon: "utensils-crossed" },
+  { title: "Dashboard Usability", icon: "monitor-smartphone" },
+  { title: "AI Query Accuracy", icon: "bot" },
+  { title: "Mobile Menu Speed", icon: "zap" },
+  { title: "Secure Payments", icon: "shield-check" },
+  { title: "Local SEO Setup", icon: "search" },
+  { title: "Multi-Branch Sync", icon: "git-merge" },
+  { title: "Booking Integration", icon: "calendar" }
 ];
 
 export const processFaqs = [
   {
-    question: "How long does a restaurant project take?",
-    answer: "A single-location site typically takes 2-4 weeks, while larger groups with multi-location routing or advanced AI reservation features take 4-6 weeks."
+    question: "How long does it take to get my restaurant online?",
+    answer: "With our streamlined platform, a Launch plan can be live in 2-4 days. More advanced setups like the Scale AI plan take 1-2 weeks."
   },
   {
-    question: "Can you work with our existing reservation platform?",
-    answer: "Yes. We seamlessly integrate with all major booking platforms including OpenTable, Resy, SevenRooms, Tock, and standard contact forms."
+    question: "Do I have to pay thousands of dollars upfront?",
+    answer: "No. Our Managed Monthly and Yearly plans have zero upfront setup fees. You get an enterprise-grade platform on a simple subscription model."
   },
   {
-    question: "Will we be able to update menu prices and items ourselves?",
-    answer: "Absolutely. We build your site with a custom, user-friendly CMS so your staff can update dishes, edit prices, and post holiday hours in real-time."
+    question: "Will we be able to update menus and prices ourselves?",
+    answer: "Absolutely. Every plan includes access to a unified dashboard where you can edit menus, update pricing, and track orders instantly."
   },
   {
-    question: "Do you help with food photography and image optimization?",
-    answer: "While we don't shoot the photos directly, we guide you on what assets are needed and perform advanced compression to ensure your high-res food shots load instantly on mobile."
+    question: "How does the native ordering system help my margins?",
+    answer: "Native ordering means guests buy directly from your platform, allowing you to bypass the hefty 20-30% commissions charged by third-party delivery apps."
   },
   {
-    question: "What is restaurant schema markup and do we need it?",
-    answer: "Yes, it is structured code that helps search engines understand your menu items, opening hours, and location. We include it in every build so you rank higher in local search results."
+    question: "What does the AI Receptionist actually do?",
+    answer: "It acts as a 24/7 digital staff member. It can answer customer questions on WhatsApp or your website regarding business hours, allergens, or parking, and help them place orders or book tables."
   },
   {
-    question: "How do AI receptionist features benefit our restaurant?",
-    answer: "They handle repetitive guest inquiries about dietary restrictions, reservation slots, or parking locations 24/7, reducing phone traffic for your busy front-of-house staff."
+    question: "What if I have multiple restaurant locations?",
+    answer: "Our higher-tier plans are built for multi-branch operations. You can control location-specific menus and track analytics across all branches from a single admin screen."
   },
   {
-    question: "Do you provide training on how to use the dashboard?",
-    answer: "Yes, we provide a video walkthrough and guide showing you exactly how to update menus, manage booking links, and post announcements."
+    question: "Do you handle hosting and servers?",
+    answer: "Yes, our managed plans include premium cloud hosting, SSL certificates, and performance monitoring. You don't need to worry about technical maintenance."
   }
 ];
 
 export const techTimeline = [
-  { stage: "Planning", tech: "Figma, Notion, Brand Assets", icon: "palette" },
-  { stage: "Frontend", tech: "React, Next.js, Tailwind CSS", icon: "monitor" },
-  { stage: "Integration", tech: "OpenTable, Resy, Toast APIs", icon: "plug" },
-  { stage: "Database & CMS", tech: "Supabase, Sanity CMS, Payload", icon: "database" },
-  { stage: "AI Features", tech: "Gemini AI, OpenAI API, Chatbots", icon: "bot" },
-  { stage: "Deployment", tech: "Vercel, Cloudflare, SSL", icon: "cloud" }
+  { stage: "Infrastructure", tech: "Vercel, Cloudflare, Next.js", icon: "cloud" },
+  { stage: "Platform Core", tech: "React, Tailwind CSS, TypeScript", icon: "monitor" },
+  { stage: "Data & Menus", tech: "Centralized CMS, Fast Edge Data", icon: "database" },
+  { stage: "AI & Automation", tech: "Gemini AI, OpenAI API, WhatsApp", icon: "bot" },
+  { stage: "Payments & Orders", tech: "Native Cart, Secure Gateways", icon: "plug" },
+  { stage: "Analytics", tech: "Custom Dashboards, Insight Tracking", icon: "search-check" }
 ];
