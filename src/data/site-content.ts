@@ -456,39 +456,39 @@ export const websiteFeatures = [
 export const processSteps = [
   {
     step: "01",
-    title: "Discovery",
-    description: "We learn about your brand, menu specialties, location, and guest booking goals.",
-    bullets: ["Restaurant goals", "Guest profile", "Brand identity"],
+    title: "Discovery & Plan Selection",
+    description: "We review your operational needs—from reservations to delivery—and select the best package for your restaurant.",
+    bullets: ["Workflow assessment", "Package selection", "Feature mapping"],
   },
   {
     step: "02",
-    title: "Planning",
-    description: "We structure the online menu, reservation paths, and map out location pages.",
-    bullets: ["Menu architecture", "Booking flows", "CTA placements"],
+    title: "Onboarding & Dashboard Setup",
+    description: "We set up your centralized dashboard and begin migrating your menu, pricing, and restaurant details.",
+    bullets: ["Dashboard creation", "Menu migration", "Branch setup"],
   },
   {
     step: "03",
-    title: "Design",
-    description: "We create a premium visual system that highlights your dishes and captures your dining room ambiance.",
-    bullets: ["Visual branding", "Food photography prep", "Mobile menu layout"],
+    title: "Design & Customization",
+    description: "We apply a premium visual system tailored to your brand, ensuring it perfectly captures your dining atmosphere.",
+    bullets: ["Visual branding", "Mobile optimization", "Layout customization"],
   },
   {
     step: "04",
-    title: "Development",
-    description: "We build your custom responsive pages, optimize images, and integrate booking systems.",
-    bullets: ["Fast-loading menus", "Third-party bookings", "Local SEO structure"],
+    title: "AI & System Integration",
+    description: "We connect the core components: online ordering, AI Receptionist, table management, and analytics.",
+    bullets: ["Ordering flow", "AI Assistant setup", "Analytics tracking"],
   },
   {
     step: "05",
-    title: "Testing",
-    description: "We test menu interactions, booking flows, page performance, and mobile layout.",
-    bullets: ["Menu usability test", "Booking checks", "Performance optimization"],
+    title: "Testing & Handover",
+    description: "We rigorously test ordering and booking flows and provide a quick walkthrough of your new centralized dashboard.",
+    bullets: ["Usability testing", "Order flow checks", "Dashboard training"],
   },
   {
     step: "06",
-    title: "Launch",
-    description: "Your site goes live with Google Maps sync, analytics, and self-managed menu support.",
-    bullets: ["Domain connection", "Analytics setup", "Dashboard handover"],
+    title: "Launch & Ongoing Support",
+    description: "Your platform goes live in as little as 2 days, backed by our continuous hosting and technical support.",
+    bullets: ["Domain connection", "Go-live", "Continuous support"],
   },
 ];
 
@@ -502,57 +502,39 @@ export const technologyGroups = [
 
 export const faqs = [
   {
-    question: "How long does a restaurant website take?",
-    answer:
-      "A standard restaurant website takes 2-4 weeks, while larger groups requiring multi-location support or advanced AI reservation features take 4-6 weeks.",
+    question: "How long does it take to launch my restaurant platform?",
+    answer: "With our streamlined setup, we can launch your digital platform and website in as little as 2 to 7 days depending on your selected tier. Custom enterprise solutions typically take 1 to 2+ weeks.",
   },
   {
-    question: "Can you redesign our existing restaurant website?",
-    answer:
-      "Yes. We can update outdated designs, optimize your menu for mobile viewing, and migrate you to a faster, modern stack to improve reservation conversion rates.",
+    question: "What is the difference between Managed Plans and One-Time Ownership?",
+    answer: "Managed Plans (Monthly/Yearly) include zero upfront fees, cloud hosting, and ongoing technical support for as long as you are subscribed. One-Time Ownership means you pay a single fee to own the system outright, with self-managed hosting.",
   },
   {
-    question: "Do you offer post-launch support and maintenance?",
-    answer:
-      "Absolutely. We offer ongoing maintenance packages to handle regular menu changes, holiday hours, price updates, and technical performance checks.",
+    question: "Do you provide a dashboard to manage my restaurant?",
+    answer: "Yes. Every package includes access to a centralized dashboard where you can manage your menus, track online and dine-in orders, control inventory, and monitor analytics all from one screen.",
   },
   {
-    question: "Will I be able to manage the platform after launch?",
-    answer:
-      "Yes. We provide a simple, intuitive custom dashboard so you or your staff can update menu items, prices, photos, and announce special events in minutes.",
+    question: "Does your system handle online delivery and takeaway orders?",
+    answer: "Absolutely. The platform features native cart functionality, product modifiers, and a direct ordering flow. You receive delivery and takeaway requests straight into your dashboard or via WhatsApp.",
   },
   {
-    question: "Do you handle hosting and cloud deployment?",
-    answer:
-      "Yes. We set up fast, secure, and production-ready hosting environments on modern networks like Vercel and Cloudflare, complete with SSL certificates.",
-  },
-  {
-    question: "How do you ensure the product performs well?",
-    answer:
-      "Performance is critical for mobile visitors. We optimize every image of your dishes, write lean code, and ensure near-perfect page speeds so customers stay engaged.",
-  },
-  {
-    question: "Can you integrate our existing reservation and booking systems?",
-    answer:
-      "Yes. We can seamlessly embed widgets or connect APIs for OpenTable, Resy, SevenRooms, or standard calendar booking tools directly into your layout.",
+    question: "Can I get a custom mobile app for my restaurant?",
+    answer: "Yes, we offer fully branded, cross-platform iOS and Android customer apps. These apps sync directly with your restaurant's core management system to offer push notifications and loyalty features.",
   },
 ];
 
 export const leftFaqs = [
   {
-    question: "Can you design a website that handles multiple locations?",
-    answer:
-      "Yes. We build centralized systems that showcase all of your restaurant locations, featuring location-specific menus, localized reservation links, and Google Map details for each branch.",
+    question: "Can your system handle multiple restaurant branches?",
+    answer: "Yes. Our Growth, Scale AI, and Custom packages support multi-branch management. You can control branch-specific menus, process orders per location, and view centralized analytics.",
   },
   {
-    question: "How does the AI Reservation Assistant work?",
-    answer:
-      "Our AI assistants can be integrated into your website or WhatsApp. They answer customer queries about hours, parking, or menu ingredients and help them secure table bookings instantly.",
+    question: "What does the AI Restaurant Assistant do?",
+    answer: "The AI assistant acts as a 24/7 receptionist. It answers guest queries regarding business hours, location, and menu ingredients, while intelligently guiding them to book tables or place orders.",
   },
   {
-    question: "Will our online menu load fast on slow cellular networks?",
-    answer:
-      "Yes. We use aggressive image optimization and modern static generation techniques, meaning your digital menus load in milliseconds, even on slow mobile connections.",
+    question: "Are there any hidden costs or setup fees?",
+    answer: "No. If you choose our Managed Monthly or Yearly plans, there are zero upfront setup fees. You simply pay the subscription rate to keep your platform active, hosted, and fully supported.",
   },
 ];
 
@@ -1038,19 +1020,16 @@ export const pricingPackages = [
 ];
 export const contactFaqs = [
   {
-    question: "What should I prepare before booking a consultation?",
-    answer:
-      "Bring your restaurant's story, menu concept, food photography if available, links to websites you admire, and your target opening or launch timeline.",
+    question: "What happens after I request a demo or consultation?",
+    answer: "We will review your requirements and schedule a brief discovery call to demonstrate how our restaurant platform, AI tools, and dashboard can streamline your operations and drive online sales.",
   },
   {
-    question: "Do you build websites for single-location restaurants or food trucks?",
-    answer:
-      "Yes. We design and build sites of all sizes—whether you're a single neighborhood bistro, a local food truck, or an expansive multi-location hospitality group.",
+    question: "Can you migrate our existing menu and data?",
+    answer: "Yes. Our onboarding team can help migrate your existing menu items, prices, and high-quality photography directly into the new dashboard so you can launch effortlessly.",
   },
   {
-    question: "What happens after I send the contact form?",
-    answer:
-      "We will schedule a quick discovery call to discuss your menu style, reservation requirements, design preferences, and set a clear timeline for your launch.",
+    question: "Do you build platforms for single-location restaurants or food trucks?",
+    answer: "Yes. We design and build systems for operations of all sizes—whether you're a single neighborhood bistro, a local food truck, or an expansive multi-location franchise.",
   },
 ];
 
