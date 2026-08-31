@@ -159,7 +159,7 @@ Get your restaurant online with a professional website, digital menu, direct ord
 * Local SEO Setup
 * Performance Optimization
 * Hosting & Deployment
-* 30 Days Post-Launch Support
+* Ongoing Support on Managed Plans
 
 ### Website + App Adds
 

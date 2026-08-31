@@ -565,7 +565,7 @@ export const pricingPackages = [
           "Local SEO Setup",
           "Performance Optimization",
           "Hosting & Deployment",
-          "30 Days Post-Launch Support"
+          "Ongoing Support on Managed Plans"
         ],
         modalDetails: [
           {
@@ -635,7 +635,7 @@ export const pricingPackages = [
           "Order Status",
           "Push Notifications",
           "App Deployment Support",
-          "30 Days Post-Launch Support"
+          "Ongoing Support on Managed Plans"
         ],
         modalDetails: [
           {
