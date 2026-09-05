@@ -14,7 +14,7 @@ export default function PricingPage() {
       <PageHero
         eyebrow="Pricing"
         title="No upfront fees on managed plans."
-        description="Get your restaurant website and digital platform without a large upfront investment. Choose a managed monthly plan, save more with yearly billing, or own your system with a one-time implementation."
+        description="Get your restaurant website and digital platform without a large upfront investment. Choose a managed monthly plan, or save more with yearly billing."
         primaryCta={{ label: "Start Your Project", href: "/contact" }}
         secondaryCta={{ label: "View Services", href: "/services" }}
       />

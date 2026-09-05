@@ -25,11 +25,11 @@ export function PricingGrid() {
             <span className="text-amber-200 text-[10px] font-bold bg-amber-500/10 px-2 py-1 rounded-full border border-amber-500/20 tracking-wider uppercase whitespace-nowrap">Lifetime Price Lock</span>
           </div>
           <div className="h-2 w-full bg-black/40 rounded-full overflow-hidden relative z-10 border border-white/5 flex mt-1">
-            <div className="h-full bg-amber-500 w-[60%] rounded-full shadow-[0_0_10px_rgba(245,158,11,0.5)]"></div>
+            <div className="h-full bg-amber-500 w-[70%] rounded-full shadow-[0_0_10px_rgba(245,158,11,0.5)]"></div>
           </div>
           <div className="flex justify-between relative z-10 mt-1 items-center">
-            <span className="text-xs text-amber-200/80 font-medium">8 spots left</span>
-            <span className="text-[10px] text-foreground-muted uppercase tracking-wider font-semibold">12/20 claimed</span>
+            <span className="text-xs text-amber-200/80 font-medium">6 spots left</span>
+            <span className="text-[10px] text-foreground-muted uppercase tracking-wider font-semibold">14/20 claimed</span>
           </div>
         </div>
       </div>
@@ -64,12 +64,6 @@ export function PricingGrid() {
             className={`rounded-full px-5 py-2 text-sm font-medium transition-colors ${billingCycle === "yearly" ? "bg-amber-500/20 text-amber-400 border border-amber-500/30 shadow-[0_0_15px_rgba(245,158,11,0.15)]" : "text-foreground-muted hover:text-foreground border border-transparent"}`}
           >
             Yearly
-          </button>
-          <button
-            onClick={() => setBillingCycle("onetime")}
-            className={`rounded-full px-5 py-2 text-sm font-medium transition-colors ${billingCycle === "onetime" ? "bg-amber-500/20 text-amber-400 border border-amber-500/30 shadow-[0_0_15px_rgba(245,158,11,0.15)]" : "text-foreground-muted hover:text-foreground border border-transparent"}`}
-          >
-            One Time
           </button>
         </div>
       </div>
