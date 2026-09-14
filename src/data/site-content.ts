@@ -274,164 +274,109 @@ export const serviceCards = [
   },
 ];
 
-export const serviceSections = [
+
+export const mainServices = [
   {
-    title: "Restaurant Management Systems",
-    description: "Complete centralized platforms that give restaurants control over orders, operations, customers, branches, staff, and business performance from one place.",
-    points: ["Centralized restaurant dashboard", "Multi-branch management", "Orders, operations & business control"],
+    title: "Restaurant Websites & Mobile Applications",
+    description: "Custom, high-performance websites and branded customer apps designed to showcase your restaurant and drive direct orders.",
+    points: ["Restaurant websites", "Customer ordering apps", "Branded digital presence", "Website + App ecosystem"],
+    icon: "monitor-smartphone",
+    href: "/services/restaurant-websites-and-apps"
+  },
+  {
+    title: "Restaurant Management Systems (RMS)",
+    description: "A centralized dashboard to control every aspect of your restaurant operations across one or multiple locations.",
+    points: ["Centralized restaurant dashboard", "Orders & Branches", "Customers & Staff", "Operations & Analytics"],
     icon: "building-2",
+    href: "/services/restaurant-management-systems"
   },
   {
     title: "Point of Sale (POS) Systems",
-    description: "Modern POS systems built to manage dine-in, takeaway, and delivery orders while keeping front-of-house operations fast and organized.",
-    points: ["Dine-in, takeaway & delivery orders", "Table & customer management", "Payments, billing & order processing"],
+    description: "Modern point-of-sale solutions for seamless billing, order processing, and table management.",
+    points: ["Dine-in, Takeaway & Delivery", "Billing & payments", "Tables & KOT", "Customer/order management"],
     icon: "calculator",
+    href: "/services/point-of-sale-systems"
   },
   {
     title: "Kitchen Display Systems (KDS)",
-    description: "Digital kitchen workflows that send orders directly to the kitchen, organize preparation, reduce mistakes, and keep staff aligned in real time.",
-    points: ["Real-time kitchen orders", "Preparation & status tracking", "KOT & kitchen workflow management"],
+    description: "Digital screens that replace paper tickets, organizing your kitchen workflow and preparation queue in real time.",
+    points: ["Digital kitchen tickets", "Order queue & Status management", "Preparation workflow", "KOT replacement/digitalization"],
     icon: "chef-hat",
+    href: "/services/kitchen-display-systems"
   },
   {
     title: "Online Ordering Systems",
-    description: "Branded online ordering experiences that let customers browse menus, customize items, choose delivery or pickup, and place orders directly with your restaurant.",
-    points: ["Cart & checkout flows", "Delivery & takeaway ordering", "Direct restaurant ordering"],
+    description: "Commission-free ordering experiences for pickup and delivery, directly integrated with your website and POS.",
+    points: ["Direct website & mobile ordering", "Pickup & Delivery", "Menu/customization", "Checkout, payments & order management"],
     icon: "shopping-bag",
+    href: "/services/online-ordering-systems"
   },
   {
-    title: "Delivery Management",
-    description: "Complete delivery workflows for managing delivery orders, zones, riders, assignments, statuses, and fulfillment from one platform.",
-    points: ["Delivery zones & fees", "Rider assignment & tracking", "Order fulfillment management"],
+    title: "Delivery & Fleet Management",
+    description: "Tools to manage your own delivery riders, track orders live, and streamline your dispatch operations.",
+    points: ["Own rider management", "Live delivery tracking & Dispatch", "Delivery zones & Delivery partners", "Rider assignment & performance"],
     icon: "bike",
+    href: "/services/delivery-and-fleet-management"
   },
   {
     title: "Dine-In & Table Management",
-    description: "Digital tools for managing restaurant tables, dine-in orders, guests, open checks, reservations, and table status throughout the service.",
-    points: ["Visual table management", "Open orders & table assignment", "Split bills & dine-in workflows"],
+    description: "Visual table management to optimize seating, handle open checks, and improve the dine-in guest experience.",
+    points: ["Digital floor plan", "Table status & Table orders", "Open checks & Billing", "QR ordering"],
     icon: "armchair",
+    href: "/services/dine-in-table-management"
   },
   {
     title: "QR Menu & Self-Ordering",
-    description: "Mobile-first QR menus that let guests instantly access your menu, order from their table, and enjoy a faster dine-in experience.",
-    points: ["Table-specific QR menus", "Customer self-ordering", "Digital menu management"],
+    description: "Contactless dining experiences allowing guests to view menus and place orders directly from their tables.",
+    points: ["Table-specific QR", "Digital menu", "Customer self-ordering", "Dine-in order integration"],
     icon: "qr-code",
-  },
-  {
-    title: "Reservation Systems",
-    description: "Custom reservation experiences that make it easy for guests to book tables while giving restaurants better visibility into reservations and table availability.",
-    points: ["Online table bookings", "Reservation management", "Private dining & event inquiries"],
-    icon: "calendar",
-  },
-  {
-    title: "Interactive Online Menus",
-    description: "Fast, mobile-optimized digital menus designed to make browsing dishes, pricing, categories, modifiers, and availability effortless for guests.",
-    points: ["Category & menu navigation", "Modifiers & add-ons", "Dynamic pricing & availability"],
-    icon: "utensils-crossed",
-  },
-  {
-    title: "Customer Management & CRM",
-    description: "Centralized customer profiles that help restaurants understand order history, preferences, spending behavior, and customer activity.",
-    points: ["Customer profiles & order history", "Customer segmentation", "Repeat customer insights"],
-    icon: "users",
-  },
-  {
-    title: "Loyalty & Rewards",
-    description: "Customer loyalty systems designed to increase repeat orders, reward your best customers, and build long-term relationships.",
-    points: ["Points & rewards", "VIP & loyalty tiers", "Referral & retention programs"],
-    icon: "award",
-  },
-  {
-    title: "Promotions & Marketing",
-    description: "Tools to create, manage, and measure restaurant promotions, campaigns, discount codes, special offers, and customer re-engagement.",
-    points: ["Coupons & discount campaigns", "Targeted customer promotions", "Campaign performance tracking"],
-    icon: "ticket",
-  },
-  {
-    title: "Analytics & Business Intelligence",
-    description: "Clear, actionable analytics that help restaurant owners understand revenue, orders, customers, products, branches, and operational performance.",
-    points: ["Sales & revenue analytics", "Product & branch performance", "Customer & order insights"],
-    icon: "bar-chart-3",
-  },
-  {
-    title: "Inventory & Supply Management",
-    description: "Operational tools for tracking ingredients, stock levels, suppliers, purchasing, recipes, wastage, and inventory across one or multiple branches.",
-    points: ["Real-time inventory tracking", "Supplier & purchasing management", "Recipe, cost & wastage tracking"],
-    icon: "boxes",
-  },
-  {
-    title: "Multi-Branch Management",
-    description: "Centralized management systems for restaurant groups that need unified control over multiple branches, menus, staff, inventory, orders, and performance.",
-    points: ["Centralized branch dashboard", "Branch-level analytics", "Shared menus & operations"],
-    icon: "network",
-  },
-  {
-    title: "AI Restaurant Assistants",
-    description: "Intelligent AI assistants that help restaurants answer customer questions, provide menu information, assist with reservations, and automate repetitive customer interactions.",
-    points: ["24/7 customer assistance", "Menu & ingredient questions", "Reservation & ordering assistance"],
-    icon: "bot",
-  },
-  {
-    title: "WhatsApp AI Assistant",
-    description: "Connect an AI-powered assistant to WhatsApp to handle restaurant enquiries, menu lookups, reservation assistance, order-related questions, and customer communication.",
-    points: ["WhatsApp AI integration", "Automated customer replies", "Menu, ordering & reservation support"],
-    icon: "message-circle-more",
-  },
-  {
-    title: "WhatsApp Ordering & Automation",
-    description: "Connect your restaurant's ordering journey with WhatsApp so customers can send detailed orders while your team can streamline communication and order handling.",
-    points: ["Detailed WhatsApp orders", "Order notifications & updates", "Automated customer workflows"],
-    icon: "message-square-dashed",
-  },
-  {
-    title: "Modern Restaurant Websites",
-    description: "Custom, responsive restaurant websites that showcase your brand, menu, locations, offers, and dining experience while connecting directly with your digital ordering ecosystem.",
-    points: ["Custom restaurant branding", "Multi-location ready", "Responsive & conversion-focused design"],
-    icon: "monitor-smartphone",
-  },
-  {
-    title: "Gallery & Food Showcases",
-    description: "High-impact visual experiences designed to showcase your food, interior, atmosphere, events, and overall restaurant identity.",
-    points: ["High-speed image loading", "Lightbox gallery experiences", "Food & ambience showcases"],
-    icon: "images",
-  },
-  {
-    title: "Events & Announcements",
-    description: "Digital experiences for promoting seasonal menus, special offers, private dining, events, launches, and restaurant announcements.",
-    points: ["Announcement banners", "Special menu experiences", "Private event booking flows"],
-    icon: "megaphone",
-  },
-  {
-    title: "Local SEO & Google Visibility",
-    description: "Technical and local search optimization designed to help restaurants appear when nearby customers search for food, restaurants, menus, and services.",
-    points: ["Google Business optimization", "Local SEO & keywords", "Restaurant schema markup"],
-    icon: "map-pinned",
-  },
-  {
-    title: "Performance Optimization",
-    description: "Speed-focused improvements designed to keep your websites and digital platforms fast, responsive, and reliable across devices and network conditions.",
-    points: ["Advanced image optimization", "Core Web Vitals optimization", "Fast page & asset delivery"],
-    icon: "zap",
-  },
-  {
-    title: "Hosting & Deployment",
-    description: "Complete technical setup covering hosting, deployment, custom domain connection, SSL configuration, production launch, and platform infrastructure.",
-    points: ["Hosting setup", "Domain connection", "SSL configuration", "Production deployment", "Infrastructure management"],
-    icon: "server-cog",
-  },
-  {
-    title: "Website Maintenance & Support",
-    description: "Ongoing technical and content support to keep your restaurant website and digital systems updated, secure, and running smoothly.",
-    points: ["Menu, pricing & content updates", "Backups & health checks", "Security & technical support"],
-    icon: "wrench",
-  },
-  {
-    title: "Integrations & Custom Automation",
-    description: "Connect your restaurant platform with external tools and build custom workflows that reduce manual work and improve operational efficiency.",
-    points: ["Payment & third-party integrations", "Custom API integrations", "Automated business workflows"],
-    icon: "workflow",
-  },
+    href: "/services/qr-menu-self-ordering"
+  }
 ];
+
+export const supportingServicesCategories = [
+  {
+    title: "Customer & Marketing",
+    items: [
+      "Customer CRM",
+      "Loyalty & Rewards",
+      "Promotions & Marketing",
+      "Reviews",
+      "AI Restaurant Assistant",
+      "WhatsApp AI Assistant",
+      "WhatsApp Ordering & Automation"
+    ]
+  },
+  {
+    title: "Business & Operations",
+    items: [
+      "Inventory & Supply Management",
+      "Reservations",
+      "Analytics & Business Intelligence",
+      "Multi-Branch Management",
+      "Reports",
+      "Staff & HR"
+    ]
+  },
+  {
+    title: "Digital Growth",
+    items: [
+      "Local SEO & Google Visibility",
+      "Performance Optimization",
+      "Gallery & Food Showcases",
+      "Events & Announcements"
+    ]
+  },
+  {
+    title: "Technical & Infrastructure",
+    items: [
+      "Integrations & Custom Automation",
+      "Hosting & Deployment",
+      "Website Maintenance & Support"
+    ]
+  }
+];
+
 
 export const websiteFeatures = [
   { title: "POS Integration", description: "Sync online orders and menu items directly with your supported POS system.", icon: "credit-card" },

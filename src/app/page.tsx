@@ -13,7 +13,7 @@ import {
   faqs,
   leftFaqs,
   industryShowcaseItems,
-  serviceCards, serviceSections,
+  serviceCards, mainServices,
   technologyGroups,
   websiteFeatures,
 } from "@/data/site-content";
@@ -22,8 +22,8 @@ const blurData = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTYnIGhlaWdodD0nMTAn
 
 export default function Home() {
   const homeServiceTitles = [
-    "Modern Restaurant Websites",
-    "Restaurant Management Systems",
+    "Restaurant Websites & Mobile Applications",
+    "Restaurant Management Systems (RMS)",
     "Point of Sale (POS) Systems",
     "Online Ordering Systems",
     "Kitchen Display Systems (KDS)",
@@ -31,7 +31,7 @@ export default function Home() {
   ];
 
   const homeServiceCards = homeServiceTitles
-    .map(title => serviceSections.find(service => service.title === title) || serviceCards.find(service => service.title === title))
+    .map(title => mainServices.find(service => service.title === title) || serviceCards.find(service => service.title === title))
     .filter((service): service is Exclude<typeof service, undefined> => !!service);
 
   return (
@@ -66,7 +66,7 @@ export default function Home() {
                       <p className="text-sm leading-[1.7] text-foreground-body sm:text-base">{service.description}</p>
                     </div>
                   </div>
-                  <Link href="/services" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-foreground">
+                  <Link href={"href" in service && service.href ? service.href : "/services"} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-foreground">
                     Learn More
                     <span className="sr-only"> about {service.title}</span>
                     <ArrowRight className="h-4 w-4 text-accent transition-transform duration-300 group-hover:translate-x-1" />
@@ -148,7 +148,7 @@ export default function Home() {
           <Reveal delayMs={0} className="space-y-8">
             <div className="space-y-5">
               <span className="inline-flex items-center gap-2 rounded-none border border-amber-400/20 bg-amber-400/10 px-4 py-1.5 text-sm font-semibold text-amber-400 backdrop-blur-md shadow-[0_0_15px_rgba(245,158,11,0.15)]">
-                Your Restaurant, One Dashboard
+                Your Restaurant, One Panel
               </span>
               <h2 className="text-[2rem] font-semibold leading-[1.15] text-foreground sm:text-[2.8rem] tracking-tight">
                 Manage your entire restaurant from <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200 drop-shadow-sm">one screen.</span>
@@ -230,7 +230,7 @@ export default function Home() {
                     <Icon className="h-5 w-5" strokeWidth={2} />
                   </span>
                   <h3 className="mt-5 text-xl font-semibold text-foreground">{feature.title}</h3>
-                  <p className="mt-3 text-sm leading-[1.7] text-foreground-body sm:text-base line-clamp-2">{feature.description}</p>
+                  <p className="mt-3 text-sm leading-[1.7] text-foreground-body sm:text-base">{feature.description}</p>
                 </Reveal>
               );
             })}

@@ -4,7 +4,7 @@ import Check from "lucide-react/dist/esm/icons/check";
 import { PageHero } from "@/components/marketing/page-hero";
 import { Reveal } from "@/components/ui/reveal";
 import { getIcon } from "@/components/ui/icon-map";
-import { serviceSections } from "@/data/site-content";
+import { mainServices, supportingServicesCategories } from "@/data/site-content";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -21,32 +21,80 @@ export default function ServicesPage() {
         primaryCta={{ label: "Start a Project", href: "/contact" }}
         secondaryCta={{ label: "How We Work", href: "/process" }}
       />
+      
+      {/* Main Services Section */}
       <section className="section-space">
-        <div className="content-shell grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
-          {serviceSections.map((service, index) => {
-            const Icon = getIcon(service.icon);
+        <div className="content-shell">
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Core Products</h2>
+            <p className="mt-4 text-lg text-foreground-body">Dedicated platforms to power every aspect of your restaurant.</p>
+          </div>
+          
+          <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+            {mainServices.map((service, index) => {
+              const Icon = getIcon(service.icon);
 
-            return (
-              <Reveal key={`${service.title}-${index}`} delayMs={index * 60} className="surface-card flex h-full flex-col p-6">
-                <span className="inline-flex w-fit rounded-none border border-amber-400/15 bg-amber-400/10 p-3 text-accent">
-                  <Icon className="h-6 w-6" strokeWidth={2} />
-                </span>
-                <h2 className="mt-6 text-2xl font-semibold text-foreground">{service.title}</h2>
-                <p className="mt-3 text-sm leading-[1.7] text-foreground-body sm:text-base">{service.description}</p>
-                <div className="mt-5 grid gap-2">
-                  {service.points.map((point) => (
-                    <div key={point} className="flex items-center gap-2 text-sm text-foreground-body">
-                      <Check className="h-4 w-4 text-accent" />
-                      <span>{point}</span>
-                    </div>
+              return (
+                <Reveal key={`${service.title}-${index}`} delayMs={index * 60} className="surface-card flex h-full flex-col p-6">
+                  <span className="inline-flex w-fit rounded-none border border-amber-400/15 bg-amber-400/10 p-3 text-accent">
+                    <Icon className="h-6 w-6" strokeWidth={2} />
+                  </span>
+                  <h3 className="mt-6 text-2xl font-semibold text-foreground">{service.title}</h3>
+                  <p className="mt-3 text-sm leading-[1.7] text-foreground-body sm:text-base">{service.description}</p>
+                  <div className="mt-5 grid gap-2">
+                    {service.points.map((point) => (
+                      <div key={point} className="flex items-center gap-2 text-sm text-foreground-body">
+                        <Check className="h-4 w-4 text-accent" />
+                        <span>{point}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Link href={`/services/${
+                    service.title === "Restaurant Websites & Mobile Applications" ? "restaurant-websites-and-apps" :
+                    service.title === "Restaurant Management Systems (RMS)" ? "restaurant-management-systems" :
+                    service.title === "Point of Sale (POS) Systems" ? "point-of-sale-systems" :
+                    service.title === "Kitchen Display Systems (KDS)" ? "kitchen-display-systems" :
+                    service.title === "Online Ordering Systems" ? "online-ordering-systems" :
+                    service.title === "Delivery & Fleet Management" ? "delivery-and-fleet-management" :
+                    service.title === "Dine-In & Table Management" ? "dine-in-table-management" :
+                    service.title === "QR Menu & Self-Ordering" ? "qr-menu-self-ordering" :
+                    service.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+                  }`} className="mt-auto pt-6 inline-flex items-center gap-2 text-sm font-semibold text-amber-500 transition-colors hover:text-amber-400">
+                    Full details
+                  </Link>
+                </Reveal>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Supporting Services Section */}
+      <section className="section-space bg-background-secondary">
+        <div className="content-shell">
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Restaurant Digital Solutions & Supporting Services</h2>
+            <p className="mt-4 text-lg text-foreground-body">Comprehensive capabilities to support operations, growth, and customer engagement.</p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {supportingServicesCategories.map((category, index) => (
+              <Reveal key={category.title} delayMs={index * 100} className="surface-card flex flex-col p-6 h-full border border-border/50 hover:border-amber-500/30 transition-colors">
+                <h3 className="mb-4 text-xl font-semibold text-foreground">{category.title}</h3>
+                <ul className="space-y-3 mb-6">
+                  {category.items.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <Check className="h-4 w-4 text-accent shrink-0 mt-0.5" />
+                      <span className="text-sm text-foreground-body leading-relaxed">{item}</span>
+                    </li>
                   ))}
-                </div>
-                <Link href="/contact" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-amber-500 transition-colors hover:text-amber-400">
-                  Discuss this service
+                </ul>
+                <Link href="/services/supporting-services" className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-amber-500 transition-colors hover:text-amber-400">
+                  Explore {category.title}
                 </Link>
               </Reveal>
-            );
-          })}
+            ))}
+          </div>
         </div>
       </section>
     </>
