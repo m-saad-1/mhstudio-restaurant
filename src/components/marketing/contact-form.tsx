@@ -144,9 +144,7 @@ export function ContactForm() {
               <option value="">Select package range</option>
               <option value="Launch ($499+)">Launch ($499+)</option>
               <option value="Growth ($1,199+)">Growth ($1,199+)</option>
-              <option value="Scale AI ($2,499+)">Scale AI ($2,499+)</option>
-              <option value="Enterprise (Custom Quote)">Enterprise (Custom Quote)</option>
-            </select>
+              </select>
           </label>
         </div>
 
