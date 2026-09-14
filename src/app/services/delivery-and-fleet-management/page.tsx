@@ -624,6 +624,7 @@ export default function DeliveryAndFleetManagementPage() {
           <SectionHeading
             eyebrow="Common Questions"
             title="Delivery & Fleet FAQ"
+            description=""
             align="left"
           />
 
