@@ -792,7 +792,8 @@ export const pricingPackages = [
         ]
       }
     }
-  },
+  }
+];
 export const contactFaqs = [
   {
     question: "What happens after I request a demo or consultation?",
